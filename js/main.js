@@ -45,7 +45,6 @@
       closeBtn.addEventListener('click', () => sidebar.classList.remove('open'));
     }
 
-    // Nav group toggles
     document.querySelectorAll('.nav-group-toggle').forEach((btn) => {
       btn.addEventListener('click', () => {
         const target = document.getElementById(btn.dataset.target);
@@ -53,7 +52,6 @@
       });
     });
 
-    // Open lectures group by default on lecture pages
     const lecturesList = document.getElementById('lectures-list');
     if (lecturesList && window.location.pathname.includes('lecture')) {
       lecturesList.classList.add('open');
@@ -90,14 +88,12 @@
     if (text) text.textContent = completed + ' / ' + TOTAL_LECTURES + ' lectures';
   }
 
-  // Mark current lecture complete when user reaches end / interacts
   function initLectureProgress() {
     const path = window.location.pathname;
     const match = path.match(/lecture-(\d+)/);
     if (!match) return;
     const id = 'lecture-' + match[1];
 
-    // Mark complete after a short delay or on scroll near bottom
     const mark = () => markLectureComplete(id);
     setTimeout(mark, 8000);
 
@@ -113,7 +109,6 @@
     );
   }
 
-  // Quiz simple feedback (optional)
   function initQuizzes() {
     document.querySelectorAll('.quiz-box').forEach((box) => {
       const btn = box.querySelector('[data-check-quiz]');
@@ -136,7 +131,6 @@
     });
   }
 
-  // Init
   document.addEventListener('DOMContentLoaded', () => {
     initTheme();
     initSidebar();
@@ -148,7 +142,6 @@
     if (themeBtn) themeBtn.addEventListener('click', toggleTheme);
   });
 
-  // Expose for lecture pages if needed
   window.PPC = {
     markLectureComplete,
     getProgress,
