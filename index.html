@@ -3,13 +3,183 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Practices in Computing — Industry-standard university course for CS, SE, DS, AI, Cybersecurity students. Ethics, responsibility, AI, privacy, career." />
   <title>Professional Practices in Computing</title>
   <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Content restored - full version will be pushed -->
-  <h1>Professional Practices in Computing</h1>
-  <p>Updating full content...</p>
+  <!-- Theme + progress bootstrap early -->
+  <script>
+    (function () {
+      const saved = localStorage.getItem('ppc-theme');
+      if (saved) document.documentElement.setAttribute('data-theme', saved);
+    })();
+  </script>
+
+  <div class="app">
+    <!-- Top Navigation -->
+    <header class="topbar glass">
+      <div class="topbar-inner">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">PPC</span>
+          <span class="logo-text">Professional Practices in Computing</span>
+        </a>
+        <nav class="nav-links">
+          <a href="index.html" class="active">Home</a>
+          <a href="#modules">Modules</a>
+          <a href="#outcomes">Outcomes</a>
+          <a href="#resources">Resources</a>
+        </nav>
+        <div class="topbar-actions">
+          <button id="theme-toggle" class="btn-icon" aria-label="Toggle theme" title="Toggle dark/light">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+          <button id="menu-toggle" class="btn-icon mobile-only" aria-label="Open menu">☰</button>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Hero -->
+      <section class="hero">
+        <div class="hero-content">
+          <p class="eyebrow">University Course · 2026–2035 Ready</p>
+          <h1>Professional Practices<br />in Computing</h1>
+          <p class="hero-lead">
+            Ethical reasoning, professional responsibility, AI governance, privacy, leadership, and career readiness for the next generation of computing professionals.
+          </p>
+          <div class="hero-cta">
+            <a href="lectures/lecture-01.html" class="btn btn-primary">Start Lecture 01</a>
+            <a href="#modules" class="btn btn-ghost">Browse Modules</a>
+          </div>
+          <div class="hero-meta">
+            <span>Static · GitHub Pages</span>
+            <span>·</span>
+            <span>No login required</span>
+            <span>·</span>
+            <span>Progress saved locally</span>
+          </div>
+        </div>
+        <div class="hero-visual glass">
+          <div class="progress-ring-wrap">
+            <svg class="progress-ring" width="140" height="140" viewBox="0 0 140 140">
+              <circle class="progress-ring-bg" cx="70" cy="70" r="58" />
+              <circle class="progress-ring-fg" id="home-progress-ring" cx="70" cy="70" r="58" />
+            </svg>
+            <div class="progress-ring-label">
+              <span id="home-progress-pct">0%</span>
+              <small>Complete</small>
+            </div>
+          </div>
+          <p class="progress-caption">Your local progress</p>
+        </div>
+      </section>
+
+      <!-- Course at a glance -->
+      <section class="section" id="about">
+        <h2 class="section-title">Course at a Glance</h2>
+        <div class="card-grid">
+          <article class="card glass">
+            <h3>Who it’s for</h3>
+            <p>Undergraduate students in Computer Science, Software Engineering, Data Science, Artificial Intelligence, Cybersecurity, and related programmes.</p>
+          </article>
+          <article class="card glass">
+            <h3>What you’ll build</h3>
+            <p>Professional judgment: ethics frameworks, responsible AI thinking, privacy analysis, communication, teamwork, and career habits that last beyond any single tool or language.</p>
+          </article>
+          <article class="card glass">
+            <h3>How you’ll learn</h3>
+            <p>Case studies, scenarios, decision simulators, quizzes, reflection, and industry-grounded assignments. Active learning, not passive reading.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Learning outcomes -->
+      <section class="section" id="outcomes">
+        <h2 class="section-title">Learning Outcomes</h2>
+        <ul class="outcomes-list">
+          <li>Apply ethical frameworks to real computing dilemmas (ACM/IEEE aligned).</li>
+          <li>Analyse privacy, security, and AI risks from professional, legal, and societal angles.</li>
+          <li>Communicate technical ideas clearly in writing and presentation.</li>
+          <li>Collaborate effectively in teams, including remote and global settings.</li>
+          <li>Plan continuous professional development and personal branding.</li>
+        </ul>
+      </section>
+
+      <!-- Modules -->
+      <section class="section" id="modules">
+        <h2 class="section-title">Weekly Modules</h2>
+        <div class="module-list" id="module-list">
+          <!-- Filled by JS -->
+        </div>
+      </section>
+
+      <!-- Resources teaser -->
+      <section class="section" id="resources">
+        <h2 class="section-title">Resources & Codes</h2>
+        <div class="card-grid">
+          <a class="card glass card-link" href="#">
+            <h3>Professional Codes</h3>
+            <p>ACM, IEEE, and related guidance summarised for practice.</p>
+          </a>
+          <a class="card glass card-link" href="#">
+            <h3>Case Study Library</h3>
+            <p>Facebook, Equifax, Boeing, Cambridge Analytica, and more.</p>
+          </a>
+          <a class="card glass card-link" href="#">
+            <h3>Career Toolkit</h3>
+            <p>Interview prep, branding, certifications, lifelong learning.</p>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer glass">
+      <div class="footer-inner">
+        <p>Professional Practices in Computing · Designed for university teaching 2026–2035</p>
+        <p class="footer-note">Static site · Progress stored in your browser · No accounts</p>
+      </div>
+    </footer>
+  </div>
+
   <script src="js/main.js"></script>
+  <script>
+    // Home-specific: populate module list and progress ring
+    document.addEventListener('DOMContentLoaded', () => {
+      const modules = [
+        { id: '01', title: 'Introduction to Professional Practices', href: 'lectures/lecture-01.html' },
+        { id: '02', title: 'Ethical Frameworks & Decision Making', href: 'lectures/lecture-02.html' },
+        { id: '03', title: 'Privacy, Data & Surveillance', href: 'lectures/lecture-03.html' },
+        { id: '04', title: 'Security Ethics & Responsibility', href: 'lectures/lecture-04.html' },
+        { id: '05', title: 'AI Ethics & Responsible AI', href: 'lectures/lecture-05.html' },
+      ];
+      const list = document.getElementById('module-list');
+      if (list) {
+        list.innerHTML = modules.map(m => {
+          const done = localStorage.getItem('ppc-lecture-' + m.id) === 'done';
+          return `<a class="module-item glass ${done ? 'done' : ''}" href="${m.href}">
+            <span class="module-id">${m.id}</span>
+            <span class="module-title">${m.title}</span>
+            <span class="module-status">${done ? '✓' : '→'}</span>
+          </a>`;
+        }).join('');
+      }
+      // Progress ring (simple: count completed of first 5)
+      const completed = modules.filter(m => localStorage.getItem('ppc-lecture-' + m.id) === 'done').length;
+      const pct = Math.round((completed / modules.length) * 100);
+      const ring = document.getElementById('home-progress-ring');
+      const label = document.getElementById('home-progress-pct');
+      if (ring && label) {
+        const circumference = 2 * Math.PI * 58;
+        ring.style.strokeDasharray = circumference;
+        ring.style.strokeDashoffset = circumference - (pct / 100) * circumference;
+        label.textContent = pct + '%';
+      }
+    });
+  </script>
 </body>
 </html>
