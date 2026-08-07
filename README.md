@@ -1,50 +1,33 @@
 # Professional Practices in Computing
 
-**Industry-standard university course website** for undergraduate students in:
+Industry-standard university course website for Computer Science, Software Engineering, Data Science, Artificial Intelligence, and Cyber Security undergraduate students.
 
-- Computer Science  
-- Software Engineering  
-- Data Science  
-- Artificial Intelligence  
-- Cybersecurity  
+**Static site · GitHub Pages ready · No backend · No login**
 
-## Features
+## Course Overview
 
-- Completely static (HTML + CSS + JS) — works on GitHub Pages  
-- Dark / Light mode with glassmorphism UI  
-- 30-lecture structure  
-- Progress tracking (localStorage)  
-- Interactive quizzes, reflection prompts, activities  
-- Responsive, modern, Apple/Microsoft-Learn inspired design  
+Professional Practices in Computing prepares future computing professionals to navigate the ethical, legal, social, organizational, and professional challenges of the modern technology landscape.
+
+The course integrates contemporary issues from AI, Data Science, Cybersecurity, Software Engineering, Cloud Computing, Open Source, Entrepreneurship, and Digital Society.
 
 ## Live Site
 
-After enabling GitHub Pages (Settings → Pages → Deploy from branch `main` / root):
-
+Once GitHub Pages is enabled:  
 `https://zuhaibbutt786.github.io/professional-practices-in-computing/`
 
-## Current Status
+## Structure
 
-- ✅ Site skeleton (Home, navigation, theme, progress, sidebar)
-- ✅ **Lecture 01** fully complete (objectives, content, case, quiz, reflection, assignment, glossary, cheat sheet)
-- ✅ **Lectures 02–05** complete modules added
-- ⏳ Lectures 06–30 will be added one complete module at a time
+- `index.html` — Home
+- `css/styles.css` — Design system (dark/light, glassmorphism)
+- `js/main.js` — Theme, navigation, progress, quizzes
+- `lectures/` — Weekly modules (Lecture 01–05 currently)
 
-## Local Development
+## Tech Stack
 
-Just open `index.html` in a browser or use any static server:
+HTML · CSS · Bootstrap 5 · Vanilla JavaScript · Mermaid.js · Chart.js · Prism.js
 
-```bash
-npx serve .
-# or
-python -m http.server 8000
-```
+## Author
 
-## License
-
-Educational use. Content is original synthesis for teaching. Primary sources should be consulted for formal citation.
-
----
-
-Designed for university teaching 2026–2035.  
-Technical excellence + professional judgment.  
+**Zuhaib Hussain Butt**  
+GIFT University  
+[Portfolio](https://zuhaibbutt.vercel.app/)
