@@ -3,167 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional Practices in Computing — Industry-standard university course for CS, Software Engineering, Data Science, AI, and Cybersecurity students. Ethics, responsibility, AI governance, and professional skills." />
-  <title>Professional Practices in Computing | Free University Course</title>
+  <meta name="description" content="Professional Practices in Computing — university course for CS, SE, Data Science, AI, and Cybersecurity students. Ethics, law, responsibility, and professional skills." />
+  <title>Professional Practices in Computing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>PPC</text></svg>" />
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
-    <a href="index.html" class="navbar-brand">
-      <div class="logo">PPC</div>
-      <span>Professional Practices</span>
-    </a>
-    <div class="nav-actions">
-      <div class="search-box">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="search" id="search-input" placeholder="Search lectures..." aria-label="Search" />
+  <div class="app">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="logo">
+          <span class="logo-mark">PPC</span>
+          <span class="logo-text">Professional Practices</span>
+        </a>
+        <button class="icon-btn" id="sidebar-close" aria-label="Close sidebar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
       </div>
-      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode"></button>
-      <button class="btn-icon" id="menu-toggle" aria-label="Menu" title="Toggle sidebar">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item active" data-page="home">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+          Home
+        </a>
+        <div class="nav-section">
+          <button class="nav-section-toggle" data-section="lectures">
+            <span>Lectures</span>
+            <svg class="chevron" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="nav-section-items" id="lectures-nav">
+            <a href="lectures/lecture-01.html" class="nav-item" data-lecture="1">01 · Introduction &amp; Professional Identity</a>
+            <a href="lectures/lecture-02.html" class="nav-item" data-lecture="2">02 · Ethical Frameworks</a>
+            <a href="lectures/lecture-03.html" class="nav-item" data-lecture="3">03 · Privacy &amp; Data Protection</a>
+            <a href="lectures/lecture-04.html" class="nav-item" data-lecture="4">04 · Intellectual Property</a>
+            <a href="lectures/lecture-05.html" class="nav-item" data-lecture="5">05 · Professional Codes of Conduct</a>
+            <a href="#" class="nav-item disabled">06–30 · Coming soon</a>
+          </div>
+        </div>
+        <a href="#outcomes" class="nav-item">Learning Outcomes</a>
+        <a href="#resources" class="nav-item">Resources</a>
+        <a href="#faq" class="nav-item">FAQ</a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="progress-widget">
+          <div class="progress-label">Course progress</div>
+          <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
+          <div class="progress-text" id="progress-text">0 / 30 lectures</div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <div class="main-wrap">
+      <header class="topbar">
+        <button class="icon-btn" id="sidebar-toggle" aria-label="Toggle sidebar">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+        <div class="topbar-title">Professional Practices in Computing</div>
+        <div class="topbar-actions">
+          <button class="icon-btn" id="theme-toggle" aria-label="Toggle theme">
+            <svg class="icon-sun" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+            <svg class="icon-moon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          </button>
+        </div>
+      </header>
+
+      <main class="content">
+        <!-- Hero -->
+        <section class="hero glass">
+          <div class="hero-badge">University Course · 2026–2035</div>
+          <h1>Professional Practices<br/>in Computing</h1>
+          <p class="hero-lead">An interdisciplinary course that prepares computing professionals to navigate ethical, legal, social, and organizational challenges in a rapidly evolving technology landscape.</p>
+          <div class="hero-actions">
+            <a href="lectures/lecture-01.html" class="btn btn-primary">Start Lecture 01</a>
+            <a href="#modules" class="btn btn-ghost">Browse modules</a>
+          </div>
+          <div class="hero-meta">
+            <span>CS · SE · DS · AI · Cybersecurity</span>
+            <span>·</span>
+            <span>Static · GitHub Pages ready</span>
+          </div>
+        </section>
+
+        <!-- About -->
+        <section class="section" id="about">
+          <h2>About this course</h2>
+          <div class="grid-2">
+            <div class="card glass">
+              <h3>What you will learn</h3>
+              <p>Professional ethics, responsibility, computing law, privacy, AI ethics, intellectual property, open source, technical communication, teamwork, leadership, sustainability, and career development — grounded in ACM and IEEE guidelines.</p>
+            </div>
+            <div class="card glass">
+              <h3>How it is taught</h3>
+              <p>Case-based and scenario-based learning. Real industry incidents, ethical dilemmas, decision frameworks, quizzes, reflections, and mini-projects. Technology-independent: professional thinking, not tool training.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Modules preview -->
+        <section class="section" id="modules">
+          <h2>Weekly modules</h2>
+          <div class="module-grid" id="module-grid">
+            <!-- Filled by JS -->
+          </div>
+        </section>
+
+        <!-- Outcomes -->
+        <section class="section" id="outcomes">
+          <h2>Learning outcomes</h2>
+          <ul class="outcome-list">
+            <li>Apply ethical frameworks to real computing dilemmas</li>
+            <li>Reason about privacy, security, and responsible AI</li>
+            <li>Understand IP, licensing, and open-source obligations</li>
+            <li>Communicate professionally and work effectively in teams</li>
+            <li>Navigate legal and regulatory contexts relevant to computing</li>
+            <li>Build habits of continuous learning and professional growth</li>
+          </ul>
+        </section>
+
+        <!-- Resources -->
+        <section class="section" id="resources">
+          <h2>Core references</h2>
+          <div class="card glass">
+            <ul class="ref-list">
+              <li>Baase — <em>A Gift of Fire</em></li>
+              <li>Quinn — <em>Ethics for the Information Age</em></li>
+              <li>Dignum — <em>Responsible Artificial Intelligence</em></li>
+              <li>ACM Code of Ethics and Professional Conduct</li>
+              <li>IEEE Code of Ethics</li>
+              <li>NIST AI Risk Management Framework</li>
+              <li>UNESCO / OECD AI ethics recommendations</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq">
+          <h2>FAQ</h2>
+          <div class="faq-list">
+            <details class="faq-item glass">
+              <summary>Is this course language- or tool-specific?</summary>
+              <p>No. It focuses on professional judgment, ethics, and practice. Any programming language or stack is fine.</p>
+            </details>
+            <details class="faq-item glass">
+              <summary>How is progress tracked?</summary>
+              <p>Progress is stored in your browser (localStorage). Clearing site data resets it.</p>
+            </details>
+            <details class="faq-item glass">
+              <summary>Can I use this for university teaching?</summary>
+              <p>Yes. Content is original synthesis for educational use. Cite primary sources for formal academic work.</p>
+            </details>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>Professional Practices in Computing · Designed for university teaching 2026–2035</p>
+          <p><a href="https://github.com/zuhaibbutt786/professional-practices-in-computing" target="_blank" rel="noopener">GitHub</a></p>
+        </footer>
+      </main>
     </div>
-  </nav>
-
-  <div class="overlay" id="overlay"></div>
-
-  <!-- Sidebar -->
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Course</div>
-      <a href="index.html" class="sidebar-link active">
-        <span class="num">⌂</span> Home
-      </a>
-      <a href="#about" class="sidebar-link"><span class="num">ℹ</span> About</a>
-      <a href="#outcomes" class="sidebar-link"><span class="num">◎</span> Outcomes</a>
-      <a href="#lectures" class="sidebar-link"><span class="num">☰</span> All Lectures</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Lectures 01–05</div>
-      <a href="lectures/lecture-01.html" class="sidebar-link"><span class="num">01</span> Introduction</a>
-      <a href="lectures/lecture-02.html" class="sidebar-link"><span class="num">02</span> History & Codes</a>
-      <a href="lectures/lecture-03.html" class="sidebar-link"><span class="num">03</span> Ethical Theories</a>
-      <a href="lectures/lecture-04.html" class="sidebar-link"><span class="num">04</span> ACM & IEEE Codes</a>
-      <a href="lectures/lecture-05.html" class="sidebar-link"><span class="num">05</span> Responsibility</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Progress</div>
-      <div class="progress-wrap" style="padding:0.5rem 1rem;">
-        <div class="progress-bar"><div class="progress-fill" id="progress-fill" style="width:0%"></div></div>
-        <div class="progress-text" id="progress-text">0 / 30 lectures</div>
-      </div>
-    </div>
-  </aside>
-
-  <div class="main-content">
-    <header class="hero">
-      <div class="hero-badge">Free University Course · 2026–2035</div>
-      <h1>Professional Practices<br/>in Computing</h1>
-      <p class="hero-lead">Ethics · Responsibility · AI Governance · Professional Skills for CS, SE, Data Science, AI & Cybersecurity</p>
-      <div class="hero-actions">
-        <a href="lectures/lecture-01.html" class="btn btn-primary">Start Lecture 01</a>
-        <a href="#about" class="btn btn-ghost">About the Course</a>
-      </div>
-    </header>
-
-    <section id="about" class="section">
-      <div class="section-header">
-        <div class="section-icon">ℹ</div>
-        <h2>About the Course</h2>
-      </div>
-      <div class="glass-card">
-        <p>Professional Practices in Computing prepares future computing professionals to navigate the ethical, legal, social, organizational, and professional challenges of the rapidly evolving technology landscape.</p>
-        <p>Unlike traditional courses that focus only on software engineering ethics, this course integrates contemporary issues from Artificial Intelligence, Data Science, Cybersecurity, Open Source, Entrepreneurship, and Digital Society.</p>
-        <p>Students develop the professional competencies required by ACM and IEEE guidelines while learning how responsible computing affects individuals, organizations, governments, and society.</p>
-      </div>
-    </section>
-
-    <section id="outcomes" class="section">
-      <div class="section-header">
-        <div class="section-icon">◎</div>
-        <h2>Learning Outcomes</h2>
-      </div>
-      <div class="outcome-grid">
-        <div class="outcome-card">
-          <h3>Ethical Reasoning</h3>
-          <p>Apply ethical frameworks and professional codes to real computing dilemmas across AI, data, security, and software.</p>
-        </div>
-        <div class="outcome-card">
-          <h3>Professional Responsibility</h3>
-          <p>Understand duty of care, accountability, whistleblowing, and the social impact of technical decisions.</p>
-        </div>
-        <div class="outcome-card">
-          <h3>Legal & Policy Awareness</h3>
-          <p>Navigate privacy, IP, licensing, safety-critical systems, and emerging regulation at a conceptual level.</p>
-        </div>
-        <div class="outcome-card">
-          <h3>Communication & Leadership</h3>
-          <p>Communicate risk, lead teams, resolve conflict, and practice inclusive, accessible design.</p>
-        </div>
-        <div class="outcome-card">
-          <h3>Responsible AI & Data</h3>
-          <p>Reason about bias, transparency, sustainability, and human factors in intelligent systems.</p>
-        </div>
-        <div class="outcome-card">
-          <h3>Career & Lifelong Learning</h3>
-          <p>Build a professional identity, personal brand, and continuous learning plan for a rapidly evolving field.</p>
-        </div>
-      </div>
-    </section>
-
-    <section id="lectures" style="padding-bottom:3rem;">
-      <div class="section-header" style="max-width:860px;margin:0 auto 1.5rem;padding:0 1.5rem;">
-        <div class="section-icon">☰</div>
-        <h2>30 Lectures</h2>
-      </div>
-      <div class="lecture-grid">
-        <a href="lectures/lecture-01.html" class="lecture-card">
-          <span class="num">Lecture 01</span>
-          <h3>Introduction to Professional Practices</h3>
-          <p>Why professionalism matters, course map, and the professional identity of a computing graduate.</p>
-        </a>
-        <a href="lectures/lecture-02.html" class="lecture-card">
-          <span class="num">Lecture 02</span>
-          <h3>History of the Profession & Codes</h3>
-          <p>Evolution of computing as a profession and early ethical codes.</p>
-        </a>
-        <a href="lectures/lecture-03.html" class="lecture-card">
-          <span class="num">Lecture 03</span>
-          <h3>Ethical Theories & Frameworks</h3>
-          <p>Utilitarianism, deontology, virtue ethics applied to technology decisions.</p>
-        </a>
-        <a href="lectures/lecture-04.html" class="lecture-card">
-          <span class="num">Lecture 04</span>
-          <h3>ACM & IEEE Codes Deep Dive</h3>
-          <p>Principles, application, and mapping real cases to the codes.</p>
-        </a>
-        <a href="lectures/lecture-05.html" class="lecture-card">
-          <span class="num">Lecture 05</span>
-          <h3>Responsibility & Accountability</h3>
-          <p>Duty of care, liability, and the ethics of speaking up.</p>
-        </a>
-        <div class="lecture-card" style="opacity:0.7;">
-          <span class="num">Lecture 06–30</span>
-          <h3>Privacy → Capstone</h3>
-          <p>Full modules released progressively. Skeleton navigation is ready.</p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <p><strong>Professional Practices in Computing</strong> — Free educational resource</p>
-      <p>Designed for university teaching 2026–2035 • Static site • GitHub Pages ready</p>
-      <p style="margin-top:0.75rem;">
-        <a href="https://github.com/zuhaibbutt786/professional-practices-in-computing" target="_blank" rel="noopener">View on GitHub</a>
-      </p>
-    </footer>
   </div>
-
   <script src="js/main.js"></script>
 </body>
 </html>
