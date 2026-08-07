@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lecture 04: ACM & IEEE Codes of Ethics Deep Dive — Principles, application, case mapping, and practical use of professional codes in computing." />
+  <title>Lecture 04 — ACM & IEEE Codes | Professional Practices in Computing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
+  <style>
+    pre, code { font-family: var(--font-mono); font-size: 0.88rem; }
+    pre {
+      background: var(--bg-primary);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.1rem 1.25rem;
+      overflow-x: auto;
+      margin: 1rem 0;
+      line-height: 1.5;
+    }
+    code {
+      background: var(--accent-soft);
+      padding: 0.15rem 0.4rem;
+      border-radius: 5px;
+      color: var(--accent);
+    }
+    pre code { background: transparent; padding: 0; color: var(--text-secondary); }
+    .code-caption {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: -0.5rem;
+      margin-bottom: 1.25rem;
+    }
+    .principle-card {
+      border-left: 4px solid var(--accent);
+      padding: 1rem 1.25rem;
+      margin: 1rem 0;
+      background: var(--bg-card);
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    }
+    .principle-card h4 { margin-bottom: 0.4rem; color: var(--accent); }
+  </style>
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-brand">
+      <div class="logo">PPC</div>
+      <span>Professional Practices</span>
+    </a>
+    <div class="nav-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="search-input" placeholder="Search..." aria-label="Search" />
+      </div>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Course</div>
+      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Current Module</div>
+      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link active" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Quick Nav</div>
+      <a href="#objectives" class="sidebar-link"><span class="num">1</span> Objectives</a>
+      <a href="#acm" class="sidebar-link"><span class="num">2</span> ACM Code</a>
+      <a href="#ieee" class="sidebar-link"><span class="num">3</span> IEEE Code</a>
+      <a href="#application" class="sidebar-link"><span class="num">4</span> Application</a>
+      <a href="#code-examples" class="sidebar-link"><span class="num">5</span> Code Examples</a>
+      <a href="#case" class="sidebar-link"><span class="num">6</span> Case Study</a>
+      <a href="#activity" class="sidebar-link"><span class="num">7</span> Activities</a>
+      <a href="#assignment" class="sidebar-link"><span class="num">8</span> Assignment</a>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <div class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">/</span>
+        <a href="../index.html#lectures">Lectures</a>
+        <span class="sep">/</span>
+        <span>Lecture 04</span>
+      </nav>
+
+      <header class="lecture-header">
+        <div class="lecture-badge">Lecture 04 of 30</div>
+        <h1>ACM & IEEE Codes of Ethics — Deep Dive</h1>
+        <p style="font-size:1.15rem;color:var(--text-secondary);max-width:640px;">
+          A practical examination of the ACM Code of Ethics, the IEEE Code of Ethics, 
+          and the Software Engineering Code — how to read them, apply them, and use them 
+          in real professional decisions.
+        </p>
+        <div class="lecture-meta">
+          <span>⏱ 90–105 min</span>
+          <span>📚 Core</span>
+          <span>🎯 Codes</span>
+          <span>✍️ Mapping + Code</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" data-progress-bar></div>
+        </div>
+      </header>
+
+      <section id="objectives" class="section">
+        <div class="section-header">
+          <div class="section-icon">🎯</div>
+          <h2>Learning Objectives</h2>
+        </div>
+        <p>By the end of this lecture you will be able to:</p>
+        <ul class="objectives-list">
+          <li>Summarize the structure and major principles of the ACM Code of Ethics (2018).</li>
+          <li>Compare the ACM Code, IEEE Code of Ethics, and the Software Engineering Code of Ethics.</li>
+          <li>Map specific code principles to concrete computing situations and design/process choices.</li>
+          <li>Use the codes as practical tools in design reviews, incident analysis, and personal decision-making.</li>
+          <li>Recognize both the power and the limits of professional codes in organizational settings.</li>
+        </ul>
+      </section>
+
+      <section id="intro" class="section">
+        <div class="section-header">
+          <div class="section-icon">📖</div>
+          <h2>Introduction</h2>
+        </div>
+        <p>
+          Professional codes are the closest thing computing has to a shared statement of 
+          “what we owe each other and the public.” They are not law, and they are not 
+          exhaustive decision procedures. They are authoritative reference points that 
+          express the profession’s collective judgment about responsibilities.
+        </p>
+        <p>
+          This lecture treats the codes as working instruments: documents you should be 
+          able to open, interpret, and apply under time pressure.
+        </p>
+      </section>
+
+      <section id="acm" class="section">
+        <div class="section-header">
+          <div class="section-icon">📜</div>
+          <h2>ACM Code of Ethics and Professional Conduct (2018)</h2>
+        </div>
+        <p>
+          The ACM Code is organized around general ethical principles, followed by more 
+          specific professional responsibilities, and guidance on leadership and compliance. 
+          Below are the high-level principles with practical computing interpretations.
+        </p>
+
+        <div class="principle-card">
+          <h4>1. Contribute to society and to human well-being</h4>
+          <p>Primary obligation is to the public good. Includes attention to vulnerable groups and the broader impacts of systems.</p>
+        </div>
+        <div class="principle-card">
+          <h4>2. Avoid harm</h4>
+          <p>Take care to prevent and mitigate negative consequences. Includes both intentional and reasonably foreseeable harm.</p>
+        </div>
+        <div class="principle-card">
+          <h4>3. Be honest and trustworthy</h4>
+          <p>Accuracy in claims about systems, transparency about limitations, and integrity in professional interactions.</p>
+        </div>
+        <div class="principle-card">
+          <h4>4. Be fair and take action not to discriminate</h4>
+          <p>Design and deployment decisions should not create or amplify unjust discrimination.</p>
+        </div>
+        <div class="principle-card">
+          <h4>5. Respect the work required to produce new ideas, inventions, creative works, and computing artifacts</h4>
+          <p>Proper attribution, respect for intellectual property and open-source licenses, credit where due.</p>
+        </div>
+        <div class="principle-card">
+          <h4>6. Respect privacy</h4>
+          <p>Collect, use, and share personal data only with appropriate justification, minimization, and safeguards.</p>
+        </div>
+        <div class="principle-card">
+          <h4>7. Honor confidentiality</h4>
+          <p>Protect confidential information except when legal or higher ethical obligations require disclosure.</p>
+        </div>
+
+        <p class="mt-2">
+          Later sections of the Code address professional responsibilities (competence, 
+          continuous learning, review of work), leadership duties, and the obligation to 
+          support the code itself.
+        </p>
+      </section>
+
+      <section id="ieee" class="section">
+        <div class="section-header">
+          <div class="section-icon">⚡</div>
+          <h2>IEEE Code of Ethics & Software Engineering Code</h2>
+        </div>
+        <p>
+          The IEEE Code of Ethics is shorter and engineering-oriented. It emphasizes 
+          safety, health, and welfare of the public; honesty; conflict-of-interest 
+          management; fairness; and continuous improvement of competence.
+        </p>
+        <p>
+          The joint IEEE-CS / ACM <strong>Software Engineering Code of Ethics and 
+          Professional Practice</strong> (1999) is more detailed for software practitioners. 
+          It is organized by principle areas (Public, Client and Employer, Product, Judgment, 
+          Management, Profession, Colleagues, Self) and remains highly relevant for 
+          safety-critical and large-scale systems.
+        </p>
+
+        <div class="callout callout-info">
+          <div class="callout-title">Key Shared Themes Across Codes</div>
+          Public interest first • Avoid harm • Honesty • Fairness • Competence • 
+          Respect for privacy and confidentiality • Responsibility to colleagues and the profession
+        </div>
+      </section>
+
+      <section id="application" class="section">
+        <div class="section-header">
+          <div class="section-icon">🔧</div>
+          <h2>Applying the Codes in Practice</h2>
+        </div>
+        <p>Codes become useful when you treat them as questions rather than slogans:</p>
+        <ul style="margin:1rem 0 1.5rem 1.5rem;color:var(--text-secondary);">
+          <li><strong>Public interest:</strong> Who benefits? Who may be harmed? Are vulnerable groups considered?</li>
+          <li><strong>Avoid harm:</strong> What are the reasonably foreseeable failure modes and misuse cases?</li>
+          <li><strong>Honesty:</strong> Are we accurately representing capabilities, limitations, and residual risks?</li>
+          <li><strong>Fairness:</strong> Have we checked for disparate impact? Is there an appeal or redress path?</li>
+          <li><strong>Privacy:</strong> Is collection necessary? Is purpose limited? Is retention justified?</li>
+          <li><strong>Competence:</strong> Do we have (or are we obtaining) the expertise required for this risk level?</li>
+        </ul>
+
+        <h3>Mapping Principles to Artifacts</h3>
+        <p>
+          Professional obligations become more reliable when they appear in concrete artifacts: 
+          design checklists, review gates, decision records, monitoring dashboards, and 
+          incident post-mortems.
+        </p>
+      </section>
+
+      <section id="code-examples" class="section">
+        <div class="section-header">
+          <div class="section-icon">💻</div>
+          <h2>Illustrative Code & Process Examples</h2>
+        </div>
+        <p>
+          These snippets show how code-of-ethics concerns can surface in everyday engineering 
+          work. They are conceptual illustrations, not production libraries.
+        </p>
+
+        <h3>Example 1 — Explicit public-interest and harm check in a review gate</h3>
+        <pre><code>def release_gate(feature):
+    checklist = {
+        "public_interest_considered": feature.impact_assessment is not None,
+        "foreseeable_harms_documented": len(feature.risks) > 0,
+        "vulnerable_groups_reviewed": feature.vulnerable_groups_checked,
+        "honesty_claims_accurate": feature.capability_claims_reviewed,
+        "privacy_minimized": feature.data_minimization_applied,
+        "residual_risk_accepted_by": feature.risk_owner
+    }
+    if not all(checklist.values()):
+        return BLOCK("Code-of-ethics review incomplete")
+    return ALLOW_WITH_MONITORING()</code></pre>
+        <p class="code-caption">Maps ACM principles (public interest, avoid harm, honesty, privacy) into a release gate.</p>
+
+        <h3>Example 2 — Decision record that cites code principles</h3>
+        <pre><code>decision = {
+    "title": "Expand facial analysis to new market",
+    "acm_principles_considered": [
+        "1. Contribute to society and human well-being",
+        "2. Avoid harm",
+        "4. Be fair and take action not to discriminate",
+        "6. Respect privacy"
+    ],
+    "key_tensions": "Accuracy gains vs. higher error rates on some groups",
+    "mitigations": ["demographic performance monitoring", "human review path"],
+    "decision": "Limited pilot with mandatory fairness dashboard",
+    "owner": "ethics-review@example.com"
+}</code></pre>
+        <p class="code-caption">Makes the link between professional code and concrete decision explicit and auditable.</p>
+
+        <h3>Example 3 — Competence and continuous learning (professional responsibility)</h3>
+        <pre><code># Conceptual skill / risk alignment check
+def can_team_own(system):
+    required = system.required_competencies   # e.g., security, fairness, domain
+    available = team.current_competencies
+    gaps = required - available
+    if gaps and not training_plan_covers(gaps):
+        raise ProfessionalResponsibilityError(
+            "Team lacks demonstrated competence for this risk profile"
+        )
+    return True</code></pre>
+        <p class="code-caption">Reflects the professional duty to accept work only within (or while actively developing) competence.</p>
+      </section>
+
+      <section id="case" class="section">
+        <div class="section-header">
+          <div class="section-icon">🔍</div>
+          <h2>Case Study — Mapping a Dilemma to the Codes</h2>
+        </div>
+        <div class="card">
+          <p>
+            A team discovers that a production ranking model systematically disadvantages 
+            candidates from certain educational backgrounds, even after controlling for 
+            experience metrics. Business pressure favors keeping the model because overall 
+            “quality” metrics look strong.
+          </p>
+          <p><strong>Relevant ACM principles:</strong></p>
+          <ul style="margin:0.75rem 0 0 1.25rem;color:var(--text-secondary);">
+            <li>Contribute to society / human well-being</li>
+            <li>Avoid harm</li>
+            <li>Be fair and take action not to discriminate</li>
+            <li>Be honest and trustworthy (about what the model actually optimizes)</li>
+          </ul>
+          <p class="mt-2">
+            The Software Engineering Code’s “Public” and “Product” principles similarly 
+            emphasize that the public interest and product quality (including fairness as 
+            a quality attribute) take precedence over narrower employer metrics when they conflict.
+          </p>
+        </div>
+      </section>
+
+      <section id="scenario" class="section">
+        <div class="section-header">
+          <div class="section-icon">🏭</div>
+          <h2>Industrial Scenario</h2>
+        </div>
+        <div class="activity-card">
+          <h4>Scenario: Conflicting Instructions</h4>
+          <p>
+            Your manager asks you to disable a fairness monitoring dashboard before a 
+            customer demo because “it raises unnecessary questions.” The dashboard was 
+            added specifically to satisfy an internal ethics review that cited the ACM Code.
+          </p>
+          <p><strong>Questions:</strong></p>
+          <ul style="margin-left:1.25rem;color:var(--text-secondary);">
+            <li>Which code principles are in tension here?</li>
+            <li>What options do you have that remain consistent with professional obligations?</li>
+            <li>How would you document your reasoning?</li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="activity" class="section">
+        <div class="section-header">
+          <div class="section-icon">✅</div>
+          <h2>Knowledge Check</h2>
+        </div>
+        <div class="quiz-container" id="quiz-4"></div>
+      </section>
+
+      <section id="reflection" class="section">
+        <div class="section-header">
+          <div class="section-icon">🪞</div>
+          <h2>Reflection Questions</h2>
+        </div>
+        <div class="reflection-box">
+          <p><strong>1.</strong> Which ACM principle do you expect will be most frequently relevant in the work you hope to do? Why?</p>
+          <textarea data-reflection="l04-q1" placeholder="Write your thoughts here..."></textarea>
+        </div>
+        <div class="reflection-box">
+          <p><strong>2.</strong> Have you ever seen (or can you imagine) a situation where following a professional code would conflict with short-term employer incentives? How should a professional respond?</p>
+          <textarea data-reflection="l04-q2" placeholder="Write your thoughts here..."></textarea>
+        </div>
+        <div class="reflection-box">
+          <p><strong>3.</strong> How can organizations make codes more than wall posters — i.e., actually influence day-to-day decisions?</p>
+          <textarea data-reflection="l04-q3" placeholder="Write your thoughts here..."></textarea>
+        </div>
+      </section>
+
+      <section id="discussion" class="section">
+        <div class="section-header">
+          <div class="section-icon">💬</div>
+          <h2>Discussion Prompts</h2>
+        </div>
+        <div class="card">
+          <ol style="margin-left:1.25rem;color:var(--text-secondary);">
+            <li>Are professional codes primarily for individuals, for organizations, or both? What follows from your answer?</li>
+            <li>Should membership in ACM or IEEE carry stronger enforcement of the codes? What are the trade-offs?</li>
+            <li>How should the codes evolve to address generative AI and autonomous systems more explicitly?</li>
+          </ol>
+        </div>
+      </section>
+
+      <section id="assignment" class="section">
+        <div class="section-header">
+          <div class="section-icon">📝</div>
+          <h2>Assignment & Mini-Project</h2>
+        </div>
+        <div class="card">
+          <h3>Assignment 4.1 — Code Mapping Exercise</h3>
+          <p>
+            Take one real or realistic computing dilemma (from prior lectures or your own 
+            experience). Produce a short mapping document that:
+          </p>
+          <ul style="margin:0.75rem 0 1rem 1.25rem;color:var(--text-secondary);">
+            <li>Identifies at least four relevant ACM or SE Code principles</li>
+            <li>Explains how each principle applies</li>
+            <li>Notes any tensions among principles</li>
+            <li>States a recommended action and how you would document it</li>
+          </ul>
+        </div>
+        <div class="card mt-2">
+          <h3>Mini-Project — Personal Code Companion</h3>
+          <p>
+            Create a one-page “code companion” for yourself: the 5–7 principles you most 
+            want to keep visible in daily work, written in your own words, with one concrete 
+            question you will ask under each principle. Keep it for your portfolio and desk.
+          </p>
+        </div>
+      </section>
+
+      <section id="summary" class="section">
+        <div class="section-header">
+          <div class="section-icon">📌</div>
+          <h2>Summary</h2>
+        </div>
+        <ul style="margin-left:1.25rem;color:var(--text-secondary);">
+          <li>The ACM Code, IEEE Code, and SE Code express shared professional commitments to the public interest, harm avoidance, honesty, fairness, privacy, and competence.</li>
+          <li>Codes are most useful when treated as structured questions and mapped onto concrete artifacts (reviews, records, monitoring).</li>
+          <li>Tensions among principles and between codes and organizational incentives are normal; the professional task is to surface and reason about them.</li>
+          <li>Documentation of how codes were considered strengthens both accountability and organizational learning.</li>
+        </ul>
+      </section>
+
+      <section id="cheatsheet" class="section">
+        <div class="section-header">
+          <div class="section-icon">📋</div>
+          <h2>Cheat Sheet</h2>
+        </div>
+        <div class="cheatsheet">
+          <div class="cheatsheet-item"><strong>ACM core</strong><span>Public good • Avoid harm • Honesty • Fairness • Privacy • Confidentiality</span></div>
+          <div class="cheatsheet-item"><strong>IEEE emphasis</strong><span>Public safety/health/welfare • Honesty • Conflicts • Competence</span></div>
+          <div class="cheatsheet-item"><strong>SE Code</strong><span>Public • Client/Employer • Product • Judgment • Management • Profession • Colleagues • Self</span></div>
+          <div class="cheatsheet-item"><strong>Application habit</strong><span>Map principles → questions → artifacts → residual risk</span></div>
+          <div class="cheatsheet-item"><strong>Limit</strong><span>Codes guide; they do not replace judgment or legal compliance</span></div>
+        </div>
+      </section>
+
+      <section id="glossary" class="section">
+        <div class="section-header">
+          <div class="section-icon">📖</div>
+          <h2>Glossary</h2>
+        </div>
+        <dl>
+          <div class="glossary-term">
+            <dt>Professional code of ethics</dt>
+            <dd>A formal statement by a professional society of the values and duties expected of members.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Public interest</dt>
+            <dd>The well-being of the broader community affected by computing systems, prioritized over narrower private interests when they conflict.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Residual risk</dt>
+            <dd>Risk remaining after mitigations; responsible practice requires acknowledgment, ownership, and monitoring.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Competence (professional)</dt>
+            <dd>Having, or actively developing, the knowledge and skill required for the risk level of the work undertaken.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <section id="reading" class="section">
+        <div class="section-header">
+          <div class="section-icon">📚</div>
+          <h2>Further Reading</h2>
+        </div>
+        <ul style="margin-left:1.25rem;color:var(--text-secondary);">
+          <li>ACM Code of Ethics and Professional Conduct (2018) — full text and case analyses.</li>
+          <li>IEEE Code of Ethics.</li>
+          <li>Software Engineering Code of Ethics and Professional Practice (IEEE-CS/ACM, 1999).</li>
+          <li>Supporting materials and case studies published by ACM and IEEE.</li>
+        </ul>
+      </section>
+
+      <div class="flex justify-between flex-wrap gap-2 mt-3" style="margin-top:3rem;">
+        <a href="lecture-03.html" class="btn btn-outline">← Lecture 03</a>
+        <button class="btn btn-primary" id="mark-complete" data-lecture-id="04">Mark Lecture Complete</button>
+        <a href="lecture-05.html" class="btn btn-outline">Lecture 05 →</a>
+      </div>
+
+      <footer class="site-footer">
+        <p>Professional Practices in Computing — Lecture 04</p>
+        <p>Static educational resource • Suitable for university use 2026–2035</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    initQuiz('quiz-4', [
+      {
+        question: "Which ACM principle most directly requires attention to the broader impacts of systems on society and vulnerable groups?",
+        options: [
+          "Honor confidentiality",
+          "Contribute to society and to human well-being",
+          "Respect the work required to produce new ideas",
+          "Be honest and trustworthy only toward employers"
+        ],
+        correct: 1,
+        explanation: "The first general principle centers the public good and human well-being, including concern for those who are vulnerable."
+      },
+      {
+        question: "What is a practical way to make professional codes influence day-to-day engineering work?",
+        options: [
+          "Post them on the wall and assume people will absorb them",
+          "Map principles to concrete questions, review gates, decision records, and monitoring",
+          "Ignore them until a lawsuit occurs",
+          "Replace all technical reviews with ethics seminars"
+        ],
+        correct: 1,
+        explanation: "Codes become operational when translated into artifacts and process checkpoints that teams actually use."
+      },
+      {
+        question: "The Software Engineering Code of Ethics is particularly useful because it:",
+        options: [
+          "Is the only legally binding code worldwide",
+          "Organizes responsibilities by role areas (Public, Product, Judgment, etc.) relevant to software work",
+          "Applies only to safety-critical medical devices",
+          "Replaces the need for the ACM Code"
+        ],
+        correct: 1,
+        explanation: "Its structure by principle areas (Public, Client and Employer, Product, etc.) makes it especially actionable for software practitioners."
+      },
+      {
+        question: "When a professional code principle conflicts with a short-term business metric, the codes generally prioritize:",
+        options: [
+          "The business metric",
+          "The public interest and avoidance of harm",
+          "Whatever the most senior manager prefers",
+          "The option that is easiest to implement"
+        ],
+        correct: 1,
+        explanation: "Across ACM, IEEE, and the SE Code, the public interest and harm avoidance are foundational and take precedence in conflict."
+      }
+    ]);
+  </script>
+</body>
+</html>
