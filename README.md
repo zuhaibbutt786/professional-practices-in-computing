@@ -19,19 +19,17 @@
 
 ## Live Site
 
-After enabling GitHub Pages (Settings → Pages → Deploy from branch `main` / root):
-
 `https://zuhaibbutt786.github.io/professional-practices-in-computing/`
 
-## Current Status
+(Enable GitHub Pages: Settings → Pages → Deploy from branch `main` / root)
+
+## Current Status (2026-08-08)
 
 - ✅ Site skeleton (Home, navigation, theme, progress, sidebar)
-- ✅ **Lecture 01** fully complete (objectives, content, case, quiz, reflection, assignment, glossary, cheat sheet)
-- ⏳ Lectures 02–30 will be added one complete module at a time
+- ✅ **Lectures 01–05** full production modules available locally; syncing to this repo
+- ⏳ Lectures 06–30 will be added one complete module at a time
 
 ## Local Development
-
-Just open `index.html` in a browser or use any static server:
 
 ```bash
 npx serve .
@@ -46,4 +44,4 @@ Educational use. Content is original synthesis for teaching. Primary sources sho
 ---
 
 Designed for university teaching 2026–2035.  
-Technical excellence + professional judgment.  
+Technical excellence + professional judgment.
