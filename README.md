@@ -15,35 +15,12 @@
 - 30-lecture structure  
 - Progress tracking (localStorage)  
 - Interactive quizzes, reflection prompts, activities  
-- Responsive, modern, Apple/Microsoft-Learn inspired design  
+- Responsive, modern, Apple/Microsoft-inspired design  
 
-## Live Site
+## Deploy
 
-After enabling GitHub Pages (Settings → Pages → Deploy from branch `main` / root):
+Enable GitHub Pages from the `main` branch (root).
 
-`https://zuhaibbutt786.github.io/professional-practices-in-computing/`
+## Course Status
 
-## Current Status
-
-- ✅ Site skeleton (Home, navigation, theme, progress, sidebar)
-- ✅ **Lecture 01** fully complete (objectives, content, case, quiz, reflection, assignment, glossary, cheat sheet)
-- ⏳ Lectures 02–30 will be added one complete module at a time
-
-## Local Development
-
-Just open `index.html` in a browser or use any static server:
-
-```bash
-npx serve .
-# or
-python -m http.server 8000
-```
-
-## License
-
-Educational use. Content is original synthesis for teaching. Primary sources should be consulted for formal citation.
-
----
-
-Designed for university teaching 2026–2035.  
-Technical excellence + professional judgment.  
+Lectures 01–05 are complete and production-ready.
