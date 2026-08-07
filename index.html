@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Practices in Computing — Industry-standard university course for CS, Software Engineering, Data Science, AI, and Cybersecurity students. Ethics, responsibility, AI governance, and professional skills." />
+  <title>Professional Practices in Computing | Free University Course</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>PPC</text></svg>" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="index.html" class="navbar-brand">
+      <div class="logo">PPC</div>
+      <span>Professional Practices</span>
+    </a>
+    <div class="nav-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="search-input" placeholder="Search lectures..." aria-label="Search" />
+      </div>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme" title="Toggle dark/light mode"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu" title="Toggle sidebar">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Course</div>
+      <a href="index.html" class="sidebar-link active"><span class="num">⌂</span> Home</a>
+      <a href="#about" class="sidebar-link"><span class="num">ℹ</span> About</a>
+      <a href="#outcomes" class="sidebar-link"><span class="num">◎</span> Outcomes</a>
+      <a href="#lectures" class="sidebar-link"><span class="num">☰</span> All Lectures</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Lectures</div>
+      <a href="lectures/lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Intro to Professional Practices</a>
+      <a href="lectures/lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lectures/lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lectures/lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lectures/lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Progress</div>
+      <div style="padding:0 0.75rem;">
+        <div class="progress-bar-container"><div class="progress-bar" data-progress-bar style="width:0%"></div></div>
+        <p style="font-size:0.8rem;color:var(--text-muted);margin:0.4rem 0 0;" data-progress-text>0 / 30 lectures (0%)</p>
+      </div>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <section class="hero">
+      <h1>Professional Practices in Computing</h1>
+      <p>An industry-standard, interdisciplinary course that prepares future computing professionals for the ethical, legal, social, and professional challenges of technology.</p>
+      <a href="lectures/lecture-01.html" class="btn btn-primary">Start Lecture 01</a>
+    </section>
+
+    <section id="about" class="content">
+      <div class="section-header"><div class="section-icon">ℹ</div><h2>About the Course</h2></div>
+      <p>Professional Practices in Computing is designed for undergraduate students in Computer Science, Software Engineering, Data Science, Artificial Intelligence, and Cybersecurity. It integrates contemporary issues from AI ethics, responsible data science, cybersecurity ethics, open source, entrepreneurship, and digital society.</p>
+      <p>Unlike traditional courses focused only on software engineering ethics, this course emphasizes professional thinking, ethical reasoning, communication, leadership, and lifelong learning — independent of any specific programming language or tool.</p>
+    </section>
+
+    <section id="outcomes" class="content">
+      <div class="section-header"><div class="section-icon">◎</div><h2>Learning Outcomes</h2></div>
+      <ul class="objectives-list">
+        <li>Apply professional codes of ethics (ACM, IEEE) to real-world computing dilemmas</li>
+        <li>Analyze privacy, security, and AI ethics issues from multiple stakeholder perspectives</li>
+        <li>Communicate technical and ethical reasoning clearly in writing and presentations</li>
+        <li>Demonstrate teamwork, leadership, and conflict-resolution skills in project contexts</li>
+        <li>Design inclusive, accessible, and sustainable computing solutions</li>
+        <li>Build a professional identity, brand, and continuous learning plan</li>
+      </ul>
+    </section>
+
+    <section id="lectures" style="padding-bottom:3rem;">
+      <div class="section-header" style="max-width:860px;margin:0 auto 1.5rem;padding:0 1.5rem;">
+        <div class="section-icon">☰</div>
+        <h2>30 Lectures</h2>
+      </div>
+      <div class="lecture-grid" style="max-width:1100px;margin:0 auto;padding:0 1.5rem;">
+        <a href="lectures/lecture-01.html" class="lecture-card">
+          <span class="num">Lecture 01</span>
+          <h3>Introduction to Professional Practices</h3>
+          <p>Why professionalism matters, course map, and the professional identity of a computing graduate.</p>
+        </a>
+        <div class="lecture-card" style="opacity:0.7;">
+          <span class="num">Lecture 02</span>
+          <h3>History of the Profession & Codes</h3>
+          <p>Coming next — evolution of computing as a profession and early ethical codes.</p>
+        </div>
+        <div class="lecture-card" style="opacity:0.7;">
+          <span class="num">Lecture 03</span>
+          <h3>Ethical Theories & Frameworks</h3>
+          <p>Utilitarianism, deontology, virtue ethics applied to technology decisions.</p>
+        </div>
+        <div class="lecture-card" style="opacity:0.7;">
+          <span class="num">Lecture 04</span>
+          <h3>ACM & IEEE Codes Deep Dive</h3>
+          <p>Principles, application, and mapping real cases to the codes.</p>
+        </div>
+        <div class="lecture-card" style="opacity:0.7;">
+          <span class="num">Lecture 05</span>
+          <h3>Responsibility & Accountability</h3>
+          <p>Duty of care, liability, and the ethics of speaking up.</p>
+        </div>
+        <div class="lecture-card" style="opacity:0.7;">
+          <span class="num">Lecture 06–30</span>
+          <h3>Privacy → Capstone</h3>
+          <p>Full modules released progressively. Skeleton navigation is ready.</p>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <p><strong>Professional Practices in Computing</strong> — Free educational resource</p>
+      <p>Designed for university teaching 2026–2035 • Static site • GitHub Pages ready</p>
+      <p style="margin-top:0.75rem;">
+        <a href="https://github.com/zuhaibbutt786/professional-practices-in-computing" target="_blank" rel="noopener">View on GitHub</a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
