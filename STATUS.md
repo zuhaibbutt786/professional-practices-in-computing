@@ -10,7 +10,7 @@ https://zuhaibbutt786.github.io/professional-practices-in-computing/
 - index.html (full home + navigation to Lectures 01–05)
 - css/styles.css (full glassmorphism dark/light)
 - js/main.js (theme, sidebar, progress, quiz engine, search, reflections)
-- lectures/lecture-01.html — Introduction to Professional Practices (full ~32k)
+- lectures/lecture-01.html — Introduction to Professional Practices (full)
 - lectures/lecture-02.html — History of the Profession & Codes (full)
 - lectures/lecture-03.html — Ethical Theories & Frameworks (full)
 - lectures/lecture-04.html — ACM & IEEE Codes Deep Dive (full)
