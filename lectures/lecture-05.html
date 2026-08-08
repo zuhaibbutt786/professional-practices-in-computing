@@ -3,105 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lecture 05 — Responsibility & Whistleblowing | Professional Practices in Computing</title>
+  <meta name="description" content="Lecture 05: Professional Codes & Responsibility — Professional Practices in Computing" />
+  <title>Lecture 05 — Professional Codes & Responsibility | PPC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
-    <div class="nav-actions">
-      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
-      <button class="btn-icon" id="menu-toggle" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-    </div>
-  </nav>
-  <div class="overlay" id="overlay"></div>
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Course</div>
-      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Lectures 1–10</div>
-      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
-      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
-      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
-      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
-      <a href="lecture-05.html" class="sidebar-link active" data-lecture="05"><span class="num">05</span> Responsibility</a>
-    </div>
-  </aside>
-  <div class="main-wrapper">
-    <div class="content">
-      <div class="breadcrumbs"><a href="../index.html">Home</a> <span class="sep">/</span> <span>Lecture 05</span></div>
-      <header class="lecture-header">
-        <div class="lecture-badge">Lecture 05</div>
-        <h1>Professional Responsibility, Accountability & Whistleblowing</h1>
-        <p class="hero-sub">Duty of care, liability, escalation paths, and the ethics of speaking up.</p>
-        <div class="lecture-meta"><span>⏱ ~55 min</span><span>📚 Module 5 of 30</span></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">
+          <span class="logo-mark">PPC</span>
+          <span class="logo-text">Professional Practices</span>
+        </a>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">×</button>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <span class="nav-label">Course</span>
+          <a href="../index.html" class="nav-link">Home</a>
+        </div>
+        <div class="nav-section">
+          <span class="nav-label">Lectures</span>
+          <a href="lecture-01.html" class="nav-link">01 · Introduction</a>
+          <a href="lecture-02.html" class="nav-link">02 · Ethics Frameworks</a>
+          <a href="lecture-03.html" class="nav-link">03 · Privacy, Data & Surveillance</a>
+          <a href="lecture-04.html" class="nav-link">04 · IP & Open Source</a>
+          <a href="lecture-05.html" class="nav-link active">05 · Professional Codes</a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="progress-widget">
+          <span class="progress-label">Course Progress</span>
+          <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+          <span class="progress-text" id="progressText">0 / 5 lectures</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="topbar-title">Lecture 05</div>
+        <div class="topbar-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+        </div>
       </header>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">◎</div><h2>Learning Objectives</h2></div>
-        <ul class="objectives-list">
-          <li>Distinguish responsibility, accountability, and liability in professional contexts.</li>
-          <li>Describe duty of care in software and data systems.</li>
-          <li>Outline internal and external escalation options when serious risks are ignored.</li>
-          <li>Discuss ethical and practical dimensions of whistleblowing.</li>
-        </ul>
-      </section>
+      <main class="content">
+        <div class="breadcrumb"><a href="../index.html">Home</a> · Lecture 05</div>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">🛡️</div><h2>Responsibility vs Accountability</h2></div>
-        <p><strong>Responsibility</strong> is the obligation to act (or refrain) according to role and professional standards. <strong>Accountability</strong> is the obligation to answer for outcomes — to explain, justify, and accept consequences. In complex systems, many people share responsibility; clear accountability structures are essential so that “everyone’s job” does not become “no one’s job.”</p>
-        <div class="callout callout-warning">
-          <div class="callout-title">Diffusion of responsibility</div>
-          Large organizations and multi-vendor stacks can obscure who is answerable. Professionals should seek clarity on decision rights and escalation paths early.
-        </div>
-      </section>
+        <header class="lecture-header">
+          <div class="lecture-meta">Lecture 05 · Codes</div>
+          <h1>Professional Codes & Responsibility</h1>
+          <p class="section-lead">ACM and IEEE codes in depth; whistleblowing, accountability, and organizational ethics.</p>
+        </header>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">📢</div><h2>Speaking Up & Whistleblowing</h2></div>
-        <p>When internal channels fail to address serious risk (safety, privacy, fraud, discrimination), professionals may face a choice about external disclosure. Factors include:</p>
-        <ul>
-          <li>Severity and likelihood of harm</li>
-          <li>Whether internal escalation was attempted in good faith</li>
-          <li>Legal protections and risks in the relevant jurisdiction</li>
-          <li>Personal and career consequences</li>
-        </ul>
-        <p>Codes of ethics generally support raising concerns; they do not prescribe a single path. Document carefully, seek confidential advice when possible, and understand local law.</p>
-      </section>
+        <section class="prose">
+          <h2>Learning Objectives</h2>
+          <ul class="objectives">
+            <li>Summarize key principles of the ACM and IEEE codes of ethics.</li>
+            <li>Apply code principles to concrete workplace scenarios.</li>
+            <li>Explain when escalation and whistleblowing become professional duties.</li>
+            <li>Distinguish individual responsibility from organizational accountability.</li>
+          </ul>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">🏭</div><h2>Industrial Scenario</h2></div>
-        <p>You discover that a production model used in loan decisions has a documented fairness issue that was deprioritized for a release deadline. Your manager says the risk is “acceptable.” What steps would you take before considering external channels?</p>
-      </section>
+          <h2>Motivation</h2>
+          <p>Codes of ethics translate abstract ideals into shared expectations for a profession. They are not law, but they guide judgment, hiring, peer review, and public trust. Computing professionals are expected to know and use them.</p>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">📝</div><h2>Knowledge Check</h2></div>
-        <div class="quiz-container" id="quiz-05"></div>
-      </section>
+          <h2>ACM Code (high-level map)</h2>
+          <p>General ethical principles (contribute to society, avoid harm, be honest, be fair, respect privacy, honor confidentiality), professional responsibilities (high quality, maintain competence, respect laws, accept review, give thorough evaluations), and leadership principles (encourage acceptance of responsibilities, manage personnel and resources ethically, enhance quality of working life).</p>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">🪞</div><h2>Reflection</h2></div>
-        <div class="reflection-box">
-          <p>What organizational conditions make it easier or harder for engineers to raise safety or ethics concerns?</p>
-          <textarea data-reflection="l05" placeholder="Write your reflection..."></textarea>
-        </div>
-      </section>
+          <h2>IEEE Code (high-level map)</h2>
+          <p>Commitment to public safety, health, and welfare; honesty and realism in claims; rejection of bribery; technical competence; fair treatment of others; continuous improvement; and support for colleagues in ethical conduct.</p>
 
-      <div class="mt-3" style="display:flex;gap:1rem;flex-wrap:wrap;">
-        <button class="btn btn-primary" id="mark-complete" data-lecture-id="05">Mark Lecture Complete</button>
-        <a href="lecture-04.html" class="btn btn-outline">← Lecture 04</a>
-        <a href="../index.html" class="btn btn-outline">Back to Home</a>
-      </div>
-      <footer class="site-footer"><p>Professional Practices in Computing — Lecture 05</p></footer>
+          <div class="callout">
+            <strong>Use codes as tools:</strong> When stuck, quote a principle in a design review or incident postmortem. Shared language reduces personalization of conflict.
+          </div>
+
+          <h2>Whistleblowing & Escalation</h2>
+          <p>Professionals first use internal channels: manager, ethics office, legal, skip-level. Whistleblowing to external parties is a last resort when serious harm is likely and internal avenues fail or are corrupted. Document facts, protect evidence lawfully, and seek advice when possible.</p>
+
+          <h2>Industrial Scenario</h2>
+          <p>You discover that a safety-critical threshold was lowered to meet a launch date. Your manager says the risk is acceptable. The code of ethics you follow emphasizes public safety. Outline your next three professional steps.</p>
+
+          <h2>Knowledge Check</h2>
+          <div id="quiz-box" class="quiz-box glass"></div>
+
+          <h2>Reflection</h2>
+          <div class="reflection-prompt glass">
+            <h4>Reflection</h4>
+            <p>Which single principle from ACM or IEEE feels most relevant to the kind of work you want to do? Why?</p>
+            <textarea data-reflection="l05" rows="5" style="width:100%;padding:0.75rem;border-radius:10px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text);font-family:inherit;margin-top:0.5rem;"></textarea>
+          </div>
+
+          <h2>Assignment</h2>
+          <div class="callout">
+            Select three ACM or IEEE principles. For each, invent a short workplace vignette and state what a professional response would look like (400–600 words total).
+          </div>
+
+          <h2>Summary</h2>
+          <p>Codes make professional expectations explicit. Use them to guide daily decisions, escalate risk, and build cultures where speaking up is normal rather than heroic.</p>
+
+          <div class="nav-lecture">
+            <a href="lecture-04.html" class="btn btn-ghost">← Lecture 04</a>
+            <div>
+              <button class="btn btn-ghost" id="markComplete">Mark complete</button>
+              <a href="../index.html" class="btn btn-primary">Back to Home</a>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>Professional Practices in Computing · Lecture 05</p>
+        </footer>
+      </main>
     </div>
   </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
   <script src="../js/main.js"></script>
   <script>
-    initQuiz('quiz-05', [
-      { question: 'Accountability differs from responsibility in that accountability emphasizes:', options: ['Only writing code', 'Answering for outcomes and accepting consequences', 'Ignoring management', 'Maximizing speed'], correct: 1, explanation: 'Accountability is about being answerable for results.' },
-      { question: 'Before external whistleblowing, professionals are generally expected to:', options: ['Post immediately on social media', 'Attempt good-faith internal escalation when safe and feasible', 'Resign silently', 'Delete all evidence'], correct: 1, explanation: 'Internal channels first is the usual professional expectation when practicable.' }
+    initQuiz([
+      {
+        question: "Professional codes of ethics are best understood as:",
+        options: ["Binding criminal law", "Shared professional expectations that guide judgment and accountability", "Optional marketing text", "Replacement for technical standards"],
+        correct: 1,
+        explanation: "Codes guide the profession; they are not statutes but are taken seriously by peers and employers."
+      },
+      {
+        question: "A typical first step when you spot serious safety risk is:",
+        options: ["Post on social media immediately", "Use internal escalation channels with documented facts", "Ignore it if the manager disagrees", "Quit without notice only"],
+        correct: 1,
+        explanation: "Internal escalation with evidence is the normal professional path before external whistleblowing."
+      },
+      {
+        question: "ACM and IEEE codes both emphasize:",
+        options: ["Maximizing shareholder value above all", "Public welfare, honesty, and professional competence", "Avoiding all open-source software", "Never challenging management"],
+        correct: 1,
+        explanation: "Public interest, honesty, and competence are central themes."
+      }
     ]);
   </script>
 </body>
