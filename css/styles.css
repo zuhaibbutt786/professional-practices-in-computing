@@ -70,6 +70,7 @@ body {
   overflow-x: hidden;
 }
 
+/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.25;
@@ -86,6 +87,7 @@ p { margin-bottom: 1rem; color: var(--text-secondary); }
 a { color: var(--accent); text-decoration: none; transition: var(--transition); }
 a:hover { color: var(--accent-hover); }
 
+/* Glassmorphism Cards */
 .glass {
   background: var(--bg-glass);
   backdrop-filter: blur(16px);
@@ -103,6 +105,7 @@ a:hover { color: var(--accent-hover); }
   box-shadow: var(--shadow);
 }
 
+/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -186,6 +189,7 @@ a:hover { color: var(--accent-hover); }
   border-color: var(--accent);
 }
 
+/* Sidebar */
 .sidebar {
   position: fixed;
   top: var(--nav-height);
@@ -245,6 +249,7 @@ a:hover { color: var(--accent-hover); }
   min-width: 1.5rem;
 }
 
+/* Main content area */
 .main-wrapper {
   margin-left: var(--sidebar-width);
   margin-top: var(--nav-height);
@@ -252,6 +257,7 @@ a:hover { color: var(--accent-hover); }
   padding-bottom: 3rem;
 }
 
+/* Hero */
 .hero {
   text-align: center;
   padding: 3.5rem 1.5rem 2.5rem;
@@ -277,6 +283,7 @@ a:hover { color: var(--accent-hover); }
   margin: 0 auto 1.75rem;
 }
 
+/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -317,6 +324,12 @@ a:hover { color: var(--accent-hover); }
   color: var(--text-primary);
 }
 
+.btn-sm {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+}
+
+/* Progress */
 .progress-bar-container {
   height: 6px;
   background: var(--border);
@@ -331,6 +344,7 @@ a:hover { color: var(--accent-hover); }
   transition: width 0.4s ease;
 }
 
+/* Sections */
 .section-header {
   display: flex;
   align-items: center;
@@ -416,6 +430,7 @@ a:hover { color: var(--accent-hover); }
   margin: 0;
 }
 
+/* Callouts */
 .callout {
   border-radius: var(--radius-sm);
   padding: 1rem 1.25rem;
@@ -447,6 +462,7 @@ a:hover { color: var(--accent-hover); }
   border-bottom: 1px solid var(--border);
 }
 
+/* Quiz */
 .quiz-card {
   padding: 1.5rem;
 }
@@ -455,6 +471,12 @@ a:hover { color: var(--accent-hover); }
   font-size: 0.85rem;
   color: var(--text-muted);
   margin-bottom: 0.75rem;
+}
+
+.quiz-question {
+  font-weight: 600;
+  margin-bottom: 1rem;
+  font-size: 1.05rem;
 }
 
 .quiz-option {
@@ -502,6 +524,7 @@ a:hover { color: var(--accent-hover); }
   color: var(--danger);
 }
 
+/* Footer */
 .site-footer {
   text-align: center;
   padding: 2.5rem 1.5rem;
@@ -512,6 +535,7 @@ a:hover { color: var(--accent-hover); }
 
 .site-footer a { color: var(--accent); }
 
+/* Overlay for mobile sidebar */
 .overlay {
   display: none;
   position: fixed;
@@ -522,6 +546,7 @@ a:hover { color: var(--accent-hover); }
 
 .overlay.show { display: block; }
 
+/* Responsive */
 @media (max-width: 900px) {
   .sidebar {
     transform: translateX(-100%);
@@ -549,13 +574,17 @@ a:hover { color: var(--accent-hover); }
   }
 }
 
+/* Utilities */
 .flex { display: flex; }
 .gap-2 { gap: 0.75rem; }
 .justify-between { justify-content: space-between; }
 .flex-wrap { flex-wrap: wrap; }
+.mt-2 { margin-top: 0.75rem; }
 .mt-3 { margin-top: 1rem; }
+.text-center { text-align: center; }
 .text-muted { color: var(--text-muted); }
 
+/* Print */
 @media print {
   .navbar, .sidebar, .btn-icon, .nav-actions { display: none !important; }
   .main-wrapper { margin: 0 !important; }
