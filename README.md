@@ -1,27 +1,50 @@
 # Professional Practices in Computing
 
-Modern, interdisciplinary course website for undergraduate students in Computer Science, Software Engineering, Data Science, Artificial Intelligence, and Cyber Security.
+**Industry-standard university course website** for undergraduate students in:
 
-**Live site:** https://zuhaibbutt786.github.io/professional-practices-in-computing/
+- Computer Science  
+- Software Engineering  
+- Data Science  
+- Artificial Intelligence  
+- Cyber Security  
+- Information Technology
 
-## Features
+## Live Site
 
-- Dark / Light mode with glassmorphism UI
-- Responsive sidebar navigation
-- Progress tracking (localStorage)
-- Quiz engine & knowledge checks
-- Search
-- Fully static — works on GitHub Pages
+**https://zuhaibbutt786.github.io/professional-practices-in-computing/**
+
+## Course Overview
+
+Professional Practices in Computing prepares future computing professionals to navigate the ethical, legal, social, organizational, and professional challenges of the rapidly evolving technology landscape.
+
+The course integrates contemporary issues from AI, Data Science, Cybersecurity, Software Engineering, Cloud, Open Source, Entrepreneurship, and Digital Society — emphasizing ethical reasoning, critical thinking, communication, leadership, teamwork, lifelong learning, sustainability, responsible AI, privacy, IP, and global software development.
+
+## Tech Stack
+
+- Static HTML / CSS / JavaScript
+- Glassmorphism UI with dark & light modes
+- Progress tracking, search, quizzes, interactive cards
+- Fully client-side (works on GitHub Pages)
 
 ## Structure
 
-- `index.html` — Home
-- `css/styles.css` — Glassmorphism theme
-- `js/main.js` — Theme, sidebar, progress, quiz, search
-- `lectures/` — Weekly modules (Lecture 01–05 and beyond)
+| Path | Description |
+|------|-------------|
+| `index.html` | Home, modules overview, progress |
+| `css/styles.css` | Glassmorphism theme system |
+| `js/main.js` | Theme, sidebar, progress, search, quizzes |
+| `lectures/` | Full lecture modules 01–05 |
 
-## Tech
+## Local Development
 
-HTML · CSS · Bootstrap · Vanilla JS · Mermaid · Chart.js · Prism.js
+Open `index.html` in a browser or serve with any static server:
 
-No backend. No login. Open educational resource.
+```bash
+npx serve .
+# or
+python -m http.server 8000
+```
+
+## License
+
+Educational use. Content original; inspired by ACM/IEEE guidelines and leading professional-practice literature.
