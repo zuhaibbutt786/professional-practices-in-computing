@@ -29,21 +29,22 @@ After enabling GitHub Pages (Settings → Pages → Deploy from branch `main` / 
 - ✅ **Lectures 01–05** fully complete (objectives, content, cases, quizzes, reflection, assignments, glossary, cheat sheets)
 - ⏳ Lectures 06–30 will be added one complete module at a time
 
-## Local Development
+## Structure
 
-Just open `index.html` in a browser or use any static server:
-
-```bash
-npx serve .
-# or
-python -m http.server 8000
 ```
+index.html
+css/styles.css
+js/main.js
+lectures/
+  lecture-01.html … lecture-05.html (and more later)
+README.md
+STATUS.md
+```
+
+## Local Preview
+
+Open `index.html` in a browser or use any static server.
 
 ## License
 
-Educational use. Content is original synthesis for teaching. Primary sources should be consulted for formal citation.
-
----
-
-Designed for university teaching 2026–2035.  
-Technical excellence + professional judgment.  
+Course content is original educational material. References to ACM/IEEE codes and public frameworks are cited for academic use.
