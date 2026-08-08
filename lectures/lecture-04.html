@@ -3,148 +3,127 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 04: Intellectual Property & Open Source — Professional Practices in Computing" />
-  <title>Lecture 04 — Intellectual Property & Open Source | PPC</title>
+  <meta name="description" content="Lecture 04: Responsible AI and Algorithmic Systems — fairness, accountability, transparency, risk management, and professional duties in AI and data-driven systems." />
+  <title>Lecture 04 · AI & Responsible Systems | Professional Practices in Computing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <div class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <a href="../index.html" class="logo">
-          <span class="logo-mark">PPC</span>
-          <span class="logo-text">Professional Practices</span>
-        </a>
-        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">×</button>
-      </div>
-      <nav class="sidebar-nav">
-        <div class="nav-section">
-          <span class="nav-label">Course</span>
-          <a href="../index.html" class="nav-link">Home</a>
-        </div>
-        <div class="nav-section">
-          <span class="nav-label">Lectures</span>
-          <a href="lecture-01.html" class="nav-link">01 · Introduction</a>
-          <a href="lecture-02.html" class="nav-link">02 · Ethics Frameworks</a>
-          <a href="lecture-03.html" class="nav-link">03 · Privacy, Data & Surveillance</a>
-          <a href="lecture-04.html" class="nav-link active">04 · IP & Open Source</a>
-          <a href="lecture-05.html" class="nav-link">05 · Professional Codes</a>
-        </div>
-      </nav>
-      <div class="sidebar-footer">
-        <div class="progress-widget">
-          <span class="progress-label">Course Progress</span>
-          <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
-          <span class="progress-text" id="progressText">0 / 5 lectures</span>
-        </div>
-      </div>
-    </aside>
-
-    <div class="main-wrap">
-      <header class="topbar">
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-        <div class="topbar-title">Lecture 04</div>
-        <div class="topbar-actions">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
-        </div>
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
+    <div class="nav-actions">
+      <div class="search-box"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="search" id="site-search" placeholder="Search lectures…" aria-label="Search" /></div>
+      <div class="progress-wrap"><span id="progress-text">0%</span><div class="progress-bar-bg"><div id="progress-bar"></div></div></div>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"><svg class="icon-sun" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="btn-icon" id="sidebar-toggle" aria-label="Toggle sidebar"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+    </div>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section"><div class="sidebar-title">Course</div><a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a></div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Lectures</div>
+      <a href="lecture-01.html" class="sidebar-link"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link"><span class="num">02</span> Ethics & Responsibility</a>
+      <a href="lecture-03.html" class="sidebar-link"><span class="num">03</span> Privacy & Data</a>
+      <a href="lecture-04.html" class="sidebar-link active"><span class="num">04</span> AI & Responsible Systems</a>
+      <a href="lecture-05.html" class="sidebar-link"><span class="num">05</span> IP, Licensing & Open Source</a>
+    </div>
+  </aside>
+  <div class="main-wrapper" id="main-wrapper">
+    <main class="content">
+      <nav class="breadcrumbs"><a href="../index.html">Home</a><span class="sep">/</span><span>Lecture 04</span></nav>
+      <header class="lecture-header">
+        <span class="lecture-badge">Module 04 · AI Ethics</span>
+        <h1>Responsible AI & Algorithmic Systems</h1>
+        <p class="hero-lead">Fairness, accountability, transparency, risk management, and the professional obligations of those who design, train, deploy, and oversee AI and data-driven systems.</p>
+        <div class="lecture-meta"><span>⏱ ~90–120 min</span><span>📚 Principles + governance</span><span>🎯 Responsible AI</span></div>
       </header>
 
-      <main class="content">
-        <div class="breadcrumb"><a href="../index.html">Home</a> · Lecture 04</div>
+      <section class="section" id="objectives">
+        <div class="section-header"><div class="section-icon">🎯</div><h2>Learning Objectives</h2></div>
+        <ul class="objectives-list">
+          <li>Articulate core principles of responsible AI (fairness, accountability, transparency, safety, human oversight).</li>
+          <li>Identify common sources of bias and harm in data and models.</li>
+          <li>Apply high-level risk-management thinking to AI systems (context, impact, monitoring).</li>
+          <li>Connect professional codes and emerging frameworks (e.g., NIST AI RMF concepts, OECD principles) to daily practice.</li>
+          <li>Discuss governance roles: who decides objectives, who is accountable when systems fail.</li>
+        </ul>
+      </section>
 
-        <header class="lecture-header">
-          <div class="lecture-meta">Lecture 04 · IP</div>
-          <h1>Intellectual Property & Open Source</h1>
-          <p class="section-lead">Copyright, patents, trade secrets, licenses, FOSS culture, and professional obligations around IP.</p>
-        </header>
+      <section class="section" id="why">
+        <div class="section-header"><div class="section-icon">💡</div><h2>Why Responsible AI</h2></div>
+        <p>AI systems encode objectives, data histories, and design choices that affect people’s opportunities, safety, and rights. Failures are not only technical; they are often failures of problem framing, evaluation, deployment context, and accountability. Professional practice requires treating these as first-class concerns throughout the lifecycle.</p>
+      </section>
 
-        <section class="prose">
-          <h2>Learning Objectives</h2>
-          <ul class="objectives">
-            <li>Distinguish copyright, patents, trademarks, and trade secrets at a conceptual level.</li>
-            <li>Explain why software licenses matter for reuse and distribution.</li>
-            <li>Describe professional duties when using third-party and open-source code.</li>
-            <li>Recognize common license families (permissive vs. copyleft) without treating this as legal advice.</li>
-          </ul>
+      <section class="section" id="principles">
+        <div class="section-header"><div class="section-icon">📐</div><h2>Key Principles</h2></div>
+        <ul>
+          <li><strong>Fairness / non-discrimination</strong> — avoid unjustified disparate impacts; examine metrics and group outcomes carefully.</li>
+          <li><strong>Accountability</strong> — clear ownership of decisions about objectives, data, and deployment; ability to explain and remedy.</li>
+          <li><strong>Transparency & explainability</strong> — appropriate disclosure of purpose, limitations, and behavior to users and overseers.</li>
+          <li><strong>Safety & robustness</strong> — design and test for failure modes; monitor in production.</li>
+          <li><strong>Human oversight</strong> — meaningful human control where stakes are high.</li>
+          <li><strong>Privacy & data governance</strong> — respect data-protection principles in training and inference.</li>
+        </ul>
+      </section>
 
-          <h2>Motivation</h2>
-          <p>Almost every modern product depends on other people's code, data, and designs. Ignoring IP rules creates legal risk, breaks community trust, and can destroy careers. Understanding licenses is part of professional competence.</p>
+      <section class="section" id="lifecycle">
+        <div class="section-header"><div class="section-icon">🔄</div><h2>Lifecycle View</h2></div>
+        <p>Problem definition → data collection & labeling → model development & evaluation → deployment → monitoring & update → decommissioning. Ethical and professional risks appear at every stage. Evaluation must include performance on relevant subgroups and in realistic operating conditions, not only average metrics on a test set.</p>
+      </section>
 
-          <h2>Core Concepts</h2>
-          <p><strong>Copyright</strong> protects original expression (including source code) automatically in many jurisdictions.</p>
-          <p><strong>Patents</strong> protect inventions that meet criteria of novelty and non-obviousness; software patent practice varies by region.</p>
-          <p><strong>Trade secrets</strong> protect confidential business information that has economic value from secrecy.</p>
-          <p><strong>Licenses</strong> grant permissions under conditions. Open-source licenses grant broad rights if conditions are met.</p>
+      <section class="section" id="cases">
+        <div class="section-header"><div class="section-icon">🔍</div><h2>Illustrative Cases</h2></div>
+        <p>Hiring and lending algorithms that reproduced historical bias. Facial recognition with uneven error rates across demographic groups. Content recommendation systems optimizing engagement at the cost of other social goods. Healthcare models trained on non-representative data. Each case shows that “the model was accurate on average” is not a complete professional defense.</p>
+      </section>
 
-          <div class="callout">
-            <strong>Professional rule of thumb:</strong> Never copy code into a product without knowing the license. Document provenance. Prefer approved license lists when your organization maintains them.
+      <section class="section" id="quiz">
+        <div class="section-header"><div class="section-icon">✅</div><h2>Knowledge Check</h2></div>
+        <div class="quiz-container" data-quiz="lec04">
+          <div class="quiz-question">Responsible AI practice emphasizes:</div>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Maximizing model accuracy on a single held-out test set and shipping.</div>
+            <div class="quiz-option" data-correct="true">Considering fairness, accountability, transparency, safety, and context throughout the system lifecycle, with clear ownership of decisions.</div>
+            <div class="quiz-option" data-correct="false">Avoiding any use of machine learning because of risk.</div>
+            <div class="quiz-option" data-correct="false">Relying solely on post-hoc explanations after harm occurs.</div>
           </div>
+          <div class="quiz-feedback"></div>
+        </div>
+      </section>
 
-          <h2>Open Source Culture</h2>
-          <p>Open source is both a licensing model and a social practice of collaboration, review, and shared maintenance. Professional contribution includes respecting attribution, reporting vulnerabilities responsibly, and not treating community projects as free labor without reciprocity.</p>
+      <section class="section" id="summary">
+        <div class="section-header"><div class="section-icon">📋</div><h2>Summary</h2></div>
+        <ul>
+          <li>AI systems require professional attention to fairness, accountability, transparency, and safety.</li>
+          <li>Risk depends on context and impact; high-stakes domains demand stronger oversight and evidence.</li>
+          <li>Governance and documentation are part of engineering work, not optional extras.</li>
+        </ul>
+      </section>
 
-          <h2>Industrial Scenario</h2>
-          <p>A teammate pastes a Stack Overflow snippet and an unlicensed GitHub gist into production. The product is about to ship. What is your professional response?</p>
-
-          <h2>Knowledge Check</h2>
-          <div id="quiz-box" class="quiz-box glass"></div>
-
-          <h2>Reflection</h2>
-          <div class="reflection-prompt glass">
-            <h4>Reflection</h4>
-            <p>Have you ever reused code without checking its license? What process would you put in place for your next team project?</p>
-            <textarea data-reflection="l04" rows="5" style="width:100%;padding:0.75rem;border-radius:10px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text);font-family:inherit;margin-top:0.5rem;"></textarea>
-          </div>
-
-          <h2>Assignment</h2>
-          <div class="callout">
-            Compare one permissive license (e.g., MIT) and one copyleft license (e.g., GPL) in 250–400 words: permissions, conditions, and implications for a commercial SaaS product.
-          </div>
-
-          <h2>Summary</h2>
-          <p>IP literacy is professional hygiene. Know what you use, under which terms, and how attribution and distribution conditions bind your product and your team.</p>
-
-          <div class="nav-lecture">
-            <a href="lecture-03.html" class="btn btn-ghost">← Lecture 03</a>
-            <div>
-              <button class="btn btn-ghost" id="markComplete">Mark complete</button>
-              <a href="lecture-05.html" class="btn btn-primary">Next: Lecture 05 →</a>
-            </div>
-          </div>
-        </section>
-
-        <footer class="site-footer">
-          <p>Professional Practices in Computing · Lecture 04</p>
-        </footer>
-      </main>
-    </div>
+      <section class="section">
+        <p><a href="lecture-03.html" class="btn btn-ghost">← Previous</a> <a href="lecture-05.html" class="btn btn-primary">Next: IP, Licensing & Open Source →</a></p>
+      </section>
+      <footer class="footer">Professional Practices in Computing · Lecture 04</footer>
+    </main>
   </div>
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
   <script src="../js/main.js"></script>
   <script>
-    initQuiz([
-      {
-        question: "Why do software licenses matter professionally?",
-        options: ["They only affect academics", "They define legal permissions and conditions for reuse and distribution", "They replace the need for testing", "They guarantee code quality"],
-        correct: 1,
-        explanation: "Licenses set the rules under which code may be used, modified, and shared."
-      },
-      {
-        question: "A professional response to unknown-license code in a product is:",
-        options: ["Ship and hope", "Remove or replace it until provenance and license are clear", "Assume public code is free of restrictions", "Only worry if a lawyer emails"],
-        correct: 1,
-        explanation: "Unknown license = unknown risk; professionals escalate or remediate before ship."
-      },
-      {
-        question: "Copyleft licenses typically require:",
-        options: ["No attribution", "That derivative works be distributed under compatible terms", "Payment to the original author", "Closed source only"],
-        correct: 1,
-        explanation: "Copyleft aims to keep derivatives open under related terms."
-      }
-    ]);
+    document.querySelectorAll('[data-quiz="lec04"] .quiz-option').forEach(opt => {
+      opt.addEventListener('click', function() {
+        const parent = this.closest('.quiz-options');
+        if (parent.dataset.answered) return;
+        parent.dataset.answered = '1';
+        this.classList.add('selected');
+        const correct = this.dataset.correct === 'true';
+        this.classList.add(correct ? 'correct' : 'incorrect');
+        const feedback = parent.nextElementSibling;
+        if (feedback) { feedback.classList.add('show', correct ? 'correct' : 'incorrect'); feedback.textContent = correct ? 'Correct.' : 'Review the principles section.'; }
+        if (!correct) parent.querySelector('[data-correct="true"]')?.classList.add('correct');
+      });
+    });
   </script>
 </body>
 </html>
