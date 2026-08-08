@@ -69,84 +69,90 @@
 
   function getProgress() {
     try {
-      return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '[]');
+      return JSON.parse(localStorage.getItem(PROGRESS_KEY)) || {};
     } catch {
-      return [];
+      return {};
     }
   }
 
-  function saveProgress(arr) {
-    localStorage.setItem(PROGRESS_KEY, JSON.stringify(arr));
+  function saveProgress(data) {
+    localStorage.setItem(PROGRESS_KEY, JSON.stringify(data));
+  }
+
+  function markLectureComplete(id) {
+    const p = getProgress();
+    p[id] = true;
+    saveProgress(p);
     updateProgressUI();
   }
 
-  function markLecture(id) {
-    const arr = getProgress();
-    const sid = String(id).padStart(2, '0');
-    if (!arr.includes(sid) && !arr.includes(String(id))) {
-      arr.push(sid);
-      saveProgress(arr);
-    }
-  }
-
   function updateProgressUI() {
-    const arr = getProgress();
-    const TOTAL = 30;
-    const pct = Math.round((arr.length / TOTAL) * 100);
+    const p = getProgress();
+    const total = 30;
+    const done = Object.keys(p).filter(k => p[k]).length;
+    const pct = Math.round((done / total) * 100);
+
     document.querySelectorAll('[data-progress-bar]').forEach(el => {
       el.style.width = pct + '%';
     });
     document.querySelectorAll('[data-progress-text]').forEach(el => {
-      el.textContent = arr.length + ' / ' + TOTAL + ' lectures (' + pct + '%)';
+      el.textContent = `${done} / ${total} lectures (${pct}%)`;
     });
-    // Mark completed links in sidebar
+
+    // Mark sidebar items
     document.querySelectorAll('.sidebar-link[data-lecture]').forEach(link => {
-      const lid = link.getAttribute('data-lecture');
-      if (arr.includes(lid) || arr.includes(String(parseInt(lid, 10)))) {
+      const id = link.getAttribute('data-lecture');
+      if (p[id]) {
         link.classList.add('completed');
+        const num = link.querySelector('.num');
+        if (num) num.innerHTML = '✓';
       }
     });
   }
 
-  // Auto-mark current lecture if on a lecture page
-  const match = location.pathname.match(/lecture-(\d+)/) || location.href.match(/lecture-(\d+)/);
-  if (match) {
-    markLecture(match[1]);
-  }
+  // Complete button
+  document.getElementById('mark-complete')?.addEventListener('click', function () {
+    const id = this.getAttribute('data-lecture-id');
+    if (id) {
+      markLectureComplete(id);
+      this.innerHTML = '✓ Completed';
+      this.disabled = true;
+      this.classList.add('btn-outline');
+      this.classList.remove('btn-primary');
+    }
+  });
+
   updateProgressUI();
 
-  // Expose for lecture pages
-  window.PPC = window.PPC || {};
-  window.PPC.markLecture = markLecture;
-  window.PPC.getProgress = getProgress;
-
   // ---------- Quiz Engine ----------
-  window.PPC.initQuiz = function (questions) {
+  window.initQuiz = function (containerId, questions) {
+    const container = document.getElementById(containerId);
+    if (!container || !questions?.length) return;
+
     let current = 0;
     let score = 0;
-    const container = document.getElementById('quiz-container');
-    if (!container || !questions || !questions.length) return;
 
     function render() {
       if (current >= questions.length) {
         container.innerHTML = `
-          <div class="quiz-result callout callout-success">
+          <div class="text-center">
             <h3>Quiz Complete</h3>
-            <p><strong>Score: ${score} / ${questions.length}</strong></p>
-            <p>${score === questions.length ? 'Excellent work!' : score >= questions.length * 0.7 ? 'Good job — review the explanations.' : 'Review the lecture and try again.'}</p>
-            <button class="btn btn-primary" onclick="location.reload()">Retry</button>
+            <p>You scored <strong>${score}</strong> out of <strong>${questions.length}</strong></p>
+            <button class="btn btn-primary mt-2" onclick="location.reload()">Retry</button>
           </div>`;
         return;
       }
+
       const q = questions[current];
       container.innerHTML = `
-        <div class="quiz-card glass">
-          <div class="quiz-meta">Question ${current + 1} of ${questions.length}</div>
-          <h4 class="quiz-question">${q.question}</h4>
-          <div class="quiz-options" id="quiz-opts"></div>
-          <div class="quiz-feedback" id="quiz-fb"></div>
-          <button class="btn btn-secondary" id="quiz-next" style="display:none;margin-top:1rem">Next</button>
+        <div class="quiz-question">${current + 1}. ${q.question}</div>
+        <div class="quiz-options" id="quiz-opts"></div>
+        <div class="quiz-feedback" id="quiz-fb"></div>
+        <div class="mt-2" style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:0.85rem;color:var(--text-muted);">${current + 1} / ${questions.length}</span>
+          <button class="btn btn-primary btn-sm" id="quiz-next" style="display:none;">Next</button>
         </div>`;
+
       const opts = document.getElementById('quiz-opts');
       q.options.forEach((opt, i) => {
         const div = document.createElement('div');
@@ -186,6 +192,7 @@
   const searchInput = document.getElementById('search-input');
   searchInput?.addEventListener('input', function () {
     const q = this.value.toLowerCase().trim();
+    // Basic: highlight or filter lecture cards if on home
     document.querySelectorAll('.lecture-card').forEach(card => {
       const text = card.textContent.toLowerCase();
       card.style.display = !q || text.includes(q) ? '' : 'none';
