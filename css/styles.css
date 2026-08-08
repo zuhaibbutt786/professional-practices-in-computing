@@ -70,7 +70,6 @@ body {
   overflow-x: hidden;
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.25;
@@ -87,7 +86,6 @@ p { margin-bottom: 1rem; color: var(--text-secondary); }
 a { color: var(--accent); text-decoration: none; transition: var(--transition); }
 a:hover { color: var(--accent-hover); }
 
-/* Glassmorphism Cards */
 .glass {
   background: var(--bg-glass);
   backdrop-filter: blur(16px);
@@ -105,7 +103,6 @@ a:hover { color: var(--accent-hover); }
   box-shadow: var(--shadow);
 }
 
-/* Navbar */
 .navbar {
   position: fixed;
   top: 0;
@@ -189,7 +186,6 @@ a:hover { color: var(--accent-hover); }
   border-color: var(--accent);
 }
 
-/* Sidebar */
 .sidebar {
   position: fixed;
   top: var(--nav-height);
@@ -235,6 +231,13 @@ a:hover { color: var(--accent-hover); }
   color: var(--accent);
 }
 
+.sidebar-link.completed::after {
+  content: '✓';
+  margin-left: auto;
+  color: var(--success);
+  font-size: 0.8rem;
+}
+
 .sidebar-link .num {
   font-family: var(--font-mono);
   font-size: 0.75rem;
@@ -242,7 +245,6 @@ a:hover { color: var(--accent-hover); }
   min-width: 1.5rem;
 }
 
-/* Main */
 .main-wrapper {
   margin-left: var(--sidebar-width);
   margin-top: var(--nav-height);
@@ -307,6 +309,12 @@ a:hover { color: var(--accent-hover); }
 .btn-outline:hover {
   border-color: var(--accent);
   color: var(--accent);
+}
+
+.btn-secondary {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text-primary);
 }
 
 .progress-bar-container {
@@ -424,6 +432,75 @@ a:hover { color: var(--accent-hover); }
 .callout-info { border-left-color: var(--accent); }
 .callout-warning { border-left-color: var(--warning); background: rgba(217, 119, 6, 0.1); }
 .callout-danger { border-left-color: var(--danger); background: rgba(220, 38, 38, 0.1); }
+.callout-success { border-left-color: var(--success); background: rgba(5, 150, 105, 0.1); }
+
+/* Lecture content */
+.lecture-content {
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+.lecture-content h2 {
+  margin-top: 2.5rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.quiz-card {
+  padding: 1.5rem;
+}
+
+.quiz-meta {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.75rem;
+}
+
+.quiz-option {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.quiz-option:hover {
+  background: var(--accent-soft);
+  border-color: var(--accent);
+}
+
+.quiz-option.correct {
+  background: rgba(5, 150, 105, 0.15);
+  border-color: var(--success);
+}
+
+.quiz-option.incorrect {
+  background: rgba(220, 38, 38, 0.12);
+  border-color: var(--danger);
+}
+
+.quiz-feedback {
+  margin-top: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+  display: none;
+}
+
+.quiz-feedback.show {
+  display: block;
+}
+
+.quiz-feedback.correct {
+  background: rgba(5, 150, 105, 0.12);
+  color: var(--success);
+}
+
+.quiz-feedback.incorrect {
+  background: rgba(220, 38, 38, 0.1);
+  color: var(--danger);
+}
 
 .site-footer {
   text-align: center;
@@ -443,9 +520,8 @@ a:hover { color: var(--accent-hover); }
   z-index: 850;
 }
 
-.overlay.open { display: block; }
+.overlay.show { display: block; }
 
-/* Responsive */
 @media (max-width: 900px) {
   .sidebar {
     transform: translateX(-100%);
@@ -473,10 +549,15 @@ a:hover { color: var(--accent-hover); }
   }
 }
 
-/* Utility */
 .flex { display: flex; }
 .gap-2 { gap: 0.75rem; }
 .justify-between { justify-content: space-between; }
 .flex-wrap { flex-wrap: wrap; }
 .mt-3 { margin-top: 1rem; }
 .text-muted { color: var(--text-muted); }
+
+@media print {
+  .navbar, .sidebar, .btn-icon, .nav-actions { display: none !important; }
+  .main-wrapper { margin: 0 !important; }
+  body { background: white; color: black; }
+}
