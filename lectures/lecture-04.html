@@ -3,105 +3,147 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lecture 04 — ACM & IEEE Codes | Professional Practices in Computing</title>
+  <meta name="description" content="Lecture 04: Intellectual Property & Open Source — Professional Practices in Computing" />
+  <title>Lecture 04 — Intellectual Property & Open Source | PPC</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
-    <div class="nav-actions">
-      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
-      <button class="btn-icon" id="menu-toggle" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-    </div>
-  </nav>
-  <div class="overlay" id="overlay"></div>
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Course</div>
-      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Lectures 1–10</div>
-      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
-      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
-      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
-      <a href="lecture-04.html" class="sidebar-link active" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
-      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
-    </div>
-  </aside>
-  <div class="main-wrapper">
-    <div class="content">
-      <div class="breadcrumbs"><a href="../index.html">Home</a> <span class="sep">/</span> <span>Lecture 04</span></div>
-      <header class="lecture-header">
-        <div class="lecture-badge">Lecture 04</div>
-        <h1>ACM & IEEE Codes of Ethics — Deep Dive</h1>
-        <p class="hero-sub">Core principles, how to map real cases to the codes, and using codes as practical tools.</p>
-        <div class="lecture-meta"><span>⏱ ~50 min</span><span>📚 Module 4 of 30</span></div>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">
+          <span class="logo-mark">PPC</span>
+          <span class="logo-text">Professional Practices</span>
+        </a>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">×</button>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <span class="nav-label">Course</span>
+          <a href="../index.html" class="nav-link">Home</a>
+        </div>
+        <div class="nav-section">
+          <span class="nav-label">Lectures</span>
+          <a href="lecture-01.html" class="nav-link">01 · Introduction</a>
+          <a href="lecture-02.html" class="nav-link">02 · Ethics Frameworks</a>
+          <a href="lecture-03.html" class="nav-link">03 · Privacy, Data & Surveillance</a>
+          <a href="lecture-04.html" class="nav-link active">04 · IP & Open Source</a>
+          <a href="lecture-05.html" class="nav-link">05 · Professional Codes</a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="progress-widget">
+          <span class="progress-label">Course Progress</span>
+          <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+          <span class="progress-text" id="progressText">0 / 5 lectures</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="topbar-title">Lecture 04</div>
+        <div class="topbar-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+        </div>
       </header>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">◎</div><h2>Learning Objectives</h2></div>
-        <ul class="objectives-list">
-          <li>Recall the main principles of the ACM Code of Ethics (2018) and IEEE Code of Ethics.</li>
-          <li>Map a case study to specific code clauses.</li>
-          <li>Explain how codes support (but do not replace) professional judgment.</li>
-          <li>Identify situations where organizational pressure conflicts with code obligations.</li>
-        </ul>
-      </section>
+      <main class="content">
+        <div class="breadcrumb"><a href="../index.html">Home</a> · Lecture 04</div>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">📘</div><h2>ACM Code — High-Level Structure</h2></div>
-        <p>The ACM Code organizes principles around general ethical responsibilities, professional responsibilities, professional leadership principles, and compliance. Key themes include:</p>
-        <ul>
-          <li>Contribute to society and to human well-being; avoid harm.</li>
-          <li>Be honest and trustworthy; respect privacy; honor confidentiality.</li>
-          <li>Respect the work required to produce new ideas and computing artifacts.</li>
-          <li>Maintain high standards of professional competence and conduct.</li>
-          <li>Design and implement systems that are robustly and usably secure.</li>
-        </ul>
-        <div class="callout callout-info">
-          <div class="callout-title">Note</div>
-          Always consult the official ACM and IEEE texts for formal citation and the latest wording. This lecture summarizes themes for teaching purposes.
-        </div>
-      </section>
+        <header class="lecture-header">
+          <div class="lecture-meta">Lecture 04 · IP</div>
+          <h1>Intellectual Property & Open Source</h1>
+          <p class="section-lead">Copyright, patents, trade secrets, licenses, FOSS culture, and professional obligations around IP.</p>
+        </header>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">📗</div><h2>IEEE Code — Emphasis</h2></div>
-        <p>IEEE’s code places strong weight on public safety, health, and welfare; honesty in statements; and treating persons fairly. For engineers working on safety-critical or infrastructure systems, these duties are central.</p>
-      </section>
+        <section class="prose">
+          <h2>Learning Objectives</h2>
+          <ul class="objectives">
+            <li>Distinguish copyright, patents, trademarks, and trade secrets at a conceptual level.</li>
+            <li>Explain why software licenses matter for reuse and distribution.</li>
+            <li>Describe professional duties when using third-party and open-source code.</li>
+            <li>Recognize common license families (permissive vs. copyleft) without treating this as legal advice.</li>
+          </ul>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">🗺️</div><h2>Mapping a Case</h2></div>
-        <p>Take a data-breach or biased-algorithm scenario. Ask: Which principles about harm, transparency, competence, and public interest are engaged? Which clauses would you cite if writing an internal ethics memo or external professional statement?</p>
-      </section>
+          <h2>Motivation</h2>
+          <p>Almost every modern product depends on other people's code, data, and designs. Ignoring IP rules creates legal risk, breaks community trust, and can destroy careers. Understanding licenses is part of professional competence.</p>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">📝</div><h2>Knowledge Check</h2></div>
-        <div class="quiz-container" id="quiz-04"></div>
-      </section>
+          <h2>Core Concepts</h2>
+          <p><strong>Copyright</strong> protects original expression (including source code) automatically in many jurisdictions.</p>
+          <p><strong>Patents</strong> protect inventions that meet criteria of novelty and non-obviousness; software patent practice varies by region.</p>
+          <p><strong>Trade secrets</strong> protect confidential business information that has economic value from secrecy.</p>
+          <p><strong>Licenses</strong> grant permissions under conditions. Open-source licenses grant broad rights if conditions are met.</p>
 
-      <section class="section">
-        <div class="section-header"><div class="section-icon">🪞</div><h2>Reflection</h2></div>
-        <div class="reflection-box">
-          <p>Pick one ACM or IEEE principle that you think is most frequently tested in industry. Explain with a brief example.</p>
-          <textarea data-reflection="l04" placeholder="Write your reflection..."></textarea>
-        </div>
-      </section>
+          <div class="callout">
+            <strong>Professional rule of thumb:</strong> Never copy code into a product without knowing the license. Document provenance. Prefer approved license lists when your organization maintains them.
+          </div>
 
-      <div class="mt-3" style="display:flex;gap:1rem;flex-wrap:wrap;">
-        <button class="btn btn-primary" id="mark-complete" data-lecture-id="04">Mark Lecture Complete</button>
-        <a href="lecture-03.html" class="btn btn-outline">← Lecture 03</a>
-        <a href="lecture-05.html" class="btn btn-outline">Next: Lecture 05 →</a>
-      </div>
-      <footer class="site-footer"><p>Professional Practices in Computing — Lecture 04</p></footer>
+          <h2>Open Source Culture</h2>
+          <p>Open source is both a licensing model and a social practice of collaboration, review, and shared maintenance. Professional contribution includes respecting attribution, reporting vulnerabilities responsibly, and not treating community projects as free labor without reciprocity.</p>
+
+          <h2>Industrial Scenario</h2>
+          <p>A teammate pastes a Stack Overflow snippet and an unlicensed GitHub gist into production. The product is about to ship. What is your professional response?</p>
+
+          <h2>Knowledge Check</h2>
+          <div id="quiz-box" class="quiz-box glass"></div>
+
+          <h2>Reflection</h2>
+          <div class="reflection-prompt glass">
+            <h4>Reflection</h4>
+            <p>Have you ever reused code without checking its license? What process would you put in place for your next team project?</p>
+            <textarea data-reflection="l04" rows="5" style="width:100%;padding:0.75rem;border-radius:10px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text);font-family:inherit;margin-top:0.5rem;"></textarea>
+          </div>
+
+          <h2>Assignment</h2>
+          <div class="callout">
+            Compare one permissive license (e.g., MIT) and one copyleft license (e.g., GPL) in 250–400 words: permissions, conditions, and implications for a commercial SaaS product.
+          </div>
+
+          <h2>Summary</h2>
+          <p>IP literacy is professional hygiene. Know what you use, under which terms, and how attribution and distribution conditions bind your product and your team.</p>
+
+          <div class="nav-lecture">
+            <a href="lecture-03.html" class="btn btn-ghost">← Lecture 03</a>
+            <div>
+              <button class="btn btn-ghost" id="markComplete">Mark complete</button>
+              <a href="lecture-05.html" class="btn btn-primary">Next: Lecture 05 →</a>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>Professional Practices in Computing · Lecture 04</p>
+        </footer>
+      </main>
     </div>
   </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
   <script src="../js/main.js"></script>
   <script>
-    initQuiz('quiz-04', [
-      { question: 'A recurring theme in both ACM and IEEE codes is:', options: ['Maximizing shareholder value only', 'Public welfare, honesty, and avoiding harm', 'Banning all AI', 'Requiring government approval for every commit'], correct: 1, explanation: 'Both codes emphasize public interest, honesty, and responsibility to avoid harm.' },
-      { question: 'Codes of ethics are most useful when:', options: ['Used as a checklist that ends all debate', 'Combined with judgment to analyze conflicts of principles and pressures', 'Ignored in startups', 'Only read after a scandal'], correct: 1, explanation: 'Codes guide analysis; they do not automate decisions.' }
+    initQuiz([
+      {
+        question: "Why do software licenses matter professionally?",
+        options: ["They only affect academics", "They define legal permissions and conditions for reuse and distribution", "They replace the need for testing", "They guarantee code quality"],
+        correct: 1,
+        explanation: "Licenses set the rules under which code may be used, modified, and shared."
+      },
+      {
+        question: "A professional response to unknown-license code in a product is:",
+        options: ["Ship and hope", "Remove or replace it until provenance and license are clear", "Assume public code is free of restrictions", "Only worry if a lawyer emails"],
+        correct: 1,
+        explanation: "Unknown license = unknown risk; professionals escalate or remediate before ship."
+      },
+      {
+        question: "Copyleft licenses typically require:",
+        options: ["No attribution", "That derivative works be distributed under compatible terms", "Payment to the original author", "Closed source only"],
+        correct: 1,
+        explanation: "Copyleft aims to keep derivatives open under related terms."
+      }
     ]);
   </script>
 </body>
