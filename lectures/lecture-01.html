@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lecture 01 — Introduction | Professional Practices in Computing</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
+    <div class="nav-actions">
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+    </div>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Course</div>
+      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Lectures 1–10</div>
+      <a href="lecture-01.html" class="sidebar-link active" data-lecture="01"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
+    </div>
+  </aside>
+  <div class="main-wrapper">
+    <div class="content">
+      <div class="breadcrumbs"><a href="../index.html">Home</a> <span class="sep">/</span> <span>Lecture 01</span></div>
+      <header class="lecture-header">
+        <div class="lecture-badge">Lecture 01</div>
+        <h1>Introduction to Professional Practices in Computing</h1>
+        <p class="hero-sub">Why professionalism matters, the unique responsibilities of computing graduates, and a map of the course ahead.</p>
+        <div class="lecture-meta"><span>⏱ ~45–60 min</span><span>📚 Module 1 of 30</span></div>
+      </header>
+
+      <section class="section">
+        <div class="section-header"><div class="section-icon">◎</div><h2>Learning Objectives</h2></div>
+        <ul class="objectives-list">
+          <li>Explain why computing requires professional practices beyond technical skill.</li>
+          <li>Distinguish personal ethics, professional ethics, and organizational ethics.</li>
+          <li>Identify the main stakeholder groups affected by computing decisions.</li>
+          <li>Describe the structure and purpose of this course.</li>
+          <li>Articulate a preliminary professional identity as a computing graduate.</li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div class="section-icon">💡</div><h2>Motivation</h2></div>
+        <p>Software, data systems, and AI now mediate almost every aspect of modern life — healthcare, finance, transportation, education, justice, and public discourse. A single design choice, training dataset bias, or incomplete risk analysis can affect millions of people. Technical excellence alone is not enough; professionals must also exercise judgment, responsibility, and ethical reasoning.</p>
+        <div class="callout callout-info">
+          <div class="callout-title">Key insight</div>
+          Computing is a socio-technical practice. Code does not exist in a vacuum; it shapes (and is shaped by) people, organizations, laws, and power structures.
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div class="section-icon">📖</div><h2>Real Story</h2></div>
+        <p>In 2018, a major social platform faced global scrutiny after it was revealed that third-party data had been used for political profiling without adequate consent or transparency. Engineers and data scientists who built the underlying APIs and recommendation systems were not the decision-makers at the board level, yet their technical work enabled the outcome. The incident raised lasting questions about duty of care, secondary use of data, and the professional obligations of those who design powerful platforms.</p>
+        <p>Similar patterns appear across domains: safety-critical avionics, healthcare AI triage tools, autonomous vehicle perception stacks, and financial trading algorithms. In each case, professionals must ask not only “Can we build it?” but “Should we, under what constraints, and with what safeguards?”</p>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div class="section-icon">🏭</div><h2>Industrial Scenario</h2></div>
+        <p>You join a product team shipping a new recommendation feature. Marketing wants maximum engagement. Legal wants compliance language. Security wants least privilege. Users want relevance without feeling manipulated. Your manager asks you to ship by the end of the sprint. How do you balance these pressures while protecting users and your own professional integrity?</p>
+        <p>This course gives you frameworks, codes, case studies, and decision processes so you can answer such questions with clarity rather than improvisation.</p>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div class="section-icon">🧭</div><h2>What “Professional Practices” Means</h2></div>
+        <p>Professional practices in computing encompass:</p>
+        <ul>
+          <li><strong>Ethical reasoning</strong> — applying moral frameworks and professional codes to concrete dilemmas.</li>
+          <li><strong>Legal literacy</strong> — understanding high-level obligations around privacy, IP, liability, and safety.</li>
+          <li><strong>Responsibility & accountability</strong> — knowing who is answerable for outcomes and when to escalate or refuse.</li>
+          <li><strong>Communication & teamwork</strong> — documenting, presenting, collaborating across roles and cultures.</li>
+          <li><strong>Lifelong learning</strong> — staying current as technology, regulation, and societal expectations change.</li>
+        </ul>
+        <p>The course is technology-independent. It teaches professional thinking rather than any specific language, framework, or cloud vendor.</p>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div class="section-icon">🔍</div><h2>Multiple Perspectives</h2></div>
+        <div class="perspective-grid">
+          <div class="perspective-card"><h4>⚖️ Ethical</h4><p>What obligations do we owe users, non-users, future generations, and the public interest?</p></div>
+          <div class="perspective-card"><h4>📜 Legal</h4><p>What statutes, regulations, and case law constrain design and deployment choices?</p></div>
+          <div class="perspective-card"><h4>💼 Business</h4><p>How do short-term incentives interact with long-term trust, brand, and risk?</p></div>
+          <div class="perspective-card"><h4>🤖 AI</h4><p>How do autonomy, opacity, and scale change the nature of professional responsibility?</p></div>
+          <div class="perspective-card"><h4>📊 Data Science</h4><p>What duties arise from data collection, labeling, modeling, and secondary use?</p></div>
+          <div class="perspective-card"><h4>🛡️ Security</h4><p>How do confidentiality, integrity, and availability trade off against usability and innovation?</p></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div class="section-icon">📝</div><h2>Knowledge Check</h2></div>
+        <div class="quiz-container" id="quiz-01"></div>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div class="section-icon">🪞</div><h2>Reflection</h2></div>
+        <div class="reflection-box">
+          <p>In 150–250 words, describe a computing-related decision (real or hypothetical) where technical skill alone was insufficient. What additional professional judgment was required?</p>
+          <textarea data-reflection="l01" placeholder="Write your reflection here (saved locally)..."></textarea>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div class="section-icon">📋</div><h2>Assignment Preview</h2></div>
+        <div class="activity-card">
+          <h4>Mini-assignment (due with Module 1 set)</h4>
+          <p>Write a one-page professional identity statement: Who are you becoming as a computing professional? What values will guide your work? Which stakeholders will you prioritize when interests conflict?</p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div class="section-icon">📌</div><h2>Summary & Cheat Sheet</h2></div>
+        <div class="cheatsheet">
+          <div class="cheatsheet-item"><strong>Core idea</strong><span>Computing is socio-technical; professionalism = skill + judgment + responsibility.</span></div>
+          <div class="cheatsheet-item"><strong>Stakeholders</strong><span>Users, non-users, employers, society, future generations, the profession itself.</span></div>
+          <div class="cheatsheet-item"><strong>Key question</strong><span>Not only “Can we?” but “Should we, under what constraints?”</span></div>
+          <div class="cheatsheet-item"><strong>Course goal</strong><span>Build ethical reasoning, legal literacy, communication, and lifelong learning habits.</span></div>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-header"><div class="section-icon">📚</div><h2>Further Reading</h2></div>
+        <ul>
+          <li>ACM Code of Ethics and Professional Conduct (current version)</li>
+          <li>IEEE Code of Ethics</li>
+          <li>Baase, <em>A Gift of Fire</em> (selected chapters on professional ethics)</li>
+          <li>Quinn, <em>Ethics for the Information Age</em></li>
+        </ul>
+      </section>
+
+      <div class="mt-3" style="display:flex;gap:1rem;flex-wrap:wrap;">
+        <button class="btn btn-primary" id="mark-complete" data-lecture-id="01">Mark Lecture Complete</button>
+        <a href="lecture-02.html" class="btn btn-outline">Next: Lecture 02 →</a>
+      </div>
+
+      <footer class="site-footer">
+        <p>Professional Practices in Computing — Lecture 01</p>
+      </footer>
+    </div>
+  </div>
+  <script src="../js/main.js"></script>
+  <script>
+    initQuiz('quiz-01', [
+      {
+        question: 'Why is technical skill alone insufficient for computing professionals?',
+        options: [
+          'Because most code is written by non-professionals',
+          'Because computing decisions affect people, organizations, and society beyond pure technical correctness',
+          'Because laws forbid pure technical work',
+          'Because employers only care about soft skills'
+        ],
+        correct: 1,
+        explanation: 'Computing systems mediate real-world outcomes; professionals must reason about impact, stakeholders, and responsibility.'
+      },
+      {
+        question: 'Which of the following best describes a socio-technical system?',
+        options: [
+          'A system that uses only social media APIs',
+          'A system whose behavior emerges from the interaction of technical components and human/organizational context',
+          'A purely hardware system',
+          'A system with no users'
+        ],
+        correct: 1,
+        explanation: 'Socio-technical thinking recognizes that technology and social context co-produce outcomes.'
+      },
+      {
+        question: 'What is the primary aim of this course?',
+        options: [
+          'To teach a specific programming language',
+          'To prepare students to navigate ethical, legal, social, and professional challenges in computing',
+          'To replace all other CS courses',
+          'To focus only on cybersecurity certifications'
+        ],
+        correct: 1,
+        explanation: 'The course develops professional judgment across ethics, law, AI, data, SE, and security viewpoints.'
+      }
+    ]);
+  </script>
+</body>
+</html>
