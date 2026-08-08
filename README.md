@@ -6,38 +6,32 @@
 - Software Engineering  
 - Data Science  
 - Artificial Intelligence  
-- Cyber Security  
-- Information Technology
+- Cybersecurity  
+
+## Features
+
+- Completely static (HTML + CSS + JS) — works on GitHub Pages  
+- Dark / Light mode with glassmorphism UI  
+- 30-lecture structure  
+- Progress tracking (localStorage)  
+- Interactive quizzes, reflection prompts, activities  
+- Responsive, modern, Apple/Microsoft-Learn inspired design  
 
 ## Live Site
 
-**https://zuhaibbutt786.github.io/professional-practices-in-computing/**
+After enabling GitHub Pages (Settings → Pages → Deploy from branch `main` / root):
 
-## Course Overview
+`https://zuhaibbutt786.github.io/professional-practices-in-computing/`
 
-Professional Practices in Computing prepares future computing professionals to navigate the ethical, legal, social, organizational, and professional challenges of the rapidly evolving technology landscape.
+## Current Status
 
-The course integrates contemporary issues from AI, Data Science, Cybersecurity, Software Engineering, Cloud, Open Source, Entrepreneurship, and Digital Society — emphasizing ethical reasoning, critical thinking, communication, leadership, teamwork, lifelong learning, sustainability, responsible AI, privacy, IP, and global software development.
-
-## Tech Stack
-
-- Static HTML / CSS / JavaScript
-- Glassmorphism UI with dark & light modes
-- Progress tracking, search, quizzes, interactive cards
-- Fully client-side (works on GitHub Pages)
-
-## Structure
-
-| Path | Description |
-|------|-------------|
-| `index.html` | Home, modules overview, progress |
-| `css/styles.css` | Glassmorphism theme system |
-| `js/main.js` | Theme, sidebar, progress, search, quizzes |
-| `lectures/` | Full lecture modules 01–05 |
+- ✅ Site skeleton (Home, navigation, theme, progress, sidebar)
+- ✅ **Lectures 01–05** fully complete (objectives, content, cases, quizzes, reflection, assignments, glossary, cheat sheets)
+- ⏳ Lectures 06–30 will be added one complete module at a time
 
 ## Local Development
 
-Open `index.html` in a browser or serve with any static server:
+Just open `index.html` in a browser or use any static server:
 
 ```bash
 npx serve .
@@ -47,4 +41,9 @@ python -m http.server 8000
 
 ## License
 
-Educational use. Content original; inspired by ACM/IEEE guidelines and leading professional-practice literature.
+Educational use. Content is original synthesis for teaching. Primary sources should be consulted for formal citation.
+
+---
+
+Designed for university teaching 2026–2035.  
+Technical excellence + professional judgment.  

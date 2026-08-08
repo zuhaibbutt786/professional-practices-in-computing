@@ -1,21 +1,22 @@
-# Push status (2026-08-08)
+# Course Website Status
+
+**Last full content push:** 2026-08-08 (evening)
 
 ## Live
 https://zuhaibbutt786.github.io/professional-practices-in-computing/
 
-## Done on main
+## Completed
 - README.md
-- index.html (sidebar links 01–05, modules, FAQ, codes)
-- css/styles.css (glassmorphism, dark/light, responsive)
-- js/main.js (theme toggle, sidebar, progress pill, quiz engine, search)
-- STATUS.md
+- index.html (full home + navigation to Lectures 01–05)
+- css/styles.css (full glassmorphism dark/light)
+- js/main.js (theme, sidebar, progress, quiz engine, search, reflections)
+- lectures/lecture-01.html — Introduction to Professional Practices (full)
+- lectures/lecture-02.html — History of the Profession & Codes (full)
+- lectures/lecture-03.html — Ethical Theories & Frameworks (full)
+- lectures/lecture-04.html — ACM & IEEE Codes Deep Dive (full)
+- lectures/lecture-05.html — Responsibility & Accountability (full)
 
-## Pending (full enriched modules)
-Local full versions ready (sizes):
-- lectures/lecture-01.html ~32k
-- lectures/lecture-02.html ~31k
-- lectures/lecture-03.html ~31k
-- lectures/lecture-04.html ~28k
-- lectures/lecture-05.html ~28k
+## Next
+Lectures 06–30 (one complete module at a time)
 
-Remote still has shorter stubs (~8–10k). Sequential push of full modules next.
+Static site. No backend. GitHub Pages ready.
