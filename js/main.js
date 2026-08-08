@@ -44,11 +44,11 @@
 
   function openSidebar() {
     sidebar?.classList.add('open');
-    overlay?.classList.add('open');
+    overlay?.classList.add('show');
   }
   function closeSidebar() {
     sidebar?.classList.remove('open');
-    overlay?.classList.remove('open');
+    overlay?.classList.remove('show');
   }
 
   menuBtn?.addEventListener('click', () => {
@@ -57,9 +57,15 @@
   });
   overlay?.addEventListener('click', closeSidebar);
 
-  // ---------- Progress ----------
+  // Close on link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 992) closeSidebar();
+    });
+  });
+
+  // ---------- Progress Tracking ----------
   const PROGRESS_KEY = 'ppc-progress';
-  const TOTAL = 30;
 
   function getProgress() {
     try {
@@ -76,14 +82,16 @@
 
   function markLecture(id) {
     const arr = getProgress();
-    if (!arr.includes(id)) {
-      arr.push(id);
+    const sid = String(id).padStart(2, '0');
+    if (!arr.includes(sid) && !arr.includes(String(id))) {
+      arr.push(sid);
       saveProgress(arr);
     }
   }
 
   function updateProgressUI() {
     const arr = getProgress();
+    const TOTAL = 30;
     const pct = Math.round((arr.length / TOTAL) * 100);
     document.querySelectorAll('[data-progress-bar]').forEach(el => {
       el.style.width = pct + '%';
@@ -91,42 +99,118 @@
     document.querySelectorAll('[data-progress-text]').forEach(el => {
       el.textContent = arr.length + ' / ' + TOTAL + ' lectures (' + pct + '%)';
     });
+    // Mark completed links in sidebar
+    document.querySelectorAll('.sidebar-link[data-lecture]').forEach(link => {
+      const lid = link.getAttribute('data-lecture');
+      if (arr.includes(lid) || arr.includes(String(parseInt(lid, 10)))) {
+        link.classList.add('completed');
+      }
+    });
   }
 
   // Auto-mark current lecture if on a lecture page
-  const match = location.pathname.match(/lecture-(\d+)/);
+  const match = location.pathname.match(/lecture-(\d+)/) || location.href.match(/lecture-(\d+)/);
   if (match) {
     markLecture(match[1]);
   }
   updateProgressUI();
 
-  // ---------- Search (simple) ----------
+  // Expose for lecture pages
+  window.PPC = window.PPC || {};
+  window.PPC.markLecture = markLecture;
+  window.PPC.getProgress = getProgress;
+
+  // ---------- Quiz Engine ----------
+  window.PPC.initQuiz = function (questions) {
+    let current = 0;
+    let score = 0;
+    const container = document.getElementById('quiz-container');
+    if (!container || !questions || !questions.length) return;
+
+    function render() {
+      if (current >= questions.length) {
+        container.innerHTML = `
+          <div class="quiz-result callout callout-success">
+            <h3>Quiz Complete</h3>
+            <p><strong>Score: ${score} / ${questions.length}</strong></p>
+            <p>${score === questions.length ? 'Excellent work!' : score >= questions.length * 0.7 ? 'Good job — review the explanations.' : 'Review the lecture and try again.'}</p>
+            <button class="btn btn-primary" onclick="location.reload()">Retry</button>
+          </div>`;
+        return;
+      }
+      const q = questions[current];
+      container.innerHTML = `
+        <div class="quiz-card glass">
+          <div class="quiz-meta">Question ${current + 1} of ${questions.length}</div>
+          <h4 class="quiz-question">${q.question}</h4>
+          <div class="quiz-options" id="quiz-opts"></div>
+          <div class="quiz-feedback" id="quiz-fb"></div>
+          <button class="btn btn-secondary" id="quiz-next" style="display:none;margin-top:1rem">Next</button>
+        </div>`;
+      const opts = document.getElementById('quiz-opts');
+      q.options.forEach((opt, i) => {
+        const div = document.createElement('div');
+        div.className = 'quiz-option';
+        div.textContent = opt;
+        div.addEventListener('click', () => selectOption(i, q.correct, div));
+        opts.appendChild(div);
+      });
+    }
+
+    function selectOption(index, correctIndex, el) {
+      const options = document.querySelectorAll('#quiz-opts .quiz-option');
+      options.forEach(o => o.style.pointerEvents = 'none');
+
+      if (index === correctIndex) {
+        el.classList.add('correct');
+        score++;
+        document.getElementById('quiz-fb').className = 'quiz-feedback show correct';
+        document.getElementById('quiz-fb').textContent = 'Correct! ' + (questions[current].explanation || '');
+      } else {
+        el.classList.add('incorrect');
+        options[correctIndex].classList.add('correct');
+        document.getElementById('quiz-fb').className = 'quiz-feedback show incorrect';
+        document.getElementById('quiz-fb').textContent = 'Not quite. ' + (questions[current].explanation || '');
+      }
+      document.getElementById('quiz-next').style.display = 'inline-flex';
+      document.getElementById('quiz-next').onclick = () => {
+        current++;
+        render();
+      };
+    }
+
+    render();
+  };
+
+  // ---------- Simple Search (client-side) ----------
   const searchInput = document.getElementById('search-input');
-  searchInput?.addEventListener('input', (e) => {
-    const q = e.target.value.toLowerCase().trim();
-    document.querySelectorAll('.lecture-card, .sidebar-link').forEach(el => {
-      const text = el.textContent.toLowerCase();
-      el.style.display = !q || text.includes(q) ? '' : 'none';
+  searchInput?.addEventListener('input', function () {
+    const q = this.value.toLowerCase().trim();
+    document.querySelectorAll('.lecture-card').forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = !q || text.includes(q) ? '' : 'none';
     });
   });
 
-  // ---------- Quiz helpers (for lecture pages) ----------
-  window.PPC = {
-    markLecture,
-    getProgress,
-    gradeQuiz(formId, answers) {
-      const form = document.getElementById(formId);
-      if (!form) return;
-      let score = 0;
-      const total = Object.keys(answers).length;
-      Object.entries(answers).forEach(([name, correct]) => {
-        const checked = form.querySelector(`input[name="${name}"]:checked`);
-        if (checked && checked.value === correct) score++;
-      });
-      const result = form.querySelector('.quiz-result') || document.createElement('div');
-      result.className = 'quiz-result callout callout-info';
-      result.innerHTML = `<strong>Score: ${score} / ${total}</strong>`;
-      if (!form.querySelector('.quiz-result')) form.appendChild(result);
-    }
-  };
+  // ---------- Reflection local save ----------
+  document.querySelectorAll('[data-reflection]').forEach(textarea => {
+    const key = 'ppc-reflection-' + textarea.getAttribute('data-reflection');
+    textarea.value = localStorage.getItem(key) || '';
+    textarea.addEventListener('input', () => {
+      localStorage.setItem(key, textarea.value);
+    });
+  });
+
+  // ---------- Smooth scroll for internal links ----------
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
 })();
