@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional Practices in Computing — modern interdisciplinary course for CS, SE, DS, AI, Cyber Security undergraduates." />
+  <title>Professional Practices in Computing</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="index.html" class="brand">
+          <span class="brand-icon">◆</span>
+          <span class="brand-text">PPC</span>
+        </a>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">×</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="index.html" class="nav-item active">Home</a>
+        <a href="#about" class="nav-item">About Course</a>
+        <div class="nav-section">Lectures</div>
+        <a href="lectures/lecture-01.html" class="nav-item">01 · Introduction &amp; Professionalism</a>
+        <a href="lectures/lecture-02.html" class="nav-item">02 · Ethics Frameworks</a>
+        <a href="lectures/lecture-03.html" class="nav-item">03 · Privacy &amp; Data</a>
+        <a href="lectures/lecture-04.html" class="nav-item">04 · AI Ethics &amp; Responsibility</a>
+        <a href="lectures/lecture-05.html" class="nav-item">05 · Intellectual Property</a>
+        <div class="nav-section">Resources</div>
+        <a href="#codes" class="nav-item">Professional Codes</a>
+        <a href="#career" class="nav-item">Career</a>
+        <a href="#faq" class="nav-item">FAQ</a>
+      </nav>
+      <div class="sidebar-footer">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+        <div class="progress-wrap">
+          <div class="progress-label">Course progress</div>
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-area">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="Search lectures, topics…" aria-label="Search" />
+        </div>
+        <div class="topbar-actions">
+          <button class="theme-toggle desktop-only" id="themeToggleDesktop" aria-label="Toggle theme">🌓</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <section class="hero glass">
+          <h1>Professional Practices<br />in Computing</h1>
+          <p class="lead">An interdisciplinary course that prepares future computing professionals to navigate ethical, legal, social, and organizational challenges in a rapidly evolving technology landscape.</p>
+          <div class="hero-actions">
+            <a href="lectures/lecture-01.html" class="btn btn-primary">Start Lecture 01</a>
+            <a href="#modules" class="btn btn-ghost">Browse modules</a>
+          </div>
+        </section>
+
+        <section id="about" class="section glass">
+          <h2>About the Course</h2>
+          <p>Professional Practices in Computing integrates contemporary issues from Artificial Intelligence, Data Science, Cybersecurity, Software Engineering, Cloud, Open Source, Entrepreneurship, and Digital Society. Students develop competencies aligned with ACM and IEEE guidelines while learning how responsible computing affects individuals, organizations, governments, and society.</p>
+          <p>The course emphasizes ethical reasoning, critical thinking, communication, leadership, teamwork, lifelong learning, sustainability, responsible AI, privacy, intellectual property, global software development, and emerging technologies. It is technology-independent: it teaches professional thinking rather than software tools.</p>
+        </section>
+
+        <section id="modules" class="section">
+          <h2>Weekly Modules</h2>
+          <div class="module-grid">
+            <a href="lectures/lecture-01.html" class="module-card glass">
+              <span class="module-num">01</span>
+              <h3>Introduction &amp; Professionalism</h3>
+              <p>What it means to be a computing professional; codes of conduct; the role of ACM &amp; IEEE.</p>
+            </a>
+            <a href="lectures/lecture-02.html" class="module-card glass">
+              <span class="module-num">02</span>
+              <h3>Ethics Frameworks</h3>
+              <p>Utilitarianism, deontology, virtue ethics, and professional decision-making models.</p>
+            </a>
+            <a href="lectures/lecture-03.html" class="module-card glass">
+              <span class="module-num">03</span>
+              <h3>Privacy &amp; Data</h3>
+              <p>Privacy as a right and value; data protection; surveillance; informed consent.</p>
+            </a>
+            <a href="lectures/lecture-04.html" class="module-card glass">
+              <span class="module-num">04</span>
+              <h3>AI Ethics &amp; Responsibility</h3>
+              <p>Bias, transparency, accountability, and governance of AI systems.</p>
+            </a>
+            <a href="lectures/lecture-05.html" class="module-card glass">
+              <span class="module-num">05</span>
+              <h3>Intellectual Property</h3>
+              <p>Copyright, patents, trade secrets, open source licensing, and digital rights.</p>
+            </a>
+          </div>
+        </section>
+
+        <section id="codes" class="section glass">
+          <h2>Professional Codes</h2>
+          <ul>
+            <li>ACM Code of Ethics and Professional Conduct</li>
+            <li>IEEE Code of Ethics</li>
+            <li>NIST AI Risk Management Framework (high-level)</li>
+            <li>UNESCO Recommendation on the Ethics of AI</li>
+            <li>OECD AI Principles</li>
+          </ul>
+        </section>
+
+        <section id="career" class="section glass">
+          <h2>Career &amp; Professional Development</h2>
+          <p>Interview skills, personal branding, networking, continuous learning, and professional certifications — integrated throughout the modules.</p>
+        </section>
+
+        <section id="faq" class="section glass">
+          <h2>FAQ</h2>
+          <details>
+            <summary>Is this course language- or tool-specific?</summary>
+            <p>No. It is technology-independent and focuses on professional judgment and responsibility.</p>
+          </details>
+          <details>
+            <summary>Does progress tracking require a login?</summary>
+            <p>No. Progress is stored in your browser (localStorage) only.</p>
+          </details>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <p>Professional Practices in Computing · Open educational resource · Static site for GitHub Pages</p>
+      </footer>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
