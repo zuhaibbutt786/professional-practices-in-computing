@@ -1,49 +1,27 @@
 # Professional Practices in Computing
 
-**Industry-standard university course website** for undergraduate students in:
-
-- Computer Science  
-- Software Engineering  
-- Data Science  
-- Artificial Intelligence  
-- Cybersecurity  
-
-## Features
-
-- Completely static (HTML + CSS + JS) — works on GitHub Pages  
-- Dark / Light mode with glassmorphism UI  
-- 30-lecture structure  
-- Progress tracking (localStorage)  
-- Interactive quizzes, reflection prompts, activities  
-- Responsive, modern, Apple/Microsoft-Learn inspired design  
+**Industry-standard university course website** for undergraduate students in Computer Science, Software Engineering, Data Science, Artificial Intelligence, and Cyber Security.
 
 ## Live Site
+https://zuhaibbutt786.github.io/professional-practices-in-computing/
 
-After enabling GitHub Pages (Settings → Pages → Deploy from branch `main` / root):
+## Features
+- Modern glassmorphism UI with Dark / Light mode
+- Responsive design (desktop, tablet, mobile)
+- Progress tracking & interactive quizzes
+- Full lecture modules with case studies, ethical frameworks, knowledge checks
+- Static site — works on GitHub Pages, no backend required
 
-`https://zuhaibbutt786.github.io/professional-practices-in-computing/`
+## Course Focus
+Professional ethics, legal issues, privacy, security ethics, AI ethics, responsible data science, intellectual property, open source, teamwork, leadership, sustainability, career development, and societal impact of computing.
 
-## Current Status
+## Structure
+- `index.html` — Home / course overview
+- `css/styles.css` — Glassmorphism theme system
+- `js/main.js` — Theme toggle, progress, quiz engine
+- `lectures/` — Full modules (Lecture 01–05 currently)
 
-- ✅ Site skeleton (Home, navigation, theme, progress, sidebar)
-- ✅ **Lectures 01–05** fully complete (objectives, content, cases, quizzes, reflection, assignments, glossary, cheat sheets)
-- ⏳ Lectures 06–30 will be added one complete module at a time
+## Tech Stack
+HTML · CSS · Bootstrap · Vanilla JavaScript · SVG · Chart.js ready · Prism.js ready · Mermaid.js ready
 
-## Local Development
-
-Just open `index.html` in a browser or use any static server:
-
-```bash
-npx serve .
-# or
-python -m http.server 8000
-```
-
-## License
-
-Educational use. Content is original synthesis for teaching. Primary sources should be consulted for formal citation.
-
----
-
-Designed for university teaching 2026–2035.  
-Technical excellence + professional judgment.  
+Built for university teaching 2026–2035.
