@@ -26,8 +26,8 @@ After enabling GitHub Pages (Settings → Pages → Deploy from branch `main` / 
 ## Current Status
 
 - ✅ Site skeleton (Home, navigation, theme, progress, sidebar)
-- ✅ **Lecture 01** fully complete (objectives, content, case, quiz, reflection, assignment, glossary, cheat sheet)
-- ⏳ Lectures 02–30 will be added one complete module at a time
+- ✅ **Lectures 01–05** fully complete (objectives, content, cases, quizzes, reflection, assignments, glossary, cheat sheets)
+- ⏳ Lectures 06–30 will be added one complete module at a time
 
 ## Local Development
 
