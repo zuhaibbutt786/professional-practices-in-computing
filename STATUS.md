@@ -1,21 +1,22 @@
-# Project Status
+# Course Website Status
 
-**Last updated:** 2026-08-09
+**Last full content push:** 2026-08-09
 
 ## Live
-
 https://zuhaibbutt786.github.io/professional-practices-in-computing/
 
-## Current state (main)
-
-- Full production `index.html` (home, lecture grid 01–05, navbar/sidebar)
-- Production glassmorphism CSS (dark/light)
-- Full `js/main.js` (theme, progress, sidebar, search, quiz engine)
-- Enriched Lectures 01–05 (objectives, multi-perspective content, cases, quizzes, reflections, assignments)
-- README and STATUS
+## Completed
+- README.md
+- index.html (full home + navigation to Lectures 01–05)
+- css/styles.css (full glassmorphism dark/light)
+- js/main.js (theme, sidebar, progress, quiz engine, search, reflections)
+- lectures/lecture-01.html — Introduction to Professional Practices (full ~32k)
+- lectures/lecture-02.html — History of the Profession & Codes (full)
+- lectures/lecture-03.html — Ethical Theories & Frameworks (full)
+- lectures/lecture-04.html — ACM & IEEE Codes Deep Dive (full)
+- lectures/lecture-05.html — Responsibility & Accountability (full)
 
 ## Next
+Lectures 06–30 (one complete module at a time)
 
-- Additional modules (06+)
-- More case studies and interactive simulators
-- Glossary and resources pages
+Static site. No backend. GitHub Pages ready.
