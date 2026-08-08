@@ -3,154 +3,162 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 02: Ethics Frameworks & Decision Making — Professional Practices in Computing" />
-  <title>Lecture 02 — Ethics Frameworks & Decision Making | PPC</title>
+  <meta name="description" content="Lecture 02: Ethics and Professional Responsibility — Ethical theories, decision frameworks, ACM/IEEE codes in practice, whistleblowing, and organizational responsibility." />
+  <title>Lecture 02 · Ethics & Responsibility | Professional Practices in Computing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <div class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <a href="../index.html" class="logo">
-          <span class="logo-mark">PPC</span>
-          <span class="logo-text">Professional Practices</span>
-        </a>
-        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">×</button>
-      </div>
-      <nav class="sidebar-nav">
-        <div class="nav-section">
-          <span class="nav-label">Course</span>
-          <a href="../index.html" class="nav-link">Home</a>
-        </div>
-        <div class="nav-section">
-          <span class="nav-label">Lectures</span>
-          <a href="lecture-01.html" class="nav-link">01 · Introduction & Professional Identity</a>
-          <a href="lecture-02.html" class="nav-link active">02 · Ethics Frameworks</a>
-          <a href="lecture-03.html" class="nav-link">03 · Privacy, Data & Surveillance</a>
-          <a href="lecture-04.html" class="nav-link">04 · IP & Open Source</a>
-          <a href="lecture-05.html" class="nav-link">05 · Professional Codes</a>
-        </div>
-      </nav>
-      <div class="sidebar-footer">
-        <div class="progress-widget">
-          <span class="progress-label">Course Progress</span>
-          <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
-          <span class="progress-text" id="progressText">0 / 5 lectures</span>
-        </div>
-      </div>
-    </aside>
-
-    <div class="main-wrap">
-      <header class="topbar">
-        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
-        <div class="topbar-title">Lecture 02</div>
-        <div class="topbar-actions">
-          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
-        </div>
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
+    <div class="nav-actions">
+      <div class="search-box"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="search" id="site-search" placeholder="Search lectures…" aria-label="Search" /></div>
+      <div class="progress-wrap" title="Course progress"><span id="progress-text">0%</span><div class="progress-bar-bg"><div id="progress-bar"></div></div></div>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"><svg class="icon-sun" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
+      <button class="btn-icon" id="sidebar-toggle" aria-label="Toggle sidebar"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+    </div>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section"><div class="sidebar-title">Course</div><a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a></div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Lectures</div>
+      <a href="lecture-01.html" class="sidebar-link"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link active"><span class="num">02</span> Ethics & Responsibility</a>
+      <a href="lecture-03.html" class="sidebar-link"><span class="num">03</span> Privacy & Data</a>
+      <a href="lecture-04.html" class="sidebar-link"><span class="num">04</span> AI & Responsible Systems</a>
+      <a href="lecture-05.html" class="sidebar-link"><span class="num">05</span> IP, Licensing & Open Source</a>
+    </div>
+  </aside>
+  <div class="main-wrapper" id="main-wrapper">
+    <main class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a><span class="sep">/</span><span>Lecture 02</span></nav>
+      <header class="lecture-header">
+        <span class="lecture-badge">Module 02 · Ethics Core</span>
+        <h1>Ethics and Professional Responsibility</h1>
+        <p class="hero-lead">Ethical theories applied to computing, practical decision frameworks, the meaning of professional responsibility, and how to act when organizational incentives conflict with public interest.</p>
+        <div class="lecture-meta"><span>⏱ ~90–120 min</span><span>📚 Theories + frameworks + cases</span><span>🎯 Ethics</span></div>
       </header>
 
-      <main class="content">
-        <div class="breadcrumb"><a href="../index.html">Home</a> · Lecture 02</div>
+      <section class="section" id="objectives">
+        <div class="section-header"><div class="section-icon">🎯</div><h2>Learning Objectives</h2></div>
+        <ul class="objectives-list">
+          <li>Apply major ethical theories (utilitarianism, deontology, virtue ethics, care ethics) to computing dilemmas.</li>
+          <li>Use a structured ethical decision-making process on realistic scenarios.</li>
+          <li>Interpret key principles from ACM and IEEE codes and map them to daily engineering decisions.</li>
+          <li>Distinguish individual, organizational, and systemic responsibility.</li>
+          <li>Evaluate when and how whistleblowing or escalation is professionally justified.</li>
+          <li>Analyze power, incentives, and culture as drivers of ethical or unethical outcomes.</li>
+        </ul>
+      </section>
 
-        <header class="lecture-header">
-          <div class="lecture-meta">Lecture 02 · Ethics</div>
-          <h1>Ethics Frameworks & Decision Making</h1>
-          <p class="section-lead">Utilitarianism, deontology, virtue ethics, and structured processes for technology dilemmas.</p>
-        </header>
+      <section class="section" id="introduction">
+        <div class="section-header"><div class="section-icon">📖</div><h2>Introduction</h2></div>
+        <p>Ethics is not a list of prohibitions. It is the practice of reasoning about what we ought to do when values conflict, when consequences are uncertain, and when multiple stakeholders have legitimate claims. In computing, those conflicts appear in product priorities, data use, security trade-offs, AI objectives, and the treatment of users and non-users.</p>
+        <p>This module gives you theories and a reusable process so that ethical reasoning becomes a professional habit rather than an after-the-fact rationalization.</p>
+      </section>
 
-        <section class="prose">
-          <h2>Learning Objectives</h2>
-          <ul class="objectives">
-            <li>Apply utilitarianism, deontology, and virtue ethics to computing cases.</li>
-            <li>Use a structured ethical decision process under uncertainty.</li>
-            <li>Distinguish legal compliance from ethical responsibility.</li>
-            <li>Recognize common cognitive biases that distort ethical judgment in tech teams.</li>
-          </ul>
+      <section class="section" id="theories">
+        <div class="section-header"><div class="section-icon">🧭</div><h2>Ethical Theories in Brief</h2></div>
+        <div class="perspective-grid">
+          <div class="perspective-card"><h4>Utilitarianism</h4><p>Focus on consequences: maximize overall well-being or minimize harm. Useful for risk-benefit analysis; weak when it ignores rights of minorities or hard-to-measure harms.</p></div>
+          <div class="perspective-card"><h4>Deontology</h4><p>Focus on duties and rules: some actions are required or forbidden regardless of outcome (honesty, respect for autonomy, non-maleficence). Strong on rights; can be rigid when duties conflict.</p></div>
+          <div class="perspective-card"><h4>Virtue Ethics</h4><p>Focus on character: what would a wise, just, courageous professional do? Emphasizes habits, judgment, and role models over pure rules or calculations.</p></div>
+          <div class="perspective-card"><h4>Care / Relational Ethics</h4><p>Focus on relationships, vulnerability, and context. Especially relevant for systems that affect dependent users, patients, or marginalized communities.</p></div>
+        </div>
+        <div class="callout callout-info"><div class="callout-title">Practical tip</div><p>Professionals rarely apply one theory in isolation. Use them as lenses: ask “What are the consequences?”, “What duties apply?”, “What character does this decision reflect?”, and “Who is vulnerable and how are relationships affected?”</p></div>
+      </section>
 
-          <h2>Motivation</h2>
-          <p>Engineers and data scientists routinely face trade-offs: speed vs. safety, engagement vs. well-being, accuracy vs. fairness. Without shared language for ethical reasoning, teams default to product pressure or personal intuition. Frameworks make reasoning explicit, contestable, and improvable.</p>
+      <section class="section" id="framework">
+        <div class="section-header"><div class="section-icon">🧩</div><h2>A Practical Decision Framework</h2></div>
+        <ol>
+          <li><strong>Identify the decision and the facts</strong> you know and do not know.</li>
+          <li><strong>Map stakeholders</strong> and their interests (including those who cannot speak for themselves).</li>
+          <li><strong>List options</strong>, including “do nothing” and “escalate / delay”.</li>
+          <li><strong>Apply ethical lenses</strong> (consequences, duties, virtues, care).</li>
+          <li><strong>Check codes, law, and policy</strong> for constraints and guidance.</li>
+          <li><strong>Choose, document rationale, and define monitoring</strong> for unexpected outcomes.</li>
+          <li><strong>Review after the fact</strong> and update practices.</li>
+        </ol>
+      </section>
 
-          <h2>Three Classical Lenses</h2>
-          <p><strong>Utilitarianism</strong> evaluates actions by consequences—typically overall welfare or reduction of harm. Useful for risk analysis and prioritization; weak when rights of minorities are sacrificed for majority benefit.</p>
-          <p><strong>Deontology</strong> focuses on duties and rules (honesty, informed consent, non-maleficence). Useful for hard boundaries; can be rigid when duties conflict.</p>
-          <p><strong>Virtue ethics</strong> asks what a good professional would do—cultivating honesty, courage, humility, and care. Useful for culture and character; less precise for one-off decisions.</p>
+      <section class="section" id="codes">
+        <div class="section-header"><div class="section-icon">📜</div><h2>Professional Codes in Practice</h2></div>
+        <p>ACM and IEEE codes are not checklists for compliance theater. They articulate shared expectations: contribute to society and human well-being; avoid harm; be honest and trustworthy; be fair and take action not to discriminate; respect privacy; honor confidentiality; maintain competence; know and respect existing laws; accept and provide appropriate professional review; give comprehensive evaluations; improve public understanding; access computing resources only when authorized.</p>
+        <p>When a code principle and an organizational incentive conflict, the professional’s obligation is to the higher standard of the profession and the public interest, not merely to the employer’s short-term preference.</p>
+      </section>
 
-          <div class="callout">
-            <strong>Practice tip:</strong> Run the same case through all three lenses. Where they agree, confidence rises. Where they diverge, you have identified the real tension.
+      <section class="section" id="responsibility">
+        <div class="section-header"><div class="section-icon">🏛</div><h2>Individual, Organizational, and Systemic Responsibility</h2></div>
+        <p>Blame is rarely located only in one person. Systems produce outcomes through incentives, culture, process design, and individual choices. Professionals still retain agency: they can ask questions, document concerns, propose safer alternatives, and, in extreme cases, refuse or report. Organizations have duties to create cultures where speaking up is safe and rewarded. Regulators and society set boundaries when self-regulation fails.</p>
+      </section>
+
+      <section class="section" id="case">
+        <div class="section-header"><div class="section-icon">🔍</div><h2>Case Focus: Boeing 737 MAX</h2></div>
+        <p>Design decisions around the MCAS system, training assumptions, certification processes, and internal communication contributed to two fatal crashes. Investigations highlighted pressure to minimize training differences, inadequate disclosure, and cultural factors that discouraged dissent. The case illustrates how technical, organizational, and ethical failures intertwine — and why professional responsibility cannot stop at “I only implemented the requirement.”</p>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="section-header"><div class="section-icon">✅</div><h2>Knowledge Check</h2></div>
+        <div class="quiz-container" data-quiz="lec02">
+          <div class="quiz-question">1. A key strength of applying multiple ethical theories is:</div>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Guaranteeing a single correct answer every time.</div>
+            <div class="quiz-option" data-correct="true">Revealing different aspects of a dilemma (consequences, duties, character, relationships) that one lens might miss.</div>
+            <div class="quiz-option" data-correct="false">Eliminating the need for professional codes.</div>
+            <div class="quiz-option" data-correct="false">Proving that ethics is purely subjective.</div>
           </div>
-
-          <h2>Industrial Scenario</h2>
-          <p>A ranking team can boost short-term revenue by promoting high-engagement content that correlates with polarization. Legal review finds no clear violation. Product leadership wants the change. How do you structure the ethical analysis before deciding whether to escalate?</p>
-
-          <h2>Decision Process (practical)</h2>
-          <ol>
-            <li>Clarify facts and uncertainty.</li>
-            <li>Identify stakeholders and foreseeable harms/benefits.</li>
-            <li>Map applicable duties, policies, and laws.</li>
-            <li>Generate options (including "do nothing" and "delay").</li>
-            <li>Evaluate options under multiple ethical lenses.</li>
-            <li>Choose, document rationale, and plan monitoring.</li>
-          </ol>
-
-          <h2>Knowledge Check</h2>
-          <div id="quiz-box" class="quiz-box glass"></div>
-
-          <h2>Reflection</h2>
-          <div class="reflection-prompt glass">
-            <h4>Reflection</h4>
-            <p>Describe a past decision (work, study, or personal project) where ethical tension was present. Which framework would have clarified the trade-off?</p>
-            <textarea data-reflection="l02" rows="5" style="width:100%;padding:0.75rem;border-radius:10px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text);font-family:inherit;margin-top:0.5rem;"></textarea>
+          <div class="quiz-feedback"></div>
+          <div class="quiz-question" style="margin-top:1.5rem">2. Professional responsibility is best understood as:</div>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Following every instruction from a manager without question.</div>
+            <div class="quiz-option" data-correct="true">Exercising judgment, competence, and accountability toward clients, users, and the public within the standards of the profession.</div>
+            <div class="quiz-option" data-correct="false">Avoiding any personal risk by never raising concerns.</div>
+            <div class="quiz-option" data-correct="false">Maximizing shareholder value above all other considerations.</div>
           </div>
+          <div class="quiz-feedback"></div>
+        </div>
+      </section>
 
-          <h2>Assignment</h2>
-          <div class="callout">
-            Choose one real public tech incident. Analyze it with utilitarianism, deontology, and virtue ethics (300–500 words). Conclude with one recommendation a professional on the team could have made earlier.
-          </div>
+      <section class="section" id="reflection">
+        <div class="section-header"><div class="section-icon">🪞</div><h2>Reflection</h2></div>
+        <div class="reflection-box"><p>Describe a time (real or hypothetical) when following orders conflicted with what you believed was right. What options did you have, and what would a professional response look like?</p><textarea data-reflection="lec02-q1" placeholder="Your reflection…"></textarea></div>
+      </section>
 
-          <h2>Summary</h2>
-          <p>Ethical frameworks do not remove hard choices; they make reasoning transparent. Structured decision processes turn moral intuition into professional practice that can be reviewed and improved.</p>
+      <section class="section" id="summary">
+        <div class="section-header"><div class="section-icon">📋</div><h2>Summary</h2></div>
+        <ul>
+          <li>Ethical theories provide complementary lenses; use them together.</li>
+          <li>A structured process (facts → stakeholders → options → lenses → codes/law → decide & monitor) improves judgment.</li>
+          <li>Codes express the profession’s shared standards; they guide when incentives pull elsewhere.</li>
+          <li>Responsibility is distributed, but individuals retain agency and duties.</li>
+        </ul>
+      </section>
 
-          <div class="nav-lecture">
-            <a href="lecture-01.html" class="btn btn-ghost">← Lecture 01</a>
-            <div>
-              <button class="btn btn-ghost" id="markComplete">Mark complete</button>
-              <a href="lecture-03.html" class="btn btn-primary">Next: Lecture 03 →</a>
-            </div>
-          </div>
-        </section>
-
-        <footer class="site-footer">
-          <p>Professional Practices in Computing · Lecture 02</p>
-        </footer>
-      </main>
-    </div>
+      <section class="section">
+        <div class="completion-badge">Complete quiz and reflection to mark progress</div>
+        <p style="margin-top:1rem"><a href="lecture-01.html" class="btn btn-ghost">← Previous</a> <a href="lecture-03.html" class="btn btn-primary">Next: Privacy & Data →</a></p>
+      </section>
+      <footer class="footer">Professional Practices in Computing · Lecture 02</footer>
+    </main>
   </div>
-  <div class="sidebar-overlay" id="sidebarOverlay"></div>
   <script src="../js/main.js"></script>
   <script>
-    initQuiz([
-      {
-        question: "Utilitarianism primarily judges actions by:",
-        options: ["Whether rules were followed", "Overall consequences for welfare or harm", "The character of the agent", "Legal compliance alone"],
-        correct: 1,
-        explanation: "Utilitarianism is consequence-focused."
-      },
-      {
-        question: "A duty-based (deontological) constraint in computing is best illustrated by:",
-        options: ["Maximizing ad revenue", "Refusing to deceive users even if it boosts metrics", "Shipping faster than competitors", "Optimizing model accuracy only"],
-        correct: 1,
-        explanation: "Deontology emphasizes duties such as honesty regardless of outcome."
-      },
-      {
-        question: "Why use multiple ethical frameworks on one case?",
-        options: ["To delay decisions indefinitely", "Agreement increases confidence; disagreement reveals tension", "Only one framework is ever correct", "To satisfy auditors with more text"],
-        correct: 1,
-        explanation: "Multi-lens analysis surfaces real trade-offs."
-      }
-    ]);
+    document.querySelectorAll('[data-quiz="lec02"] .quiz-option').forEach(opt => {
+      opt.addEventListener('click', function() {
+        const parent = this.closest('.quiz-options');
+        if (parent.dataset.answered) return;
+        parent.dataset.answered = '1';
+        this.classList.add('selected');
+        const correct = this.dataset.correct === 'true';
+        this.classList.add(correct ? 'correct' : 'incorrect');
+        const feedback = parent.nextElementSibling;
+        if (feedback) { feedback.classList.add('show', correct ? 'correct' : 'incorrect'); feedback.textContent = correct ? 'Correct.' : 'Review the theories and responsibility sections.'; }
+        if (!correct) parent.querySelector('[data-correct="true"]')?.classList.add('correct');
+      });
+    });
   </script>
 </body>
 </html>
