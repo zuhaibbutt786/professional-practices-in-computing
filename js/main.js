@@ -1,64 +1,75 @@
 /* =========================================================
    Professional Practices in Computing - Main JS
-   Theme, Sidebar, Progress, Quiz Engine
+   Theme, Sidebar, Progress, Quiz Engine, Search
    ========================================================= */
 
 (function () {
   'use strict';
 
   // ---------- Theme ----------
-  const root = document.documentElement;
-  const themeToggle = document.getElementById('theme-toggle');
+  const THEME_KEY = 'ppc-theme';
+  const html = document.documentElement;
 
   function getPreferredTheme() {
-    const stored = localStorage.getItem('ppc-theme');
+    const stored = localStorage.getItem(THEME_KEY);
     if (stored) return stored;
-    return window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark';
+    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
   }
 
   function setTheme(theme) {
-    root.setAttribute('data-theme', theme);
-    localStorage.setItem('ppc-theme', theme);
-    if (themeToggle) {
-      themeToggle.innerHTML = theme === 'dark'
-        ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
-        : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
-    }
+    html.setAttribute('data-theme', theme);
+    localStorage.setItem(THEME_KEY, theme);
+    updateThemeIcon(theme);
+  }
+
+  function updateThemeIcon(theme) {
+    const btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+    btn.innerHTML = theme === 'dark'
+      ? '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg>'
+      : '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>';
   }
 
   setTheme(getPreferredTheme());
-  if (themeToggle) {
-    themeToggle.addEventListener('click', () => {
-      const next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
-      setTheme(next);
-    });
-  }
+
+  document.getElementById('theme-toggle')?.addEventListener('click', () => {
+    const next = html.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
+    setTheme(next);
+  });
 
   // ---------- Sidebar ----------
   const sidebar = document.getElementById('sidebar');
-  const menuToggle = document.getElementById('menu-toggle');
   const overlay = document.getElementById('overlay');
+  const menuBtn = document.getElementById('menu-toggle');
 
+  function openSidebar() {
+    sidebar?.classList.add('open');
+    overlay?.classList.add('show');
+  }
   function closeSidebar() {
-    if (sidebar) sidebar.classList.remove('open');
-    if (overlay) overlay.classList.remove('active');
+    sidebar?.classList.remove('open');
+    overlay?.classList.remove('show');
   }
 
-  if (menuToggle) {
-    menuToggle.addEventListener('click', () => {
-      sidebar && sidebar.classList.toggle('open');
-      overlay && overlay.classList.toggle('active');
+  menuBtn?.addEventListener('click', () => {
+    if (sidebar?.classList.contains('open')) closeSidebar();
+    else openSidebar();
+  });
+  overlay?.addEventListener('click', closeSidebar);
+
+  // Close on link click (mobile)
+  document.querySelectorAll('.sidebar-link').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth < 992) closeSidebar();
     });
-  }
-  if (overlay) overlay.addEventListener('click', closeSidebar);
+  });
 
-  // ---------- Progress ----------
+  // ---------- Progress Tracking ----------
   const PROGRESS_KEY = 'ppc-progress';
-  const TOTAL_LECTURES = 30;
 
   function getProgress() {
     try {
-      return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
+      return JSON.parse(localStorage.getItem(PROGRESS_KEY)) || {};
     } catch {
       return {};
     }
@@ -66,121 +77,147 @@
 
   function saveProgress(data) {
     localStorage.setItem(PROGRESS_KEY, JSON.stringify(data));
-    updateProgressUI();
   }
 
-  function markComplete(id) {
+  function markLectureComplete(id) {
     const p = getProgress();
     p[id] = true;
     saveProgress(p);
+    updateProgressUI();
   }
 
   function updateProgressUI() {
     const p = getProgress();
+    const total = 30;
     const done = Object.keys(p).filter(k => p[k]).length;
-    const pct = Math.round((done / TOTAL_LECTURES) * 100);
-    const fill = document.getElementById('progress-fill');
-    const label = document.getElementById('progress-pct');
-    if (fill) fill.style.width = pct + '%';
-    if (label) label.textContent = pct + '%';
+    const pct = Math.round((done / total) * 100);
 
-    // Mark sidebar links
-    document.querySelectorAll('[data-lecture]').forEach(el => {
-      const id = el.getAttribute('data-lecture');
-      if (p[id]) el.classList.add('completed');
+    document.querySelectorAll('[data-progress-bar]').forEach(el => {
+      el.style.width = pct + '%';
     });
-  }
+    document.querySelectorAll('[data-progress-text]').forEach(el => {
+      el.textContent = `${done} / ${total} lectures (${pct}%)`;
+    });
 
-  updateProgressUI();
-
-  const markBtn = document.getElementById('mark-complete');
-  if (markBtn) {
-    markBtn.addEventListener('click', () => {
-      const id = markBtn.getAttribute('data-lecture-id');
-      if (id) {
-        markComplete(id);
-        markBtn.textContent = '✓ Completed';
-        markBtn.disabled = true;
+    // Mark sidebar items
+    document.querySelectorAll('.sidebar-link[data-lecture]').forEach(link => {
+      const id = link.getAttribute('data-lecture');
+      if (p[id]) {
+        link.classList.add('completed');
+        const num = link.querySelector('.num');
+        if (num) num.innerHTML = '✓';
       }
     });
-    const id = markBtn.getAttribute('data-lecture-id');
-    if (id && getProgress()[id]) {
-      markBtn.textContent = '✓ Completed';
-      markBtn.disabled = true;
-    }
   }
 
-  // ---------- Reflections (localStorage) ----------
-  document.querySelectorAll('[data-reflection]').forEach(ta => {
-    const key = 'ppc-reflection-' + ta.getAttribute('data-reflection');
-    const saved = localStorage.getItem(key);
-    if (saved) ta.value = saved;
-    ta.addEventListener('input', () => {
-      localStorage.setItem(key, ta.value);
-    });
+  // Complete button
+  document.getElementById('mark-complete')?.addEventListener('click', function () {
+    const id = this.getAttribute('data-lecture-id');
+    if (id) {
+      markLectureComplete(id);
+      this.innerHTML = '✓ Completed';
+      this.disabled = true;
+      this.classList.add('btn-outline');
+      this.classList.remove('btn-primary');
+    }
   });
+
+  updateProgressUI();
 
   // ---------- Quiz Engine ----------
   window.initQuiz = function (containerId, questions) {
     const container = document.getElementById(containerId);
-    if (!container || !questions || !questions.length) return;
+    if (!container || !questions?.length) return;
 
-    let html = '';
-    questions.forEach((q, qi) => {
-      html += `<div class="quiz-question" data-q="${qi}">
-        <h4>${qi + 1}. ${q.question}</h4>`;
-      q.options.forEach((opt, oi) => {
-        html += `<div class="quiz-option" data-q="${qi}" data-o="${oi}">${opt}</div>`;
-      });
-      html += `<div class="quiz-explanation" id="exp-${qi}" style="display:none;"></div></div>`;
-    });
-    html += `<button class="btn btn-primary" id="quiz-submit-${containerId}">Check Answers</button>`;
-    container.innerHTML = html;
+    let current = 0;
+    let score = 0;
 
-    const selected = {};
-    container.querySelectorAll('.quiz-option').forEach(el => {
-      el.addEventListener('click', () => {
-        const qi = el.getAttribute('data-q');
-        container.querySelectorAll(`.quiz-option[data-q="${qi}"]`).forEach(o => o.classList.remove('selected'));
-        el.classList.add('selected');
-        selected[qi] = parseInt(el.getAttribute('data-o'), 10);
-      });
-    });
+    function render() {
+      if (current >= questions.length) {
+        container.innerHTML = `
+          <div class="text-center">
+            <h3>Quiz Complete</h3>
+            <p>You scored <strong>${score}</strong> out of <strong>${questions.length}</strong></p>
+            <button class="btn btn-primary mt-2" onclick="location.reload()">Retry</button>
+          </div>`;
+        return;
+      }
 
-    const submitBtn = document.getElementById(`quiz-submit-${containerId}`);
-    if (submitBtn) {
-      submitBtn.addEventListener('click', () => {
-        let correctCount = 0;
-        questions.forEach((q, qi) => {
-          const opts = container.querySelectorAll(`.quiz-option[data-q="${qi}"]`);
-          opts.forEach(o => {
-            o.classList.remove('correct', 'incorrect');
-            const oi = parseInt(o.getAttribute('data-o'), 10);
-            if (oi === q.correct) o.classList.add('correct');
-            else if (selected[qi] === oi) o.classList.add('incorrect');
-          });
-          const exp = document.getElementById(`exp-${qi}`);
-          if (exp) {
-            exp.style.display = 'block';
-            exp.textContent = q.explanation || '';
-          }
-          if (selected[qi] === q.correct) correctCount++;
-        });
-        submitBtn.textContent = `Score: ${correctCount} / ${questions.length}`;
-        submitBtn.disabled = true;
+      const q = questions[current];
+      container.innerHTML = `
+        <div class="quiz-question">${current + 1}. ${q.question}</div>
+        <div class="quiz-options" id="quiz-opts"></div>
+        <div class="quiz-feedback" id="quiz-fb"></div>
+        <div class="mt-2" style="display:flex;justify-content:space-between;align-items:center;">
+          <span style="font-size:0.85rem;color:var(--text-muted);">${current + 1} / ${questions.length}</span>
+          <button class="btn btn-primary btn-sm" id="quiz-next" style="display:none;">Next</button>
+        </div>`;
+
+      const opts = document.getElementById('quiz-opts');
+      q.options.forEach((opt, i) => {
+        const div = document.createElement('div');
+        div.className = 'quiz-option';
+        div.textContent = opt;
+        div.addEventListener('click', () => selectOption(i, q.correct, div));
+        opts.appendChild(div);
       });
     }
+
+    function selectOption(index, correctIndex, el) {
+      const options = document.querySelectorAll('#quiz-opts .quiz-option');
+      options.forEach(o => o.style.pointerEvents = 'none');
+
+      if (index === correctIndex) {
+        el.classList.add('correct');
+        score++;
+        document.getElementById('quiz-fb').className = 'quiz-feedback show correct';
+        document.getElementById('quiz-fb').textContent = 'Correct! ' + (questions[current].explanation || '');
+      } else {
+        el.classList.add('incorrect');
+        options[correctIndex].classList.add('correct');
+        document.getElementById('quiz-fb').className = 'quiz-feedback show incorrect';
+        document.getElementById('quiz-fb').textContent = 'Not quite. ' + (questions[current].explanation || '');
+      }
+      document.getElementById('quiz-next').style.display = 'inline-flex';
+      document.getElementById('quiz-next').onclick = () => {
+        current++;
+        render();
+      };
+    }
+
+    render();
   };
 
-  // ---------- Search (simple) ----------
+  // ---------- Simple Search (client-side) ----------
   const searchInput = document.getElementById('search-input');
-  if (searchInput) {
-    searchInput.addEventListener('input', (e) => {
-      const term = e.target.value.toLowerCase().trim();
-      document.querySelectorAll('.lecture-card, .sidebar-link[data-lecture]').forEach(el => {
-        const text = el.textContent.toLowerCase();
-        el.style.display = !term || text.includes(term) ? '' : 'none';
-      });
+  searchInput?.addEventListener('input', function () {
+    const q = this.value.toLowerCase().trim();
+    // Basic: highlight or filter lecture cards if on home
+    document.querySelectorAll('.lecture-card').forEach(card => {
+      const text = card.textContent.toLowerCase();
+      card.style.display = !q || text.includes(q) ? '' : 'none';
     });
-  }
+  });
+
+  // ---------- Reflection local save ----------
+  document.querySelectorAll('[data-reflection]').forEach(textarea => {
+    const key = 'ppc-reflection-' + textarea.getAttribute('data-reflection');
+    textarea.value = localStorage.getItem(key) || '';
+    textarea.addEventListener('input', () => {
+      localStorage.setItem(key, textarea.value);
+    });
+  });
+
+  // ---------- Smooth scroll for internal links ----------
+  document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+      const id = a.getAttribute('href').slice(1);
+      const el = document.getElementById(id);
+      if (el) {
+        e.preventDefault();
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+
 })();
