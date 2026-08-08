@@ -3,108 +3,135 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lecture 01 — Introduction to Professional Practices | PPC</title>
+  <meta name="description" content="Lecture 01: Introduction & Professional Identity — Professional Practices in Computing" />
+  <title>Lecture 01 — Introduction & Professional Identity | PPC</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="navbar-brand">
-      <div class="logo">PPC</div>
-      <span>Professional Practices</span>
-    </a>
-    <div class="nav-actions">
-      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
-      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">
+          <span class="logo-mark">PPC</span>
+          <span class="logo-text">Professional Practices</span>
+        </a>
+        <button class="sidebar-close" id="sidebarClose" aria-label="Close menu">×</button>
+      </div>
+      <nav class="sidebar-nav">
+        <div class="nav-section">
+          <span class="nav-label">Course</span>
+          <a href="../index.html" class="nav-link">Home</a>
+        </div>
+        <div class="nav-section">
+          <span class="nav-label">Lectures</span>
+          <a href="lecture-01.html" class="nav-link active">01 · Introduction & Professional Identity</a>
+          <a href="lecture-02.html" class="nav-link">02 · Ethics Frameworks</a>
+          <a href="lecture-03.html" class="nav-link">03 · Privacy, Data & Surveillance</a>
+          <a href="lecture-04.html" class="nav-link">04 · IP & Open Source</a>
+          <a href="lecture-05.html" class="nav-link">05 · Professional Codes</a>
+        </div>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="progress-widget">
+          <span class="progress-label">Course Progress</span>
+          <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:0%"></div></div>
+          <span class="progress-text" id="progressText">0 / 5 lectures</span>
+        </div>
+      </div>
+    </aside>
+
+    <div class="main-wrap">
+      <header class="topbar">
+        <button class="menu-toggle" id="menuToggle" aria-label="Open menu">☰</button>
+        <div class="topbar-title">Lecture 01</div>
+        <div class="topbar-actions">
+          <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+        </div>
+      </header>
+
+      <main class="content">
+        <div class="breadcrumb"><a href="../index.html">Home</a> · Lecture 01</div>
+
+        <header class="lecture-header">
+          <div class="lecture-meta">Lecture 01 · Introduction</div>
+          <h1>Introduction & Professional Identity</h1>
+          <p class="section-lead">Why professionalism matters, the map of this course, and the identity of a computing professional.</p>
+        </header>
+
+        <section class="prose">
+          <h2>Learning Objectives</h2>
+          <ul class="objectives">
+            <li>Explain why professional practices are essential beyond writing correct code.</li>
+            <li>Describe the scope of professional responsibility in computing.</li>
+            <li>Identify major course themes: ethics, law, AI, data, communication, career.</li>
+            <li>Draft a first version of your professional identity as a computing graduate.</li>
+          </ul>
+
+          <h2>Motivation</h2>
+          <p>Technical skill alone is not enough. Computing systems shape health, finance, justice, democracy, and everyday life. When systems fail—or succeed in harmful ways—the impact is rarely limited to a single company. Employers, regulators, and the public expect computing professionals to exercise judgment about risk, fairness, privacy, safety, and social impact.</p>
+          <p>This course develops that judgment. It does not teach a particular language or framework. It teaches how to think as a professional: to see stakeholders, trade-offs, duties, and long-term consequences.</p>
+
+          <div class="callout">
+            <strong>Core idea:</strong> A profession combines specialized knowledge with a commitment to the public interest and standards that can constrain pure commercial pressure.
+          </div>
+
+          <h2>Real Story</h2>
+          <p>In 2018, a major social platform faced intense scrutiny after data from millions of users was harvested and used for political targeting without adequate consent. Engineers who built data pipelines and APIs had made technical decisions under product pressure. Many later reflected that clearer professional norms, stronger internal challenge culture, and earlier escalation might have changed outcomes. The incident became a global case study in privacy, consent, and organizational responsibility.</p>
+
+          <h2>Industrial Scenario</h2>
+          <p>You join a startup building a recommendation system for a health-related consumer app. The product team wants maximum engagement. Your model can increase session time by surfacing emotionally charged content. A junior colleague asks whether engagement metrics should be the primary success measure when the domain is health. How do you respond as a professional—not only as an engineer?</p>
+
+          <h2>Core Concepts</h2>
+          <p><strong>Profession vs. job.</strong> A job is paid work. A profession involves specialized knowledge, a commitment to the public interest, and standards that can constrain commercial pressure.</p>
+          <p><strong>Stakeholders.</strong> Users, non-users affected by systems, employers, clients, regulators, society, and future generations.</p>
+          <p><strong>Duty of care.</strong> A reasonable professional anticipates foreseeable harms and takes proportionate steps to prevent or mitigate them.</p>
+          <p><strong>Accountability.</strong> Being answerable for decisions and outcomes, including the decision to remain silent.</p>
+
+          <h2>Perspectives</h2>
+          <p><strong>Ethical:</strong> What should we do when interests conflict?</p>
+          <p><strong>Legal:</strong> What are we required to do under law and regulation?</p>
+          <p><strong>Business:</strong> What sustains trust and long-term value?</p>
+          <p><strong>AI / Data Science:</strong> Models and data pipelines encode choices about whose interests count.</p>
+          <p><strong>Software Engineering:</strong> Requirements, architecture, and process determine where ethical risk lives.</p>
+          <p><strong>Cybersecurity:</strong> Security failures are often professional failures of prioritization and communication.</p>
+
+          <h2>Knowledge Check</h2>
+          <div id="quiz-box" class="quiz-box glass"></div>
+
+          <h2>Reflection</h2>
+          <div class="reflection-prompt glass">
+            <h4>Personal reflection</h4>
+            <p>In one paragraph, describe the kind of computing professional you want to become. What values will you refuse to compromise?</p>
+            <textarea data-reflection="l01" rows="5" style="width:100%;padding:0.75rem;border-radius:10px;border:1px solid var(--border);background:var(--bg-elevated);color:var(--text);font-family:inherit;margin-top:0.5rem;"></textarea>
+          </div>
+
+          <h2>Assignment</h2>
+          <div class="callout">
+            Write a 400–600 word professional identity statement. Include: (1) your intended role domain, (2) two professional values, (3) one risk area you want to understand deeply this term, (4) one concrete habit you will practice.
+          </div>
+
+          <h2>Summary</h2>
+          <p>Professional practices turn technical ability into trustworthy service. This course builds ethical reasoning, legal awareness, communication, leadership, and judgment for a career that will outlast any single tool stack.</p>
+
+          <div class="nav-lecture">
+            <a href="../index.html" class="btn btn-ghost">← Home</a>
+            <div>
+              <button class="btn btn-ghost" id="markComplete">Mark complete</button>
+              <a href="lecture-02.html" class="btn btn-primary">Next: Lecture 02 →</a>
+            </div>
+          </div>
+        </section>
+
+        <footer class="site-footer">
+          <p>Professional Practices in Computing · Lecture 01</p>
+        </footer>
+      </main>
     </div>
-  </nav>
-  <div class="overlay" id="overlay"></div>
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Course</div>
-      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Lectures</div>
-      <a href="lecture-01.html" class="sidebar-link active"><span class="num">01</span> Introduction</a>
-      <a href="lecture-02.html" class="sidebar-link"><span class="num">02</span> History & Codes</a>
-      <a href="lecture-03.html" class="sidebar-link"><span class="num">03</span> Ethical Theories</a>
-      <a href="lecture-04.html" class="sidebar-link"><span class="num">04</span> ACM & IEEE Codes</a>
-      <a href="lecture-05.html" class="sidebar-link"><span class="num">05</span> Responsibility</a>
-    </div>
-  </aside>
-  <div class="main-wrapper">
-    <article class="section" style="max-width:780px;">
-      <p style="color:var(--accent);font-weight:600;font-size:0.9rem;margin-bottom:0.5rem;">Lecture 01</p>
-      <h1>Introduction to Professional Practices</h1>
-      <p class="hero-lead" style="text-align:left;margin:0 0 2rem;">Why professionalism matters for computing graduates, the map of this course, and the identity of a computing professional.</p>
-
-      <div class="content-block" style="margin-bottom:2rem;">
-        <h2>Learning Objectives</h2>
-        <ul style="padding-left:1.25rem;color:var(--text-secondary);">
-          <li>Explain why professional practices are essential in computing careers.</li>
-          <li>Describe the scope of professional responsibility beyond writing correct code.</li>
-          <li>Identify the major themes of this course (ethics, law, AI, data, communication, career).</li>
-          <li>Articulate a first draft of your professional identity as a computing graduate.</li>
-        </ul>
-      </div>
-
-      <h2>Motivation</h2>
-      <p>Technical skill alone is not enough. Computing systems shape health, finance, justice, democracy, and everyday life. When systems fail—or succeed in harmful ways—the impact is rarely limited to a single company. Employers, regulators, and the public increasingly expect computing professionals to exercise judgment about risk, fairness, privacy, safety, and social impact.</p>
-      <p>This course develops that judgment. It does not teach a particular language or framework. It teaches how to think as a professional: to see stakeholders, trade-offs, duties, and long-term consequences.</p>
-
-      <h2>Real Story</h2>
-      <p>In 2018, a widely used social platform faced intense scrutiny after data from millions of users was harvested and used for political targeting without adequate consent or transparency. Engineers who built data pipelines and APIs had made technical decisions under product pressure. Many later reflected that clearer professional norms, stronger internal challenge culture, and earlier escalation might have changed outcomes. The incident became a global case study in privacy, consent, and organizational responsibility.</p>
-
-      <h2>Industrial Scenario</h2>
-      <p>You join a startup building a recommendation system for a health-related consumer app. The product team wants maximum engagement. Your model can increase session time by surfacing emotionally charged content. A junior colleague asks whether engagement metrics should be the primary success measure when the domain is health. How do you respond as a professional—not only as an engineer?</p>
-
-      <h2>Core Concepts</h2>
-      <p><strong>Profession vs. job.</strong> A job is paid work. A profession involves specialized knowledge, a commitment to the public interest, and standards that can constrain commercial pressure.</p>
-      <p><strong>Stakeholders.</strong> Users, non-users affected by systems, employers, clients, regulators, society, and future generations.</p>
-      <p><strong>Duty of care.</strong> A reasonable professional anticipates foreseeable harms and takes proportionate steps to prevent or mitigate them.</p>
-      <p><strong>Accountability.</strong> Being answerable for decisions and outcomes, including the decision to remain silent.</p>
-
-      <h2>Perspectives</h2>
-      <p><strong>Ethical:</strong> What should we do when interests conflict?</p>
-      <p><strong>Legal:</strong> What are we required to do under law and regulation?</p>
-      <p><strong>Business:</strong> What sustains trust and long-term value?</p>
-      <p><strong>AI / Data Science:</strong> Models and data pipelines encode choices about whose interests count.</p>
-      <p><strong>Software Engineering:</strong> Requirements, architecture, and process determine where ethical risk lives.</p>
-      <p><strong>Cybersecurity:</strong> Security failures are often professional failures of prioritization and communication.</p>
-
-      <h2>Knowledge Check</h2>
-      <div id="quiz-container" class="activity-card"></div>
-
-      <h2>Reflection</h2>
-      <div class="activity-card">
-        <h4>Personal reflection</h4>
-        <p>In one paragraph, describe the kind of computing professional you want to become. What values will you refuse to compromise?</p>
-        <textarea data-reflection="l01" rows="5" style="width:100%;padding:0.75rem;border-radius:10px;border:1px solid var(--border);background:var(--bg-secondary);color:var(--text-primary);font-family:inherit;"></textarea>
-      </div>
-
-      <h2>Assignment</h2>
-      <div class="content-block">
-        <p>Write a 400–600 word professional identity statement. Include: (1) your intended role domain, (2) two professional values, (3) one risk area you want to understand deeply this term, (4) one concrete habit you will practice.</p>
-      </div>
-
-      <h2>Summary</h2>
-      <p>Professional practices turn technical ability into trustworthy service. This course builds ethical reasoning, legal awareness, communication, leadership, and judgment for a career that will outlast any single tool stack.</p>
-
-      <div style="margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap;">
-        <a href="../index.html" class="btn btn-secondary">← Home</a>
-        <a href="lecture-02.html" class="btn btn-primary">Next: Lecture 02 →</a>
-        <button class="btn btn-primary" onclick="markLectureComplete('lecture-01')">Mark complete</button>
-      </div>
-    </article>
-    <footer class="site-footer">
-      <p>Professional Practices in Computing — Lecture 01</p>
-    </footer>
   </div>
+  <div class="sidebar-overlay" id="sidebarOverlay"></div>
   <script src="../js/main.js"></script>
   <script>
     initQuiz([
