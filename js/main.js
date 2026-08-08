@@ -1,6 +1,6 @@
 /* =========================================================
    Professional Practices in Computing - Main JS
-   Theme, Sidebar, Progress, Quiz Engine, Search
+   Theme, Sidebar, Progress, Quiz Engine, Search, Reflections
    ========================================================= */
 
 (function () {
@@ -91,10 +91,12 @@
     const total = 30;
     const done = Object.keys(p).filter(k => p[k]).length;
     const pct = Math.round((done / total) * 100);
-    const el = document.getElementById('progress-bar');
-    if (el) el.style.width = pct + '%';
-    const label = document.getElementById('progress-label');
-    if (label) label.textContent = done + ' / ' + total + ' lectures';
+    document.querySelectorAll('[data-progress-bar]').forEach(el => {
+      el.style.width = pct + '%';
+    });
+    document.querySelectorAll('[data-progress-text]').forEach(el => {
+      el.textContent = done + ' / ' + total + ' lectures (' + pct + '%)';
+    });
   }
 
   window.markLectureComplete = markComplete;
@@ -154,7 +156,7 @@
   const searchInput = document.getElementById('search-input');
   searchInput?.addEventListener('input', function () {
     const q = this.value.toLowerCase().trim();
-    document.querySelectorAll('.lecture-card').forEach(card => {
+    document.querySelectorAll('.lecture-card, .sidebar-link').forEach(card => {
       const text = card.textContent.toLowerCase();
       card.style.display = !q || text.includes(q) ? '' : 'none';
     });
@@ -180,5 +182,19 @@
       }
     });
   });
+
+  // ---------- Mark current lecture complete on load if data-lecture-id present ----------
+  const lectureId = document.body.getAttribute('data-lecture-id');
+  if (lectureId) {
+    // Optional: auto-mark or provide button
+    const btn = document.getElementById('mark-complete');
+    if (btn) {
+      btn.addEventListener('click', () => {
+        markComplete(lectureId);
+        btn.textContent = 'Completed ✓';
+        btn.disabled = true;
+      });
+    }
+  }
 
 })();
