@@ -29,12 +29,10 @@
   }
 
   document.getElementById('themeToggle')?.addEventListener('click', toggleTheme);
-  document.getElementById('themeToggleDesktop')?.addEventListener('click', toggleTheme);
-  document.getElementById('theme-toggle')?.addEventListener('click', toggleTheme);
 
   // ---------- Sidebar ----------
   const sidebar = document.getElementById('sidebar');
-  const menuBtn = document.getElementById('menuToggle') || document.getElementById('menu-toggle');
+  const menuBtn = document.getElementById('menuBtn');
   const closeBtn = document.getElementById('sidebarClose');
 
   function openSidebar() {
@@ -50,7 +48,7 @@
   });
   closeBtn?.addEventListener('click', closeSidebar);
 
-  document.querySelectorAll('.nav-item, .sidebar-link').forEach(link => {
+  document.querySelectorAll('.nav-item').forEach(link => {
     link.addEventListener('click', () => {
       if (window.innerWidth < 900) closeSidebar();
     });
@@ -58,6 +56,7 @@
 
   // ---------- Progress Tracking ----------
   const PROGRESS_KEY = 'ppc-progress';
+  const TOTAL_MODULES = 5;
 
   function getProgress() {
     try {
@@ -76,14 +75,16 @@
 
   function updateProgressUI() {
     const p = getProgress();
-    const total = 5; // lectures 01-05 for now
     const done = Object.values(p).filter(Boolean).length;
-    const pct = Math.min(100, Math.round((done / total) * 100));
-    const fill = document.getElementById('progressFill');
-    if (fill) fill.style.width = pct + '%';
+    const pct = Math.min(100, Math.round((done / TOTAL_MODULES) * 100));
+    const pill = document.getElementById('progressPill');
+    if (pill) pill.textContent = pct + '%';
+    document.querySelectorAll('[data-status]').forEach(el => {
+      const id = el.getAttribute('data-status');
+      if (p[id]) el.textContent = 'Completed';
+    });
   }
 
-  // Mark current lecture complete on load if data-lecture attribute present
   const lectureId = document.body.getAttribute('data-lecture');
   if (lectureId) {
     setProgress(lectureId, true);
@@ -95,7 +96,6 @@
     if (!questions || !questions.length) return;
     let current = 0;
     let score = 0;
-
     const container = document.getElementById('quiz-container');
     if (!container) return;
 
@@ -105,7 +105,7 @@
         return;
       }
       const q = questions[current];
-      let html = '<div class="quiz-card glass"><h4>Q' + (current + 1) + '. ' + q.question + '</h4><div class="quiz-options" id="quiz-opts"></div><div id="quiz-fb" class="quiz-feedback"></div><button class="btn btn-primary" id="quiz-next" style="display:none;margin-top:0.75rem">Next</button></div>';
+      let html = '<div class="quiz-card glass"><h4>Q' + (current + 1) + '. ' + q.question + '</h4><div class="quiz-options" id="quiz-opts"></div><div id="quiz-fb" class="quiz-feedback"></div><button class="btn primary" id="quiz-next" style="display:none;margin-top:0.75rem">Next</button></div>';
       container.innerHTML = html;
       const opts = document.getElementById('quiz-opts');
       q.options.forEach((opt, i) => {
@@ -137,13 +137,19 @@
     render();
   };
 
-  // ---------- Simple Search ----------
-  const searchInput = document.getElementById('searchInput') || document.getElementById('search-input');
+  // ---------- Search ----------
+  const searchInput = document.getElementById('siteSearch');
+  const searchResults = document.getElementById('searchResults');
   searchInput?.addEventListener('input', function () {
     const q = this.value.toLowerCase().trim();
-    document.querySelectorAll('.module-card, .lecture-card').forEach(card => {
+    if (!searchResults) return;
+    if (!q) {
+      searchResults.hidden = true;
+      return;
+    }
+    document.querySelectorAll('.module-card').forEach(card => {
       const text = card.textContent.toLowerCase();
-      card.style.display = !q || text.includes(q) ? '' : 'none';
+      card.style.display = text.includes(q) ? '' : 'none';
     });
   });
 
