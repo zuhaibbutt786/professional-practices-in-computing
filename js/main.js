@@ -69,7 +69,7 @@
 
   function getProgress() {
     try {
-      return JSON.parse(localStorage.getItem(PROGRESS_KEY)) || {};
+      return JSON.parse(localStorage.getItem(PROGRESS_KEY) || '{}');
     } catch {
       return {};
     }
@@ -79,9 +79,9 @@
     localStorage.setItem(PROGRESS_KEY, JSON.stringify(data));
   }
 
-  function markLectureComplete(id) {
+  function markComplete(lectureId) {
     const p = getProgress();
-    p[id] = true;
+    p[lectureId] = true;
     saveProgress(p);
     updateProgressUI();
   }
@@ -91,68 +91,30 @@
     const total = 30;
     const done = Object.keys(p).filter(k => p[k]).length;
     const pct = Math.round((done / total) * 100);
-
-    document.querySelectorAll('[data-progress-bar]').forEach(el => {
-      el.style.width = pct + '%';
-    });
-    document.querySelectorAll('[data-progress-text]').forEach(el => {
-      el.textContent = `${done} / ${total} lectures (${pct}%)`;
-    });
-
-    // Mark sidebar items
-    document.querySelectorAll('.sidebar-link[data-lecture]').forEach(link => {
-      const id = link.getAttribute('data-lecture');
-      if (p[id]) {
-        link.classList.add('completed');
-        const num = link.querySelector('.num');
-        if (num) num.innerHTML = '✓';
-      }
-    });
+    const el = document.getElementById('progress-bar');
+    if (el) el.style.width = pct + '%';
+    const label = document.getElementById('progress-label');
+    if (label) label.textContent = done + ' / ' + total + ' lectures';
   }
 
-  // Complete button
-  document.getElementById('mark-complete')?.addEventListener('click', function () {
-    const id = this.getAttribute('data-lecture-id');
-    if (id) {
-      markLectureComplete(id);
-      this.innerHTML = '✓ Completed';
-      this.disabled = true;
-      this.classList.add('btn-outline');
-      this.classList.remove('btn-primary');
-    }
-  });
-
+  window.markLectureComplete = markComplete;
   updateProgressUI();
 
   // ---------- Quiz Engine ----------
-  window.initQuiz = function (containerId, questions) {
-    const container = document.getElementById(containerId);
-    if (!container || !questions?.length) return;
+  window.initQuiz = function (questions, containerId) {
+    const container = document.getElementById(containerId || 'quiz-container');
+    if (!container || !questions || !questions.length) return;
 
     let current = 0;
     let score = 0;
 
     function render() {
       if (current >= questions.length) {
-        container.innerHTML = `
-          <div class="text-center">
-            <h3>Quiz Complete</h3>
-            <p>You scored <strong>${score}</strong> out of <strong>${questions.length}</strong></p>
-            <button class="btn btn-primary mt-2" onclick="location.reload()">Retry</button>
-          </div>`;
+        container.innerHTML = '<div class="quiz-result"><h3>Quiz Complete</h3><p>Score: ' + score + ' / ' + questions.length + '</p><button class="btn btn-primary" onclick="location.reload()">Retry</button></div>';
         return;
       }
-
       const q = questions[current];
-      container.innerHTML = `
-        <div class="quiz-question">${current + 1}. ${q.question}</div>
-        <div class="quiz-options" id="quiz-opts"></div>
-        <div class="quiz-feedback" id="quiz-fb"></div>
-        <div class="mt-2" style="display:flex;justify-content:space-between;align-items:center;">
-          <span style="font-size:0.85rem;color:var(--text-muted);">${current + 1} / ${questions.length}</span>
-          <button class="btn btn-primary btn-sm" id="quiz-next" style="display:none;">Next</button>
-        </div>`;
-
+      container.innerHTML = '<div class="quiz-q"><h4>Q' + (current + 1) + '. ' + q.question + '</h4><div id="quiz-opts"></div><div id="quiz-fb" class="quiz-feedback"></div><button id="quiz-next" class="btn btn-primary" style="display:none;margin-top:1rem">Next</button></div>';
       const opts = document.getElementById('quiz-opts');
       q.options.forEach((opt, i) => {
         const div = document.createElement('div');
@@ -192,7 +154,6 @@
   const searchInput = document.getElementById('search-input');
   searchInput?.addEventListener('input', function () {
     const q = this.value.toLowerCase().trim();
-    // Basic: highlight or filter lecture cards if on home
     document.querySelectorAll('.lecture-card').forEach(card => {
       const text = card.textContent.toLowerCase();
       card.style.display = !q || text.includes(q) ? '' : 'none';
