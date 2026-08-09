@@ -8,13 +8,13 @@ https://zuhaibbutt786.github.io/professional-practices-in-computing/
 ## Completed
 - README.md
 - index.html (full home + navigation to Lectures 01–05)
-- css/styles.css (glassmorphism dark/light, responsive)
-- js/main.js (theme, sidebar, progress, quiz, search, reflections)
-- lectures/lecture-01.html — Introduction to Professional Practices (enriched)
-- lectures/lecture-02.html — Ethics & Professional Responsibility (enriched)
-- lectures/lecture-03.html — Privacy, Data Protection & Surveillance (enriched)
-- lectures/lecture-04.html — Responsible AI & Algorithmic Systems (enriched)
-- lectures/lecture-05.html — Intellectual Property, Licensing & Open Source (enriched)
+- css/styles.css (full glassmorphism dark/light, responsive)
+- js/main.js (theme, sidebar, progress, quiz engine, search, reflections)
+- lectures/lecture-01.html — Introduction to Professional Practices (full enriched ~32k)
+- lectures/lecture-02.html — Ethics & Professional Responsibility (full enriched ~31k)
+- lectures/lecture-03.html — Privacy, Data Protection & Surveillance (full enriched ~31k)
+- lectures/lecture-04.html — Responsible AI & Algorithmic Systems (full enriched ~28k)
+- lectures/lecture-05.html — Intellectual Property, Licensing & Open Source (full enriched ~27k)
 
 ## Next
 Lectures 06–30 (one complete module at a time)
