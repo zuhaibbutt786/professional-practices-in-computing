@@ -11,10 +11,10 @@ https://zuhaibbutt786.github.io/professional-practices-in-computing/
 - css/styles.css (full glassmorphism dark/light, responsive)
 - js/main.js (theme, sidebar, progress, quiz engine, search, reflections)
 - lectures/lecture-01.html — Introduction to Professional Practices (full enriched ~32k)
-- lectures/lecture-02.html — Ethics & Professional Responsibility (full enriched ~31k)
-- lectures/lecture-03.html — Privacy, Data Protection & Surveillance (full enriched ~31k)
-- lectures/lecture-04.html — Responsible AI & Algorithmic Systems (full enriched ~28k)
-- lectures/lecture-05.html — Intellectual Property, Licensing & Open Source (full enriched ~27k)
+- lectures/lecture-02.html — History of the Profession & Codes (full enriched ~31k)
+- lectures/lecture-03.html — Ethical Theories & Frameworks (full enriched ~31k)
+- lectures/lecture-04.html — ACM & IEEE Codes Deep Dive (full enriched ~28k)
+- lectures/lecture-05.html — Responsibility & Accountability (full enriched ~27k)
 
 ## Next
 Lectures 06–30 (one complete module at a time)
