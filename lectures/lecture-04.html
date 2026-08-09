@@ -3,127 +3,130 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 04: Responsible AI and Algorithmic Systems — fairness, accountability, transparency, risk management, and professional duties in AI and data-driven systems." />
-  <title>Lecture 04 · AI & Responsible Systems | Professional Practices in Computing</title>
+  <meta name="description" content="Lecture 04: ACM & IEEE Codes Deep Dive — Interpreting professional codes, applying principles to cases, and resolving conflicts between duties." />
+  <title>Lecture 04 — ACM & IEEE Codes | Professional Practices in Computing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
   <nav class="navbar">
     <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
     <div class="nav-actions">
-      <div class="search-box"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="search" id="site-search" placeholder="Search lectures…" aria-label="Search" /></div>
-      <div class="progress-wrap"><span id="progress-text">0%</span><div class="progress-bar-bg"><div id="progress-bar"></div></div></div>
-      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"><svg class="icon-sun" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-      <button class="btn-icon" id="sidebar-toggle" aria-label="Toggle sidebar"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
     </div>
   </nav>
   <div class="overlay" id="overlay"></div>
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-section"><div class="sidebar-title">Course</div><a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a></div>
     <div class="sidebar-section">
-      <div class="sidebar-title">Lectures</div>
-      <a href="lecture-01.html" class="sidebar-link"><span class="num">01</span> Introduction</a>
-      <a href="lecture-02.html" class="sidebar-link"><span class="num">02</span> Ethics & Responsibility</a>
-      <a href="lecture-03.html" class="sidebar-link"><span class="num">03</span> Privacy & Data</a>
-      <a href="lecture-04.html" class="sidebar-link active"><span class="num">04</span> AI & Responsible Systems</a>
-      <a href="lecture-05.html" class="sidebar-link"><span class="num">05</span> IP, Licensing & Open Source</a>
+      <div class="sidebar-title">Modules</div>
+      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link active" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
     </div>
   </aside>
-  <div class="main-wrapper" id="main-wrapper">
-    <main class="content">
-      <nav class="breadcrumbs"><a href="../index.html">Home</a><span class="sep">/</span><span>Lecture 04</span></nav>
-      <header class="lecture-header">
-        <span class="lecture-badge">Module 04 · AI Ethics</span>
-        <h1>Responsible AI & Algorithmic Systems</h1>
-        <p class="hero-lead">Fairness, accountability, transparency, risk management, and the professional obligations of those who design, train, deploy, and oversee AI and data-driven systems.</p>
-        <div class="lecture-meta"><span>⏱ ~90–120 min</span><span>📚 Principles + governance</span><span>🎯 Responsible AI</span></div>
-      </header>
-
-      <section class="section" id="objectives">
-        <div class="section-header"><div class="section-icon">🎯</div><h2>Learning Objectives</h2></div>
-        <ul class="objectives-list">
-          <li>Articulate core principles of responsible AI (fairness, accountability, transparency, safety, human oversight).</li>
-          <li>Identify common sources of bias and harm in data and models.</li>
-          <li>Apply high-level risk-management thinking to AI systems (context, impact, monitoring).</li>
-          <li>Connect professional codes and emerging frameworks (e.g., NIST AI RMF concepts, OECD principles) to daily practice.</li>
-          <li>Discuss governance roles: who decides objectives, who is accountable when systems fail.</li>
-        </ul>
-      </section>
-
-      <section class="section" id="why">
-        <div class="section-header"><div class="section-icon">💡</div><h2>Why Responsible AI</h2></div>
-        <p>AI systems encode objectives, data histories, and design choices that affect people’s opportunities, safety, and rights. Failures are not only technical; they are often failures of problem framing, evaluation, deployment context, and accountability. Professional practice requires treating these as first-class concerns throughout the lifecycle.</p>
-      </section>
-
-      <section class="section" id="principles">
-        <div class="section-header"><div class="section-icon">📐</div><h2>Key Principles</h2></div>
-        <ul>
-          <li><strong>Fairness / non-discrimination</strong> — avoid unjustified disparate impacts; examine metrics and group outcomes carefully.</li>
-          <li><strong>Accountability</strong> — clear ownership of decisions about objectives, data, and deployment; ability to explain and remedy.</li>
-          <li><strong>Transparency & explainability</strong> — appropriate disclosure of purpose, limitations, and behavior to users and overseers.</li>
-          <li><strong>Safety & robustness</strong> — design and test for failure modes; monitor in production.</li>
-          <li><strong>Human oversight</strong> — meaningful human control where stakes are high.</li>
-          <li><strong>Privacy & data governance</strong> — respect data-protection principles in training and inference.</li>
-        </ul>
-      </section>
-
-      <section class="section" id="lifecycle">
-        <div class="section-header"><div class="section-icon">🔄</div><h2>Lifecycle View</h2></div>
-        <p>Problem definition → data collection & labeling → model development & evaluation → deployment → monitoring & update → decommissioning. Ethical and professional risks appear at every stage. Evaluation must include performance on relevant subgroups and in realistic operating conditions, not only average metrics on a test set.</p>
-      </section>
-
-      <section class="section" id="cases">
-        <div class="section-header"><div class="section-icon">🔍</div><h2>Illustrative Cases</h2></div>
-        <p>Hiring and lending algorithms that reproduced historical bias. Facial recognition with uneven error rates across demographic groups. Content recommendation systems optimizing engagement at the cost of other social goods. Healthcare models trained on non-representative data. Each case shows that “the model was accurate on average” is not a complete professional defense.</p>
-      </section>
-
-      <section class="section" id="quiz">
-        <div class="section-header"><div class="section-icon">✅</div><h2>Knowledge Check</h2></div>
-        <div class="quiz-container" data-quiz="lec04">
-          <div class="quiz-question">Responsible AI practice emphasizes:</div>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">Maximizing model accuracy on a single held-out test set and shipping.</div>
-            <div class="quiz-option" data-correct="true">Considering fairness, accountability, transparency, safety, and context throughout the system lifecycle, with clear ownership of decisions.</div>
-            <div class="quiz-option" data-correct="false">Avoiding any use of machine learning because of risk.</div>
-            <div class="quiz-option" data-correct="false">Relying solely on post-hoc explanations after harm occurs.</div>
-          </div>
-          <div class="quiz-feedback"></div>
-        </div>
-      </section>
-
-      <section class="section" id="summary">
-        <div class="section-header"><div class="section-icon">📋</div><h2>Summary</h2></div>
-        <ul>
-          <li>AI systems require professional attention to fairness, accountability, transparency, and safety.</li>
-          <li>Risk depends on context and impact; high-stakes domains demand stronger oversight and evidence.</li>
-          <li>Governance and documentation are part of engineering work, not optional extras.</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <p><a href="lecture-03.html" class="btn btn-ghost">← Previous</a> <a href="lecture-05.html" class="btn btn-primary">Next: IP, Licensing & Open Source →</a></p>
-      </section>
-      <footer class="footer">Professional Practices in Computing · Lecture 04</footer>
-    </main>
-  </div>
+  <div class="main-wrapper"><div class="content">
+    <div class="breadcrumbs"><a href="../index.html">Home</a> <span class="sep">/</span> Lecture 04</div>
+    <header class="lecture-header">
+      <div class="lecture-badge">Module 04</div>
+      <h1>ACM & IEEE Codes Deep Dive</h1>
+      <p class="hero-lead">How to read professional codes as decision tools—not posters—and apply ACM and IEEE principles to real conflicts in software, data, AI, and security work.</p>
+      <div class="lecture-meta"><span>Reading ~40 min</span><span>Cases + Quiz</span></div>
+    </header>
+    <section id="objectives" class="section">
+      <div class="section-header"><div class="section-icon">🎯</div><h2>Learning Objectives</h2></div>
+      <ul class="objectives-list">
+        <li>Map ACM Code of Ethics principles to concrete professional decisions.</li>
+        <li>Use IEEE Code of Ethics clauses when evaluating safety, honesty, and public interest.</li>
+        <li>Resolve apparent conflicts between code principles using structured reasoning.</li>
+        <li>Connect code duties to organizational processes (review, escalation, documentation).</li>
+      </ul>
+    </section>
+    <section class="section">
+      <div class="section-header"><div class="section-icon">📖</div><h2>Introduction</h2></div>
+      <p>Codes of ethics are not optional decoration. ACM and IEEE codes articulate duties that members of the profession accept: contribute to society, avoid harm, be honest, respect privacy, honor intellectual property, and take responsibility for work. This module treats codes as operational guidance for design, review, and escalation.</p>
+      <div class="callout callout-info"><div class="callout-title">Practice tip</div><p>When stuck, write the principle number, the facts, the options, and which stakeholders are affected. Codes become usable when paired with evidence and alternatives.</p></div>
+    </section>
+    <section class="section">
+      <div class="section-header"><div class="section-icon">🧭</div><h2>ACM Principles (Working View)</h2></div>
+      <div class="perspective-grid">
+        <div class="perspective-card"><h4>1. Public</h4><p>Contribute to society and human well-being; prioritize public good over narrow employer interest when they conflict seriously.</p></div>
+        <div class="perspective-card"><h4>2. Avoid harm</h4><p>Take care that systems do not cause unjustified injury—physical, psychological, financial, or rights-based.</p></div>
+        <div class="perspective-card"><h4>3. Honesty</h4><p>Be truthful about capabilities, limitations, risks, and data quality; do not misrepresent systems.</p></div>
+        <div class="perspective-card"><h4>4. Fairness</h4><p>Discriminate only on relevant criteria; watch for biased outcomes and exclusionary design.</p></div>
+        <div class="perspective-card"><h4>5. Intellectual property</h4><p>Respect copyright, patents, trade secrets, and license terms; give credit.</p></div>
+        <div class="perspective-card"><h4>6–8. Privacy, confidentiality, competence</h4><p>Protect personal data; keep commitments; only claim work within competence or get help.</p></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-header"><div class="section-icon">⚡</div><h2>IEEE Emphasis</h2></div>
+      <p>IEEE stresses holding paramount the safety, health, and welfare of the public; disclosing factors that might endanger the public; being honest and realistic in claims; and rejecting bribery. For computing professionals building infrastructure, medical software, autonomous systems, or critical data pipelines, these clauses are daily tools.</p>
+    </section>
+    <section class="section">
+      <div class="section-header"><div class="section-icon">🏭</div><h2>Case Application</h2></div>
+      <div class="card">
+        <p><strong>Scenario:</strong> Your team is asked to dark-pattern a subscription cancel flow and to understate model error rates in a sales deck. Which code principles are implicated, and what sequence of actions is professionally defensible?</p>
+        <p>Map at least three principles, list stakeholders, and propose an internal escalation path before any external step.</p>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-header"><div class="section-icon">✅</div><h2>Knowledge Check</h2></div>
+      <div class="quiz-container" id="quiz-root">
+        <div class="quiz-question" id="quiz-q"></div>
+        <div class="quiz-options" id="quiz-opts"></div>
+        <div class="quiz-feedback" id="quiz-fb"></div>
+        <button class="btn btn-primary" id="quiz-next" style="display:none;margin-top:1rem">Next</button>
+        <div class="quiz-score" id="quiz-score"></div>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-header"><div class="section-icon">✍️</div><h2>Reflection</h2></div>
+      <div class="reflection-box">
+        <p>Pick one ACM or IEEE principle. Describe a workplace decision where applying it would change the design or the release plan. What evidence would you collect?</p>
+        <textarea data-reflection="l04" placeholder="Your reflection (saved locally)…"></textarea>
+      </div>
+    </section>
+    <section class="section">
+      <div class="section-header"><div class="section-icon">📋</div><h2>Summary</h2></div>
+      <ul class="outcome-list">
+        <li>Codes encode professional duties to the public, clients, and colleagues.</li>
+        <li>Use principles as decision checklists with facts, options, and stakeholders.</li>
+        <li>Document reasoning; escalate when organizational pressure conflicts with core duties.</li>
+      </ul>
+    </section>
+    <footer class="footer">Professional Practices in Computing · Lecture 04</footer>
+  </div></div>
   <script src="../js/main.js"></script>
   <script>
-    document.querySelectorAll('[data-quiz="lec04"] .quiz-option').forEach(opt => {
-      opt.addEventListener('click', function() {
-        const parent = this.closest('.quiz-options');
-        if (parent.dataset.answered) return;
-        parent.dataset.answered = '1';
-        this.classList.add('selected');
-        const correct = this.dataset.correct === 'true';
-        this.classList.add(correct ? 'correct' : 'incorrect');
-        const feedback = parent.nextElementSibling;
-        if (feedback) { feedback.classList.add('show', correct ? 'correct' : 'incorrect'); feedback.textContent = correct ? 'Correct.' : 'Review the principles section.'; }
-        if (!correct) parent.querySelector('[data-correct="true"]')?.classList.add('correct');
-      });
-    });
+    window.initQuiz && window.initQuiz([
+      {
+        question: "ACM/IEEE codes are most useful when professionals:",
+        options: [
+          "Memorize every clause word-for-word without applying them",
+          "Map principles to facts, options, and stakeholders in real decisions",
+          "Ignore them whenever a manager disagrees",
+          "Treat them as legally binding statutes in every country"
+        ],
+        correct: 1,
+        explanation: "Codes work as decision tools when paired with concrete facts and alternatives."
+      },
+      {
+        question: "A core shared theme of ACM and IEEE codes is:",
+        options: [
+          "Maximizing employer revenue above all else",
+          "Prioritizing public welfare, honesty, and avoidance of unjustified harm",
+          "Never shipping software until it is perfect",
+          "Avoiding all collaboration with non-engineers"
+        ],
+        correct: 1,
+        explanation: "Public welfare, honesty, and harm avoidance are central across both codes."
+      }
+    ]);
   </script>
 </body>
 </html>
