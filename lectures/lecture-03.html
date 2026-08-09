@@ -3,12 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 03: Ethical Theories and Decision Frameworks for computing professionals — utilitarianism, deontology, virtue ethics, and practical decision procedures." />
-  <title>Lecture 03 — Ethical Theories | Professional Practices in Computing</title>
+  <meta name="description" content="Lecture 03 — Ethical Theories and Decision Frameworks for Computing Professionals" />
+  <title>Lecture 03 — Ethical Theories | PPC</title>
   <link rel="stylesheet" href="../css/styles.css" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
   <div class="app-shell">
@@ -18,137 +16,114 @@
         <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
       </div>
       <nav class="sidebar-nav">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="lecture-01.html" class="nav-link">01 · Introduction</a>
-        <a href="lecture-02.html" class="nav-link">02 · History & Codes</a>
-        <a href="lecture-03.html" class="nav-link active">03 · Ethical Theories</a>
-        <a href="lecture-04.html" class="nav-link">04 · ACM & IEEE</a>
-        <a href="lecture-05.html" class="nav-link">05 · Responsibility</a>
+        <a href="../index.html">Home</a>
+        <a href="lecture-01.html">01 · Introduction</a>
+        <a href="lecture-02.html">02 · History & Codes</a>
+        <a href="lecture-03.html" class="active">03 · Ethical Theories</a>
+        <a href="lecture-04.html">04 · ACM & IEEE Codes</a>
+        <a href="lecture-05.html">05 · Responsibility</a>
       </nav>
-      <div class="sidebar-footer">
-        <div class="progress-wrap">
-          <div class="progress-label">Course Progress</div>
-          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-        </div>
+      <div class="progress-box">
+        <div class="progress-label">Course Progress</div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:60%"></div></div>
       </div>
     </aside>
-
     <main class="main-content">
-      <header class="top-bar">
-        <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
-        <div class="breadcrumbs"><a href="../index.html">Home</a> / <span>Lecture 03</span></div>
-        <div class="search-box"><input type="search" id="searchInput" placeholder="Search…" aria-label="Search" /></div>
+      <header class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 03</div>
+        <h1>Lecture 03 — Ethical Theories & Decision Frameworks</h1>
+        <p class="lead">Classical ethical theories applied to computing decisions, plus practical frameworks for professional judgment.</p>
       </header>
 
-      <article class="lecture-article">
-        <header class="lecture-header">
-          <span class="lecture-badge">Module 03</span>
-          <h1>Ethical Theories & Decision Frameworks</h1>
-          <p class="lecture-meta">Utilitarianism · Deontology · Virtue ethics · Practical decision procedures</p>
-        </header>
+      <section class="card objectives">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Summarize utilitarianism, deontology, virtue ethics, and care ethics in computing contexts.</li>
+          <li>Apply at least two ethical theories to a realistic professional dilemma.</li>
+          <li>Use a structured decision framework (e.g., stakeholder analysis + principle check + consequence estimate).</li>
+          <li>Recognize limits of any single theory and the value of pluralistic reasoning.</li>
+        </ul>
+      </section>
 
-        <section class="objectives glass-card">
-          <h2>Learning Objectives</h2>
-          <ul>
-            <li>Summarize major ethical theories used in professional computing discussions</li>
-            <li>Apply utilitarian, deontological, and virtue-ethics lenses to the same dilemma</li>
-            <li>Use a structured decision procedure under uncertainty and conflicting duties</li>
-            <li>Recognize limits of pure theory when incentives, culture, and incomplete information dominate</li>
-            <li>Connect ethical reasoning to documentation, stakeholder analysis, and professional codes</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h2>Motivation</h2>
+        <p>When a model disproportionately harms a protected group, or a release decision trades safety for schedule, intuition alone is unreliable. Ethical theories supply disciplined ways to examine consequences, duties, character, and relationships.</p>
+      </section>
 
-        <section class="content-section">
-          <h2>1. Motivation</h2>
-          <p>Professionals face trade-offs: privacy vs. security, speed vs. safety, individual fairness vs. group benefit. Ethical theories do not hand down unique answers in every case, but they supply vocabulary and structure so that decisions can be explained, challenged, and improved rather than rationalized after the fact.</p>
-        </section>
+      <section class="card">
+        <h2>Core Theories (Brief)</h2>
+        <ul>
+          <li><strong>Utilitarianism:</strong> Choose the action that maximizes overall good / minimizes harm. Useful for impact assessment; risks ignoring minority rights.</li>
+          <li><strong>Deontology:</strong> Focus on duties and rules (honesty, respect for persons, non-maleficence). Useful for non-negotiable obligations; can feel rigid under conflict.</li>
+          <li><strong>Virtue ethics:</strong> Ask what a good professional would do; cultivate honesty, courage, humility, and care. Emphasizes character and habits.</li>
+          <li><strong>Care / relational ethics:</strong> Attend to relationships, vulnerability, and context. Especially relevant in healthcare AI, education systems, and community platforms.</li>
+        </ul>
+      </section>
 
-        <section class="content-section">
-          <h2>2. Core Theories (Practical Overview)</h2>
-          <div class="perspective-grid">
-            <div class="perspective-card glass-card">
-              <h3>Utilitarianism / Consequentialism</h3>
-              <p>Focus on outcomes: maximize overall good (or minimize harm). Strength: forces explicit consideration of impacts. Weakness: measurement problems, minority rights, and long-term uncertainty.</p>
-            </div>
-            <div class="perspective-card glass-card">
-              <h3>Deontology (Duty-based)</h3>
-              <p>Focus on rules and rights: some actions are required or forbidden regardless of aggregate benefit. Strength: protects individuals and process integrity. Weakness: rule conflicts and rigidity in novel situations.</p>
-            </div>
-            <div class="perspective-card glass-card">
-              <h3>Virtue Ethics</h3>
-              <p>Focus on character: what would a responsible, honest, careful professional do? Strength: emphasizes habits and culture. Weakness: less precise guidance for one-off dilemmas.</p>
-            </div>
-            <div class="perspective-card glass-card">
-              <h3>Care / Relational Ethics</h3>
-              <p>Focus on relationships, vulnerability, and context. Useful in healthcare, education, and community-facing systems where pure aggregation misses important harms.</p>
-            </div>
+      <section class="card multi-perspective">
+        <h2>Multi-Perspective Application</h2>
+        <div class="grid-2">
+          <div><h3>Software Engineering</h3><p>Duty to test adequately (deontology) vs. schedule pressure (utilitarian trade-offs); virtue of thoroughness.</p></div>
+          <div><h3>AI & Data Science</h3><p>Fairness metrics (utilitarian aggregation) vs. individual rights (deontology) vs. participatory design (care).</p></div>
+          <div><h3>Cybersecurity</h3><p>Responsible disclosure duties; limits on “ends justify the means” in offensive research.</p></div>
+          <div><h3>Business & Legal</h3><p>Codes and theories inform internal escalation and external regulatory expectations.</p></div>
+        </div>
+      </section>
+
+      <section class="card case">
+        <h2>Scenario — Biased Hiring Model</h2>
+        <p>A team discovers that a ranking model systematically downgrades candidates from certain demographic groups. Shipping on time would meet a major client deadline; delaying requires costly rework and explanation to leadership.</p>
+        <p>Apply each theory: What does maximizing aggregate utility suggest? What duties are engaged? What would a virtuous professional do? How does care for affected candidates change the analysis?</p>
+      </section>
+
+      <section class="card quiz-section">
+        <h2>Knowledge Check</h2>
+        <div class="quiz" data-quiz="lec03">
+          <div class="q" data-correct="0">
+            <p>1. Utilitarianism primarily evaluates actions by:</p>
+            <label><input type="radio" name="q1" value="0"> Their consequences for overall welfare</label>
+            <label><input type="radio" name="q1" value="1"> Strict adherence to absolute rules</label>
+            <label><input type="radio" name="q1" value="2"> The character of the decision-maker alone</label>
           </div>
-        </section>
-
-        <section class="content-section">
-          <h2>3. A Practical Decision Procedure</h2>
-          <ol>
-            <li>Identify stakeholders and potential harms/benefits (including second-order effects)</li>
-            <li>List applicable duties, rights, laws, and organizational policies</li>
-            <li>Generate feasible options (including "do nothing" and escalation)</li>
-            <li>Evaluate options under more than one ethical lens</li>
-            <li>Choose, document rationale, and define monitoring/review triggers</li>
-          </ol>
-          <p>Documentation matters: professional accountability requires that reasoning can be inspected later.</p>
-        </section>
-
-        <section class="content-section">
-          <h2>4. Industrial Scenario</h2>
-          <div class="case-card glass-card">
-            <h3>Feature flag for sensitive data processing</h3>
-            <p>A product team can enable a high-value analytics feature by processing user content that may include personal data. Marketing wants it on by default; legal wants explicit consent; engineering can ship either way in two weeks. Apply the decision procedure above: who is affected, which duties apply, what options exist, and how would different ethical theories rank the options?</p>
+          <div class="q" data-correct="1">
+            <p>2. A practical professional decision framework should include:</p>
+            <label><input type="radio" name="q2" value="0"> Only the opinion of the most senior engineer</label>
+            <label><input type="radio" name="q2" value="1"> Stakeholder identification, principle checks, and consequence estimates</label>
+            <label><input type="radio" name="q2" value="2"> Ignoring long-term impacts</label>
           </div>
-        </section>
+          <button class="btn primary" onclick="gradeQuiz(this)">Check Answers</button>
+          <div class="quiz-result" hidden></div>
+        </div>
+      </section>
 
-        <section class="quiz-section glass-card">
-          <h2>Knowledge Check</h2>
-          <div class="quiz" data-quiz="l03">
-            <div class="q">
-              <p><strong>1.</strong> A purely utilitarian analysis of a system decision focuses primarily on:</p>
-              <label><input type="radio" name="q1" value="a" /> Whether a rule was followed</label>
-              <label><input type="radio" name="q1" value="b" /> Aggregate expected benefits and harms across affected parties</label>
-              <label><input type="radio" name="q1" value="c" /> The character of the engineers involved</label>
-              <label><input type="radio" name="q1" value="d" /> Whether the decision is popular with customers</label>
-            </div>
-            <div class="q">
-              <p><strong>2.</strong> Why should professionals document ethical reasoning for significant decisions?</p>
-              <label><input type="radio" name="q2" value="a" /> Only to satisfy auditors after a lawsuit</label>
-              <label><input type="radio" name="q2" value="b" /> To support accountability, learning, and consistent future decisions</label>
-              <label><input type="radio" name="q2" value="c" /> Because codes of ethics require a public blog post</label>
-              <label><input type="radio" name="q2" value="d" /> Documentation is optional if the outcome is good</label>
-            </div>
-            <button class="btn primary" onclick="checkQuiz('l03')">Check answers</button>
-            <div class="quiz-result" id="quiz-l03-result"></div>
-          </div>
-        </section>
+      <section class="card">
+        <h2>Reflection</h2>
+        <ol>
+          <li>Describe a decision you have faced (or observed) where two ethical theories would recommend different actions.</li>
+          <li>Which theory do you find most natural, and what blind spots might that create?</li>
+        </ol>
+      </section>
 
-        <section class="reflection glass-card">
-          <h2>Reflection</h2>
-          <ol>
-            <li>Take a recent technology controversy you know. Analyze it once under a consequentialist lens and once under a rights/duties lens. Where do the recommendations diverge?</li>
-            <li>Which part of a structured decision procedure do teams most often skip under deadline pressure? What is the cost of skipping it?</li>
-          </ol>
-        </section>
+      <section class="card summary">
+        <h2>Summary</h2>
+        <p>Ethical theories provide complementary lenses. Professionals combine them with stakeholder analysis and documented reasoning to make and defend decisions under uncertainty and pressure.</p>
+      </section>
 
-        <section class="summary glass-card">
-          <h2>Summary</h2>
-          <ul>
-            <li>Ethical theories provide complementary lenses, not a single algorithm for every case.</li>
-            <li>Structured procedures and documentation turn private intuition into professional practice.</li>
-            <li>Culture and incentives determine whether good reasoning is possible under pressure.</li>
-          </ul>
-        </section>
+      <section class="card">
+        <h2>Cheat Sheet</h2>
+        <ul>
+          <li>Utilitarian → consequences / aggregate good</li>
+          <li>Deontological → duties and rights</li>
+          <li>Virtue → character and professional excellence</li>
+          <li>Care → relationships and vulnerability</li>
+          <li>Always: identify stakeholders and document reasoning</li>
+        </ul>
+      </section>
 
-        <nav class="lecture-nav">
-          <a href="lecture-02.html" class="btn secondary">← Previous</a>
-          <a href="lecture-04.html" class="btn primary">Next: ACM & IEEE →</a>
-        </nav>
-      </article>
+      <footer class="page-footer">
+        <a href="lecture-02.html">← Previous</a>
+        <a href="lecture-04.html">Next: ACM & IEEE Codes →</a>
+      </footer>
     </main>
   </div>
   <script src="../js/main.js"></script>
