@@ -1,26 +1,24 @@
 # Course Website Status
 
-**Last update:** 2026-08-09 (morning)
+**Last full content push:** 2026-08-09 (morning)
 
 ## Live
 https://zuhaibbutt786.github.io/professional-practices-in-computing/
 
-## On remote (main)
-- README.md, index.html, css/styles.css, js/main.js — production
-- lectures/lecture-01.html, lecture-02.html, lecture-03.html — short placeholders (full enriched modules pending sequential push)
-- lectures/lecture-04.html, lecture-05.html — intermediate versions
+## Completed on remote
+- README.md
+- index.html (full home + navigation to Lectures 01–05)
+- css/styles.css (glassmorphism dark/light, responsive)
+- js/main.js (theme, sidebar, progress, quiz engine, search, reflections)
 
-## Local production ready (ppc-course/)
-Full enriched modules (~27–32k each):
-- Lecture 01 Introduction (~32k)
-- Lecture 02 History & Codes (~31k)
-- Lecture 03 Ethical Theories (~31k)
-- Lecture 04 ACM & IEEE Codes (~28k)
-- Lecture 05 Responsibility (~27k)
-Updated glassmorphism CSS (~17k)
+## Local production ready (pending sequential push due to API payload size)
+- lectures/lecture-01.html — Introduction to Professional Practices (~32k)
+- lectures/lecture-02.html — History of the Profession & Codes (~31k)
+- lectures/lecture-03.html — Ethical Theories & Frameworks (~31k)
+- lectures/lecture-04.html — ACM & IEEE Codes Deep Dive (~28k)
+- lectures/lecture-05.html — Responsibility & Accountability (~27k)
 
-## Next actions
-1. Sequential create_or_update_file pushes of Lectures 01–05 (payload-size constrained)
-2. Lectures 06–30 one complete module at a time
+## Next
+Push full enriched Lectures 01–05 one-by-one via create_or_update_file, then Lectures 06–30.
 
 Static site. No backend. GitHub Pages ready.
