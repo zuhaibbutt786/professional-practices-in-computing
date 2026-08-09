@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 04: ACM & IEEE Codes Deep Dive — Interpreting professional codes, applying principles to cases, and resolving conflicts between duties." />
+  <meta name="description" content="Lecture 04: ACM Code of Ethics and IEEE Code of Ethics — structure, key principles, application to real cases, and how to use codes in professional practice." />
   <title>Lecture 04 — ACM & IEEE Codes | Professional Practices in Computing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,6 +14,7 @@
   <nav class="navbar">
     <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
     <div class="nav-actions">
+      <div class="search-box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="search" id="search-input" placeholder="Search..." aria-label="Search" /></div>
       <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
       <button class="btn-icon" id="menu-toggle" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
     </div>
@@ -22,7 +23,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-section"><div class="sidebar-title">Course</div><a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a></div>
     <div class="sidebar-section">
-      <div class="sidebar-title">Modules</div>
+      <div class="sidebar-title">Current Module</div>
       <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
       <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
       <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
@@ -30,101 +31,94 @@
       <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
     </div>
   </aside>
-  <div class="main-wrapper"><div class="content">
-    <div class="breadcrumbs"><a href="../index.html">Home</a> <span class="sep">/</span> Lecture 04</div>
-    <header class="lecture-header">
-      <div class="lecture-badge">Module 04</div>
-      <h1>ACM & IEEE Codes Deep Dive</h1>
-      <p class="hero-lead">How to read professional codes as decision tools—not posters—and apply ACM and IEEE principles to real conflicts in software, data, AI, and security work.</p>
-      <div class="lecture-meta"><span>Reading ~40 min</span><span>Cases + Quiz</span></div>
-    </header>
-    <section id="objectives" class="section">
-      <div class="section-header"><div class="section-icon">🎯</div><h2>Learning Objectives</h2></div>
-      <ul class="objectives-list">
-        <li>Map ACM Code of Ethics principles to concrete professional decisions.</li>
-        <li>Use IEEE Code of Ethics clauses when evaluating safety, honesty, and public interest.</li>
-        <li>Resolve apparent conflicts between code principles using structured reasoning.</li>
-        <li>Connect code duties to organizational processes (review, escalation, documentation).</li>
-      </ul>
-    </section>
-    <section class="section">
-      <div class="section-header"><div class="section-icon">📖</div><h2>Introduction</h2></div>
-      <p>Codes of ethics are not optional decoration. ACM and IEEE codes articulate duties that members of the profession accept: contribute to society, avoid harm, be honest, respect privacy, honor intellectual property, and take responsibility for work. This module treats codes as operational guidance for design, review, and escalation.</p>
-      <div class="callout callout-info"><div class="callout-title">Practice tip</div><p>When stuck, write the principle number, the facts, the options, and which stakeholders are affected. Codes become usable when paired with evidence and alternatives.</p></div>
-    </section>
-    <section class="section">
-      <div class="section-header"><div class="section-icon">🧭</div><h2>ACM Principles (Working View)</h2></div>
-      <div class="perspective-grid">
-        <div class="perspective-card"><h4>1. Public</h4><p>Contribute to society and human well-being; prioritize public good over narrow employer interest when they conflict seriously.</p></div>
-        <div class="perspective-card"><h4>2. Avoid harm</h4><p>Take care that systems do not cause unjustified injury—physical, psychological, financial, or rights-based.</p></div>
-        <div class="perspective-card"><h4>3. Honesty</h4><p>Be truthful about capabilities, limitations, risks, and data quality; do not misrepresent systems.</p></div>
-        <div class="perspective-card"><h4>4. Fairness</h4><p>Discriminate only on relevant criteria; watch for biased outcomes and exclusionary design.</p></div>
-        <div class="perspective-card"><h4>5. Intellectual property</h4><p>Respect copyright, patents, trade secrets, and license terms; give credit.</p></div>
-        <div class="perspective-card"><h4>6–8. Privacy, confidentiality, competence</h4><p>Protect personal data; keep commitments; only claim work within competence or get help.</p></div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="section-header"><div class="section-icon">⚡</div><h2>IEEE Emphasis</h2></div>
-      <p>IEEE stresses holding paramount the safety, health, and welfare of the public; disclosing factors that might endanger the public; being honest and realistic in claims; and rejecting bribery. For computing professionals building infrastructure, medical software, autonomous systems, or critical data pipelines, these clauses are daily tools.</p>
-    </section>
-    <section class="section">
-      <div class="section-header"><div class="section-icon">🏭</div><h2>Case Application</h2></div>
-      <div class="card">
-        <p><strong>Scenario:</strong> Your team is asked to dark-pattern a subscription cancel flow and to understate model error rates in a sales deck. Which code principles are implicated, and what sequence of actions is professionally defensible?</p>
-        <p>Map at least three principles, list stakeholders, and propose an internal escalation path before any external step.</p>
-      </div>
-    </section>
-    <section class="section">
-      <div class="section-header"><div class="section-icon">✅</div><h2>Knowledge Check</h2></div>
-      <div class="quiz-container" id="quiz-root">
-        <div class="quiz-question" id="quiz-q"></div>
-        <div class="quiz-options" id="quiz-opts"></div>
-        <div class="quiz-feedback" id="quiz-fb"></div>
-        <button class="btn btn-primary" id="quiz-next" style="display:none;margin-top:1rem">Next</button>
-        <div class="quiz-score" id="quiz-score"></div>
-      </div>
-    </section>
-    <section class="section">
-      <div class="section-header"><div class="section-icon">✍️</div><h2>Reflection</h2></div>
-      <div class="reflection-box">
-        <p>Pick one ACM or IEEE principle. Describe a workplace decision where applying it would change the design or the release plan. What evidence would you collect?</p>
-        <textarea data-reflection="l04" placeholder="Your reflection (saved locally)…"></textarea>
-      </div>
-    </section>
-    <section class="section">
-      <div class="section-header"><div class="section-icon">📋</div><h2>Summary</h2></div>
-      <ul class="outcome-list">
-        <li>Codes encode professional duties to the public, clients, and colleagues.</li>
-        <li>Use principles as decision checklists with facts, options, and stakeholders.</li>
-        <li>Document reasoning; escalate when organizational pressure conflicts with core duties.</li>
-      </ul>
-    </section>
-    <footer class="footer">Professional Practices in Computing · Lecture 04</footer>
-  </div></div>
+  <main class="main-content">
+    <div class="content-wrapper">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <span>Lecture 04 — ACM & IEEE Codes</span></nav>
+      <header class="lecture-header glass">
+        <div class="lecture-meta"><span class="badge">Module 04</span><span class="reading-time">~50–65 min</span></div>
+        <h1>ACM & IEEE Codes of Ethics — Deep Dive</h1>
+        <p class="lead">Structure, principles, and practical application of the primary professional codes that guide computing practitioners worldwide.</p>
+      </header>
+      <section class="objectives glass">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Describe the structure and major principles of the ACM Code of Ethics</li>
+          <li>Describe key elements of the IEEE Code of Ethics relevant to computing</li>
+          <li>Map code principles to concrete workplace and design decisions</li>
+          <li>Use codes as decision aids rather than as mere checklists</li>
+          <li>Identify tensions between principles and practice strategies for resolution</li>
+        </ul>
+      </section>
+      <section class="content-section glass">
+        <h2>1. Why These Codes Matter</h2>
+        <p>ACM and IEEE codes are the most widely referenced ethical standards for computing professionals. Employers, courts, and accreditation bodies look to them as expressions of the profession’s expectations. They are not law, but they shape standards of care, hiring, and professional identity.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>2. ACM Code — Core Structure</h2>
+        <p>The ACM Code organizes principles around general ethical responsibilities, professional responsibilities, and leadership principles. Key themes include: contribute to society and human well-being; avoid harm; be honest and trustworthy; be fair and take action not to discriminate; respect privacy; honor confidentiality; maintain competence; respect the work of others; and improve public understanding of computing.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>3. IEEE Code — Highlights for Computing</h2>
+        <p>IEEE emphasizes high standards of integrity, responsibility to public safety and welfare, disclosure of factors that might endanger the public, rejection of bribery, honest criticism, and treatment of all persons fairly. For software, systems, and AI work, public-safety and disclosure duties are especially salient.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>4. Applying Codes in Practice</h2>
+        <p>Codes are most useful when used early: in design reviews, data-collection decisions, model-risk discussions, and incident response. Treating them only as post-hoc justification weakens their value. Documenting how a decision aligns with specific principles improves accountability and learning.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>5. Common Tensions</h2>
+        <ul>
+          <li>Employer loyalty vs. public welfare</li>
+          <li>Speed-to-market vs. thorough verification</li>
+          <li>Innovation vs. precaution under uncertainty</li>
+          <li>Confidentiality vs. duty to warn or disclose</li>
+        </ul>
+        <p>Codes rarely eliminate tension; they name the values that must be weighed and justified.</p>
+      </section>
+      <section class="quiz-section glass" id="quiz-4">
+        <h2>Knowledge Check</h2>
+        <div class="quiz-container"></div>
+      </section>
+      <section class="reflection glass">
+        <h2>Reflection Questions</h2>
+        <ol>
+          <li>Which ACM principle do you find most challenging to apply in a typical product-development environment? Why?</li>
+          <li>How would you use a code provision in a design review without sounding purely formalistic?</li>
+          <li>When confidentiality and public safety conflict, what process would you follow?</li>
+        </ol>
+      </section>
+      <section class="summary glass">
+        <h2>Summary</h2>
+        <ul>
+          <li>ACM and IEEE codes express the profession’s core expectations regarding harm, honesty, fairness, privacy, competence, and public welfare.</li>
+          <li>They are decision aids and standards of care, not substitute for judgment.</li>
+          <li>Early, explicit use of principles improves design and accountability.</li>
+          <li>Real practice involves navigating tensions among duties — codes help name them.</li>
+        </ul>
+      </section>
+      <footer class="lecture-footer"><p>Professional Practices in Computing — Module 04. Designed for university use 2026–2035</p></footer>
+    </div>
+  </main>
   <script src="../js/main.js"></script>
   <script>
-    window.initQuiz && window.initQuiz([
+    initQuiz('quiz-4', [
       {
-        question: "ACM/IEEE codes are most useful when professionals:",
-        options: [
-          "Memorize every clause word-for-word without applying them",
-          "Map principles to facts, options, and stakeholders in real decisions",
-          "Ignore them whenever a manager disagrees",
-          "Treat them as legally binding statutes in every country"
-        ],
+        question: "ACM and IEEE codes of ethics are best described as:",
+        options: ["Binding criminal law", "Expressions of professional standards that shape care, identity, and accountability", "Optional marketing material only", "Applicable only to managers"],
         correct: 1,
-        explanation: "Codes work as decision tools when paired with concrete facts and alternatives."
+        explanation: "Codes are professional standards, not statutes, but they influence expectations and practice."
       },
       {
-        question: "A core shared theme of ACM and IEEE codes is:",
-        options: [
-          "Maximizing employer revenue above all else",
-          "Prioritizing public welfare, honesty, and avoidance of unjustified harm",
-          "Never shipping software until it is perfect",
-          "Avoiding all collaboration with non-engineers"
-        ],
+        question: "A core theme across ACM principles is:",
+        options: ["Maximize shareholder value only", "Contribute to society and human well-being while avoiding harm", "Never disclose any information", "Always follow the fastest shipping schedule"],
         correct: 1,
-        explanation: "Public welfare, honesty, and harm avoidance are central across both codes."
+        explanation: "Public good and avoidance of harm are central themes."
+      },
+      {
+        question: "Codes are most effective when:",
+        options: ["Used only after a scandal", "Applied early in design and decision processes", "Ignored in favor of pure intuition", "Used solely by legal departments"],
+        correct: 1,
+        explanation: "Early use in design and review strengthens professional practice."
       }
     ]);
   </script>
