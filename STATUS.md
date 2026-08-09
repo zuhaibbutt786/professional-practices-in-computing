@@ -5,16 +5,18 @@
 ## Live
 https://zuhaibbutt786.github.io/professional-practices-in-computing/
 
-## Completed
+## Completed on main
 - README.md
-- index.html (full home + navigation to Lectures 01–05)
-- css/styles.css (full glassmorphism dark/light, responsive)
-- js/main.js (theme, sidebar, progress, quiz engine, search, reflections)
-- lectures/lecture-01.html — Introduction to Professional Practices (full enriched ~32k)
-- lectures/lecture-02.html — History of the Profession & Codes (full enriched ~31k)
-- lectures/lecture-03.html — Ethical Theories & Frameworks (full enriched ~31k)
-- lectures/lecture-04.html — ACM & IEEE Codes Deep Dive (full enriched ~28k)
-- lectures/lecture-05.html — Responsibility & Accountability (full enriched ~27k)
+- index.html (home + navigation to Lectures 01–05)
+- css/styles.css (glassmorphism dark/light, responsive)
+- js/main.js (theme, sidebar, progress, quiz engine, search)
+- lectures/lecture-01.html — Introduction to Professional Practices (production module)
+- lectures/lecture-02.html — History of the Profession & Codes (production module)
+- lectures/lecture-03.html — Ethical Theories & Decision Frameworks (production module)
+- lectures/lecture-04.html — ACM & IEEE Codes Deep Dive (production module)
+- lectures/lecture-05.html — Professional Responsibility & Accountability (production module)
+
+Each lecture includes: learning objectives, motivation, real story / case, multi-perspective analysis (SE, AI/DS, security, business/legal), knowledge-check quiz, reflection prompts, and summary.
 
 ## Next
 Lectures 06–30 (one complete module at a time)
