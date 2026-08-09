@@ -1,6 +1,6 @@
 # Course Website Status
 
-**Last content push:** 2026-08-09 (evening)
+**Last content push:** 2026-08-09 (night)
 
 ## Live
 https://zuhaibbutt786.github.io/professional-practices-in-computing/
@@ -18,7 +18,7 @@ https://zuhaibbutt786.github.io/professional-practices-in-computing/
 
 ## Notes
 - Production modules for Lectures 01–05 are live (objectives, multi-perspective content, cases, quizzes, reflections, assignments, glossaries).
-- Local workspace still holds larger 27–32k enriched variants for optional future expansion.
+- Local workspace holds larger 27–32k enriched variants for optional future expansion (API payload limits constrain single-commit size for the fullest versions).
 - Next: add Lectures 06–30 one complete module at a time.
 
 Static site. No backend. GitHub Pages ready.
