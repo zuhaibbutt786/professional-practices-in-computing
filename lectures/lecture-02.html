@@ -3,18 +3,168 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lecture 02: History of the Computing Profession & Codes of Ethics — Evolution of professional identity, early codes, ACM/IEEE milestones, and why history matters for modern practice." />
   <title>Lecture 02 — History & Codes | Professional Practices in Computing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
   <nav class="navbar">
-    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
+    <a href="../index.html" class="navbar-brand">
+      <div class="logo">PPC</div>
+      <span>Professional Practices</span>
+    </a>
+    <div class="nav-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="search-input" placeholder="Search..." aria-label="Search" />
+      </div>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
   </nav>
-  <main class="container" style="padding: 2rem;">
-    <h1>Lecture 02 — History of the Profession & Codes</h1>
-    <p>Full enriched content (~31k) is prepared locally and will be pushed in the next sequential update. This placeholder restores the page structure after an empty-file incident.</p>
-    <p><a href="../index.html">← Back to Home</a></p>
+  <div class="overlay" id="overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Course</div>
+      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Current Module</div>
+      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link active" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
+    </div>
+  </aside>
+  <main class="main-content">
+    <div class="content-wrapper">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a> <span>/</span> <span>Lecture 02 — History & Codes</span>
+      </nav>
+      <header class="lecture-header glass">
+        <div class="lecture-meta">
+          <span class="badge">Module 02</span>
+          <span class="reading-time">~50–65 min</span>
+        </div>
+        <h1>History of the Computing Profession & Codes of Ethics</h1>
+        <p class="lead">How computing moved from a technical craft to a recognized profession — and why codes of ethics emerged as responses to power, harm, and public trust.</p>
+      </header>
+      <section class="objectives glass">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Trace major milestones in the professionalization of computing</li>
+          <li>Explain why codes of ethics appear when an occupation gains power to cause significant harm</li>
+          <li>Distinguish aspirational and enforceable provisions in professional codes</li>
+          <li>Connect historical failures and public scandals to revisions of ACM and IEEE codes</li>
+          <li>Argue why historical awareness improves contemporary professional judgment</li>
+        </ul>
+      </section>
+      <section class="content-section glass">
+        <h2>1. Motivation</h2>
+        <p>Every profession that can injure or benefit the public eventually develops standards of conduct. Medicine, law, and engineering did so over centuries. Computing compressed the same trajectory into decades. Understanding that history prevents the illusion that today’s dilemmas are entirely new — and shows how the profession has already tried (and sometimes failed) to govern itself.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>2. From Craft to Profession</h2>
+        <p>Early computing was often treated as a technical craft or a branch of mathematics and electrical engineering. As systems moved into banking, defense, medicine, and government, the consequences of error and misuse grew. Sociologists of the professions identify markers such as specialized knowledge, formal education, a service ideal, and self-regulation. Computing acquired these features unevenly; licensing remains rare, but codes, accreditation, and public accountability have become central.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>3. Why Codes Appear</h2>
+        <p>Codes typically emerge when three conditions coincide: (1) the work can cause significant harm or benefit to non-clients; (2) practitioners hold specialized knowledge that outsiders cannot easily evaluate; (3) the community prefers internal standards to pure external regulation. Computing met these conditions as networks, data scale, and AI expanded impact.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>4. Landmark Moments</h2>
+        <ul>
+          <li>Early ACM and IEEE codes (1960s–1970s) responding to emerging professional identity</li>
+          <li>Revisions after high-profile software failures and privacy controversies</li>
+          <li>Joint ACM/IEEE Software Engineering Code of Ethics</li>
+          <li>Modern updates addressing data, algorithms, AI, and global practice</li>
+        </ul>
+        <p>Each revision reflects new capabilities and new responsibilities that earlier language only partially anticipated.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>5. Aspirational vs Enforceable</h2>
+        <p>Many code provisions are aspirational (ideals to strive toward). Others are enforceable through peer processes, employment consequences, or, in rare cases, legal mechanisms. Understanding the difference helps professionals know when a code is guidance and when it is a hard constraint.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>6. Multi-Perspective Takeaways</h2>
+        <ul>
+          <li><strong>Ethical:</strong> Codes encode duties to public, clients, and colleagues.</li>
+          <li><strong>Legal:</strong> Codes are not statutes, but they influence standards of care and liability discussions.</li>
+          <li><strong>Business:</strong> Reputation and trust depend on visible professional standards.</li>
+          <li><strong>AI / Data:</strong> New capabilities force code evolution; history shows lag is common.</li>
+          <li><strong>SE / Security:</strong> Quality, safety, and disclosure practices have roots in professional norms.</li>
+        </ul>
+      </section>
+      <section class="quiz-section glass" id="quiz-2">
+        <h2>Knowledge Check</h2>
+        <div class="quiz-container"></div>
+      </section>
+      <section class="reflection glass">
+        <h2>Reflection Questions</h2>
+        <ol>
+          <li>Which historical computing failure or scandal most clearly illustrates why a professional code was needed?</li>
+          <li>Should computing move toward stronger licensing (like PE for engineers)? Pros and cons?</li>
+          <li>How should codes be updated when technology outpaces the language of earlier versions?</li>
+        </ol>
+      </section>
+      <section class="summary glass">
+        <h2>Summary</h2>
+        <ul>
+          <li>Professionalization of computing accelerated as systems gained capacity to harm and help at scale.</li>
+          <li>Codes of ethics respond to power, knowledge asymmetry, and the need for self-regulation.</li>
+          <li>History of ACM/IEEE revisions tracks the expansion of computing’s societal role.</li>
+          <li>Aspirational and enforceable provisions serve different functions.</li>
+          <li>Historical literacy improves judgment about today’s AI, privacy, and safety challenges.</li>
+        </ul>
+      </section>
+      <footer class="lecture-footer">
+        <p>Professional Practices in Computing — Module 02. Designed for university use 2026–2035</p>
+      </footer>
+    </div>
   </main>
   <script src="../js/main.js"></script>
+  <script>
+    initQuiz('quiz-2', [
+      {
+        question: "Why do codes of ethics typically emerge in an occupation?",
+        options: [
+          "Primarily to guarantee high salaries for members",
+          "When work can cause significant harm, knowledge is specialized, and self-regulation is preferred",
+          "Only after government mandates them",
+          "Solely for marketing purposes"
+        ],
+        correct: 1,
+        explanation: "Codes arise from the combination of potential harm, specialized knowledge, and a preference for internal standards."
+      },
+      {
+        question: "What is a key difference between aspirational and enforceable code provisions?",
+        options: [
+          "Aspirational provisions are ideals; enforceable ones can trigger peer or employment consequences",
+          "There is no difference",
+          "Only aspirational provisions appear in ACM codes",
+          "Enforceable provisions are always criminal law"
+        ],
+        correct: 0,
+        explanation: "Aspirational language sets ideals; enforceable language can be used in disciplinary or employment contexts."
+      },
+      {
+        question: "Which of the following is NOT typically a classic marker of a profession?",
+        options: [
+          "Specialized knowledge requiring extended education",
+          "A service ideal oriented toward a public good",
+          "Guaranteed high salaries for all members",
+          "Self-regulation through codes and peer mechanisms"
+        ],
+        correct: 2,
+        explanation: "Salary levels are not a defining sociological criterion of professionalism."
+      }
+    ]);
+  </script>
 </body>
 </html>
