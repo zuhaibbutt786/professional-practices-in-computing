@@ -3,34 +3,148 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 02 — History of the Profession & Codes | Professional Practices in Computing" />
-  <title>Lecture 02 — History of the Profession & Codes | PPC</title>
+  <meta name="description" content="Lecture 02 — History of the Computing Profession and Codes of Ethics" />
+  <title>Lecture 02 — History & Codes | PPC</title>
   <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="app">
+  <div class="app-shell">
     <aside class="sidebar" id="sidebar">
       <div class="sidebar-header">
         <a href="../index.html" class="logo">PPC</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
       </div>
       <nav class="sidebar-nav">
         <a href="../index.html">Home</a>
         <a href="lecture-01.html">01 · Introduction</a>
         <a href="lecture-02.html" class="active">02 · History & Codes</a>
         <a href="lecture-03.html">03 · Ethical Theories</a>
-        <a href="lecture-04.html">04 · ACM & IEEE</a>
+        <a href="lecture-04.html">04 · ACM & IEEE Codes</a>
         <a href="lecture-05.html">05 · Responsibility</a>
       </nav>
+      <div class="progress-box">
+        <div class="progress-label">Course Progress</div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:40%"></div></div>
+      </div>
     </aside>
-    <main class="main">
-      <header class="page-header glass">
-        <h1>Lecture 02 — History of the Profession & Codes</h1>
-        <p class="subtitle">How computing became a profession and why codes of ethics matter</p>
+    <main class="main-content">
+      <header class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 02</div>
+        <h1>Lecture 02 — History of the Profession & Codes of Ethics</h1>
+        <p class="lead">How computing became a profession, why codes of ethics emerged, and what they demand of practitioners today.</p>
       </header>
-      <section class="content glass">
-        <p>Full module content is being restored. Please refresh after the next sequential push completes.</p>
+
+      <section class="card objectives">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Trace key milestones in the professionalization of computing.</li>
+          <li>Explain why formal codes of ethics became necessary.</li>
+          <li>Compare the roles of ACM, IEEE-CS, and other bodies in shaping professional norms.</li>
+          <li>Identify recurring themes across historical codes (public interest, competence, honesty, fairness).</li>
+          <li>Relate historical failures to the content of modern codes.</li>
+        </ul>
       </section>
+
+      <section class="card">
+        <h2>Motivation</h2>
+        <p>Codes of ethics are not decorative statements. They crystallize lessons from decades of accidents, scandals, and near-misses. Understanding how and why they were written helps practitioners apply them under real pressure instead of treating them as compliance checklists.</p>
+      </section>
+
+      <section class="card">
+        <h2>Historical Arc</h2>
+        <p>Early computing was research and military work. As systems moved into banking, healthcare, aviation, and consumer life, failures began to affect the public directly. Professional societies responded with education standards, certification discussions, and formal codes that elevated public interest, competence, and honesty above pure technical cleverness.</p>
+        <p>Key organizations: ACM (Code of Ethics and Professional Conduct), IEEE Computer Society, and later joint efforts that influenced computing curricula worldwide.</p>
+      </section>
+
+      <section class="card multi-perspective">
+        <h2>Multi-Perspective View</h2>
+        <div class="grid-2">
+          <div>
+            <h3>Software Engineering</h3>
+            <p>Codes reinforce process discipline, truthful status reporting, and refusing to release unsafe systems.</p>
+          </div>
+          <div>
+            <h3>AI & Data Science</h3>
+            <p>Modern interpretations extend classic principles to dataset bias, model opacity, and human oversight.</p>
+          </div>
+          <div>
+            <h3>Cybersecurity</h3>
+            <p>Responsible disclosure, authorization boundaries, and dual-use awareness appear as applications of honesty and public interest.</p>
+          </div>
+          <div>
+            <h3>Business & Legal</h3>
+            <p>Codes support duty-of-care arguments and can influence how organizations structure escalation and accountability.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card case">
+        <h2>Case Link — From Failures to Principles</h2>
+        <p>Incidents such as Therac-25, the Ariane 5 flight 501 software exception, and later data-privacy scandals repeatedly showed that technical skill without professional norms produces preventable harm. Codes encode the corrective principles: prioritize public safety, maintain competence, communicate limitations honestly, and accept responsibility.</p>
+      </section>
+
+      <section class="card quiz-section">
+        <h2>Knowledge Check</h2>
+        <div class="quiz" data-quiz="lec02">
+          <div class="q" data-correct="1">
+            <p>1. Codes of ethics in computing primarily emerged because:</p>
+            <label><input type="radio" name="q1" value="0"> Governments required them by law from the start</label>
+            <label><input type="radio" name="q1" value="1"> Growing societal impact and repeated failures demanded shared professional standards</label>
+            <label><input type="radio" name="q1" value="2"> They replace the need for technical testing</label>
+          </div>
+          <div class="q" data-correct="2">
+            <p>2. A recurring theme across ACM and IEEE codes is:</p>
+            <label><input type="radio" name="q2" value="0"> Maximizing shareholder value above all else</label>
+            <label><input type="radio" name="q2" value="1"> Avoiding all innovation risk</label>
+            <label><input type="radio" name="q2" value="2"> Prioritizing the public interest and honest communication of limitations</label>
+          </div>
+          <button class="btn primary" onclick="gradeQuiz(this)">Check Answers</button>
+          <div class="quiz-result" hidden></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Reflection</h2>
+        <ol>
+          <li>Which historical failure most clearly illustrates the need for a professional code in your view? Why?</li>
+          <li>How might an early-career engineer use a code of ethics when facing pressure to ship incomplete work?</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Assignment</h2>
+        <p>Select one historical computing incident. Write a short analysis linking specific code principles (from ACM or IEEE) that were violated or that could have prevented harm if followed.</p>
+      </section>
+
+      <section class="card summary">
+        <h2>Summary</h2>
+        <p>The computing profession developed codes of ethics in response to growing societal impact and repeated failures. Those codes remain living documents that guide judgment, training, and accountability across SE, AI, data, and security practice.</p>
+      </section>
+
+      <section class="card">
+        <h2>Cheat Sheet</h2>
+        <ul>
+          <li>Codes = shared professional expectations, not law</li>
+          <li>Public interest and competence are central themes</li>
+          <li>History of failure drives code content</li>
+          <li>Use codes as decision aids and communication tools</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Glossary</h2>
+        <dl>
+          <dt>Code of ethics</dt><dd>A formal statement of values and expected conduct for members of a profession.</dd>
+          <dt>Professionalization</dt><dd>The process by which an occupation develops standards, education, and self-regulation.</dd>
+          <dt>Public interest</dt><dd>The welfare of society as a whole, prioritized over narrow private gain in professional codes.</dd>
+        </dl>
+      </section>
+
+      <footer class="page-footer">
+        <a href="lecture-01.html">← Previous</a>
+        <a href="lecture-03.html">Next: Ethical Theories →</a>
+      </footer>
     </main>
   </div>
   <script src="../js/main.js"></script>
