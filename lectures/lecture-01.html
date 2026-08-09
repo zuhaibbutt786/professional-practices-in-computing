@@ -3,204 +3,175 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 1: Introduction to Professional Practices in Computing — Why professionalism matters, professional identity, and the roadmap for ethical and responsible computing." />
+  <meta name="description" content="Lecture 01: Introduction to Professional Practices in Computing — Professional Practices in Computing course" />
   <title>Lecture 01 — Introduction | Professional Practices in Computing</title>
+  <link rel="stylesheet" href="../css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="navbar-brand">
-      <div class="logo">PPC</div>
-      <span>Professional Practices</span>
-    </a>
-    <div class="nav-actions">
-      <div class="search-box">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="search" id="search-input" placeholder="Search..." aria-label="Search" />
+  <div class="app-shell">
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">PPC</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
       </div>
-      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
-      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
-    </div>
-  </nav>
-
-  <div class="overlay" id="overlay"></div>
-
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Course</div>
-      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Current Module</div>
-      <a href="lecture-01.html" class="sidebar-link active" data-lecture="01"><span class="num">01</span> Introduction</a>
-      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
-      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
-      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
-      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
-    </div>
-  </aside>
-
-  <main class="main-content">
-    <div class="content-wrapper">
-      <nav class="breadcrumbs" aria-label="Breadcrumb">
-        <a href="../index.html">Home</a>
-        <span>/</span>
-        <span>Lecture 01 — Introduction</span>
+      <nav class="sidebar-nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="lecture-01.html" class="nav-link active">01 · Introduction</a>
+        <a href="lecture-02.html" class="nav-link">02 · History & Codes</a>
+        <a href="lecture-03.html" class="nav-link">03 · Ethical Theories</a>
+        <a href="lecture-04.html" class="nav-link">04 · ACM & IEEE</a>
+        <a href="lecture-05.html" class="nav-link">05 · Responsibility</a>
       </nav>
-
-      <header class="lecture-header glass">
-        <div class="lecture-meta">
-          <span class="badge">Module 01</span>
-          <span class="reading-time">~45–60 min</span>
+      <div class="sidebar-footer">
+        <div class="progress-wrap">
+          <div class="progress-label">Course Progress</div>
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
         </div>
-        <h1>Introduction to Professional Practices in Computing</h1>
-        <p class="lead">Why technical excellence alone is not enough — and how professional judgment, ethical reasoning, and multi-perspective analysis become core competencies for every computing graduate.</p>
+      </div>
+    </aside>
+
+    <!-- Main -->
+    <main class="main-content">
+      <header class="top-bar">
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+        <div class="breadcrumbs">
+          <a href="../index.html">Home</a> / <span>Lecture 01</span>
+        </div>
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="Search…" aria-label="Search" />
+        </div>
       </header>
 
-      <section class="objectives glass">
-        <h2>Learning Objectives</h2>
-        <ul>
-          <li>Articulate why professional practices matter beyond writing correct code</li>
-          <li>Describe the dual role of the computing professional as Creator and Steward</li>
-          <li>Identify key dimensions of professional competence (ethical, legal, social, organizational)</li>
-          <li>Explain how historical failures illuminate the need for professional judgment</li>
-          <li>Apply a multi-perspective lens (ethical, legal, business, AI, data, SE, security) to simple scenarios</li>
-        </ul>
-      </section>
+      <article class="lecture-article">
+        <header class="lecture-header">
+          <span class="lecture-badge">Module 01</span>
+          <h1>Introduction to Professional Practices in Computing</h1>
+          <p class="lecture-meta">Foundations · Ethics · Responsibility · Career</p>
+        </header>
 
-      <section class="content-section glass">
-        <h2>1. Motivation: Why This Course Exists</h2>
-        <p>Computing systems now mediate health care, finance, justice, education, transportation, and public discourse. A single design decision can affect millions of people. Technical skill lets you build systems that work; professional skill helps you decide whether they <em>should</em> work that way, for whom, under what conditions, and with what safeguards.</p>
-        <p>This course is deliberately technology-independent. It does not teach a programming language or a framework. It teaches professional thinking: how to reason about responsibility, impact, trade-offs, and the long-term consequences of technical choices.</p>
-      </section>
+        <section class="objectives glass-card">
+          <h2>Learning Objectives</h2>
+          <ul>
+            <li>Define professional practice in the context of computing disciplines</li>
+            <li>Explain why ethics, law, and social responsibility matter for CS, SE, DS, AI, and Cybersecurity graduates</li>
+            <li>Identify the major stakeholder groups affected by computing systems</li>
+            <li>Distinguish between personal morality, professional ethics, and organizational codes</li>
+            <li>Articulate the relationship between technical competence and professional responsibility</li>
+          </ul>
+        </section>
 
-      <section class="content-section glass">
-        <h2>2. Real Story: When Code Meets Consequence</h2>
-        <p>Consider the Therac-25 radiation therapy accidents (1985–1987). A combination of software race conditions, removal of hardware interlocks, inadequate testing, and weak organizational response led to massive overdoses. Patients were harmed or killed. The engineers who wrote the software were competent in their domain; the failure was systemic — process, verification, culture, and the assumption that software alone could replace proven safety mechanisms.</p>
-        <p>Similar patterns appear in more recent incidents: autonomous vehicle crashes, biased hiring algorithms, large-scale data breaches, and content-moderation failures. In each case, the technical artifact was only part of the story. Professional judgment about risk, evidence, stakeholder impact, and escalation was equally decisive.</p>
-      </section>
+        <section class="content-section">
+          <h2>1. Motivation — Why This Course Exists</h2>
+          <p>Computing professionals design systems that shape how people work, communicate, vote, receive healthcare, and make financial decisions. A single design choice can affect millions of lives. Technical skill alone is not enough; professionals must reason about consequences, trade-offs, and duties that extend beyond the immediate client or employer.</p>
+          <p>This course prepares you to act as a responsible professional: to recognize ethical issues early, to apply structured decision frameworks, to communicate clearly with non-technical stakeholders, and to contribute to a culture of integrity in teams and organizations.</p>
+        </section>
 
-      <section class="content-section glass">
-        <h2>3. Industrial Scenario</h2>
-        <p>You join a product team shipping a recommendation system used by tens of millions of users. The model optimizes engagement. Engagement metrics improve. Leadership is pleased. A junior engineer notices that certain demographic groups receive systematically lower-quality recommendations and that some content clusters appear to reinforce harmful stereotypes. Raising the issue requires navigating product incentives, incomplete data about harm, and the risk of being labeled "not a team player."</p>
-        <p>This is not a pure coding problem. It is a professional-practice problem: how to surface concerns, gather evidence, propose mitigations, and escalate when necessary — while remaining constructive and grounded in both technical and ethical reasoning.</p>
-      </section>
+        <section class="content-section">
+          <h2>2. Real Story — When Code Meets Consequence</h2>
+          <div class="case-card glass-card">
+            <h3>Therac-25 (1985–1987)</h3>
+            <p>A radiation therapy machine delivered massive overdoses to patients because of software race conditions and inadequate safety interlocks. At least six patients were seriously injured; several died. The incident remains a classic case study in the cost of treating software as an afterthought rather than a safety-critical system.</p>
+            <p><strong>Professional lesson:</strong> Engineers who write code that can harm people carry a duty of care that goes beyond "it compiled and passed unit tests."</p>
+          </div>
+        </section>
 
-      <section class="content-section glass">
-        <h2>4. The Dual Role: Creator and Steward</h2>
-        <p>Every computing professional occupies two roles simultaneously:</p>
-        <ul>
-          <li><strong>Creator</strong> — designs, builds, tests, and ships systems.</li>
-          <li><strong>Steward</strong> — considers impact, anticipates misuse, protects users and the public, and maintains the integrity of the profession.</li>
-        </ul>
-        <p>Neither role is optional. Excellence in creation without stewardship produces brittle, harmful, or untrustworthy systems. Stewardship without creation produces only commentary. The course trains both.</p>
-      </section>
+        <section class="content-section">
+          <h2>3. What Is a Computing Professional?</h2>
+          <p>A professional is not merely someone who is paid for technical work. Professionalism implies:</p>
+          <ul>
+            <li><strong>Specialized knowledge</strong> that the public cannot fully evaluate</li>
+            <li><strong>Autonomy</strong> in applying that knowledge</li>
+            <li><strong>Accountability</strong> to clients, employers, the profession, and the public</li>
+            <li><strong>Commitment</strong> to continuous learning and ethical standards</li>
+          </ul>
+          <p>In computing, the boundary between "technician" and "professional" is often blurred because the field is young and barriers to entry are low. Codes of ethics (ACM, IEEE, BCS, and others) attempt to clarify the expectations that come with claiming professional status.</p>
+        </section>
 
-      <section class="content-section glass">
-        <h2>5. Multi-Perspective Analysis</h2>
-        <p>Professional practice requires examining decisions through multiple lenses:</p>
-        <ul>
-          <li><strong>Ethical</strong> — duties, rights, harms, fairness, autonomy</li>
-          <li><strong>Legal</strong> — statutes, liability, regulation, contracts</li>
-          <li><strong>Business</strong> — incentives, reputation, risk, sustainability</li>
-          <li><strong>AI / Data Science</strong> — bias, opacity, data provenance, model risk</li>
-          <li><strong>Software Engineering</strong> — quality, maintainability, verification, technical debt</li>
-          <li><strong>Cybersecurity</strong> — threats, privacy, resilience, disclosure</li>
-        </ul>
-        <p>No single perspective is sufficient. The course repeatedly practices moving between them.</p>
-      </section>
+        <section class="content-section">
+          <h2>4. Multi-Perspective View</h2>
+          <div class="perspective-grid">
+            <div class="perspective-card glass-card">
+              <h3>Software Engineering</h3>
+              <p>Requirements, architecture, testing, and maintenance decisions all embed value judgments. Professional SE practice requires explicit attention to safety, security, and maintainability, not only feature delivery.</p>
+            </div>
+            <div class="perspective-card glass-card">
+              <h3>Data Science & AI</h3>
+              <p>Models trained on biased data, deployed without impact assessment, or used for high-stakes decisions without human oversight create systemic risk. Responsible practice includes documentation, monitoring, and stakeholder engagement.</p>
+            </div>
+            <div class="perspective-card glass-card">
+              <h3>Cybersecurity</h3>
+              <p>Security professionals often discover vulnerabilities or handle sensitive data. Ethical disclosure, dual-use awareness, and respect for privacy are core professional obligations.</p>
+            </div>
+            <div class="perspective-card glass-card">
+              <h3>Business & Legal</h3>
+              <p>Organizations face regulatory pressure (GDPR, AI Act, sector-specific rules). Professionals who understand both technical constraints and legal/ethical obligations become valuable bridges between engineering and compliance.</p>
+            </div>
+          </div>
+        </section>
 
-      <section class="content-section glass">
-        <h2>6. Professional Identity and Career</h2>
-        <p>Professional identity is not a job title. It is a commitment to competence, honesty, and the public interest. ACM and IEEE codes of ethics articulate this commitment. Employers increasingly expect graduates who can discuss ethics, privacy, accessibility, and responsible AI in interviews and on the job.</p>
-        <p>This course also covers communication, teamwork, leadership, conflict resolution, continuous learning, and career development — the practical skills that turn technical ability into professional impact.</p>
-      </section>
+        <section class="content-section">
+          <h2>5. Stakeholders and Impact</h2>
+          <p>Every non-trivial system affects multiple parties:</p>
+          <ul>
+            <li>End users and the public</li>
+            <li>Clients and employers</li>
+            <li>Colleagues and the profession</li>
+            <li>Society and future generations (sustainability, lock-in, path dependence)</li>
+          </ul>
+          <p>Professional judgment involves balancing competing interests when they conflict. Simple rules ("always maximize profit" or "always protect privacy") fail in complex situations; structured ethical reasoning is required.</p>
+        </section>
 
-      <section class="content-section glass">
-        <h2>7. Course Roadmap</h2>
-        <p>Subsequent modules deepen the foundations introduced here: history of computing ethics and professional codes, ethical theories and decision frameworks, ACM and IEEE codes in detail, professional responsibility and accountability, privacy and data protection, AI ethics and responsible AI, intellectual property and open source, communication and teamwork, and emerging challenges in a digital society.</p>
-      </section>
+        <section class="quiz-section glass-card">
+          <h2>Knowledge Check</h2>
+          <div class="quiz" data-quiz="l01">
+            <div class="q">
+              <p><strong>1.</strong> Which of the following best distinguishes a computing professional from a skilled technician?</p>
+              <label><input type="radio" name="q1" value="a" /> Ability to write correct code quickly</label>
+              <label><input type="radio" name="q1" value="b" /> Accountability to the public and the profession beyond the immediate employer</label>
+              <label><input type="radio" name="q1" value="c" /> Possession of a university degree</label>
+              <label><input type="radio" name="q1" value="d" /> Experience with the latest frameworks</label>
+            </div>
+            <div class="q">
+              <p><strong>2.</strong> The Therac-25 accidents primarily illustrate:</p>
+              <label><input type="radio" name="q2" value="a" /> The importance of user interface design alone</label>
+              <label><input type="radio" name="q2" value="b" /> The need for safety-critical software practices and independent verification</label>
+              <label><input type="radio" name="q2" value="c" /> That hardware is always more reliable than software</label>
+              <label><input type="radio" name="q2" value="d" /> That radiation machines should not use computers</label>
+            </div>
+            <button class="btn primary" onclick="checkQuiz('l01')">Check answers</button>
+            <div class="quiz-result" id="quiz-l01-result"></div>
+          </div>
+        </section>
 
-      <section class="quiz-section glass" id="quiz-1">
-        <h2>Knowledge Check</h2>
-        <div class="quiz-container"></div>
-      </section>
+        <section class="reflection glass-card">
+          <h2>Reflection</h2>
+          <ol>
+            <li>Describe a situation (real or hypothetical) in which technical excellence and ethical responsibility might pull in different directions. How would you approach the trade-off?</li>
+            <li>Which stakeholder groups do you most often overlook when designing or evaluating a system? Why?</li>
+          </ol>
+        </section>
 
-      <section class="reflection glass">
-        <h2>Reflection Questions</h2>
-        <ol>
-          <li>Describe a computing system you use daily. Who are the stakeholders who might be helped or harmed by design decisions in that system?</li>
-          <li>When have you observed (or imagined) a tension between "shipping fast" and "shipping responsibly"? How would you surface that tension constructively?</li>
-          <li>Which of the multi-perspective lenses feels most natural to you right now? Which feels least familiar? Why?</li>
-        </ol>
-      </section>
+        <section class="summary glass-card">
+          <h2>Summary</h2>
+          <ul>
+            <li>Professional practice in computing combines technical competence with ethical awareness, legal literacy, and accountability.</li>
+            <li>Historical failures (e.g., Therac-25) show the human cost of treating software as non-critical.</li>
+            <li>Multiple perspectives—SE, AI/DS, security, business/legal—must inform professional judgment.</li>
+            <li>Codes of ethics and decision frameworks exist to support consistent, defensible choices under uncertainty.</li>
+          </ul>
+        </section>
 
-      <section class="summary glass">
-        <h2>Summary</h2>
-        <ul>
-          <li>Technical competence and professional judgment are complementary.</li>
-          <li>Computing professionals act as both Creators and Stewards.</li>
-          <li>Historical failures (e.g., Therac-25) show that culture, process, and verification matter as much as individual coding skill.</li>
-          <li>Multi-perspective analysis (ethical, legal, business, AI, data, SE, security) is a core professional habit.</li>
-          <li>This course builds the professional thinking required by ACM/IEEE guidelines and by contemporary industry practice.</li>
-        </ul>
-      </section>
-
-      <footer class="lecture-footer">
-        <p>Professional Practices in Computing — Module 01. Designed for university use 2026–2035</p>
-      </footer>
-    </div>
-  </main>
-
+        <nav class="lecture-nav">
+          <a href="../index.html" class="btn secondary">← Home</a>
+          <a href="lecture-02.html" class="btn primary">Next: History & Codes →</a>
+        </nav>
+      </article>
+    </main>
+  </div>
   <script src="../js/main.js"></script>
-  <script>
-    // Lecture 1 Quiz data
-    initQuiz('quiz-1', [
-      {
-        question: "What is the core premise of this course regarding technical and professional competence?",
-        options: [
-          "Technical skill is sufficient if the code works correctly.",
-          "Professional judgment can fully replace technical understanding.",
-          "Technical excellence and professional judgment are both necessary and complementary.",
-          "Only managers need professional competence; engineers need only technical skill."
-        ],
-        correct: 2,
-        explanation: "The course treats technical excellence and professional judgment as complementary. Neither alone is enough for responsible practice."
-      },
-      {
-        question: "In the dual-role model, a computing professional is both a Creator and a _____ .",
-        options: ["Regulator", "Steward", "Auditor", "Consultant"],
-        correct: 1,
-        explanation: "The dual role is Creator (building systems) and Steward (considering impact, risks, and responsibility)."
-      },
-      {
-        question: "Which of the following best describes a key lesson from historical safety-critical failures such as Therac-25?",
-        options: [
-          "Hardware is always safer than software.",
-          "Organizational culture and verification practices matter as much as individual coding skill.",
-          "Only licensed professional engineers should write medical software.",
-          "Race conditions are no longer a practical concern."
-        ],
-        correct: 1,
-        explanation: "Therac-25 illustrated that culture, process, and the decision to rely solely on software without adequate safeguards can produce catastrophic outcomes."
-      },
-      {
-        question: "When evaluating a system, professional practice encourages examining it through multiple lenses. Which set is emphasized in this course?",
-        options: [
-          "Only legal and financial",
-          "Ethical, Legal, Business, AI, Data Science, Software Engineering, Cybersecurity",
-          "Only technical performance metrics",
-          "Marketing and user acquisition only"
-        ],
-        correct: 1,
-        explanation: "The course deliberately trains multi-perspective analysis across ethical, legal, business, AI, data, SE, and security viewpoints."
-      }
-    ]);
-  </script>
 </body>
 </html>
