@@ -11,7 +11,182 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <!-- Full content will be replaced by actual local file in next step if this is truncated -->
-  <p>Placeholder - actual push via sequential full content</p>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">PPC</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../index.html">Home</a>
+        <a href="lecture-01.html" class="active">01 · Introduction</a>
+        <a href="lecture-02.html">02 · History & Codes</a>
+        <a href="lecture-03.html">03 · Ethical Theories</a>
+        <a href="lecture-04.html">04 · ACM & IEEE Codes</a>
+        <a href="lecture-05.html">05 · Responsibility</a>
+      </nav>
+      <div class="progress-box">
+        <div class="progress-label">Course Progress</div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:20%"></div></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 01</div>
+        <h1>Lecture 01 — Introduction to Professional Practices in Computing</h1>
+        <p class="lead">Why professional practices matter for every computing graduate in the age of AI, data, and global software.</p>
+      </header>
+
+      <section class="card objectives">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Define professional practice in the context of computing disciplines (CS, SE, DS, AI, Cybersecurity).</li>
+          <li>Explain why technical skill alone is insufficient for professional competence.</li>
+          <li>Identify the major stakeholders affected by computing systems.</li>
+          <li>Distinguish between personal ethics, professional ethics, and organizational culture.</li>
+          <li>Locate key reference frameworks (ACM, IEEE, NIST, UNESCO) that guide responsible practice.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Motivation</h2>
+        <p>Every major computing failure of the last three decades—from Therac-25 radiation overdoses to Boeing 737 MAX, from Cambridge Analytica to biased hiring algorithms—shares a common root: decisions made by people who possessed technical ability but lacked a robust professional framework for evaluating impact, risk, and responsibility.</p>
+        <p>This course treats professional practice as a core engineering discipline, not an afterthought. You will learn to reason about trade-offs, document decisions, communicate risk, and act when systems threaten people, organizations, or society.</p>
+      </section>
+
+      <section class="card story">
+        <h2>Real Story — The Cost of Missing Professional Judgment</h2>
+        <p>In the mid-1980s the Therac-25 radiation therapy machine delivered massive overdoses to patients. The root causes were not only software race conditions but also a culture that treated software as secondary, removed hardware interlocks, and failed to investigate prior incidents thoroughly. Engineers who wrote the code were competent programmers; the professional failure lay in risk analysis, testing rigor, incident response, and accountability structures.</p>
+        <p>Modern parallels appear in autonomous vehicle disengagements, medical AI false negatives, and social-media ranking systems that amplify harm. Technical competence without professional judgment remains a recurring pattern.</p>
+      </section>
+
+      <section class="card">
+        <h2>What “Professional Practices” Means</h2>
+        <p>Professional practices encompass the knowledge, skills, attitudes, and habits that enable computing practitioners to deliver reliable systems while protecting the public interest. They include:</p>
+        <ul>
+          <li>Ethical reasoning and decision frameworks</li>
+          <li>Legal awareness (privacy, IP, liability, safety regulation)</li>
+          <li>Communication and documentation standards</li>
+          <li>Teamwork, leadership, and conflict handling</li>
+          <li>Risk management and safety-critical thinking</li>
+          <li>Lifelong learning and professional identity</li>
+        </ul>
+        <p>These competencies appear in the ACM/IEEE Computing Curricula and in employer expectations for mid-to-senior roles.</p>
+      </section>
+
+      <section class="card multi-perspective">
+        <h2>Multi-Perspective View</h2>
+        <div class="grid-2">
+          <div>
+            <h3>Software Engineering</h3>
+            <p>Process discipline, requirements integrity, verification, configuration management, and post-release responsibility.</p>
+          </div>
+          <div>
+            <h3>AI & Data Science</h3>
+            <p>Dataset provenance, model cards, bias auditing, human oversight, and documentation of limitations.</p>
+          </div>
+          <div>
+            <h3>Cybersecurity</h3>
+            <p>Threat modeling, secure design defaults, responsible disclosure, and ethical red-teaming boundaries.</p>
+          </div>
+          <div>
+            <h3>Business & Legal</h3>
+            <p>Contractual duty of care, regulatory compliance, liability allocation, and organizational culture that either supports or punishes speaking up.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Historical Background</h2>
+        <p>Computing professionalization accelerated after high-visibility failures in the 1980s–1990s. The ACM and IEEE refined codes of ethics; safety-critical domains adopted stricter standards; and later AI and data ethics movements extended the same concerns to algorithmic systems. Understanding this history helps practitioners recognize that today’s frameworks are responses to real harm, not abstract philosophy.</p>
+      </section>
+
+      <section class="card case">
+        <h2>Mini Case — Therac-25 Lessons for Today</h2>
+        <p><strong>Background:</strong> Software-controlled radiation therapy; race conditions and missing interlocks produced lethal overdoses.</p>
+        <p><strong>Professional issues:</strong> Inadequate testing under realistic concurrency, removal of hardware safety without compensating analysis, weak incident investigation culture, and limited channels for raising safety concerns.</p>
+        <p><strong>Modern translation:</strong> Similar patterns appear when ML models are deployed without adequate validation under edge cases, when logging is disabled for performance, or when incident reports are treated as PR problems rather than learning opportunities.</p>
+      </section>
+
+      <section class="card quiz-section">
+        <h2>Knowledge Check</h2>
+        <div class="quiz" data-quiz="lec01">
+          <div class="q" data-correct="1">
+            <p>1. Professional practice in computing primarily emphasizes:</p>
+            <label><input type="radio" name="q1" value="0"> Writing code faster than peers</label>
+            <label><input type="radio" name="q1" value="1"> Judging impact, risk, and responsibility alongside technical skill</label>
+            <label><input type="radio" name="q1" value="2"> Memorizing every API</label>
+          </div>
+          <div class="q" data-correct="2">
+            <p>2. A key lesson from Therac-25 is that:</p>
+            <label><input type="radio" name="q2" value="0"> Hardware is always safer than software</label>
+            <label><input type="radio" name="q2" value="1"> Only physicists need safety training</label>
+            <label><input type="radio" name="q2" value="2"> Culture, testing rigor, and incident response are part of professional duty</label>
+          </div>
+          <button class="btn primary" onclick="gradeQuiz(this)">Check Answers</button>
+          <div class="quiz-result" hidden></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Reflection</h2>
+        <ol>
+          <li>Describe a recent news story involving technology harm. Which professional practice failures contributed?</li>
+          <li>Where in your own projects have you faced a trade-off between speed and thoroughness? How did you decide?</li>
+          <li>Which stakeholder groups are most affected by the systems you currently build or study?</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Assignment & Mini-Project</h2>
+        <p><strong>A1:</strong> Write a one-page professional judgment memo analyzing a public computing incident of your choice. Identify at least three professional practice gaps and propose concrete process improvements.</p>
+        <p><strong>Mini-project seed:</strong> Draft a lightweight “decision record” template your team could use for ethically or safety-relevant choices.</p>
+      </section>
+
+      <section class="card summary">
+        <h2>Summary</h2>
+        <p>Professional practices turn technical ability into responsible engineering. They rest on ethical reasoning, legal awareness, communication, risk thinking, and a culture that values learning from failure. This course builds those competencies systematically.</p>
+      </section>
+
+      <section class="card">
+        <h2>Cheat Sheet</h2>
+        <ul>
+          <li>Technical skill ≠ professional competence</li>
+          <li>Stakeholders include users, non-users, organizations, regulators, and future generations</li>
+          <li>Codes (ACM/IEEE) provide shared language; judgment still required</li>
+          <li>Incident history is a primary learning resource</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Glossary</h2>
+        <dl>
+          <dt>Professional practice</dt><dd>The disciplined application of knowledge, ethics, and process to deliver reliable systems in the public interest.</dd>
+          <dt>Stakeholder</dt><dd>Any party affected by a system’s design, deployment, or failure.</dd>
+          <dt>Duty of care</dt><dd>The obligation to take reasonable steps to avoid foreseeable harm.</dd>
+        </dl>
+      </section>
+
+      <section class="card">
+        <h2>Further Reading</h2>
+        <ul>
+          <li>Baase, <em>A Gift of Fire</em> (selected chapters on professional ethics)</li>
+          <li>ACM Code of Ethics and Professional Conduct</li>
+          <li>Leveson & Turner, “An Investigation of the Therac-25 Accidents”</li>
+        </ul>
+      </section>
+
+      <footer class="page-footer">
+        <a href="../index.html">← Home</a>
+        <a href="lecture-02.html">Next: History & Codes →</a>
+      </footer>
+    </main>
+  </div>
+  <script src="../js/main.js"></script>
+  <script>
+    // Additional quiz data for richer local version
+    if (typeof window.quizBank === 'undefined') window.quizBank = {};
+    window.quizBank['lec01'] = window.quizBank['lec01'] || [];
+  </script>
 </body>
 </html>
