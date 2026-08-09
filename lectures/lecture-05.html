@@ -3,124 +3,148 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 05: Intellectual Property, Licensing and Open Source — Copyright, patents, trade secrets, software licenses, open-source obligations, and professional responsibilities around IP." />
-  <title>Lecture 05 · IP, Licensing & Open Source | Professional Practices in Computing</title>
+  <meta name="description" content="Lecture 05: Professional Responsibility, Accountability & Whistleblowing — Duty of care, organizational accountability, raising concerns, and the ethics of speaking up in computing." />
+  <title>Lecture 05 — Responsibility & Accountability | Professional Practices in Computing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
   <nav class="navbar">
-    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
+    <a href="../index.html" class="navbar-brand">
+      <div class="logo">PPC</div>
+      <span>Professional Practices</span>
+    </a>
     <div class="nav-actions">
-      <div class="search-box"><svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="search" id="site-search" placeholder="Search lectures…" aria-label="Search" /></div>
-      <div class="progress-wrap"><span id="progress-text">0%</span><div class="progress-bar-bg"><div id="progress-bar"></div></div></div>
-      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"><svg class="icon-sun" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="5"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42"/></svg><svg class="icon-moon" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" style="display:none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></button>
-      <button class="btn-icon" id="sidebar-toggle" aria-label="Toggle sidebar"><svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
   </nav>
   <div class="overlay" id="overlay"></div>
   <aside class="sidebar" id="sidebar">
-    <div class="sidebar-section"><div class="sidebar-title">Course</div><a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a></div>
     <div class="sidebar-section">
-      <div class="sidebar-title">Lectures</div>
-      <a href="lecture-01.html" class="sidebar-link"><span class="num">01</span> Introduction</a>
-      <a href="lecture-02.html" class="sidebar-link"><span class="num">02</span> Ethics & Responsibility</a>
-      <a href="lecture-03.html" class="sidebar-link"><span class="num">03</span> Privacy & Data</a>
-      <a href="lecture-04.html" class="sidebar-link"><span class="num">04</span> AI & Responsible Systems</a>
-      <a href="lecture-05.html" class="sidebar-link active"><span class="num">05</span> IP, Licensing & Open Source</a>
+      <div class="sidebar-title">Course</div>
+      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Modules</div>
+      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link active" data-lecture="05"><span class="num">05</span> Responsibility</a>
     </div>
   </aside>
-  <div class="main-wrapper" id="main-wrapper">
-    <main class="content">
-      <nav class="breadcrumbs"><a href="../index.html">Home</a><span class="sep">/</span><span>Lecture 05</span></nav>
+  <div class="main-wrapper">
+    <div class="content">
+      <div class="breadcrumbs"><a href="../index.html">Home</a> <span class="sep">/</span> Lecture 05</div>
       <header class="lecture-header">
-        <span class="lecture-badge">Module 05 · IP & Community</span>
-        <h1>Intellectual Property, Licensing & Open Source</h1>
-        <p class="hero-lead">Copyright, patents, trade secrets, software licenses, open-source obligations, and the professional responsibilities of developers who create, reuse, and distribute software.</p>
-        <div class="lecture-meta"><span>⏱ ~90–120 min</span><span>📚 Law + practice</span><span>🎯 IP & OSS</span></div>
+        <div class="lecture-badge">Module 05</div>
+        <h1>Professional Responsibility & Accountability</h1>
+        <p class="hero-lead">Duty of care, organizational accountability, whistleblowing, and the professional obligation to raise concerns when systems or practices put people at risk.</p>
+        <div class="lecture-meta"><span>Reading ~45 min</span><span>Quiz + Reflection</span></div>
       </header>
-
-      <section class="section" id="objectives">
+      <section id="objectives" class="section">
         <div class="section-header"><div class="section-icon">🎯</div><h2>Learning Objectives</h2></div>
         <ul class="objectives-list">
-          <li>Distinguish copyright, patents, trademarks, and trade secrets as they apply to software and data.</li>
-          <li>Explain the purpose and basic terms of common software licenses (proprietary, permissive, copyleft).</li>
-          <li>Identify professional duties when reusing third-party code and when contributing to open source.</li>
-          <li>Discuss ethical and practical issues around patents in software and defensive vs. aggressive patent strategies.</li>
-          <li>Recognize license compatibility and attribution requirements in real projects.</li>
+          <li>Distinguish personal, professional, and organizational responsibility in computing work.</li>
+          <li>Apply duty-of-care and accountability frameworks to realistic software and AI scenarios.</li>
+          <li>Evaluate when and how to escalate concerns, including protected whistleblowing pathways.</li>
+          <li>Connect ACM/IEEE code duties to concrete decisions about safety, honesty, and reporting.</li>
         </ul>
       </section>
-
-      <section class="section" id="ip">
-        <div class="section-header"><div class="section-icon">📜</div><h2>Intellectual Property Basics</h2></div>
-        <p><strong>Copyright</strong> protects original expression (source code, documentation, UI design in many jurisdictions) automatically upon fixation. It does not protect ideas, algorithms, or facts.</p>
-        <p><strong>Patents</strong> can protect inventions that meet novelty, non-obviousness, and utility requirements; software-related patents remain controversial and jurisdiction-dependent.</p>
-        <p><strong>Trade secrets</strong> protect confidential business information that derives value from secrecy and is subject to reasonable secrecy measures.</p>
-        <p><strong>Trademarks</strong> protect brand identifiers and reduce consumer confusion.</p>
+      <section class="section">
+        <div class="section-header"><div class="section-icon">📖</div><h2>Introduction</h2></div>
+        <p>Professional responsibility goes beyond “doing your ticket.” It includes the obligation to anticipate harm, refuse unsafe shortcuts, document decisions, and escalate when leadership or systems ignore credible risk. Accountability means someone can answer for outcomes—and that paths exist to correct course before harm scales.</p>
+        <div class="callout callout-info"><div class="callout-title">Core idea</div><p>In computing, harm is often diffuse, delayed, and mediated by systems. Responsibility frameworks must therefore be explicit, not assumed.</p></div>
       </section>
-
-      <section class="section" id="licenses">
-        <div class="section-header"><div class="section-icon">📄</div><h2>Software Licenses</h2></div>
-        <p>Licenses grant permission to use, copy, modify, and distribute under specified conditions. Proprietary licenses typically restrict redistribution and modification. Open-source licenses form a spectrum:</p>
-        <ul>
-          <li><strong>Permissive</strong> (MIT, Apache 2.0, BSD) — few restrictions; attribution usually required; compatible with proprietary products.</li>
-          <li><strong>Copyleft / reciprocal</strong> (GPL family) — modifications and derivative works distributed further must use a compatible copyleft license.</li>
-          <li><strong>Weak copyleft</strong> (LGPL, MPL) — intermediate obligations focused on the library or file level.</li>
-        </ul>
-        <div class="callout callout-warning"><div class="callout-title">Professional practice</div><p>Always check and record the licenses of every dependency. License conflicts and missing attribution create legal and reputational risk. “I found it on the internet” is not a defense.</p></div>
+      <section class="section">
+        <div class="section-header"><div class="section-icon">⚡</div><h2>Motivation & Real Story</h2></div>
+        <p>Engineers who raised concerns about safety-critical software, biased models, or insecure defaults have sometimes been ignored—or punished. Others were protected and prevented major failures. The difference is often culture, process, and whether professionals treat “raising a concern” as part of the job description.</p>
       </section>
-
-      <section class="section" id="oss">
-        <div class="section-header"><div class="section-icon">🌐</div><h2>Open Source as Professional Practice</h2></div>
-        <p>Open source is both a licensing model and a set of collaboration norms. Professionals who contribute should respect project codes of conduct, contribution guidelines, and the project’s license. Organizations that consume open source have duties to comply with licenses, support critical maintainers where appropriate, and avoid treating volunteer maintainers as free labor for critical infrastructure.</p>
-      </section>
-
-      <section class="section" id="quiz">
-        <div class="section-header"><div class="section-icon">✅</div><h2>Knowledge Check</h2></div>
-        <div class="quiz-container" data-quiz="lec05">
-          <div class="quiz-question">Using a dependency under the MIT license typically requires:</div>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">Releasing your entire product under the GPL.</div>
-            <div class="quiz-option" data-correct="true">Preserving copyright and license notices (attribution) as required by the license.</div>
-            <div class="quiz-option" data-correct="false">Paying royalties to the original author.</div>
-            <div class="quiz-option" data-correct="false">Making your source code public.</div>
-          </div>
-          <div class="quiz-feedback"></div>
+      <section class="section">
+        <div class="section-header"><div class="section-icon">🏭</div><h2>Industrial Scenario</h2></div>
+        <div class="card">
+          <p>You are a mid-level engineer. A release is scheduled. Load tests show intermittent data corruption under peak traffic. Product insists on ship date. Legal asks only whether the contract was met. Your manager says “monitor and hotfix.” What is your professional responsibility beyond following orders?</p>
         </div>
       </section>
-
-      <section class="section" id="summary">
+      <section class="section">
+        <div class="section-header"><div class="section-icon">🧭</div><h2>Multi-Perspective Analysis</h2></div>
+        <div class="perspective-grid">
+          <div class="perspective-card"><h4>Ethical</h4><p>Duty of care, non-maleficence, honesty about residual risk, and refusal to mislead users or downstream teams.</p></div>
+          <div class="perspective-card"><h4>Legal</h4><p>Negligence exposure, regulatory reporting duties, whistleblower protection statutes, and product liability trends.</p></div>
+          <div class="perspective-card"><h4>Business</h4><p>Reputation, incident cost, insurance, and the long-term value of a speak-up culture versus short-term ship pressure.</p></div>
+          <div class="perspective-card"><h4>AI / Data</h4><p>Model risk ownership, data quality accountability, and escalation when evaluation metrics hide subgroup harm.</p></div>
+          <div class="perspective-card"><h4>Software Engineering</h4><p>Change control, risk registers, blameless postmortems, and clear ownership of production health.</p></div>
+          <div class="perspective-card"><h4>Cybersecurity</h4><p>Responsible disclosure, vulnerability management SLAs, and not burying known exploitable defects.</p></div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-header"><div class="section-icon">🧩</div><h2>Key Concepts</h2></div>
+        <h3>Duty of care</h3>
+        <p>Professionals must take reasonable steps to avoid foreseeable harm to those affected by their systems—users, operators, and the public.</p>
+        <h3>Accountability vs. blame</h3>
+        <p>Accountability is answerability with authority and information to act. Blame cultures suppress reporting; learning cultures improve systems.</p>
+        <h3>Whistleblowing</h3>
+        <p>Internal escalation first when safe and effective; external reporting when internal paths fail and harm is serious. Know local legal protections.</p>
+      </section>
+      <section class="section">
+        <div class="section-header"><div class="section-icon">✅</div><h2>Knowledge Check</h2></div>
+        <div class="quiz-container" id="quiz-root">
+          <div class="quiz-question" id="quiz-q"></div>
+          <div class="quiz-options" id="quiz-opts"></div>
+          <div class="quiz-feedback" id="quiz-fb"></div>
+          <button class="btn btn-primary" id="quiz-next" style="display:none;margin-top:1rem">Next</button>
+          <div class="quiz-score" id="quiz-score"></div>
+        </div>
+      </section>
+      <section class="section">
+        <div class="section-header"><div class="section-icon">✍️</div><h2>Reflection</h2></div>
+        <div class="reflection-box">
+          <p>Describe a situation (real or hypothetical) where shipping on schedule conflicted with safety or honesty. What would professional responsibility require you to do, step by step?</p>
+          <textarea data-reflection="l05" placeholder="Your reflection (saved locally)…"></textarea>
+        </div>
+      </section>
+      <section class="section">
         <div class="section-header"><div class="section-icon">📋</div><h2>Summary</h2></div>
-        <ul>
-          <li>IP law shapes what you can copy, modify, and distribute; understand the category that applies.</li>
-          <li>License compliance is a professional obligation, not optional paperwork.</li>
-          <li>Open source creates shared infrastructure; reciprocity and respect for maintainers matter.</li>
+        <ul class="outcome-list">
+          <li>Professional responsibility is broader than any single employer’s instructions.</li>
+          <li>Accountability needs clear ownership, escalation paths, and learning—not pure punishment.</li>
+          <li>Raising concerns is a professional skill; document facts, risks, and recommendations.</li>
         </ul>
       </section>
-
-      <section class="section">
-        <p><a href="lecture-04.html" class="btn btn-ghost">← Previous</a> <a href="../index.html" class="btn btn-primary">Back to Home</a></p>
-      </section>
       <footer class="footer">Professional Practices in Computing · Lecture 05</footer>
-    </main>
+    </div>
   </div>
   <script src="../js/main.js"></script>
   <script>
-    document.querySelectorAll('[data-quiz="lec05"] .quiz-option').forEach(opt => {
-      opt.addEventListener('click', function() {
-        const parent = this.closest('.quiz-options');
-        if (parent.dataset.answered) return;
-        parent.dataset.answered = '1';
-        this.classList.add('selected');
-        const correct = this.dataset.correct === 'true';
-        this.classList.add(correct ? 'correct' : 'incorrect');
-        const feedback = parent.nextElementSibling;
-        if (feedback) { feedback.classList.add('show', correct ? 'correct' : 'incorrect'); feedback.textContent = correct ? 'Correct.' : 'Review the licenses section.'; }
-        if (!correct) parent.querySelector('[data-correct="true"]')?.classList.add('correct');
-      });
-    });
+    window.initQuiz && window.initQuiz([
+      {
+        question: "Professional responsibility is best described as:",
+        options: [
+          "Identical to whatever the current employer’s policy says",
+          "Broader than any single employment contract and grounded in professional role and codes",
+          "Only applicable after something has gone wrong",
+          "A purely legal concept with no ethical dimension"
+        ],
+        correct: 1,
+        explanation: "Professional responsibility arises from membership in the profession and its codes; it is not exhausted by one employer’s instructions."
+      },
+      {
+        question: "A healthy accountability culture usually emphasizes:",
+        options: [
+          "Finding a single person to punish after incidents",
+          "Visible ownership, escalation paths, and learning from failures",
+          "Hiding near-misses to protect the brand",
+          "Never challenging product deadlines"
+        ],
+        correct: 1,
+        explanation: "Visible ownership and escalation paths make responsible behavior easier and pure diffusion harder."
+      }
+    ]);
   </script>
 </body>
 </html>
