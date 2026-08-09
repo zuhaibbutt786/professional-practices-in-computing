@@ -11,6 +11,147 @@
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <!-- PLACEHOLDER - full content will be loaded from local file via tool -->
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-brand">
+      <div class="logo">PPC</div>
+      <span>Professional Practices</span>
+    </a>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌙</button>
+      <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+    </div>
+  </nav>
+  <div class="layout">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">Lectures</div>
+      <nav class="sidebar-nav">
+        <a href="lecture-01.html" class="active">01. Introduction</a>
+        <a href="lecture-02.html">02. History & Codes</a>
+        <a href="lecture-03.html">03. Ethical Theories</a>
+        <a href="lecture-04.html">04. ACM & IEEE Codes</a>
+        <a href="lecture-05.html">05. Responsibility</a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 01</div>
+      <article class="lecture">
+        <header class="lecture-header">
+          <span class="lecture-number">Lecture 01</span>
+          <h1>Introduction to Professional Practices in Computing</h1>
+          <p class="lecture-lead">Why professionalism matters, professional identity, and the roadmap for ethical and responsible computing across CS, SE, AI, Data Science, and Cybersecurity.</p>
+        </header>
+
+        <section class="objectives glass-card">
+          <h2>Learning Objectives</h2>
+          <ul>
+            <li>Define professional practices in computing and distinguish them from pure technical skill.</li>
+            <li>Explain why ethics, law, and social impact are core to modern computing roles.</li>
+            <li>Identify the multi-perspective lens (ethical, legal, business, AI, data, SE, security) used throughout the course.</li>
+            <li>Describe professional identity and the responsibilities that come with computing power.</li>
+            <li>Outline the course roadmap and how each module builds professional judgment.</li>
+          </ul>
+        </section>
+
+        <section class="intro glass-card">
+          <h2>Introduction</h2>
+          <p>Computing professionals shape systems that affect billions of lives, from recommendation engines and medical diagnostics to critical infrastructure and autonomous vehicles. Technical competence alone is insufficient. Professional practices equip you with the ethical reasoning, legal awareness, communication skills, and accountability frameworks required by ACM, IEEE, and industry employers.</p>
+          <p>This course is technology-independent. It teaches professional thinking rather than specific tools or languages. Whether you become a software engineer, data scientist, AI researcher, or cybersecurity specialist, the same core competencies apply.</p>
+        </section>
+
+        <section class="motivation glass-card">
+          <h2>Motivation</h2>
+          <p>High-profile failures — from biased hiring algorithms to data breaches and unsafe autonomous systems — repeatedly show that technical excellence without professional judgment produces harm. Employers, regulators, and the public increasingly expect computing graduates to demonstrate ethical literacy, risk awareness, and the ability to communicate trade-offs clearly.</p>
+        </section>
+
+        <section class="real-story glass-card">
+          <h2>Real Story</h2>
+          <p>Consider the engineer who discovers a serious privacy flaw in a production system days before a major launch. Raising the issue may delay the release and anger stakeholders; staying silent risks user harm and future liability. Professional practices provide the frameworks, codes, and decision processes that help you navigate such moments with integrity.</p>
+        </section>
+
+        <section class="case glass-card">
+          <h2>Industrial Scenario</h2>
+          <p>A mid-size product company is racing to ship an AI-powered feature. Marketing has already announced the launch date. During final review, a junior engineer notices that the training data under-represents certain demographic groups and that the model’s error rates are significantly higher for those groups. The team lead is under pressure to ship. What should the engineer do, and what organizational practices would have prevented this late discovery?</p>
+        </section>
+
+        <section class="perspectives glass-card">
+          <h2>Multi-Perspective Analysis</h2>
+          <div class="perspective-grid">
+            <div class="perspective"><h3>Ethical</h3><p>Fairness, non-maleficence, and transparency obligations toward affected users.</p></div>
+            <div class="perspective"><h3>Legal</h3><p>Potential discrimination claims, regulatory scrutiny, and contractual duties to customers.</p></div>
+            <div class="perspective"><h3>Business</h3><p>Reputation risk, delayed revenue versus long-term trust and brand damage.</p></div>
+            <div class="perspective"><h3>AI / Data Science</h3><p>Dataset bias, evaluation metrics that hide subgroup failures, documentation of limitations.</p></div>
+            <div class="perspective"><h3>Software Engineering</h3><p>Quality gates, risk registers, and the cost of fixing issues after release.</p></div>
+            <div class="perspective"><h3>Cybersecurity</h3><p>Privacy side-effects and the attack surface introduced by the new feature.</p></div>
+          </div>
+        </section>
+
+        <section class="concepts glass-card">
+          <h2>Core Concepts</h2>
+          <p>Professional identity in computing means accepting that your work has consequences beyond the code. It includes continuous learning, clear communication, respect for colleagues and users, and the courage to raise concerns. Codes of ethics (ACM, IEEE) provide shared language; they do not replace personal judgment.</p>
+        </section>
+
+        <section class="quiz-section glass-card" id="quiz">
+          <h2>Knowledge Check</h2>
+          <div id="quiz-container"></div>
+        </section>
+
+        <section class="reflection glass-card">
+          <h2>Reflection</h2>
+          <ol>
+            <li>Describe a time (real or hypothetical) when technical pressure conflicted with professional responsibility. What did you do or what would you do?</li>
+            <li>Which of the six perspectives (ethical, legal, business, AI/DS, SE, security) do you feel least prepared to apply, and how will you strengthen it?</li>
+            <li>How does professional identity differ from simply being a skilled programmer or data analyst?</li>
+          </ol>
+        </section>
+
+        <section class="summary glass-card">
+          <h2>Summary</h2>
+          <ul>
+            <li>Professional practices complement technical skill with ethics, law, communication, and accountability.</li>
+            <li>Multi-perspective analysis is a core habit of this course.</li>
+            <li>Codes of ethics and real-world cases train judgment under pressure.</li>
+            <li>Your professional identity includes the duty to anticipate and mitigate harm.</li>
+          </ul>
+        </section>
+
+        <section class="further glass-card">
+          <h2>Further Reading</h2>
+          <ul>
+            <li>ACM Code of Ethics and Professional Conduct</li>
+            <li>IEEE Code of Ethics</li>
+            <li>Baase, <em>A Gift of Fire</em> (selected chapters on ethics and social impact)</li>
+            <li>Quinn, <em>Ethics for the Information Age</em></li>
+          </ul>
+        </section>
+      </article>
+    </main>
+  </div>
+  <script src="../js/main.js"></script>
+  <script>
+    initQuiz([
+      {
+        question: "Why are professional practices essential in computing beyond technical skill?",
+        options: [
+          "They replace the need for testing and code review",
+          "They equip practitioners to reason about ethics, law, social impact, and accountability",
+          "They are only required for managers",
+          "They guarantee that software will never fail"
+        ],
+        correct: 1,
+        explanation: "Professional practices address the non-technical dimensions of harm, responsibility, and societal impact that pure technical skill does not cover."
+      },
+      {
+        question: "Which perspectives are emphasized in this course?",
+        options: [
+          "Only legal and financial",
+          "Ethical, Legal, Business, AI, Data Science, Software Engineering, Cybersecurity",
+          "Only technical performance metrics",
+          "Marketing and user acquisition only"
+        ],
+        correct: 1,
+        explanation: "The course deliberately trains multi-perspective analysis across ethical, legal, business, AI, data, SE, and security viewpoints."
+      }
+    ]);
+  </script>
 </body>
 </html>
