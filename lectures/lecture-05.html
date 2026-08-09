@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 05: Professional Responsibility, Accountability & Whistleblowing — Duty of care, organizational accountability, raising concerns, and the ethics of speaking up in computing." />
-  <title>Lecture 05 — Responsibility & Accountability | Professional Practices in Computing</title>
+  <meta name="description" content="Lecture 05: Professional Responsibility & Accountability — individual and collective responsibility, liability, whistleblowing, and organizational culture." />
+  <title>Lecture 05 — Responsibility | Professional Practices in Computing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
@@ -12,25 +12,18 @@
 </head>
 <body>
   <nav class="navbar">
-    <a href="../index.html" class="navbar-brand">
-      <div class="logo">PPC</div>
-      <span>Professional Practices</span>
-    </a>
+    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
     <div class="nav-actions">
+      <div class="search-box"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg><input type="search" id="search-input" placeholder="Search..." aria-label="Search" /></div>
       <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
-      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
-      </button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
     </div>
   </nav>
   <div class="overlay" id="overlay"></div>
   <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section"><div class="sidebar-title">Course</div><a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a></div>
     <div class="sidebar-section">
-      <div class="sidebar-title">Course</div>
-      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Modules</div>
+      <div class="sidebar-title">Current Module</div>
       <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
       <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
       <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
@@ -38,111 +31,89 @@
       <a href="lecture-05.html" class="sidebar-link active" data-lecture="05"><span class="num">05</span> Responsibility</a>
     </div>
   </aside>
-  <div class="main-wrapper">
-    <div class="content">
-      <div class="breadcrumbs"><a href="../index.html">Home</a> <span class="sep">/</span> Lecture 05</div>
-      <header class="lecture-header">
-        <div class="lecture-badge">Module 05</div>
+  <main class="main-content">
+    <div class="content-wrapper">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <span>Lecture 05 — Responsibility</span></nav>
+      <header class="lecture-header glass">
+        <div class="lecture-meta"><span class="badge">Module 05</span><span class="reading-time">~50–65 min</span></div>
         <h1>Professional Responsibility & Accountability</h1>
-        <p class="hero-lead">Duty of care, organizational accountability, whistleblowing, and the professional obligation to raise concerns when systems or practices put people at risk.</p>
-        <div class="lecture-meta"><span>Reading ~45 min</span><span>Quiz + Reflection</span></div>
+        <p class="lead">Who is responsible when systems fail or cause harm — individuals, teams, organizations, or the profession — and how accountability is designed and enforced.</p>
       </header>
-      <section id="objectives" class="section">
-        <div class="section-header"><div class="section-icon">🎯</div><h2>Learning Objectives</h2></div>
-        <ul class="objectives-list">
-          <li>Distinguish personal, professional, and organizational responsibility in computing work.</li>
-          <li>Apply duty-of-care and accountability frameworks to realistic software and AI scenarios.</li>
-          <li>Evaluate when and how to escalate concerns, including protected whistleblowing pathways.</li>
-          <li>Connect ACM/IEEE code duties to concrete decisions about safety, honesty, and reporting.</li>
+      <section class="objectives glass">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Distinguish responsibility, accountability, and liability</li>
+          <li>Analyze individual vs. collective and organizational responsibility</li>
+          <li>Describe conditions under which whistleblowing may be justified and the risks involved</li>
+          <li>Explain how culture, incentives, and process shape who is held accountable</li>
+          <li>Apply responsibility analysis to realistic failure and near-miss scenarios</li>
         </ul>
       </section>
-      <section class="section">
-        <div class="section-header"><div class="section-icon">📖</div><h2>Introduction</h2></div>
-        <p>Professional responsibility goes beyond “doing your ticket.” It includes the obligation to anticipate harm, refuse unsafe shortcuts, document decisions, and escalate when leadership or systems ignore credible risk. Accountability means someone can answer for outcomes—and that paths exist to correct course before harm scales.</p>
-        <div class="callout callout-info"><div class="callout-title">Core idea</div><p>In computing, harm is often diffuse, delayed, and mediated by systems. Responsibility frameworks must therefore be explicit, not assumed.</p></div>
+      <section class="content-section glass">
+        <h2>1. Responsibility, Accountability, Liability</h2>
+        <p><strong>Responsibility</strong> is the duty to act with care and to answer for outcomes within one’s role. <strong>Accountability</strong> is the obligation to explain and justify decisions and results to others. <strong>Liability</strong> is legal exposure to remedy or penalty. Professionals must understand all three; ethics focuses heavily on the first two while remaining aware of the third.</p>
       </section>
-      <section class="section">
-        <div class="section-header"><div class="section-icon">⚡</div><h2>Motivation & Real Story</h2></div>
-        <p>Engineers who raised concerns about safety-critical software, biased models, or insecure defaults have sometimes been ignored—or punished. Others were protected and prevented major failures. The difference is often culture, process, and whether professionals treat “raising a concern” as part of the job description.</p>
+      <section class="content-section glass">
+        <h2>2. Individual and Collective Responsibility</h2>
+        <p>Modern systems are built by many people. Diffusion of responsibility is a known risk: when everyone is partly responsible, no one feels fully responsible. Professional practice requires clear ownership of decisions, escalation paths, and refusal rights when safety or ethics are at stake.</p>
       </section>
-      <section class="section">
-        <div class="section-header"><div class="section-icon">🏭</div><h2>Industrial Scenario</h2></div>
-        <div class="card">
-          <p>You are a mid-level engineer. A release is scheduled. Load tests show intermittent data corruption under peak traffic. Product insists on ship date. Legal asks only whether the contract was met. Your manager says “monitor and hotfix.” What is your professional responsibility beyond following orders?</p>
-        </div>
+      <section class="content-section glass">
+        <h2>3. Organizational Culture and Incentives</h2>
+        <p>Culture and incentives determine whether responsible behavior is rewarded or punished. Metrics that only reward speed or engagement can systematically discourage caution. Leaders shape the environment in which individual professionals either can or cannot act on their judgment.</p>
       </section>
-      <section class="section">
-        <div class="section-header"><div class="section-icon">🧭</div><h2>Multi-Perspective Analysis</h2></div>
-        <div class="perspective-grid">
-          <div class="perspective-card"><h4>Ethical</h4><p>Duty of care, non-maleficence, honesty about residual risk, and refusal to mislead users or downstream teams.</p></div>
-          <div class="perspective-card"><h4>Legal</h4><p>Negligence exposure, regulatory reporting duties, whistleblower protection statutes, and product liability trends.</p></div>
-          <div class="perspective-card"><h4>Business</h4><p>Reputation, incident cost, insurance, and the long-term value of a speak-up culture versus short-term ship pressure.</p></div>
-          <div class="perspective-card"><h4>AI / Data</h4><p>Model risk ownership, data quality accountability, and escalation when evaluation metrics hide subgroup harm.</p></div>
-          <div class="perspective-card"><h4>Software Engineering</h4><p>Change control, risk registers, blameless postmortems, and clear ownership of production health.</p></div>
-          <div class="perspective-card"><h4>Cybersecurity</h4><p>Responsible disclosure, vulnerability management SLAs, and not burying known exploitable defects.</p></div>
-        </div>
+      <section class="content-section glass">
+        <h2>4. Whistleblowing and Escalation</h2>
+        <p>Internal escalation is the first duty in most codes. External disclosure may become justified when internal channels fail and serious public harm is at stake. Whistleblowers often face retaliation; organizations and professions have a corresponding duty to protect good-faith reporting.</p>
       </section>
-      <section class="section">
-        <div class="section-header"><div class="section-icon">🧩</div><h2>Key Concepts</h2></div>
-        <h3>Duty of care</h3>
-        <p>Professionals must take reasonable steps to avoid foreseeable harm to those affected by their systems—users, operators, and the public.</p>
-        <h3>Accountability vs. blame</h3>
-        <p>Accountability is answerability with authority and information to act. Blame cultures suppress reporting; learning cultures improve systems.</p>
-        <h3>Whistleblowing</h3>
-        <p>Internal escalation first when safe and effective; external reporting when internal paths fail and harm is serious. Know local legal protections.</p>
+      <section class="content-section glass">
+        <h2>5. Lessons from Failures</h2>
+        <p>Therac-25, Boeing 737 MAX, Equifax, and major AI/algorithmic harms all show mixtures of individual error, process failure, and cultural pressure. Assigning blame only to the last person who touched the code is usually incomplete and unfair. Accountability systems should improve learning, not only punish.</p>
       </section>
-      <section class="section">
-        <div class="section-header"><div class="section-icon">✅</div><h2>Knowledge Check</h2></div>
-        <div class="quiz-container" id="quiz-root">
-          <div class="quiz-question" id="quiz-q"></div>
-          <div class="quiz-options" id="quiz-opts"></div>
-          <div class="quiz-feedback" id="quiz-fb"></div>
-          <button class="btn btn-primary" id="quiz-next" style="display:none;margin-top:1rem">Next</button>
-          <div class="quiz-score" id="quiz-score"></div>
-        </div>
+      <section class="quiz-section glass" id="quiz-5">
+        <h2>Knowledge Check</h2>
+        <div class="quiz-container"></div>
       </section>
-      <section class="section">
-        <div class="section-header"><div class="section-icon">✍️</div><h2>Reflection</h2></div>
-        <div class="reflection-box">
-          <p>Describe a situation (real or hypothetical) where shipping on schedule conflicted with safety or honesty. What would professional responsibility require you to do, step by step?</p>
-          <textarea data-reflection="l05" placeholder="Your reflection (saved locally)…"></textarea>
-        </div>
+      <section class="reflection glass">
+        <h2>Reflection Questions</h2>
+        <ol>
+          <li>Describe a situation (real or hypothetical) where responsibility was unclear because many people contributed to a decision.</li>
+          <li>What organizational practices would make it safer for a junior engineer to raise a serious ethical concern?</li>
+          <li>When, if ever, would you consider external disclosure after internal escalation failed?</li>
+        </ol>
       </section>
-      <section class="section">
-        <div class="section-header"><div class="section-icon">📋</div><h2>Summary</h2></div>
-        <ul class="outcome-list">
-          <li>Professional responsibility is broader than any single employer’s instructions.</li>
-          <li>Accountability needs clear ownership, escalation paths, and learning—not pure punishment.</li>
-          <li>Raising concerns is a professional skill; document facts, risks, and recommendations.</li>
+      <section class="summary glass">
+        <h2>Summary</h2>
+        <ul>
+          <li>Responsibility, accountability, and liability are related but distinct.</li>
+          <li>Collective work requires deliberate design of ownership and escalation.</li>
+          <li>Culture and incentives enable or suppress professional judgment.</li>
+          <li>Whistleblowing is a last resort with serious personal risk; internal channels must work first.</li>
+          <li>Failure analysis should improve systems, not only assign individual blame.</li>
         </ul>
       </section>
-      <footer class="footer">Professional Practices in Computing · Lecture 05</footer>
+      <footer class="lecture-footer"><p>Professional Practices in Computing — Module 05. Designed for university use 2026–2035</p></footer>
     </div>
-  </div>
+  </main>
   <script src="../js/main.js"></script>
   <script>
-    window.initQuiz && window.initQuiz([
+    initQuiz('quiz-5', [
       {
-        question: "Professional responsibility is best described as:",
-        options: [
-          "Identical to whatever the current employer’s policy says",
-          "Broader than any single employment contract and grounded in professional role and codes",
-          "Only applicable after something has gone wrong",
-          "A purely legal concept with no ethical dimension"
-        ],
+        question: "In professional ethics, responsibility primarily refers to:",
+        options: ["Only legal liability for damages", "The duty to act with care and to answer for outcomes within one’s role", "Marketing claims", "Shareholder returns only"],
         correct: 1,
-        explanation: "Professional responsibility arises from membership in the profession and its codes; it is not exhausted by one employer’s instructions."
+        explanation: "Responsibility is the duty of care and answerability within a professional role."
       },
       {
-        question: "A healthy accountability culture usually emphasizes:",
-        options: [
-          "Finding a single person to punish after incidents",
-          "Visible ownership, escalation paths, and learning from failures",
-          "Hiding near-misses to protect the brand",
-          "Never challenging product deadlines"
-        ],
+        question: "Diffusion of responsibility is a risk when:",
+        options: ["One person owns the entire system", "Many people contribute and no clear ownership or escalation exists", "Codes are too short", "Only managers are involved"],
         correct: 1,
-        explanation: "Visible ownership and escalation paths make responsible behavior easier and pure diffusion harder."
+        explanation: "When many contribute without clear ownership, individuals may feel less personal responsibility."
+      },
+      {
+        question: "Whistleblowing is generally considered:",
+        options: ["The first step in every disagreement", "A last resort after internal channels fail and serious public harm is at stake", "Always illegal", "Only a management tool"],
+        correct: 1,
+        explanation: "Codes typically require internal escalation first; external disclosure may be justified when that fails and harm is serious."
       }
     ]);
   </script>
