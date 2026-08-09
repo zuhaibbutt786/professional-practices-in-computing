@@ -6,38 +6,44 @@
 - Software Engineering  
 - Data Science  
 - Artificial Intelligence  
-- Cyber Security  
-- Information Technology
-
-Live site: **https://zuhaibbutt786.github.io/professional-practices-in-computing/**
-
-## Course Overview
-
-Professional Practices in Computing prepares future computing professionals to navigate the ethical, legal, social, organizational, and professional challenges of the rapidly evolving technology landscape.
-
-The course integrates contemporary issues from AI, Data Science, Cybersecurity, Software Engineering, Cloud, Open Source, Entrepreneurship, and Digital Society. It emphasizes ethical reasoning, critical thinking, communication, leadership, teamwork, lifelong learning, sustainability, responsible AI, privacy, intellectual property, and emerging technologies.
-
-Technology-independent. Professional thinking over tools.
+- Cybersecurity  
 
 ## Features
 
-- Glassmorphism UI with dark / light mode
-- Progress tracking and local quiz engine
-- Sidebar navigation and search
-- Fully static — works on GitHub Pages and offline
-- Lectures 01–05 with multi-perspective content, case studies, quizzes, reflections, and assignments
+- Completely static (HTML + CSS + JS) — works on GitHub Pages  
+- Dark / Light mode with glassmorphism UI  
+- 30-lecture structure  
+- Progress tracking (localStorage)  
+- Interactive quizzes, reflection prompts, activities  
+- Responsive, modern, Apple/Microsoft-Learn inspired design  
 
-## Structure
+## Live Site
 
-```
-index.html
-css/styles.css
-js/main.js
-lectures/lecture-01.html … lecture-05.html
-README.md
-STATUS.md
+After enabling GitHub Pages (Settings → Pages → Deploy from branch `main` / root):
+
+`https://zuhaibbutt786.github.io/professional-practices-in-computing/`
+
+## Current Status
+
+- ✅ Site skeleton (Home, navigation, theme, progress, sidebar)
+- ✅ **Lectures 01–05** fully complete (objectives, content, cases, quizzes, reflection, assignments, glossary, cheat sheets)
+- ⏳ Lectures 06–30 will be added one complete module at a time
+
+## Local Development
+
+Just open `index.html` in a browser or use any static server:
+
+```bash
+npx serve .
+# or
+python -m http.server 8000
 ```
 
 ## License
 
-Educational use. Content is original and rewritten from public professional-practice frameworks (ACM, IEEE, NIST, UNESCO, OECD) and classic references.
+Educational use. Content is original synthesis for teaching. Primary sources should be consulted for formal citation.
+
+---
+
+Designed for university teaching 2026–2035.  
+Technical excellence + professional judgment.  
