@@ -1,1 +1,152 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lecture 01 — Introduction to Professional Practices in Computing" />
+  <title>Lecture 01 — Introduction | PPC</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">PPC</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../index.html">Home</a>
+        <a href="lecture-01.html" class="active">01 · Introduction</a>
+        <a href="lecture-02.html">02 · History & Codes</a>
+        <a href="lecture-03.html">03 · Ethical Theories</a>
+        <a href="lecture-04.html">04 · ACM & IEEE Codes</a>
+        <a href="lecture-05.html">05 · Responsibility</a>
+      </nav>
+      <div class="progress-box">
+        <div class="progress-label">Course Progress</div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:20%"></div></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 01</div>
+        <h1>Lecture 01 — Introduction to Professional Practices in Computing</h1>
+        <p class="lead">Why professional judgment matters as much as technical skill, and how this course prepares you for real responsibility.</p>
+      </header>
+
+      <section class="card objectives">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Define professional practices in the context of computing disciplines.</li>
+          <li>Explain the difference between technical competence and professional responsibility.</li>
+          <li>Identify stakeholders affected by computing decisions (users, organizations, society, future generations).</li>
+          <li>Recognize that ethical, legal, business, and technical perspectives must be considered together.</li>
+          <li>Describe the structure and expectations of this course.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Motivation</h2>
+        <p>Software, data systems, and AI now mediate credit decisions, medical triage, hiring, content visibility, infrastructure control, and national security. A technically correct system can still be harmful, unfair, illegal, or unsustainable. Professional practices train the judgment that sits above code: knowing when to stop, when to escalate, how to communicate risk, and how to act when incentives conflict with the public interest.</p>
+      </section>
+
+      <section class="card">
+        <h2>What “Professional” Means Here</h2>
+        <p>A profession is not only a job. It involves specialized knowledge, a commitment to standards beyond the employer’s immediate demands, and accountability to a wider community. Computing has become a profession because its failures affect life, liberty, property, and dignity. Codes of ethics, licensing debates, and curriculum standards all respond to that reality.</p>
+        <p>This course is technology-independent. It teaches professional thinking rather than any specific tool or language.</p>
+      </section>
+
+      <section class="card multi-perspective">
+        <h2>Multi-Perspective View</h2>
+        <div class="grid-2">
+          <div>
+            <h3>Software Engineering</h3>
+            <p>Requirements, testing, and release decisions carry professional weight. Shipping known defects without disclosure is a professional failure, not only a process failure.</p>
+          </div>
+          <div>
+            <h3>AI & Data Science</h3>
+            <p>Dataset choices, evaluation metrics, and deployment context determine whether a model helps or harms. “It worked on the test set” is never a complete professional answer.</p>
+          </div>
+          <div>
+            <h3>Cybersecurity</h3>
+            <p>Access, disclosure, and dual-use knowledge require clear authorization and responsibility. Competence without ethics becomes a threat.</p>
+          </div>
+          <div>
+            <h3>Business & Legal</h3>
+            <p>Contracts, liability, regulation, and reputation constrain what is permissible. Professionals must understand enough law and organizational reality to act wisely.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="card case">
+        <h2>Opening Case — Why This Course Exists</h2>
+        <p>Across decades, high-profile failures (unsafe medical devices, biased decision systems, large-scale privacy breaches, infrastructure outages caused by configuration and process gaps) have shared a pattern: technical teams optimized for a narrow goal while underestimating broader harm, communication failure, or accountability gaps. Professional practices aim to make those wider considerations routine rather than exceptional.</p>
+      </section>
+
+      <section class="card quiz-section">
+        <h2>Knowledge Check</h2>
+        <div class="quiz" data-quiz="lec01">
+          <div class="q" data-correct="1">
+            <p>1. Professional practices in computing primarily address:</p>
+            <label><input type="radio" name="q1" value="0"> Only writing correct algorithms</label>
+            <label><input type="radio" name="q1" value="1"> Judgment, responsibility, and impact beyond pure technical correctness</label>
+            <label><input type="radio" name="q1" value="2"> Marketing and sales techniques for software products</label>
+          </div>
+          <div class="q" data-correct="2">
+            <p>2. A system can be technically correct and still be professionally unacceptable because:</p>
+            <label><input type="radio" name="q2" value="0"> It uses an unpopular programming language</label>
+            <label><input type="radio" name="q2" value="1"> It fails unit tests</label>
+            <label><input type="radio" name="q2" value="2"> It produces unfair, unsafe, or illegal outcomes for stakeholders</label>
+          </div>
+          <button class="btn primary" onclick="gradeQuiz(this)">Check Answers</button>
+          <div class="quiz-result" hidden></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Reflection</h2>
+        <ol>
+          <li>Describe a recent technology decision (from news or your experience) where technical success and professional responsibility might have diverged.</li>
+          <li>Which stakeholder groups are easiest for engineers to forget when shipping under deadline pressure?</li>
+        </ol>
+      </section>
+
+      <section class="card">
+        <h2>Assignment</h2>
+        <p>Write a one-page reflection: Choose one computing domain you care about (e.g., healthcare AI, social media ranking, autonomous systems, cybersecurity). List three professional risks that pure technical metrics would miss, and how a professional would surface them early.</p>
+      </section>
+
+      <section class="card summary">
+        <h2>Summary</h2>
+        <p>Professional practices prepare computing graduates to exercise judgment under uncertainty, conflict of interest, and social impact. Technical skill is necessary but not sufficient. This course develops the habits of multi-perspective analysis, ethical reasoning, and accountable communication required by modern professional standards.</p>
+      </section>
+
+      <section class="card">
+        <h2>Cheat Sheet</h2>
+        <ul>
+          <li>Technical correctness ≠ professional adequacy</li>
+          <li>Stakeholders extend beyond the immediate user and employer</li>
+          <li>Multiple lenses (ethical, legal, business, SE, AI, security) must be applied together</li>
+          <li>Codes and standards exist to support judgment, not replace it</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Glossary</h2>
+        <dl>
+          <dt>Professional practices</dt><dd>The norms, judgment, and accountability expected of computing practitioners beyond pure technical skill.</dd>
+          <dt>Stakeholder</dt><dd>Any party affected by a system or decision, including users, non-users, organizations, regulators, and society.</dd>
+          <dt>Public interest</dt><dd>The welfare of society as a whole, often prioritized in professional codes over narrow private gain.</dd>
+        </dl>
+      </section>
+
+      <footer class="page-footer">
+        <a href="../index.html">← Home</a>
+        <a href="lecture-02.html">Next: History & Codes →</a>
+      </footer>
+    </main>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
