@@ -3,21 +3,164 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 05: Professional Responsibility, Accountability & Whistleblowing — Duty of care, organizational accountability, raising concerns, and the ethics of speaking up in computing." />
-  <title>Lecture 05 — Responsibility & Accountability | Professional Practices in Computing</title>
+  <meta name="description" content="Lecture 05: Professional Responsibility and Accountability — duties to public, employer, profession; liability, whistleblowing, and safety-critical systems." />
+  <title>Lecture 05 — Responsibility | Professional Practices in Computing</title>
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
-  </nav>
-  <main class="main-content">
-    <div class="content-wrapper">
-      <h1>Lecture 05 — Responsibility & Accountability</h1>
-      <p>Full enriched module is available locally and will be pushed in the next incremental update due to payload size. Content covers duty of care, accountability models, whistleblowing ethics, case studies (Boeing, Therac-25 related lessons), and professional decision-making.</p>
-      <p><a href="../index.html">Back to Home</a></p>
-    </div>
-  </main>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">PPC</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a href="lecture-01.html" class="nav-link">01 · Introduction</a>
+        <a href="lecture-02.html" class="nav-link">02 · History & Codes</a>
+        <a href="lecture-03.html" class="nav-link">03 · Ethical Theories</a>
+        <a href="lecture-04.html" class="nav-link">04 · ACM & IEEE</a>
+        <a href="lecture-05.html" class="nav-link active">05 · Responsibility</a>
+      </nav>
+      <div class="sidebar-footer">
+        <div class="progress-wrap">
+          <div class="progress-label">Course Progress</div>
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main-content">
+      <header class="top-bar">
+        <button class="menu-btn" id="menuBtn" aria-label="Menu">☰</button>
+        <div class="breadcrumbs">
+          <a href="../index.html">Home</a> / <span>Lecture 05</span>
+        </div>
+        <div class="search-box">
+          <input type="search" id="searchInput" placeholder="Search…" aria-label="Search" />
+        </div>
+      </header>
+
+      <article class="lecture-article">
+        <header class="lecture-header">
+          <span class="lecture-badge">Module 05</span>
+          <h1>Professional Responsibility & Accountability</h1>
+          <p class="lecture-meta">Duty of care · Liability · Whistleblowing · Safety-critical systems</p>
+        </header>
+
+        <section class="objectives glass-card">
+          <h2>Learning Objectives</h2>
+          <ul>
+            <li>Define professional responsibility and distinguish it from legal liability</li>
+            <li>Explain duty of care in the design and deployment of computing systems</li>
+            <li>Analyze accountability structures in teams, organizations, and supply chains</li>
+            <li>Evaluate when and how to escalate concerns (including whistleblowing)</li>
+            <li>Apply responsibility principles to safety-critical and high-stakes AI/data systems</li>
+          </ul>
+        </section>
+
+        <section class="content-section">
+          <h2>1. Motivation</h2>
+          <p>When a system fails—overdosing a patient, denying a loan unfairly, leaking personal data, or enabling surveillance—someone must answer for design, testing, deployment, and oversight choices. Professional responsibility is the proactive counterpart to reactive blame: it is the set of duties professionals accept because their work can affect others who cannot fully evaluate the technology themselves.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>2. Real Story — Boeing 737 MAX</h2>
+          <div class="case-card glass-card">
+            <h3>MCAS and the limits of organizational accountability</h3>
+            <p>The Maneuvering Characteristics Augmentation System (MCAS) contributed to two fatal crashes. Investigations highlighted pressures on schedule and certification, incomplete disclosure of system behavior to pilots and regulators, and fragmented responsibility across design, training, and safety assessment. The case is widely used to discuss how professional and organizational incentives can undermine safety culture.</p>
+            <p><strong>Lesson:</strong> Individual engineers and managers operate inside systems of incentives. Professional codes and personal integrity matter, but so do reporting channels, independent review, and regulatory design.</p>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>3. Core Concepts</h2>
+          <ul>
+            <li><strong>Responsibility</strong> — forward-looking duties to prevent harm and promote beneficial outcomes</li>
+            <li><strong>Accountability</strong> — backward-looking answerability for decisions and outcomes</li>
+            <li><strong>Liability</strong> — legal exposure (civil or criminal) under statute or tort</li>
+            <li><strong>Duty of care</strong> — the standard of reasonable care expected of a competent professional in the circumstances</li>
+          </ul>
+          <p>These concepts overlap but are not identical. A team can be responsible for a risk without any individual being found legally liable. Conversely, liability can attach in ways that do not map cleanly onto moral responsibility.</p>
+        </section>
+
+        <section class="content-section">
+          <h2>4. Multi-Perspective View</h2>
+          <div class="perspective-grid">
+            <div class="perspective-card glass-card">
+              <h3>Software Engineering</h3>
+              <p>Requirements prioritization, hazard analysis, independent verification, and configuration management are mechanisms of professional responsibility in SE. Skipping them under schedule pressure is a professional failure, not merely a process deviation.</p>
+            </div>
+            <div class="perspective-card glass-card">
+              <h3>AI & Data Science</h3>
+              <p>Model cards, impact assessments, monitoring for drift and disparate impact, and human-in-the-loop design are concrete ways to operationalize responsibility when systems learn and adapt after deployment.</p>
+            </div>
+            <div class="perspective-card glass-card">
+              <h3>Cybersecurity</h3>
+              <p>Responsible disclosure, secure defaults, least privilege, and clear ownership of residual risk are professional norms. "Security is someone else's job" is not a defensible professional stance for system builders.</p>
+            </div>
+            <div class="perspective-card glass-card">
+              <h3>Legal & Organizational</h3>
+              <p>Contracts, insurance, and regulation allocate liability. Professionals should understand how their organization's governance and their own employment terms interact with professional duties to the public.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="content-section">
+          <h2>5. Whistleblowing and Escalation</h2>
+          <p>When internal channels fail, professionals may face a choice between loyalty to the employer and duty to the public. Codes such as ACM and IEEE generally prioritize public interest in cases of serious harm. Practical steps include documenting concerns, using designated ethics or safety channels, seeking confidential advice, and understanding legal protections (and limits) for whistleblowers in the relevant jurisdiction.</p>
+        </section>
+
+        <section class="quiz-section glass-card">
+          <h2>Knowledge Check</h2>
+          <div class="quiz" data-quiz="l05">
+            <div class="q">
+              <p><strong>1.</strong> Professional responsibility is best described as:</p>
+              <label><input type="radio" name="q1" value="a" /> Only the legal liability that attaches after a failure</label>
+              <label><input type="radio" name="q1" value="b" /> Forward-looking duties to prevent harm and act with care, in addition to accountability for outcomes</label>
+              <label><input type="radio" name="q1" value="c" /> Following whatever the employer orders without question</label>
+              <label><input type="radio" name="q1" value="d" /> Avoiding any system that could possibly cause harm</label>
+            </div>
+            <div class="q">
+              <p><strong>2.</strong> In safety-critical computing, duty of care typically requires:</p>
+              <label><input type="radio" name="q2" value="a" /> Only unit tests written by the same team</label>
+              <label><input type="radio" name="q2" value="b" /> Hazard analysis, appropriate verification, and clear communication of residual risk</label>
+              <label><input type="radio" name="q2" value="c" /> Shipping on the original marketing date regardless of open risks</label>
+              <label><input type="radio" name="q2" value="d" /> Delegating all safety decisions to the customer</label>
+            </div>
+            <button class="btn primary" onclick="checkQuiz('l05')">Check answers</button>
+            <div class="quiz-result" id="quiz-l05-result"></div>
+          </div>
+        </section>
+
+        <section class="reflection glass-card">
+          <h2>Reflection</h2>
+          <ol>
+            <li>Describe a situation in which you (or a team you observe) might feel pressure to understate residual risk. What professional response would you recommend?</li>
+            <li>How should accountability be designed when AI systems involve multiple vendors, open-source components, and post-deployment learning?</li>
+          </ol>
+        </section>
+
+        <section class="summary glass-card">
+          <h2>Summary</h2>
+          <ul>
+            <li>Responsibility is proactive; accountability is answerability; liability is legal exposure—related but distinct.</li>
+            <li>Duty of care scales with potential harm and the professional’s role.</li>
+            <li>Organizational culture and incentives strongly shape whether individual professionals can meet their duties.</li>
+            <li>Escalation and whistleblowing are last-resort tools when serious public harm is at stake.</li>
+          </ul>
+        </section>
+
+        <nav class="lecture-nav">
+          <a href="lecture-04.html" class="btn secondary">← Previous</a>
+          <a href="../index.html" class="btn primary">Home →</a>
+        </nav>
+      </article>
+    </main>
+  </div>
   <script src="../js/main.js"></script>
 </body>
 </html>
