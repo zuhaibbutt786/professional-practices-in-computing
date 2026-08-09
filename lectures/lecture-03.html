@@ -3,18 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lecture 03 — Ethical Theories & Frameworks | Professional Practices in Computing</title>
+  <meta name="description" content="Lecture 03: Ethical Theories & Frameworks — Utilitarianism, deontology, virtue ethics, care ethics, and practical decision frameworks for computing professionals." />
+  <title>Lecture 03 — Ethical Theories | Professional Practices in Computing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
   <nav class="navbar">
     <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
+    <div class="nav-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="search-input" placeholder="Search..." aria-label="Search" />
+      </div>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
+    </div>
   </nav>
-  <main class="container" style="padding: 2rem;">
-    <h1>Lecture 03 — Ethical Theories & Frameworks</h1>
-    <p>Full enriched content (~31k) is prepared locally and will be pushed in the next sequential update. This placeholder restores the page structure after an empty-file incident.</p>
-    <p><a href="../index.html">← Back to Home</a></p>
+  <div class="overlay" id="overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section"><div class="sidebar-title">Course</div><a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a></div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Current Module</div>
+      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link active" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
+    </div>
+  </aside>
+  <main class="main-content">
+    <div class="content-wrapper">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> <span>/</span> <span>Lecture 03 — Ethical Theories</span></nav>
+      <header class="lecture-header glass">
+        <div class="lecture-meta"><span class="badge">Module 03</span><span class="reading-time">~55–70 min</span></div>
+        <h1>Ethical Theories & Decision Frameworks</h1>
+        <p class="lead">Core ethical theories used in professional reasoning — and practical frameworks for applying them to computing dilemmas without reducing ethics to slogans.</p>
+      </header>
+      <section class="objectives glass">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Explain utilitarianism, deontology, virtue ethics, and care ethics in plain language</li>
+          <li>Apply each theory to a computing scenario and note strengths and limitations</li>
+          <li>Use a structured decision framework (identify stakeholders, options, consequences, duties, character)</li>
+          <li>Recognize when theories conflict and how professionals justify choices</li>
+          <li>Connect theory to multi-perspective analysis used throughout the course</li>
+        </ul>
+      </section>
+      <section class="content-section glass">
+        <h2>1. Why Theory Matters</h2>
+        <p>Ethical theories are not academic ornaments. They supply vocabulary and tests for arguments about harm, rights, fairness, and character. When teams disagree about the right action, theory helps surface the underlying values rather than remaining stuck in intuition or authority.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>2. Utilitarianism (Consequentialism)</h2>
+        <p>Focuses on outcomes: the right action tends to maximize overall good (or minimize harm) for those affected. Strengths: forces quantification of impact and comparison of options. Limitations: measurement problems, minority sacrifice, and uncertainty about long-term consequences — all acute in AI and large-scale systems.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>3. Deontology (Duty-Based Ethics)</h2>
+        <p>Focuses on rules, rights, and duties independent of outcomes. Certain actions are wrong even if they produce good results (e.g., deception, violation of autonomy). Strengths: protects individuals against being used as mere means. Limitations: rigid rules can conflict; hard cases require judgment about which duties take priority.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>4. Virtue Ethics</h2>
+        <p>Asks what a person of good character would do and what habits of excellence the profession should cultivate (honesty, courage, justice, humility, care). Strengths: emphasizes long-term professional identity and culture. Limitations: less precise for one-off decisions under time pressure.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>5. Care Ethics & Relational Approaches</h2>
+        <p>Emphasizes relationships, vulnerability, and responsibilities of care. Particularly relevant to systems that affect dependents, patients, children, or marginalized groups. Complements rights-based and outcome-based thinking.</p>
+      </section>
+      <section class="content-section glass">
+        <h2>6. Practical Decision Framework</h2>
+        <ol>
+          <li>Clarify the decision and constraints</li>
+          <li>Identify stakeholders and possible harms/benefits</li>
+          <li>List options (including "do nothing" and escalation)</li>
+          <li>Evaluate options through consequential, duty, and character lenses</li>
+          <li>Choose, document reasoning, and plan monitoring</li>
+        </ol>
+        <p>This structure is reusable in design reviews, incident response, and policy discussions.</p>
+      </section>
+      <section class="quiz-section glass" id="quiz-3">
+        <h2>Knowledge Check</h2>
+        <div class="quiz-container"></div>
+      </section>
+      <section class="reflection glass">
+        <h2>Reflection Questions</h2>
+        <ol>
+          <li>Take a recent tech controversy. How would a utilitarian analysis differ from a deontological one?</li>
+          <li>Which virtues do you think computing professionals most need to cultivate in the age of AI?</li>
+          <li>When have you seen outcome-focused and duty-focused arguments clash in a real or hypothetical project?</li>
+        </ol>
+      </section>
+      <section class="summary glass">
+        <h2>Summary</h2>
+        <ul>
+          <li>Utilitarianism evaluates outcomes; deontology emphasizes duties and rights; virtue ethics focuses on character; care ethics centers relationships and vulnerability.</li>
+          <li>No single theory solves every case; professionals use them as lenses.</li>
+          <li>Structured decision frameworks make reasoning transparent and reviewable.</li>
+          <li>Theory supports the multi-perspective analysis used across this course.</li>
+        </ul>
+      </section>
+      <footer class="lecture-footer"><p>Professional Practices in Computing — Module 03. Designed for university use 2026–2035</p></footer>
+    </div>
   </main>
   <script src="../js/main.js"></script>
+  <script>
+    initQuiz('quiz-3', [
+      {
+        question: "Utilitarianism primarily judges actions by:",
+        options: ["Whether they follow absolute rules", "Their consequences for overall good or harm", "The character of the agent only", "Legal compliance alone"],
+        correct: 1,
+        explanation: "Utilitarianism is a form of consequentialism focused on outcomes."
+      },
+      {
+        question: "A key limitation of pure utilitarian analysis in large AI systems is:",
+        options: ["It never considers numbers", "Difficulty measuring and predicting long-term harms and benefits", "It always protects minorities perfectly", "It ignores efficiency"],
+        correct: 1,
+        explanation: "Scale, opacity, and long-term effects make outcome measurement and prediction hard."
+      },
+      {
+        question: "Virtue ethics asks primarily:",
+        options: ["What maximizes aggregate utility?", "What rules must never be broken?", "What would a person of good professional character do, and what habits should we cultivate?", "What does the law require?"],
+        correct: 2,
+        explanation: "Virtue ethics centers character and the cultivation of excellence."
+      }
+    ]);
+  </script>
 </body>
 </html>
