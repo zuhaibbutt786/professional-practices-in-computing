@@ -11,7 +11,111 @@
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <!-- Content truncated for this tool call demonstration; full 32k version is the intended payload from local stash -->
-  <p>Full enriched module content would be here. See local file for complete version.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <aside class="sidebar" id="sidebar" aria-label="Course navigation">
+    <div class="sidebar-header">
+      <a href="../index.html" class="logo">PPC</a>
+      <button class="sidebar-close" id="sidebar-close" aria-label="Close sidebar">×</button>
+    </div>
+    <nav class="sidebar-nav">
+      <a href="../index.html">Home</a>
+      <a href="lecture-01.html" class="active">01 · Introduction</a>
+      <a href="lecture-02.html">02 · History & Codes</a>
+      <a href="lecture-03.html">03 · Ethical Theories</a>
+      <a href="lecture-04.html">04 · ACM & IEEE Codes</a>
+      <a href="lecture-05.html">05 · Responsibility</a>
+    </nav>
+    <div class="sidebar-footer">
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme">Theme</button>
+    </div>
+  </aside>
+  <div class="overlay" id="overlay"></div>
+  <header class="topbar">
+    <button class="menu-btn" id="menu-btn" aria-label="Open menu">☰</button>
+    <div class="breadcrumbs">
+      <a href="../index.html">Home</a>
+      <span>/</span>
+      <span>Lecture 01</span>
+    </div>
+    <div class="topbar-actions">
+      <button class="theme-toggle" id="theme-toggle-top" aria-label="Toggle theme">◐</button>
+    </div>
+  </header>
+  <main id="main" class="lecture-main">
+    <article class="lecture-article">
+      <header class="lecture-header">
+        <p class="lecture-meta">Module 01 · Week 1</p>
+        <h1>Introduction to Professional Practices in Computing</h1>
+        <p class="lecture-lead">Why professional practice matters in a world shaped by algorithms, data, and autonomous systems.</p>
+        <div class="lecture-meta-row">
+          <span>Reading time · ~45–60 min</span>
+          <span>Level · Undergraduate</span>
+        </div>
+      </header>
+      <section class="objectives glass-card">
+        <h2>Learning Objectives</h2>
+        <p>By the end of this module you will be able to:</p>
+        <ul>
+          <li>Define professional practice in computing and distinguish it from technical skill alone.</li>
+          <li>Explain why computing professionals carry heightened responsibilities toward individuals, organizations, and society.</li>
+          <li>Identify the major domains of professional practice: ethics, law, privacy, security, AI responsibility, communication, teamwork, and career development.</li>
+          <li>Recognize real-world failures and successes that illustrate the cost of neglecting professional judgment.</li>
+          <li>Articulate a personal stance on what it means to be a responsible computing professional in 2026 and beyond.</li>
+        </ul>
+      </section>
+      <section class="content-section">
+        <h2>1. Motivation: Why This Course Exists</h2>
+        <p>Computing is no longer a niche technical craft. Software, data systems, and AI models now mediate hiring, credit, healthcare, mobility, public discourse, and national security. When these systems fail—or when they succeed in ways that harm—the consequences are measured in lives, livelihoods, and trust.</p>
+        <p>Traditional computer science curricula excel at teaching algorithms, architectures, and implementation. They often under-emphasize the professional judgment required to decide <em>whether</em>, <em>how</em>, and <em>under what constraints</em> a system should be built and deployed. This course closes that gap.</p>
+        <p>Professional Practices in Computing is technology-independent. It does not teach a programming language or a cloud console. It teaches the habits of mind, ethical frameworks, legal awareness, and communication skills that ACM, IEEE, and leading employers expect of graduates who will shape the digital world for the next decade.</p>
+      </section>
+      <section class="content-section">
+        <h2>2. Real Story: The Human Cost of Technical Decisions</h2>
+        <div class="story-card glass-card">
+          <h3>Therac-25 (1985–1987)</h3>
+          <p>A radiation therapy machine delivered massive overdoses to patients because of a race condition in the software and inadequate hardware interlocks. Operators trusted the system; engineers had removed hardware safety features relying on software that was never rigorously validated. Several patients died or suffered permanent injury.</p>
+          <p><strong>Professional lesson:</strong> Safety-critical systems demand defense-in-depth. Software correctness is necessary but not sufficient; professional responsibility includes challenging design assumptions, insisting on independent verification, and refusing to ship when safety evidence is incomplete.</p>
+        </div>
+        <div class="story-card glass-card">
+          <h3>Boeing 737 MAX MCAS (2018–2019)</h3>
+          <p>A flight-control system relied on a single angle-of-attack sensor. When that sensor failed, the system repeatedly pushed the nose down. Two crashes killed 346 people. Investigations revealed pressure to minimize training differences, limited disclosure to pilots and regulators, and organizational incentives that deprioritized safety culture.</p>
+          <p><strong>Professional lesson:</strong> Organizational culture and commercial pressure can override engineering judgment. Professionals must cultivate the courage to escalate safety concerns and the institutional pathways that make escalation effective.</p>
+        </div>
+      </section>
+      <section class="content-section">
+        <h2>3. Industrial Scenario</h2>
+        <div class="scenario-box glass-card">
+          <p>You are a junior software engineer at a health-tech startup. Your team is racing to ship an AI triage assistant that prioritizes emergency-room patients. The model was trained primarily on data from urban hospitals in one country. A clinical advisor flags that rural and elderly populations are under-represented and that false negatives could delay critical care. The product manager argues that “we can improve the model after launch” and that competitors are already in market.</p>
+          <p><strong>Discussion prompt:</strong> What professional obligations do you have? To whom? What concrete actions can a junior engineer take without being dismissed as “blocking the roadmap”?</p>
+        </div>
+      </section>
+      <section class="content-section">
+        <h2>4. What “Professional Practice” Means</h2>
+        <p>A profession is more than a paid occupation. Professions typically involve specialized knowledge, a commitment to the public interest, codes of ethics, and accountability for judgment.</p>
+        <p>Key dimensions covered in this course: Ethics & Responsibility, Law & Regulation, Security & Privacy, AI & Data Responsibility, Communication & Teamwork, Career & Lifelong Learning.</p>
+      </section>
+      <section class="content-section">
+        <h2>5. Multi-Perspective Analysis</h2>
+        <p>Professional, Ethical, Legal, Business, AI/Data Science, Software Engineering, and Cybersecurity perspectives must be considered together when evaluating technology decisions.</p>
+      </section>
+      <section class="content-section">
+        <h2>6. Knowledge Check & Reflection</h2>
+        <p>Use the interactive quiz on the live site and the reflection prompts to consolidate learning. Technical skill enables building systems; professional practice governs whether, how, and under what constraints those systems should be built and deployed.</p>
+      </section>
+      <section class="content-section summary-section">
+        <h2>Summary</h2>
+        <ul>
+          <li>Computing systems mediate critical aspects of life; technical skill without professional judgment is incomplete.</li>
+          <li>Historical failures (Therac-25, 737 MAX) show safety, fairness, and accountability are design requirements.</li>
+          <li>This course develops professional thinking applicable across CS, SE, DS, AI, and cybersecurity roles.</li>
+        </ul>
+      </section>
+      <nav class="lecture-nav">
+        <a href="../index.html" class="btn ghost">← Home</a>
+        <a href="lecture-02.html" class="btn primary">Next: History & Codes →</a>
+      </nav>
+    </article>
+  </main>
+  <script src="../js/main.js"></script>
 </body>
 </html>
