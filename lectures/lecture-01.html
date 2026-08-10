@@ -18,231 +18,56 @@
     </a>
     <div class="nav-actions">
       <div class="search-box">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="search" placeholder="Search course…" id="searchInput" />
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="search-input" placeholder="Search..." aria-label="Search" />
       </div>
-      <button class="btn-icon" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light mode">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <button class="btn-icon" id="sidebarToggle" title="Toggle sidebar" aria-label="Toggle sidebar">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
   </nav>
+
+  <div class="overlay" id="overlay"></div>
+
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-section">
       <div class="sidebar-title">Course</div>
-      <a href="../index.html" class="sidebar-link">Home</a>
-      <a href="../index.html#about" class="sidebar-link">About</a>
-      <a href="../index.html#outcomes" class="sidebar-link">Learning Outcomes</a>
+      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
     </div>
     <div class="sidebar-section">
-      <div class="sidebar-title">Lectures</div>
-      <a href="lecture-01.html" class="sidebar-link active"><span class="num">01</span> Introduction</a>
-      <a href="lecture-02.html" class="sidebar-link"><span class="num">02</span> History & Codes</a>
-      <a href="lecture-03.html" class="sidebar-link"><span class="num">03</span> Ethical Theories</a>
-      <a href="lecture-04.html" class="sidebar-link"><span class="num">04</span> ACM & IEEE</a>
-      <a href="lecture-05.html" class="sidebar-link"><span class="num">05</span> Responsibility</a>
+      <div class="sidebar-title">Current Module</div>
+      <a href="lecture-01.html" class="sidebar-link active" data-lecture="01"><span class="num">01</span> Introduction</a>
+      <a href="#" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="#" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="#" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="#" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Quick Nav</div>
+      <a href="#objectives" class="sidebar-link"><span class="num">1</span> Objectives</a>
+      <a href="#motivation" class="sidebar-link"><span class="num">2</span> Motivation</a>
+      <a href="#story" class="sidebar-link"><span class="num">3</span> Real Story</a>
     </div>
   </aside>
-  <div class="overlay" id="overlay"></div>
-  <div class="main-wrapper" id="mainWrapper">
-    <div class="content">
-      <nav class="breadcrumbs">
-        <a href="../index.html">Home</a>
-        <span class="sep">/</span>
-        <a href="../index.html#lectures">Lectures</a>
-        <span class="sep">/</span>
-        <span>Lecture 01</span>
-      </nav>
-      <header class="lecture-header">
-        <div class="lecture-badge">Lecture 01 · Week 1</div>
+
+  <main class="main">
+    <div class="container">
+      <header class="page-header">
+        <div class="breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <span>Lecture 01</span>
+        </div>
         <h1>Introduction to Professional Practices in Computing</h1>
-        <p class="hero-sub" style="text-align:left; margin:0.75rem 0 0; max-width:none;">Why professional practices matter more than ever in the age of AI, data, and global software systems.</p>
-        <div class="lecture-meta">
-          <span>⏱ 45–60 min</span>
-          <span>📚 Reading: Baase Ch.1, Quinn Ch.1</span>
-          <span>🎯 6 Learning Objectives</span>
-        </div>
-        <div class="progress-bar-container"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
+        <p class="lead">Why professionalism matters, professional identity, and the roadmap for ethical and responsible computing.</p>
       </header>
-      <section class="section" id="objectives">
-        <div class="section-header"><div class="section-icon">🎯</div><h2>Learning Objectives</h2></div>
-        <ul class="objectives-list">
-          <li>Explain what “professional practices” means in computing disciplines (CS, SE, DS, AI, Cybersecurity).</li>
-          <li>Distinguish between legal compliance, ethical responsibility, and professional excellence.</li>
-          <li>Identify the major stakeholder groups affected by computing decisions.</li>
-          <li>Describe the role of professional codes (ACM, IEEE) at a high level.</li>
-          <li>Recognize why technical skill alone is insufficient for professional competence.</li>
-          <li>Reflect on personal values and how they will shape future professional identity.</li>
-        </ul>
+      <section id="objectives" class="card">
+        <h2>Learning Objectives</h2>
+        <p>Placeholder for full content. The complete enriched module is being restored.</p>
       </section>
-      <section class="section" id="introduction">
-        <div class="section-header"><div class="section-icon">📖</div><h2>Introduction</h2></div>
-        <p>Computing is no longer a purely technical craft practiced in isolation. Every line of code, every model trained, every system deployed, and every dataset collected has the potential to affect individuals, organizations, and societies at scale. Professional Practices in Computing is the discipline that prepares you to act responsibly within that reality.</p>
-        <p>This course is technology-independent. We will not teach you a particular programming language, framework, or cloud provider. Instead we focus on the reasoning, judgment, communication, and accountability skills that every computing professional needs—whether you become a software engineer, data scientist, AI researcher, security analyst, product manager, or entrepreneur.</p>
-        <div class="callout callout-info">
-          <div class="callout-title">Core Idea</div>
-          <p style="margin:0">Technical competence is necessary but not sufficient. Professional competence = technical skill + ethical reasoning + legal awareness + communication + lifelong learning + responsibility for impact.</p>
-        </div>
-      </section>
-      <section class="section" id="motivation">
-        <div class="section-header"><div class="section-icon">🔥</div><h2>Motivation: Why This Course Exists</h2></div>
-        <p>In the last fifteen years we have witnessed repeated, high-profile failures that were not primarily caused by “bugs” in the classical sense, but by failures of professional judgment:</p>
-        <ul style="margin:1rem 0 1rem 1.5rem; color:var(--text-secondary);">
-          <li>Social-media platforms optimizing for engagement while amplifying misinformation and polarization.</li>
-          <li>Machine-learning systems that encoded historical bias and produced discriminatory outcomes at scale.</li>
-          <li>Autonomous and safety-critical systems whose testing and verification processes were inadequate for the risk they posed.</li>
-          <li>Data breaches that exposed hundreds of millions of people because basic security and privacy practices were treated as optional.</li>
-          <li>Open-source maintainers burned out or projects abandoned because the social and economic model of contribution was unsustainable.</li>
-        </ul>
-        <p>These are not edge cases. They are predictable outcomes when organizations and individuals treat computing as a purely technical activity rather than a socio-technical practice with real human stakes.</p>
-      </section>
-      <section class="section" id="real-story">
-        <div class="section-header"><div class="section-icon">📰</div><h2>Real Story: The Human Cost of “Just Shipping”</h2></div>
-        <div class="card">
-          <p>In 2018–2019 a major ride-sharing company faced intense public and regulatory scrutiny after a series of incidents involving its autonomous vehicle testing program and its treatment of drivers and data. Internal documents later revealed pressure to accelerate deployment timelines, under-investment in safety verification relative to the claimed autonomy level, and a culture that prioritized growth metrics over systematic risk analysis.</p>
-          <p>Engineers who raised concerns about edge cases or simulation coverage reported feeling that their voices were secondary to product and marketing schedules. The result was not only regulatory setbacks and reputational damage, but also a loss of public trust in the broader autonomous-driving industry that persists years later.</p>
-          <p><strong>Professional lesson:</strong> When schedule and metrics dominate, the people who understand the residual risk are often the first to be sidelined. Professional practice requires creating (and protecting) channels for those concerns to be heard and acted upon.</p>
-        </div>
-      </section>
-      <section class="section" id="industrial">
-        <div class="section-header"><div class="section-icon">🏭</div><h2>Industrial Scenario</h2></div>
-        <div class="activity-card">
-          <h4>Scenario: You Join a Fast-Growing AI Startup</h4>
-          <p>You are a new graduate hired as a machine-learning engineer at a 40-person startup building a hiring-recommendation system for mid-size companies. In your first month you discover that:</p>
-          <ul style="margin:0.75rem 0 0.75rem 1.25rem; color:var(--text-secondary);">
-            <li>The training data is drawn primarily from the last five years of the founders’ previous employer’s hiring decisions.</li>
-            <li>There is no formal documentation of fairness metrics or demographic performance gaps.</li>
-            <li>The product is already being sold to customers with a “bias-free AI” marketing claim.</li>
-            <li>Your manager is under pressure from investors to hit a revenue target this quarter.</li>
-          </ul>
-          <p><strong>Discussion prompts:</strong></p>
-          <ol style="margin:0.5rem 0 0 1.25rem; color:var(--text-secondary);">
-            <li>What are the professional obligations of an individual engineer in this situation?</li>
-            <li>What organizational structures would make it easier (or harder) to raise the issue?</li>
-            <li>How would you frame the conversation so that it is heard as risk management rather than obstruction?</li>
-          </ol>
-        </div>
-      </section>
-      <section class="section" id="perspectives">
-        <div class="section-header"><div class="section-icon">🔭</div><h2>Multi-Perspective View</h2></div>
-        <p>Professional practice looks different depending on the lens you apply. Below are six complementary perspectives that will recur throughout the course.</p>
-        <div class="perspective-grid">
-          <div class="perspective-card"><h4>⚖️ Ethical</h4><p>What values are at stake? Who is harmed or benefited? Are we treating people as ends or merely as means?</p></div>
-          <div class="perspective-card"><h4>📜 Legal</h4><p>What statutes, regulations, and case law constrain or enable the action? What is the difference between legal and ethical?</p></div>
-          <div class="perspective-card"><h4>💼 Business</h4><p>What are the short- and long-term commercial consequences? Reputation, liability, talent retention, market access.</p></div>
-          <div class="perspective-card"><h4>🤖 AI / Data</h4><p>How do data provenance, model opacity, feedback loops, and scale change the nature of responsibility?</p></div>
-          <div class="perspective-card"><h4>🛠️ Software Engineering</h4><p>Requirements, verification, maintainability, technical debt, and the professional duty of care for systems that last.</p></div>
-          <div class="perspective-card"><h4>🔒 Security</h4><p>Threat models, least privilege, secure defaults, and the ethical obligation to protect users who cannot protect themselves.</p></div>
-        </div>
-      </section>
-      <section class="section" id="history">
-        <div class="section-header"><div class="section-icon">⏳</div><h2>Brief Historical Background</h2></div>
-        <div class="timeline">
-          <div class="timeline-item"><div class="timeline-year">1940s–50s</div><p>Early computing as scientific instrument and military tool. Professional identity still forming.</p></div>
-          <div class="timeline-item"><div class="timeline-year">1960s–70s</div><p>Software crisis. ACM and IEEE begin formalizing codes of ethics and educational recommendations.</p></div>
-          <div class="timeline-item"><div class="timeline-year">1980s–90s</div><p>Personal computing and the internet. Privacy, intellectual property, and liability questions intensify.</p></div>
-          <div class="timeline-item"><div class="timeline-year">2000s</div><p>Platform scale. Social networks, search, and cloud computing create new classes of societal impact.</p></div>
-          <div class="timeline-item"><div class="timeline-year">2010s–present</div><p>AI, data science, and cyber-physical systems. Professional practice expands to include algorithmic accountability, sustainability, and global collaboration.</p></div>
-        </div>
-      </section>
-      <section class="section" id="concepts">
-        <div class="section-header"><div class="section-icon">💡</div><h2>Key Concepts</h2></div>
-        <div class="cheatsheet">
-          <div class="cheatsheet-item"><strong>Profession</strong><span>A vocation with specialized knowledge, a service orientation, and mechanisms of self-regulation and accountability.</span></div>
-          <div class="cheatsheet-item"><strong>Professional</strong><span>Someone who applies specialized knowledge for the benefit of clients/society and accepts responsibility for the consequences of that application.</span></div>
-          <div class="cheatsheet-item"><strong>Ethics vs Law</strong><span>Law sets minimum enforceable standards. Ethics asks what we ought to do even when the law is silent or lagging.</span></div>
-          <div class="cheatsheet-item"><strong>Stakeholder</strong><span>Anyone who can affect or is affected by a decision—users, non-users, employees, investors, communities, future generations.</span></div>
-          <div class="cheatsheet-item"><strong>Accountability</strong><span>The obligation to explain and justify one’s decisions and to accept the consequences of those decisions.</span></div>
-          <div class="cheatsheet-item"><strong>Due care / Due diligence</strong><span>The standard of care a reasonable professional would exercise under similar circumstances.</span></div>
-        </div>
-      </section>
-      <section class="section" id="quiz">
-        <div class="section-header"><div class="section-icon">✅</div><h2>Knowledge Check</h2></div>
-        <div class="quiz-container" id="quiz1">
-          <div class="quiz-question">1. Which statement best captures the relationship between technical skill and professional competence?</div>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">Technical skill is the only thing that matters; ethics can be learned on the job.</div>
-            <div class="quiz-option" data-correct="true">Technical skill is necessary but not sufficient; professional competence also requires ethical reasoning, communication, and accountability for impact.</div>
-            <div class="quiz-option" data-correct="false">Professional competence is mainly about knowing the ACM Code of Ethics by heart.</div>
-            <div class="quiz-option" data-correct="false">As long as the software works and ships on time, professional issues are secondary.</div>
-          </div>
-          <div class="quiz-feedback" id="feedback1"></div>
-        </div>
-        <div class="quiz-container" id="quiz2">
-          <div class="quiz-question">2. A system is legal under current law but produces systematically unfair outcomes for a protected group. What is the professional response?</div>
-          <div class="quiz-options">
-            <div class="quiz-option" data-correct="false">If it is legal, no further action is required.</div>
-            <div class="quiz-option" data-correct="true">Recognize that legality is a floor, not a ceiling; investigate the harm, document it, and work toward mitigation or redesign.</div>
-            <div class="quiz-option" data-correct="false">Immediately resign to avoid any association with the system.</div>
-            <div class="quiz-option" data-correct="false">Only the legal team is responsible for such issues.</div>
-          </div>
-          <div class="quiz-feedback" id="feedback2"></div>
-        </div>
-      </section>
-      <section class="section" id="reflection">
-        <div class="section-header"><div class="section-icon">🪞</div><h2>Reflection</h2></div>
-        <div class="reflection-box">
-          <p><strong>Personal prompt:</strong> Think of a computing product or system you use regularly that has caused (or could cause) harm to some group of people. What professional practices, if applied earlier, might have reduced that harm? Write 4–6 sentences.</p>
-          <textarea placeholder="Your reflection (saved locally in this browser)…" id="reflectionText"></textarea>
-          <button class="btn btn-primary btn-sm mt-2" onclick="saveReflection()">Save locally</button>
-        </div>
-      </section>
-      <section class="section" id="summary">
-        <div class="section-header"><div class="section-icon">📋</div><h2>Summary</h2></div>
-        <ul style="margin-left:1.25rem; color:var(--text-secondary);">
-          <li>Professional practices in computing integrate technical excellence with ethical reasoning, legal awareness, communication, and accountability.</li>
-          <li>Computing decisions affect a wide range of stakeholders, many of whom have little power to influence the design process.</li>
-          <li>Legality is necessary but not sufficient; professionals are expected to exercise due care beyond minimum compliance.</li>
-          <li>Multiple perspectives (ethical, legal, business, AI/data, SE, security) help reveal blind spots.</li>
-          <li>Your professional identity begins forming now—through the habits of questioning, documenting, and speaking up.</li>
-        </ul>
-      </section>
-      <section class="section" id="reading">
-        <div class="section-header"><div class="section-icon">📚</div><h2>Further Reading</h2></div>
-        <ul style="margin-left:1.25rem; color:var(--text-secondary);">
-          <li>Sara Baase — <em>A Gift of Fire</em>, Chapter 1 (Unwrapping the Gift)</li>
-          <li>Michael Quinn — <em>Ethics for the Information Age</em>, Chapter 1</li>
-          <li>ACM Code of Ethics and Professional Conduct (2018)</li>
-          <li>IEEE Code of Ethics</li>
-          <li>Virginia Dignum — <em>Responsible Artificial Intelligence</em> (selected sections on professional responsibility)</li>
-        </ul>
-      </section>
-      <div class="site-footer">
-        <p>Professional Practices in Computing · Lecture 01</p>
-        <p><a href="lecture-02.html">Next: History of the Profession & Codes →</a></p>
-      </div>
     </div>
-  </div>
+  </main>
   <script src="../js/main.js"></script>
-  <script>
-    document.querySelectorAll('.quiz-option').forEach(opt => {
-      opt.addEventListener('click', function() {
-        const container = this.closest('.quiz-container');
-        const options = container.querySelectorAll('.quiz-option');
-        const feedback = container.querySelector('.quiz-feedback');
-        options.forEach(o => o.classList.remove('selected', 'correct', 'incorrect'));
-        this.classList.add('selected');
-        const isCorrect = this.dataset.correct === 'true';
-        if (isCorrect) {
-          this.classList.add('correct');
-          feedback.textContent = 'Correct. Professional competence requires more than technical skill.';
-          feedback.className = 'quiz-feedback show correct';
-        } else {
-          this.classList.add('incorrect');
-          feedback.textContent = 'Not quite. Re-read the relationship between technical skill and professional competence.';
-          feedback.className = 'quiz-feedback show incorrect';
-        }
-      });
-    });
-    function saveReflection() {
-      const text = document.getElementById('reflectionText').value;
-      localStorage.setItem('ppc-l01-reflection', text);
-      alert('Reflection saved locally in this browser.');
-    }
-    const saved = localStorage.getItem('ppc-l01-reflection');
-    if (saved) document.getElementById('reflectionText').value = saved;
-  </script>
 </body>
 </html>
