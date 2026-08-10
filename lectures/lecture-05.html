@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 05 — Professional Responsibility and Accountability in Computing" />
-  <title>Lecture 05 — Responsibility | PPC</title>
+  <meta name="description" content="Lecture 05: Professional Responsibility & Accountability — individual and collective duty, escalation, culture, and learning from failure in computing." />
+  <title>Lecture 05 — Professional Responsibility & Accountability | Professional Practices in Computing</title>
   <link rel="stylesheet" href="../css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
@@ -30,44 +30,88 @@
     </aside>
     <main class="main-content">
       <header class="page-header">
-        <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 05</div>
+        <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 05 Responsibility</div>
         <h1>Lecture 05 — Professional Responsibility & Accountability</h1>
-        <p class="lead">Individual and collective responsibility, accountability mechanisms, escalation, and learning from failure.</p>
+        <p class="lead">Individual and collective responsibility, accountability mechanisms, escalation paths, organizational culture, and learning from failure in computing practice.</p>
       </header>
 
       <section class="card objectives">
         <h2>Learning Objectives</h2>
         <ul>
-          <li>Distinguish responsibility, accountability, and liability in professional contexts.</li>
-          <li>Identify appropriate escalation paths when ethical or safety concerns arise.</li>
-          <li>Analyze how organizational culture enables or blocks responsible practice.</li>
-          <li>Apply lessons from well-known computing failures to personal and team practice.</li>
+          <li>Distinguish responsibility, accountability, and liability in professional computing contexts.</li>
+          <li>Identify appropriate escalation paths when ethical, safety, or integrity concerns arise.</li>
+          <li>Analyze how organizational culture, incentives, and psychological safety enable or block responsible practice.</li>
+          <li>Apply lessons from well-known computing and socio-technical failures to personal and team practice.</li>
+          <li>Describe how post-incident learning can improve systems without collapsing into blame.</li>
         </ul>
       </section>
 
       <section class="card">
-        <h2>Responsibility vs Accountability</h2>
-        <p><strong>Responsibility</strong> is the obligation to act with care and to own the consequences of one’s role. <strong>Accountability</strong> is the obligation to answer for those actions to others (teams, managers, regulators, the public). Professionals often share responsibility across roles; clear accountability prevents diffusion.</p>
+        <h2>Motivation</h2>
+        <p>Ethical theories and professional codes remain abstract until someone owns a decision under pressure. Responsibility is the obligation to act with care in one’s role. Accountability is the obligation to answer for those actions to colleagues, managers, users, regulators, or the public. When many people touch a system, responsibility can diffuse; clear accountability and documented decisions prevent “no one was responsible” outcomes after harm.</p>
+      </section>
+
+      <section class="card">
+        <h2>Responsibility, Accountability, Liability</h2>
+        <ul>
+          <li><strong>Responsibility</strong> — moral and professional duty tied to role and competence: design carefully, test adequately, communicate residual risk, refuse to falsify assessments.</li>
+          <li><strong>Accountability</strong> — the social and organizational mechanism of answering for actions and decisions: who can be asked, who must answer, and what records exist.</li>
+          <li><strong>Liability</strong> — legal exposure (civil or criminal). Ethical responsibility can exceed legal liability; the reverse can also occur. Professionals should understand both without reducing ethics to law alone.</li>
+        </ul>
       </section>
 
       <section class="card">
         <h2>Escalation and Speaking Up</h2>
-        <p>When residual risk, bias, or pressure to misrepresent appears, professionals need channels: peer review, technical leads, ethics officers, anonymous reporting, and, in extreme cases, external disclosure consistent with law and professional codes. Retaliation-free cultures are essential.</p>
+        <p>When residual risk, bias, security defects, or pressure to misrepresent appears, professionals need workable channels:</p>
+        <ol>
+          <li>Peer review and technical discussion within the team.</li>
+          <li>Technical leads and engineering management.</li>
+          <li>Safety, security, privacy, or ethics specialists where they exist.</li>
+          <li>Formal risk or go/no-go review processes.</li>
+          <li>Anonymous or protected reporting channels when retaliation is a concern.</li>
+          <li>In extreme cases, external disclosure consistent with law and professional codes (whistleblowing is a last resort with serious personal cost; organizations should make internal paths effective).</li>
+        </ol>
+        <p>Retaliation-free cultures and leadership that rewards early raising of concerns are as important as written policies.</p>
       </section>
 
       <section class="card multi-perspective">
         <h2>Multi-Perspective View</h2>
         <div class="grid-2">
-          <div><h3>Software Engineering</h3><p>Code ownership, review culture, and post-incident learning support collective responsibility.</p></div>
-          <div><h3>AI & Data Science</h3><p>Model cards, impact assessments, and monitoring make residual risk visible and reviewable.</p></div>
-          <div><h3>Cybersecurity</h3><p>Responsible disclosure and incident response require clear roles and communication.</p></div>
-          <div><h3>Leadership</h3><p>Leaders set incentives and psychological safety that determine whether concerns surface early.</p></div>
+          <div>
+            <h3>Software Engineering</h3>
+            <p>Code ownership, review culture, on-call practices, and blameless post-mortems support collective responsibility for quality and reliability.</p>
+          </div>
+          <div>
+            <h3>AI & Data Science</h3>
+            <p>Model cards, data sheets, impact assessments, and monitoring make residual risk visible and assignable. Opacity without ownership is a failure mode.</p>
+          </div>
+          <div>
+            <h3>Cybersecurity</h3>
+            <p>Responsible disclosure, incident response roles, and clear communication of severity require defined accountability during high-stress events.</p>
+          </div>
+          <div>
+            <h3>Leadership & Organizations</h3>
+            <p>Leaders set incentives, resource constraints, and psychological safety. Culture determines whether concerns surface early or only after public failure.</p>
+          </div>
         </div>
       </section>
 
       <section class="card case">
-        <h2>Scenario — Near-Miss Safety Report</h2>
-        <p>An engineer discovers a race condition that could, under rare conditions, produce incorrect outputs in a medical decision-support tool. The release is scheduled for the next day. Document the immediate actions, stakeholders to inform, and how accountability should be assigned for the decision to ship or delay.</p>
+        <h2>Industrial Scenario — Near-Miss in a Medical Decision-Support Tool</h2>
+        <p>An engineer discovers a race condition that could, under rare timing conditions, produce incorrect outputs in a medical decision-support component. The release is scheduled for the next day. Client communications already describe the feature as ready.</p>
+        <p><strong>Work through:</strong></p>
+        <ul>
+          <li>Immediate containment and verification steps.</li>
+          <li>Stakeholders to inform (who needs what information, when).</li>
+          <li>How the ship-or-delay decision should be recorded and who is accountable for it.</li>
+          <li>What follow-up monitoring or compensating controls would be required if a controlled release proceeds.</li>
+          <li>How the near-miss should feed into process improvement without becoming a blame exercise.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Learning from Failure</h2>
+        <p>High-reliability domains (aviation, some healthcare systems) treat serious incidents and near-misses as learning opportunities. Effective reviews focus on systemic factors: design assumptions, incentives, information flow, tooling, and culture — not only individual error. Computing organizations can adopt similar practices: blameless post-mortems, tracked action items, and visible leadership support for learning over punishment of honest reporters.</p>
       </section>
 
       <section class="card quiz-section">
@@ -77,13 +121,19 @@
             <p>1. Diffusion of responsibility is best reduced by:</p>
             <label><input type="radio" name="q1" value="0"> Leaving decisions only to the most junior engineer</label>
             <label><input type="radio" name="q1" value="1"> Clear role ownership and documented decision records</label>
-            <label><input type="radio" name="q1" value="2"> Avoiding any discussion of risk</label>
+            <label><input type="radio" name="q1" value="2"> Avoiding any discussion of residual risk</label>
           </div>
           <div class="q" data-correct="0">
             <p>2. A healthy professional culture typically:</p>
-            <label><input type="radio" name="q2" value="0"> Protects people who raise safety or ethics concerns</label>
-            <label><input type="radio" name="q2" value="1"> Punishes any delay to schedule</label>
-            <label><input type="radio" name="q2" value="2"> Treats codes as purely decorative</label>
+            <label><input type="radio" name="q2" value="0"> Protects people who raise safety or ethics concerns in good faith</label>
+            <label><input type="radio" name="q2" value="1"> Punishes any delay to schedule regardless of reason</label>
+            <label><input type="radio" name="q2" value="2"> Treats professional codes as purely decorative</label>
+          </div>
+          <div class="q" data-correct="2">
+            <p>3. Effective post-incident reviews prioritize:</p>
+            <label><input type="radio" name="q3" value="0"> Identifying a single person to blame</label>
+            <label><input type="radio" name="q3" value="1"> Minimizing written records</label>
+            <label><input type="radio" name="q3" value="2"> Systemic factors and actionable improvements</label>
           </div>
           <button class="btn primary" onclick="gradeQuiz(this)">Check Answers</button>
           <div class="quiz-result" hidden></div>
@@ -91,20 +141,32 @@
       </section>
 
       <section class="card">
-        <h2>Reflection</h2>
+        <h2>Reflection Questions</h2>
         <ol>
-          <li>Describe an escalation path you would use if you encountered a serious unresolved safety issue.</li>
-          <li>How can post-incident reviews improve accountability without becoming blame sessions?</li>
+          <li>Describe an escalation path you would use if you encountered a serious unresolved safety or integrity issue shortly before a release.</li>
+          <li>How can post-incident reviews improve accountability and systems without becoming blame sessions?</li>
+          <li>What signals would tell you that an organization’s culture actually supports professional responsibility rather than only claiming to?</li>
         </ol>
       </section>
 
       <section class="card summary">
         <h2>Summary</h2>
-        <p>Professional responsibility is both individual and collective. Accountability mechanisms, psychological safety, and learning cultures turn ethical principles into reliable practice.</p>
+        <p>Professional responsibility is both individual and collective. Accountability mechanisms, psychological safety, clear ownership, and learning-oriented incident review turn ethical principles and codes into reliable practice. Diffusion of responsibility is a design problem as much as a moral one.</p>
+      </section>
+
+      <section class="card">
+        <h2>Cheat Sheet</h2>
+        <ul>
+          <li>Responsibility = duty to act with care in role</li>
+          <li>Accountability = obligation to answer for actions and decisions</li>
+          <li>Document decisions and residual risk; avoid diffusion</li>
+          <li>Escalation paths + non-retaliation culture are essential</li>
+          <li>Learn from near-misses and incidents; focus on systems, not only individuals</li>
+        </ul>
       </section>
 
       <footer class="page-footer">
-        <a href="lecture-04.html">← Previous</a>
+        <a href="lecture-04.html">← Previous: ACM & IEEE Codes</a>
         <a href="../index.html">Home →</a>
       </footer>
     </main>
