@@ -1,1 +1,114 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lecture 05 — Professional Responsibility and Accountability in Computing" />
+  <title>Lecture 05 — Responsibility | PPC</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">PPC</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../index.html">Home</a>
+        <a href="lecture-01.html">01 · Introduction</a>
+        <a href="lecture-02.html">02 · History & Codes</a>
+        <a href="lecture-03.html">03 · Ethical Theories</a>
+        <a href="lecture-04.html">04 · ACM & IEEE Codes</a>
+        <a href="lecture-05.html" class="active">05 · Responsibility</a>
+      </nav>
+      <div class="progress-box">
+        <div class="progress-label">Course Progress</div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:100%"></div></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 05</div>
+        <h1>Lecture 05 — Professional Responsibility & Accountability</h1>
+        <p class="lead">Individual and collective responsibility, accountability mechanisms, escalation, and learning from failure.</p>
+      </header>
+
+      <section class="card objectives">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Distinguish responsibility, accountability, and liability in professional contexts.</li>
+          <li>Identify appropriate escalation paths when ethical or safety concerns arise.</li>
+          <li>Analyze how organizational culture enables or blocks responsible practice.</li>
+          <li>Apply lessons from well-known computing failures to personal and team practice.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Responsibility vs Accountability</h2>
+        <p><strong>Responsibility</strong> is the obligation to act with care and to own the consequences of one’s role. <strong>Accountability</strong> is the obligation to answer for those actions to others (teams, managers, regulators, the public). Professionals often share responsibility across roles; clear accountability prevents diffusion.</p>
+      </section>
+
+      <section class="card">
+        <h2>Escalation and Speaking Up</h2>
+        <p>When residual risk, bias, or pressure to misrepresent appears, professionals need channels: peer review, technical leads, ethics officers, anonymous reporting, and, in extreme cases, external disclosure consistent with law and professional codes. Retaliation-free cultures are essential.</p>
+      </section>
+
+      <section class="card multi-perspective">
+        <h2>Multi-Perspective View</h2>
+        <div class="grid-2">
+          <div><h3>Software Engineering</h3><p>Code ownership, review culture, and post-incident learning support collective responsibility.</p></div>
+          <div><h3>AI & Data Science</h3><p>Model cards, impact assessments, and monitoring make residual risk visible and reviewable.</p></div>
+          <div><h3>Cybersecurity</h3><p>Responsible disclosure and incident response require clear roles and communication.</p></div>
+          <div><h3>Leadership</h3><p>Leaders set incentives and psychological safety that determine whether concerns surface early.</p></div>
+        </div>
+      </section>
+
+      <section class="card case">
+        <h2>Scenario — Near-Miss Safety Report</h2>
+        <p>An engineer discovers a race condition that could, under rare conditions, produce incorrect outputs in a medical decision-support tool. The release is scheduled for the next day. Document the immediate actions, stakeholders to inform, and how accountability should be assigned for the decision to ship or delay.</p>
+      </section>
+
+      <section class="card quiz-section">
+        <h2>Knowledge Check</h2>
+        <div class="quiz" data-quiz="lec05">
+          <div class="q" data-correct="1">
+            <p>1. Diffusion of responsibility is best reduced by:</p>
+            <label><input type="radio" name="q1" value="0"> Leaving decisions only to the most junior engineer</label>
+            <label><input type="radio" name="q1" value="1"> Clear role ownership and documented decision records</label>
+            <label><input type="radio" name="q1" value="2"> Avoiding any discussion of risk</label>
+          </div>
+          <div class="q" data-correct="0">
+            <p>2. A healthy professional culture typically:</p>
+            <label><input type="radio" name="q2" value="0"> Protects people who raise safety or ethics concerns</label>
+            <label><input type="radio" name="q2" value="1"> Punishes any delay to schedule</label>
+            <label><input type="radio" name="q2" value="2"> Treats codes as purely decorative</label>
+          </div>
+          <button class="btn primary" onclick="gradeQuiz(this)">Check Answers</button>
+          <div class="quiz-result" hidden></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Reflection</h2>
+        <ol>
+          <li>Describe an escalation path you would use if you encountered a serious unresolved safety issue.</li>
+          <li>How can post-incident reviews improve accountability without becoming blame sessions?</li>
+        </ol>
+      </section>
+
+      <section class="card summary">
+        <h2>Summary</h2>
+        <p>Professional responsibility is both individual and collective. Accountability mechanisms, psychological safety, and learning cultures turn ethical principles into reliable practice.</p>
+      </section>
+
+      <footer class="page-footer">
+        <a href="lecture-04.html">← Previous</a>
+        <a href="../index.html">Home →</a>
+      </footer>
+    </main>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>

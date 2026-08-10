@@ -1,1 +1,129 @@
-PLACEHOLDER
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lecture 04 — ACM and IEEE Codes of Ethics Deep Dive for Computing Professionals" />
+  <title>Lecture 04 — ACM & IEEE Codes | PPC</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">PPC</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../index.html">Home</a>
+        <a href="lecture-01.html">01 · Introduction</a>
+        <a href="lecture-02.html">02 · History & Codes</a>
+        <a href="lecture-03.html">03 · Ethical Theories</a>
+        <a href="lecture-04.html" class="active">04 · ACM & IEEE Codes</a>
+        <a href="lecture-05.html">05 · Responsibility</a>
+      </nav>
+      <div class="progress-box">
+        <div class="progress-label">Course Progress</div>
+        <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:80%"></div></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <header class="page-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 04</div>
+        <h1>Lecture 04 — ACM & IEEE Codes Deep Dive</h1>
+        <p class="lead">Professional codes as living guidance: structure, key principles, interpretation in real decisions, and limits.</p>
+      </header>
+
+      <section class="card objectives">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Locate and explain the main sections of the ACM Code of Ethics and IEEE Code of Ethics.</li>
+          <li>Map specific code clauses to concrete professional situations (privacy, safety, honesty, public interest).</li>
+          <li>Use codes as decision aids while recognizing they do not remove judgment or conflict.</li>
+          <li>Discuss enforcement, organizational culture, and individual responsibility.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Why Codes Matter</h2>
+        <p>Codes articulate shared expectations of the profession. They support education, provide a common language for escalation, and signal accountability to the public and employers. They are not detailed rulebooks for every case.</p>
+      </section>
+
+      <section class="card">
+        <h2>ACM Code — High-Level Structure</h2>
+        <ul>
+          <li>General Ethical Principles (contribute to society, avoid harm, be honest, be fair, respect privacy, honor confidentiality).</li>
+          <li>Professional Responsibilities (high quality, maintain competence, respect laws, provide reviews, give realistic evaluations).</li>
+          <li>Professional Leadership Principles (encourage public good, manage personnel and resources responsibly).</li>
+          <li>Compliance with the Code.</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>IEEE Code — Core Themes</h2>
+        <ul>
+          <li>Safety, health, and welfare of the public.</li>
+          <li>Honesty and realism in claims and estimates.</li>
+          <li>Rejection of bribery and conflicts of interest that compromise judgment.</li>
+          <li>Fair treatment, continuous improvement, and technical competence.</li>
+        </ul>
+      </section>
+
+      <section class="card multi-perspective">
+        <h2>Multi-Perspective Mapping</h2>
+        <div class="grid-2">
+          <div><h3>Software Engineering</h3><p>Quality, realistic estimates, and documentation obligations map directly to code clauses.</p></div>
+          <div><h3>AI & Data Science</h3><p>Avoid harm, fairness, and privacy principles guide dataset and model decisions.</p></div>
+          <div><h3>Cybersecurity</h3><p>Responsible disclosure and public welfare align with professional duties.</p></div>
+          <div><h3>Leadership</h3><p>Codes address managers’ duties to create environments that support ethical practice.</p></div>
+        </div>
+      </section>
+
+      <section class="card case">
+        <h2>Scenario — Pressure to Understate Risk</h2>
+        <p>A project lead is asked to present residual safety risk as “acceptable and fully mitigated” before a major release. Internal analysis shows remaining uncertainties. How do ACM and IEEE clauses on honesty, public safety, and realistic evaluation apply? What escalation path is appropriate?</p>
+      </section>
+
+      <section class="card quiz-section">
+        <h2>Knowledge Check</h2>
+        <div class="quiz" data-quiz="lec04">
+          <div class="q" data-correct="0">
+            <p>1. A primary purpose of professional codes is to:</p>
+            <label><input type="radio" name="q1" value="0"> Articulate shared expectations and support accountable practice</label>
+            <label><input type="radio" name="q1" value="1"> Replace all need for individual judgment</label>
+            <label><input type="radio" name="q1" value="2"> Serve only as legal contracts</label>
+          </div>
+          <div class="q" data-correct="1">
+            <p>2. Understating known residual risk in a safety-critical system most clearly violates:</p>
+            <label><input type="radio" name="q1b" value="0"> Only internal company style guides</label>
+            <label><input type="radio" name="q1b" value="1"> Honesty, public welfare, and realistic evaluation principles</label>
+            <label><input type="radio" name="q1b" value="2"> Nothing if the product ships on time</label>
+          </div>
+          <button class="btn primary" onclick="gradeQuiz(this)">Check Answers</button>
+          <div class="quiz-result" hidden></div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Reflection</h2>
+        <ol>
+          <li>Which single clause from ACM or IEEE do you find most relevant to your intended career path, and why?</li>
+          <li>How should an organization make codes operational rather than decorative?</li>
+        </ol>
+      </section>
+
+      <section class="card summary">
+        <h2>Summary</h2>
+        <p>ACM and IEEE codes provide principled guidance for public interest, honesty, competence, and fairness. Professionals must interpret them in context and support cultures that enable ethical action.</p>
+      </section>
+
+      <footer class="page-footer">
+        <a href="lecture-03.html">← Previous</a>
+        <a href="lecture-05.html">Next: Responsibility →</a>
+      </footer>
+    </main>
+  </div>
+  <script src="../js/main.js"></script>
+</body>
+</html>
