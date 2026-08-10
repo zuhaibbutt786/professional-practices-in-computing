@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 1: Introduction to Professional Practices in Computing — Why professionalism matters, professional identity, and the roadmap for ethical and responsible computing." />
+  <meta name="description" content="Lecture 1: Introduction to Professional Practices in Computing — Why professionalism matters, professional identity, multi-perspective analysis, real stories, industrial scenarios, quizzes and reflection." />
   <title>Lecture 01 — Introduction | Professional Practices in Computing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,129 +35,134 @@
     </div>
   </aside>
   <main class="main-wrapper">
-    <div class="lecture-header">
-      <span class="badge">Lecture 01</span>
-      <h1>Introduction to Professional Practices in Computing</h1>
-      <p class="meta">Why professionalism matters · Professional identity · Roadmap for ethical computing</p>
-      <div class="progress-bar"><div class="progress-fill" style="width:0%" id="progressFill"></div></div>
-    </div>
-
-    <section class="section" id="objectives">
-      <div class="section-title"><span class="icon">🎯</span><h2>Learning Objectives</h2></div>
-      <p>By the end of this module, you will be able to:</p>
-      <ul>
-        <li>Define what it means to be a computing professional and distinguish professionalism from technical skill alone.</li>
-        <li>Explain why professional practices matter for individuals, organizations, and society.</li>
-        <li>Identify the major domains covered in this course (ethics, law, privacy, AI responsibility, communication, teamwork, sustainability, career).</li>
-        <li>Describe the multi-perspective analysis method used throughout the course.</li>
-        <li>Reflect on your own emerging professional identity.</li>
-      </ul>
-    </section>
-
-    <section class="section" id="intro">
-      <div class="section-title"><span class="icon">📖</span><h2>Introduction</h2></div>
-      <p>Computing is no longer a purely technical activity performed in isolation. Software, data systems, AI models, and digital platforms shape how people work, learn, vote, receive healthcare, and relate to one another. Every design decision, every dataset chosen, every model deployed, and every system left unsecured carries consequences that extend far beyond the screen.</p>
-      <p>Professional Practices in Computing prepares you to navigate those consequences with competence, integrity, and foresight. This course does not teach a programming language or a specific tool. It teaches professional thinking: how to reason about responsibility, how to weigh competing values, how to communicate clearly under pressure, and how to build systems that respect people and society.</p>
-      <div class="callout info">
-        <h4>Course stance</h4>
-        <p>We treat professionalism as a set of habits and judgment skills that can be learned, practiced, and refined. Technical excellence is necessary but not sufficient. The best engineers, data scientists, and security specialists are those who can also explain trade-offs, anticipate harm, and act with accountability.</p>
+    <div class="content">
+      <div class="lecture-header">
+        <span class="lecture-badge">Lecture 01</span>
+        <h1>Introduction to Professional Practices in Computing</h1>
+        <p class="lecture-meta">Why professionalism matters · Professional identity · Roadmap for ethical computing</p>
+        <div class="progress-bar-container"><div class="progress-bar" id="progressFill" style="width:0%"></div></div>
       </div>
-    </section>
 
-    <section class="section" id="motivation">
-      <div class="section-title"><span class="icon">🔥</span><h2>Motivation — Why This Matters Now</h2></div>
-      <p>In the last decade the computing profession has moved from supporting roles into positions of enormous leverage. Decisions made by small teams now affect hundreds of millions of people. Failures are no longer just bugs; they become public crises, regulatory investigations, and lasting damage to trust.</p>
-      <p>Consider a few high-visibility signals:</p>
-      <ul>
-        <li>Large-scale data breaches that expose personal and financial records of tens of millions.</li>
-        <li>AI systems that amplify bias or generate persuasive misinformation at scale.</li>
-        <li>Autonomous and safety-critical systems whose failures can cost lives.</li>
-        <li>Platform design choices that influence attention, polarization, and mental health.</li>
-        <li>Global software supply chains where a single compromised dependency can cascade worldwide.</li>
-      </ul>
-      <p>Employers, professional societies (ACM, IEEE), and regulators increasingly expect graduates to demonstrate ethical reasoning, awareness of legal constraints, communication skill, and the ability to work effectively in diverse teams. This course is designed to build exactly those competencies.</p>
-    </section>
+      <section class="section" id="objectives">
+        <div class="section-header"><div class="section-icon">🎯</div><h2>Learning Objectives</h2></div>
+        <p>By the end of this module, you will be able to:</p>
+        <ul class="objectives-list">
+          <li>Define what it means to be a computing professional and distinguish professionalism from technical skill alone.</li>
+          <li>Explain why professional practices matter for individuals, organizations, and society.</li>
+          <li>Identify the major domains covered in this course (ethics, law, privacy, AI responsibility, communication, teamwork, sustainability, career).</li>
+          <li>Describe the multi-perspective analysis method used throughout the course.</li>
+          <li>Reflect on your own emerging professional identity.</li>
+        </ul>
+      </section>
 
-    <section class="section" id="real-story">
-      <div class="section-title"><span class="icon">📰</span><h2>Real Story</h2></div>
-      <p>In 2018, revelations about Cambridge Analytica and Facebook showed how personal data harvested through a personality quiz could be used to influence political messaging at scale. Engineers and product managers who built the underlying APIs and data-sharing features did not set out to undermine democratic processes. Yet design decisions about data access, consent, and third-party use created the conditions for misuse.</p>
-      <p>The episode became a global case study in the gap between "technically possible" and "professionally responsible." It accelerated regulatory attention (GDPR enforcement, later privacy laws), changed hiring conversations, and forced many organizations to create or strengthen ethics and privacy review processes. For students entering the field, the lesson is clear: the systems you help build will be used in ways you may not anticipate. Professional practice includes designing for that uncertainty.</p>
-    </section>
+      <section class="section" id="intro">
+        <div class="section-header"><div class="section-icon">📖</div><h2>Introduction</h2></div>
+        <p>Computing is no longer a purely technical activity performed in isolation. Software, data systems, AI models, and digital platforms shape how people work, learn, vote, receive healthcare, and relate to one another. Every design decision, every dataset chosen, every model deployed, and every system left unsecured carries consequences that extend far beyond the screen.</p>
+        <p>Professional Practices in Computing prepares you to navigate those consequences with competence, integrity, and foresight. This course does not teach a programming language or a specific tool. It teaches professional thinking: how to reason about responsibility, how to weigh competing values, how to communicate clearly under pressure, and how to build systems that respect people and society.</p>
+        <div class="callout callout-info">
+          <div class="callout-title">Course stance</div>
+          <p>We treat professionalism as a set of habits and judgment skills that can be learned, practiced, and refined. Technical excellence is necessary but not sufficient. The best engineers, data scientists, and security specialists are those who can also explain trade-offs, anticipate harm, and act with accountability.</p>
+        </div>
+      </section>
 
-    <section class="section" id="industrial">
-      <div class="section-title"><span class="icon">🏭</span><h2>Industrial Scenario</h2></div>
-      <p>You are a junior software engineer on a team shipping a recommendation feature for a consumer health app. The feature uses activity and location data to suggest wellness content. Marketing wants aggressive personalization to increase engagement. Legal has flagged that some jurisdictions require explicit opt-in for health-related inferences. The product manager asks you to "just ship the model we already trained" while the policy team finishes its review.</p>
-      <p>What do you do? This course gives you the frameworks, vocabulary, and multi-perspective habits to answer that question professionally rather than reactively.</p>
-    </section>
+      <section class="section" id="motivation">
+        <div class="section-header"><div class="section-icon">🔥</div><h2>Motivation — Why This Matters Now</h2></div>
+        <p>In the last decade the computing profession has moved from supporting roles into positions of enormous leverage. Decisions made by small teams now affect hundreds of millions of people. Failures are no longer just bugs; they become public crises, regulatory investigations, and lasting damage to trust.</p>
+        <p>Consider a few high-visibility signals:</p>
+        <ul>
+          <li>Large-scale data breaches that expose personal and financial records of tens of millions.</li>
+          <li>AI systems that amplify bias or generate persuasive misinformation at scale.</li>
+          <li>Autonomous and safety-critical systems whose failures can cost lives.</li>
+          <li>Platform design choices that influence attention, polarization, and mental health.</li>
+          <li>Global software supply chains where a single compromised dependency can cascade worldwide.</li>
+        </ul>
+        <p>Employers, professional societies (ACM, IEEE), and regulators increasingly expect graduates to demonstrate ethical reasoning, awareness of legal constraints, communication skill, and the ability to work effectively in diverse teams. This course is designed to build exactly those competencies.</p>
+      </section>
 
-    <section class="section" id="perspectives">
-      <div class="section-title"><span class="icon">🔭</span><h2>Multi-Perspective Lens</h2></div>
-      <p>Throughout the course every major topic is examined from several complementary angles. You will practice shifting between them deliberately.</p>
-      <div class="perspective-grid">
-        <div class="perspective-card"><div class="label">Ethical</div><p>What values are at stake? Who is affected and how? Which principles (autonomy, justice, non-maleficence, beneficence) guide the decision?</p></div>
-        <div class="perspective-card"><div class="label">Legal</div><p>What statutes, regulations, or contractual obligations apply? What are the compliance risks and enforcement mechanisms?</p></div>
-        <div class="perspective-card"><div class="label">Business</div><p>What are the short- and long-term impacts on reputation, revenue, talent, and market access?</p></div>
-        <div class="perspective-card"><div class="label">AI / Data</div><p>How do data quality, model behavior, feedback loops, and opacity affect outcomes and accountability?</p></div>
-        <div class="perspective-card"><div class="label">Software Engineering</div><p>How do architecture, process, testing, and operational practices either mitigate or amplify risk?</p></div>
-        <div class="perspective-card"><div class="label">Cybersecurity</div><p>What attack surfaces, threat models, and failure modes must be considered?</p></div>
+      <section class="section" id="real-story">
+        <div class="section-header"><div class="section-icon">📰</div><h2>Real Story</h2></div>
+        <p>In 2018, revelations about Cambridge Analytica and Facebook showed how personal data harvested through a personality quiz could be used to influence political messaging at scale. Engineers and product managers who built the underlying APIs and data-sharing features did not set out to undermine democratic processes. Yet design decisions about data access, consent, and third-party use created the conditions for misuse.</p>
+        <p>The episode became a global case study in the gap between "technically possible" and "professionally responsible." It accelerated regulatory attention (GDPR enforcement, later privacy laws), changed hiring conversations, and forced many organizations to create or strengthen ethics and privacy review processes. For students entering the field, the lesson is clear: the systems you help build will be used in ways you may not anticipate. Professional practice includes designing for that uncertainty.</p>
+      </section>
+
+      <section class="section" id="industrial">
+        <div class="section-header"><div class="section-icon">🏭</div><h2>Industrial Scenario</h2></div>
+        <p>You are a junior software engineer on a team shipping a recommendation feature for a consumer health app. The feature uses activity and location data to suggest wellness content. Marketing wants aggressive personalization to increase engagement. Legal has flagged that some jurisdictions require explicit opt-in for health-related inferences. The product manager asks you to "just ship the model we already trained" while the policy team finishes its review.</p>
+        <p>What do you do? This course gives you the frameworks, vocabulary, and multi-perspective habits to answer that question professionally rather than reactively.</p>
+      </section>
+
+      <section class="section" id="perspectives">
+        <div class="section-header"><div class="section-icon">🔭</div><h2>Multi-Perspective Lens</h2></div>
+        <p>Throughout the course every major topic is examined from several complementary angles. You will practice shifting between them deliberately.</p>
+        <div class="perspective-grid">
+          <div class="perspective-card"><h4>Ethical</h4><p>What values are at stake? Who is affected and how? Which principles (autonomy, justice, non-maleficence, beneficence) guide the decision?</p></div>
+          <div class="perspective-card"><h4>Legal</h4><p>What statutes, regulations, or contractual obligations apply? What are the compliance risks and enforcement mechanisms?</p></div>
+          <div class="perspective-card"><h4>Business</h4><p>What are the short- and long-term impacts on reputation, revenue, talent, and market access?</p></div>
+          <div class="perspective-card"><h4>AI / Data</h4><p>How do data quality, model behavior, feedback loops, and opacity affect outcomes and accountability?</p></div>
+          <div class="perspective-card"><h4>Software Engineering</h4><p>How do architecture, process, testing, and operational practices either mitigate or amplify risk?</p></div>
+          <div class="perspective-card"><h4>Cybersecurity</h4><p>What attack surfaces, threat models, and failure modes must be considered?</p></div>
+        </div>
+      </section>
+
+      <section class="section" id="roadmap">
+        <div class="section-header"><div class="section-icon">🗺️</div><h2>Course Roadmap</h2></div>
+        <p>Lectures 01–05 establish foundations: professional identity, history of the field and its codes, ethical theories and decision frameworks, deep engagement with ACM and IEEE codes, and the meaning of professional responsibility and accountability.</p>
+        <p>Later modules expand into privacy and data protection, security ethics, responsible AI, intellectual property and open source, communication and teamwork, global and remote collaboration, safety-critical systems, accessibility and inclusive design, sustainability, entrepreneurship and freelancing ethics, and career development.</p>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="section-header"><div class="section-icon">✅</div><h2>Knowledge Check</h2></div>
+        <div class="quiz-container" id="quiz1">
+          <p class="quiz-question">1. According to this course, which statement best captures the relationship between technical skill and professionalism?</p>
+          <div class="quiz-options">
+            <button class="quiz-option" data-correct="false">Technical skill is sufficient; professionalism is optional soft skill training.</button>
+            <button class="quiz-option" data-correct="true">Technical excellence is necessary but not sufficient; professional judgment and responsibility are required.</button>
+            <button class="quiz-option" data-correct="false">Professionalism is mainly about dress code and meeting etiquette.</button>
+            <button class="quiz-option" data-correct="false">Only managers need to worry about ethics and responsibility.</button>
+          </div>
+          <div class="quiz-feedback">Professionalism includes ethical reasoning, communication, accountability, and awareness of broader impacts. Technical skill alone does not guarantee responsible outcomes.</div>
+        </div>
+      </section>
+
+      <section class="section" id="reflection">
+        <div class="section-header"><div class="section-icon">💭</div><h2>Reflection</h2></div>
+        <div class="activity-card">
+          <h4>Personal identity prompt</h4>
+          <p>Write a short paragraph (150–250 words) answering: What kind of computing professional do I want to become? What values will guide my technical decisions? What responsibilities do I accept toward users, teammates, and society?</p>
+        </div>
+      </section>
+
+      <section class="section" id="summary">
+        <div class="section-header"><div class="section-icon">📌</div><h2>Summary</h2></div>
+        <ul>
+          <li>Professional practices go beyond coding skill to include ethics, law, communication, teamwork, and societal impact.</li>
+          <li>Real-world incidents show that design and process decisions can have large-scale consequences.</li>
+          <li>This course uses multi-perspective analysis (ethical, legal, business, AI/data, SE, security) as a core habit.</li>
+          <li>Your professional identity is something you deliberately develop, not something that appears automatically with a degree.</li>
+        </ul>
+      </section>
+
+      <div class="flex justify-between mt-3" style="margin-top:2.5rem;padding-top:1.5rem;border-top:1px solid var(--border);">
+        <a href="../index.html" class="btn btn-outline">← Home</a>
+        <a href="lecture-02.html" class="btn btn-primary">Next: History & Codes →</a>
       </div>
-    </section>
-
-    <section class="section" id="roadmap">
-      <div class="section-title"><span class="icon">🗺️</span><h2>Course Roadmap</h2></div>
-      <p>Lectures 01–05 establish foundations: professional identity, history of the field and its codes, ethical theories and decision frameworks, deep engagement with ACM and IEEE codes, and the meaning of professional responsibility and accountability.</p>
-      <p>Later modules expand into privacy and data protection, security ethics, responsible AI, intellectual property and open source, communication and teamwork, global and remote collaboration, safety-critical systems, accessibility and inclusive design, sustainability, entrepreneurship and freelancing ethics, and career development.</p>
-    </section>
-
-    <section class="section" id="quiz">
-      <div class="section-title"><span class="icon">✅</span><h2>Knowledge Check</h2></div>
-      <div class="quiz-container" id="quiz1">
-        <p class="quiz-question">1. According to this course, which statement best captures the relationship between technical skill and professionalism?</p>
-        <button class="quiz-option" data-correct="false">Technical skill is sufficient; professionalism is optional soft skill training.</button>
-        <button class="quiz-option" data-correct="true">Technical excellence is necessary but not sufficient; professional judgment and responsibility are required.</button>
-        <button class="quiz-option" data-correct="false">Professionalism is mainly about dress code and meeting etiquette.</button>
-        <button class="quiz-option" data-correct="false">Only managers need to worry about ethics and responsibility.</button>
-        <div class="quiz-explanation">Professionalism includes ethical reasoning, communication, accountability, and awareness of broader impacts. Technical skill alone does not guarantee responsible outcomes.</div>
-      </div>
-    </section>
-
-    <section class="section" id="reflection">
-      <div class="section-title"><span class="icon">💭</span><h2>Reflection</h2></div>
-      <div class="activity-card">
-        <h4>Personal identity prompt</h4>
-        <p>Write a short paragraph (150–250 words) answering: What kind of computing professional do I want to become? What values will guide my technical decisions? What responsibilities do I accept toward users, teammates, and society?</p>
-      </div>
-    </section>
-
-    <section class="section" id="summary">
-      <div class="section-title"><span class="icon">📌</span><h2>Summary</h2></div>
-      <ul>
-        <li>Professional practices go beyond coding skill to include ethics, law, communication, teamwork, and societal impact.</li>
-        <li>Real-world incidents show that design and process decisions can have large-scale consequences.</li>
-        <li>This course uses multi-perspective analysis (ethical, legal, business, AI/data, SE, security) as a core habit.</li>
-        <li>Your professional identity is something you deliberately develop, not something that appears automatically with a degree.</li>
-      </ul>
-    </section>
-
-    <div class="lecture-footer">
-      <a href="../index.html" class="btn btn-secondary">← Home</a>
-      <a href="lecture-02.html" class="btn btn-primary">Next: History & Codes →</a>
     </div>
   </main>
   <script src="../js/main.js"></script>
   <script>
-    // Minimal inline quiz wiring if main.js expects data attributes
     document.querySelectorAll('.quiz-option').forEach(btn => {
       btn.addEventListener('click', function() {
         const parent = this.closest('.quiz-container');
         parent.querySelectorAll('.quiz-option').forEach(b => b.disabled = true);
         if (this.dataset.correct === 'true') {
           this.classList.add('correct');
+          parent.querySelector('.quiz-feedback').classList.add('show', 'correct');
         } else {
           this.classList.add('incorrect');
-          parent.querySelector('[data-correct="true"]').classList.add('correct');
+          const correct = parent.querySelector('[data-correct="true"]');
+          if (correct) correct.classList.add('correct');
+          parent.querySelector('.quiz-feedback').classList.add('show', 'incorrect');
         }
-        parent.querySelector('.quiz-explanation').classList.add('show');
       });
     });
   </script>
