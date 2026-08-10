@@ -1,6 +1,6 @@
 # Course Website Status
 
-**Last content push:** 2026-08-11 01:00 PKT
+**Last content push:** 2026-08-11 02:20 PKT
 
 ## Live
 https://zuhaibbutt786.github.io/professional-practices-in-computing/
@@ -10,7 +10,7 @@ https://zuhaibbutt786.github.io/professional-practices-in-computing/
 - index.html (home + navigation to Lectures 01–05)
 - css/styles.css (full glassmorphism dark/light, responsive, print — 17k)
 - js/main.js (theme, sidebar, progress, quiz engine, search)
-- lectures/lecture-01.html — Introduction to Professional Practices (production module)
+- lectures/lecture-01.html — Introduction to Professional Practices (solid production module)
 - lectures/lecture-02.html — History of the Profession & Codes (production module)
 - lectures/lecture-03.html — Ethical Theories & Decision Frameworks (production module)
 - lectures/lecture-04.html — ACM & IEEE Codes Deep Dive (production module)
@@ -19,7 +19,7 @@ https://zuhaibbutt786.github.io/professional-practices-in-computing/
 ## Notes
 - Index, CSS, JS, README production-ready.
 - Lectures 01–05 functional production modules live on main.
-- Local holds larger enriched variants (~27–32k each) for sequential expansion.
+- Local holds larger enriched variants (~27–32k each) for sequential expansion when payload limits allow.
 - Static site. No backend. GitHub Pages ready.
 
 ## Next
