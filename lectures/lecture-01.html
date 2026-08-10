@@ -11,7 +11,211 @@
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <!-- FULL LOCAL CONTENT WOULD BE HERE - using simplified for tool limit in this step; actual push of full 32k requires sequential or different method -->
-  <p>Placeholder - full content pending due to size. See local artifacts.</p>
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-brand">
+      <div class="logo">PPC</div>
+      <span>Professional Practices</span>
+    </a>
+    <div class="nav-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="search-input" placeholder="Search..." aria-label="Search" />
+      </div>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Course</div>
+      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Lectures</div>
+      <a href="lecture-01.html" class="sidebar-link active"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link"><span class="num">05</span> Responsibility</a>
+    </div>
+  </aside>
+
+  <main class="main-content">
+    <div class="breadcrumb">
+      <a href="../index.html">Home</a> / <span>Lecture 01</span>
+    </div>
+
+    <header class="lecture-header glass">
+      <div class="lecture-meta">Lecture 01 · Module 1</div>
+      <h1>Introduction to Professional Practices in Computing</h1>
+      <p class="lead">Why professionalism matters, what it means to be a computing professional, and how this course prepares you for ethical, legal, and societal challenges across CS, SE, Data Science, AI, and Cybersecurity.</p>
+      <div class="tags">
+        <span class="tag">Professional Identity</span>
+        <span class="tag">Ethics</span>
+        <span class="tag">Responsibility</span>
+        <span class="tag">Career</span>
+      </div>
+    </header>
+
+    <section class="section glass" id="objectives">
+      <h2>Learning Objectives</h2>
+      <p>By the end of this lecture you will be able to:</p>
+      <ul class="objectives-list">
+        <li>Define what professional practice means in computing and contrast it with purely technical skill.</li>
+        <li>Explain why computing professionals carry special responsibilities toward users, organizations, and society.</li>
+        <li>Identify the main stakeholder groups affected by computing systems and the types of harm or benefit that can arise.</li>
+        <li>Describe the multi-perspective lens (ethical, legal, business, AI, data, SE, security) used throughout this course.</li>
+        <li>Locate yourself on a professional development roadmap and set initial goals for continuous learning.</li>
+      </ul>
+    </section>
+
+    <section class="section glass" id="motivation">
+      <h2>Motivation — Why This Course Exists</h2>
+      <p>Software, data, and AI systems now mediate almost every aspect of modern life: healthcare decisions, credit scoring, hiring, criminal justice risk assessment, autonomous vehicles, content recommendation, and national infrastructure. When these systems fail or are misused, the consequences are not abstract — people lose jobs, privacy, freedom, health, or even life.</p>
+      <p>Universities have traditionally taught technical skills extremely well and professional judgment less systematically. This course closes that gap. It is deliberately technology-independent: the principles of responsibility, accountability, fairness, transparency, and care apply whether you write Python, design ML pipelines, secure cloud workloads, or lead open-source projects.</p>
+      <div class="callout callout-info">
+        <strong>Key idea:</strong> Technical excellence without professional judgment is incomplete. Professional judgment without technical understanding is ineffective. You need both.
+      </div>
+    </section>
+
+    <section class="section glass" id="real-story">
+      <h2>Real Story — The Cost of Ignoring Professional Practice</h2>
+      <p>In 2018, a self-driving test vehicle operated by a major technology company struck and killed a pedestrian in Arizona. Investigations later highlighted gaps in safety culture, testing protocols, operator monitoring, and the prioritization of deployment speed over rigorous validation. Engineers and managers faced difficult questions about whether the system was ready, whether edge cases had been adequately considered, and whether organizational incentives had discouraged raising safety concerns.</p>
+      <p>This was not a failure of algorithms alone. It was a failure of professional practice: risk assessment, escalation paths, ethical prioritization of human safety, and clear accountability. Similar patterns appear in medical device software recalls, biased hiring algorithms, data breaches caused by weak security culture, and content moderation systems that amplify harm.</p>
+      <p>Every computing professional will eventually face a moment when the "easy" technical path conflicts with the responsible path. This course trains you to recognize those moments and act with integrity.</p>
+    </section>
+
+    <section class="section glass" id="industrial-scenario">
+      <h2>Industrial Scenario</h2>
+      <p>You are a mid-level engineer on a team building a recommendation system for a large social platform. Product leadership wants to maximize engagement metrics. Your analysis shows that the current ranking objective correlates with increased polarization and time spent on emotionally charged content. A junior colleague privately asks whether the team should raise this with leadership or quietly continue optimizing the metric.</p>
+      <p><strong>Questions you should be able to answer after this course:</strong></p>
+      <ul>
+        <li>What professional and ethical obligations apply here?</li>
+        <li>Who are the stakeholders beyond the product metrics dashboard?</li>
+        <li>What channels exist for raising concerns, and what documentation should you keep?</li>
+        <li>How do ACM/IEEE codes and company policy interact in this situation?</li>
+        <li>What would "responsible" design look like if engagement were balanced against well-being?</li>
+      </ul>
+    </section>
+
+    <section class="section glass" id="perspectives">
+      <h2>Multi-Perspective Analysis</h2>
+      <div class="perspective-grid">
+        <div class="perspective-card">
+          <h3>Ethical</h3>
+          <p>What duties do we owe users, society, and future generations? How do we balance autonomy, non-maleficence, justice, and beneficence in system design?</p>
+        </div>
+        <div class="perspective-card">
+          <h3>Legal</h3>
+          <p>Which laws, regulations, and liability frameworks apply? Privacy statutes, product liability, discrimination law, and emerging AI regulation all constrain choices.</p>
+        </div>
+        <div class="perspective-card">
+          <h3>Business</h3>
+          <p>How do professional decisions affect reputation, risk, talent retention, and long-term value? Short-term metrics vs. sustainable trust.</p>
+        </div>
+        <div class="perspective-card">
+          <h3>AI / Data Science</h3>
+          <p>Bias, explainability, data provenance, model governance, and the special responsibilities that come with probabilistic systems that affect people at scale.</p>
+        </div>
+        <div class="perspective-card">
+          <h3>Software Engineering</h3>
+          <p>Requirements, validation, safety-critical practices, documentation, and the professional obligation to produce systems that are fit for purpose.</p>
+        </div>
+        <div class="perspective-card">
+          <h3>Cybersecurity</h3>
+          <p>Security as a professional duty, not an afterthought. Threat modeling, responsible disclosure, and the ethics of offensive and defensive work.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section glass" id="knowledge-check">
+      <h2>Knowledge Check</h2>
+      <div class="quiz" data-quiz-id="l01-intro">
+        <div class="quiz-question" data-correct="1">
+          <p><strong>1.</strong> Professional practice in computing primarily concerns:</p>
+          <label><input type="radio" name="q1" value="0"> Only writing correct code that passes tests</label>
+          <label><input type="radio" name="q1" value="1"> The responsibilities, judgments, and standards that guide how computing work affects people and society</label>
+          <label><input type="radio" name="q1" value="2"> Maximizing company stock price</label>
+          <label><input type="radio" name="q1" value="3"> Following whatever the product manager requests without question</label>
+        </div>
+        <div class="quiz-question" data-correct="1">
+          <p><strong>2.</strong> Which set of perspectives is deliberately emphasized in this course?</p>
+          <label><input type="radio" name="q2" value="0"> Only legal and financial</label>
+          <label><input type="radio" name="q2" value="1"> Ethical, Legal, Business, AI, Data Science, Software Engineering, Cybersecurity</label>
+          <label><input type="radio" name="q2" value="2"> Only technical performance metrics</label>
+          <label><input type="radio" name="q2" value="3"> Marketing and user acquisition only</label>
+        </div>
+      </div>
+      <button class="btn" onclick="window.checkQuiz && window.checkQuiz(this)">Check answers</button>
+    </section>
+
+    <section class="section glass" id="reflection">
+      <h2>Reflection</h2>
+      <ol>
+        <li>Describe a computing system you use daily. Who are its stakeholders, and what harms could arise if professional judgment is weak?</li>
+        <li>Where do you currently feel strongest and weakest among the multi-perspective lenses introduced in this lecture?</li>
+        <li>What is one concrete habit you can adopt this semester to strengthen your professional practice?</li>
+      </ol>
+    </section>
+
+    <section class="section glass" id="summary">
+      <h2>Summary</h2>
+      <ul>
+        <li>Computing professionals influence systems that affect human welfare at scale.</li>
+        <li>Professional practice combines technical competence with ethical reasoning, legal awareness, and organizational judgment.</li>
+        <li>This course trains a multi-perspective approach and concrete decision skills usable across CS, SE, Data Science, AI, and Cybersecurity careers.</li>
+        <li>Next lectures examine the history of the profession, ethical theories, professional codes, and responsibility/accountability frameworks.</li>
+      </ul>
+    </section>
+
+    <section class="section glass" id="further-reading">
+      <h2>Further Reading</h2>
+      <ul>
+        <li>ACM Code of Ethics and Professional Conduct</li>
+        <li>IEEE Code of Ethics</li>
+        <li>Sara Baase, <em>A Gift of Fire</em> (selected chapters on professional ethics)</li>
+        <li>Michael Quinn, <em>Ethics for the Information Age</em></li>
+      </ul>
+    </section>
+
+    <nav class="lecture-nav">
+      <a href="../index.html" class="btn btn-secondary">← Home</a>
+      <a href="lecture-02.html" class="btn">Next: History & Codes →</a>
+    </nav>
+  </main>
+
+  <script src="../js/main.js"></script>
+  <script>
+    window.quizData = window.quizData || {};
+    window.quizData["l01-intro"] = [
+      {
+        question: "Professional practice in computing primarily concerns:",
+        options: [
+          "Only writing correct code that passes tests",
+          "The responsibilities, judgments, and standards that guide how computing work affects people and society",
+          "Maximizing company stock price",
+          "Following whatever the product manager requests without question"
+        ],
+        correct: 1,
+        explanation: "Professional practice is about the judgment and standards that connect technical work to human and societal impact."
+      },
+      {
+        question: "Which set of perspectives is deliberately emphasized in this course?",
+        options: [
+          "Only legal and financial",
+          "Ethical, Legal, Business, AI, Data Science, Software Engineering, Cybersecurity",
+          "Only technical performance metrics",
+          "Marketing and user acquisition only"
+        ],
+        correct: 1,
+        explanation: "The course deliberately trains multi-perspective analysis across ethical, legal, business, AI, data, SE, and security viewpoints."
+      }
+    ];
+  </script>
 </body>
 </html>
