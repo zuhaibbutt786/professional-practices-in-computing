@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 03 — Ethical Theories and Decision Frameworks for Computing Professionals" />
-  <title>Lecture 03 — Ethical Theories | PPC</title>
+  <meta name="description" content="Lecture 03: Ethical Theories & Decision-Making Frameworks — Utilitarianism, deontology, virtue ethics, care ethics, and practical professional judgment frameworks for computing." />
+  <title>Lecture 03 — Ethical Theories & Decision Frameworks | Professional Practices in Computing</title>
   <link rel="stylesheet" href="../css/styles.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
@@ -30,50 +30,109 @@
     </aside>
     <main class="main-content">
       <header class="page-header">
-        <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 03</div>
-        <h1>Lecture 03 — Ethical Theories & Decision Frameworks</h1>
-        <p class="lead">Classical ethical theories applied to computing decisions, plus practical frameworks for professional judgment.</p>
+        <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 03 Ethical Theories</div>
+        <h1>Lecture 03 — Ethical Theories & Decision-Making Frameworks</h1>
+        <p class="lead">Classical ethical theories applied to computing decisions, plus practical frameworks that help professionals reason under uncertainty, pressure, and conflicting values.</p>
       </header>
 
       <section class="card objectives">
         <h2>Learning Objectives</h2>
         <ul>
-          <li>Summarize utilitarianism, deontology, virtue ethics, and care ethics in computing contexts.</li>
-          <li>Apply at least two ethical theories to a realistic professional dilemma.</li>
-          <li>Use a structured decision framework (stakeholder analysis + principle check + consequence estimate).</li>
-          <li>Recognize limits of any single theory and the value of pluralistic reasoning.</li>
+          <li>Summarize utilitarianism, deontology, virtue ethics, and care ethics and map each to realistic computing situations.</li>
+          <li>Apply at least two ethical theories to a professional dilemma and compare the recommendations.</li>
+          <li>Use a structured decision framework that combines stakeholder analysis, principle checks, and consequence estimation.</li>
+          <li>Recognize the limits of any single theory and the value of pluralistic, documented reasoning.</li>
+          <li>Identify how organizational incentives can distort ethical judgment and how professional habits counter those pressures.</li>
         </ul>
       </section>
 
       <section class="card">
         <h2>Motivation</h2>
-        <p>When a model disproportionately harms a protected group, or a release decision trades safety for schedule, intuition alone is unreliable. Ethical theories supply disciplined ways to examine consequences, duties, character, and relationships.</p>
+        <p>When a ranking model systematically disadvantages a protected group, or a release decision trades residual safety risk for schedule, intuition alone is unreliable. Teams need disciplined ways to examine consequences, duties, character, and relationships. Ethical theories supply those lenses; practical frameworks turn the lenses into repeatable professional practice.</p>
+        <p>This lecture does not ask you to become a philosopher. It asks you to become a professional who can explain why a decision was made, which values were prioritized, which stakeholders were considered, and what residual risks remain.</p>
       </section>
 
       <section class="card">
-        <h2>Core Theories</h2>
-        <ul>
-          <li><strong>Utilitarianism:</strong> Choose the action that maximizes overall good / minimizes harm. Useful for impact assessment; risks ignoring minority rights.</li>
-          <li><strong>Deontology:</strong> Focus on duties and rules (honesty, respect for persons, non-maleficence). Useful for non-negotiable obligations; can feel rigid under conflict.</li>
-          <li><strong>Virtue ethics:</strong> Ask what a good professional would do; cultivate honesty, courage, humility, and care. Emphasizes character and habits.</li>
-          <li><strong>Care / relational ethics:</strong> Attend to relationships, vulnerability, and context. Especially relevant in healthcare AI, education systems, and community platforms.</li>
-        </ul>
+        <h2>Real Story — The Algorithm That Learned the Wrong Lesson</h2>
+        <p>A large technology company deployed a résumé-screening tool trained on a decade of historical hiring data. The model quickly learned that patterns correlated with past hires — many of whom were male engineers — predicted “success.” Candidates with language associated with women’s colleges or certain extracurricular activities received systematically lower scores. The team had optimized for predictive accuracy against historical labels without asking whether those labels encoded past discrimination.</p>
+        <p>When the bias surfaced, leadership faced a classic tension: fix immediately (costly, visible, schedule impact) or continue with monitoring while a replacement was built. Different ethical theories produce different urgencies and justifications. The episode illustrates why theory literacy matters: without shared vocabulary, teams debate feelings instead of principles and evidence.</p>
+      </section>
+
+      <section class="card">
+        <h2>Core Ethical Theories for Computing</h2>
+
+        <h3>1. Utilitarianism (Consequence-Focused)</h3>
+        <p>Actions are evaluated by their consequences for overall welfare — maximize good, minimize harm, for the greatest number. In computing this maps naturally to impact assessments, A/B test outcomes, safety metrics, and cost–benefit analyses of release decisions.</p>
+        <p><strong>Strengths:</strong> Forces quantitative and qualitative attention to outcomes; useful for system-level trade-offs (latency vs. accuracy, coverage vs. false positives).</p>
+        <p><strong>Risks:</strong> Can justify sacrificing identifiable individuals or minority groups for aggregate gains; hard to measure long-term and second-order effects; “utility” itself is contested (whose welfare counts, how weighted).</p>
+
+        <h3>2. Deontology (Duty- and Rule-Focused)</h3>
+        <p>Certain actions are right or wrong regardless of consequences. Duties such as honesty, respect for persons, non-maleficence, and fidelity to role obligations constrain what professionals may do even when outcomes look attractive.</p>
+        <p><strong>Strengths:</strong> Protects rights and professional integrity under pressure; supports clear “red lines” (do not fabricate results, do not ship known critical safety defects without disclosure).</p>
+        <p><strong>Risks:</strong> Can feel rigid when duties conflict; may under-weight catastrophic outcomes if rules are applied mechanistically.</p>
+
+        <h3>3. Virtue Ethics (Character-Focused)</h3>
+        <p>Asks what a good professional would do and which habits of character (honesty, courage, humility, thoroughness, care) the decision cultivates or erodes. Emphasizes long-term formation of judgment rather than isolated calculations.</p>
+        <p><strong>Strengths:</strong> Connects daily practice to professional identity; supports culture and mentoring; resists pure instrumentalism.</p>
+        <p><strong>Risks:</strong> Can be vague without concrete exemplars; “what a good engineer would do” can be captured by local culture that itself is flawed.</p>
+
+        <h3>4. Care / Relational Ethics</h3>
+        <p>Centers relationships, vulnerability, context, and responsibilities to particular people rather than abstract aggregates or universal rules. Especially relevant in healthcare AI, education technology, accessibility, and community platforms.</p>
+        <p><strong>Strengths:</strong> Surfaces power asymmetries and lived impact; supports participatory design and ongoing stewardship.</p>
+        <p><strong>Risks:</strong> Can become parochial (care only for nearby stakeholders); needs integration with broader fairness and rights considerations.</p>
       </section>
 
       <section class="card multi-perspective">
         <h2>Multi-Perspective Application</h2>
         <div class="grid-2">
-          <div><h3>Software Engineering</h3><p>Duty to test adequately (deontology) vs. schedule pressure (utilitarian trade-offs); virtue of thoroughness.</p></div>
-          <div><h3>AI & Data Science</h3><p>Fairness metrics (utilitarian aggregation) vs. individual rights (deontology) vs. participatory design (care).</p></div>
-          <div><h3>Cybersecurity</h3><p>Responsible disclosure duties; limits on “ends justify the means” in offensive research.</p></div>
-          <div><h3>Business & Legal</h3><p>Codes and theories inform internal escalation and external regulatory expectations.</p></div>
+          <div>
+            <h3>Software Engineering</h3>
+            <p>Duty to test adequately and refuse to ship known critical defects (deontology) versus schedule and market pressure framed as aggregate benefit (utilitarian). Virtue of thoroughness and intellectual honesty. Care for on-call engineers and end users who will absorb residual risk.</p>
+          </div>
+          <div>
+            <h3>AI & Data Science</h3>
+            <p>Fairness metrics often aggregate error rates (utilitarian flavor). Individual rights and non-discrimination duties (deontology). Participatory design and attention to affected communities (care). Professional humility about model limits (virtue).</p>
+          </div>
+          <div>
+            <h3>Cybersecurity</h3>
+            <p>Responsible disclosure duties; limits on “ends justify the means” in offensive research or red-team exercises. Care for vulnerable users of systems under test. Character of integrity when findings are inconvenient.</p>
+          </div>
+          <div>
+            <h3>Business, Legal & Organizational</h3>
+            <p>Codes and theories inform escalation paths, documentation standards, and how organizations respond when commercial incentives conflict with professional obligations. Legal compliance is necessary but not sufficient for ethical practice.</p>
+          </div>
         </div>
       </section>
 
       <section class="card case">
-        <h2>Scenario — Biased Hiring Model</h2>
-        <p>A team discovers that a ranking model systematically downgrades candidates from certain demographic groups. Shipping on time would meet a major client deadline; delaying requires costly rework and explanation to leadership.</p>
-        <p>Apply each theory: What does maximizing aggregate utility suggest? What duties are engaged? What would a virtuous professional do? How does care for affected candidates change the analysis?</p>
+        <h2>Industrial Scenario — Biased Hiring Model Under Deadline</h2>
+        <p>A team discovers that a ranking model systematically downgrades candidates from certain demographic groups. Shipping on the original date would meet a major client deadline and protect quarterly revenue targets. Delaying requires costly rework, explanation to leadership, and possible contractual friction.</p>
+        <p><strong>Apply the theories:</strong></p>
+        <ul>
+          <li><strong>Utilitarian:</strong> Estimate harms to candidates, benefits to the organization and other candidates, probability of regulatory or reputational damage, and long-term talent-pipeline effects. Does “greatest good” support delay?</li>
+          <li><strong>Deontological:</strong> What duties are engaged — non-discrimination, honesty to stakeholders, fidelity to professional standards? Are any non-negotiable?</li>
+          <li><strong>Virtue:</strong> What would a thorough, courageous, and humble professional do? What precedent does the choice set for junior engineers?</li>
+          <li><strong>Care:</strong> Who is most vulnerable in this situation? How does the decision affect relationships of trust with candidates, recruiters, and the public?</li>
+        </ul>
+        <p>Document the reasoning. Even when the final call is constrained by others, the professional record of analysis matters for accountability and learning.</p>
+      </section>
+
+      <section class="card">
+        <h2>A Practical Decision Framework</h2>
+        <ol>
+          <li><strong>Clarify the decision and constraints.</strong> What exactly must be decided, by when, and under which non-negotiable constraints (law, safety, contracts)?</li>
+          <li><strong>Identify stakeholders.</strong> Who is affected, directly and indirectly? Include people who cannot easily speak for themselves.</li>
+          <li><strong>Map duties and principles.</strong> Which professional, legal, and organizational obligations apply? Where do they conflict?</li>
+          <li><strong>Estimate consequences.</strong> Short-term and long-term; distributional effects; uncertainty and reversibility.</li>
+          <li><strong>Check character and culture.</strong> What habits does this decision reinforce? Would you be comfortable explaining it publicly and to a junior colleague?</li>
+          <li><strong>Decide, document, and monitor.</strong> Record the rationale, residual risks, and follow-up metrics. Treat the decision as revisable when new evidence appears.</li>
+        </ol>
+        <p>Frameworks do not eliminate judgment; they make judgment visible, discussable, and improvable.</p>
+      </section>
+
+      <section class="card">
+        <h2>Historical Background (Brief)</h2>
+        <p>Utilitarian ideas trace to Bentham and Mill; deontological emphasis on duty is associated with Kant; virtue ethics returns to Aristotle and has been revived in professional ethics; care ethics emerged from feminist philosophy and developmental psychology (Gilligan and others) and has influenced nursing, education, and increasingly technology ethics. Computing codes (ACM, IEEE) draw on multiple traditions without fully endorsing any single theory — a deliberate pluralistic stance suited to complex socio-technical systems.</p>
       </section>
 
       <section class="card quiz-section">
@@ -82,14 +141,20 @@
           <div class="q" data-correct="0">
             <p>1. Utilitarianism primarily evaluates actions by:</p>
             <label><input type="radio" name="q1" value="0"> Their consequences for overall welfare</label>
-            <label><input type="radio" name="q1" value="1"> Strict adherence to absolute rules</label>
+            <label><input type="radio" name="q1" value="1"> Strict adherence to absolute rules regardless of outcome</label>
             <label><input type="radio" name="q1" value="2"> The character of the decision-maker alone</label>
           </div>
           <div class="q" data-correct="1">
             <p>2. A practical professional decision framework should include:</p>
             <label><input type="radio" name="q2" value="0"> Only the opinion of the most senior engineer</label>
             <label><input type="radio" name="q2" value="1"> Stakeholder identification, principle checks, and consequence estimates</label>
-            <label><input type="radio" name="q2" value="2"> Ignoring long-term impacts</label>
+            <label><input type="radio" name="q2" value="2"> Ignoring long-term and distributional impacts</label>
+          </div>
+          <div class="q" data-correct="2">
+            <p>3. Care ethics is especially useful when:</p>
+            <label><input type="radio" name="q3" value="0"> Only aggregate metrics matter</label>
+            <label><input type="radio" name="q3" value="1"> Rules never conflict</label>
+            <label><input type="radio" name="q3" value="2"> Relationships, vulnerability, and context are central to the harm or benefit</label>
           </div>
           <button class="btn primary" onclick="gradeQuiz(this)">Check Answers</button>
           <div class="quiz-result" hidden></div>
@@ -97,35 +162,70 @@
       </section>
 
       <section class="card">
-        <h2>Reflection</h2>
+        <h2>Reflection Questions</h2>
         <ol>
-          <li>Describe a decision you have faced (or observed) where two ethical theories would recommend different actions.</li>
-          <li>Which theory do you find most natural, and what blind spots might that create?</li>
+          <li>Describe a decision you have faced or observed where two ethical theories would recommend different actions. Which recommendation feels more defensible, and why?</li>
+          <li>Which theory do you find most natural in your own reasoning, and what blind spots might that create for you as a future professional?</li>
+          <li>How should a team document ethical reasoning so that it remains useful under later audit, incident review, or personnel change?</li>
         </ol>
       </section>
 
       <section class="card summary">
         <h2>Summary</h2>
-        <p>Ethical theories provide complementary lenses. Professionals combine them with stakeholder analysis and documented reasoning to make and defend decisions under uncertainty and pressure.</p>
+        <p>Ethical theories provide complementary lenses: consequences, duties, character, and relationships. Professionals combine them with stakeholder analysis and written reasoning to make and defend decisions under uncertainty and organizational pressure. No single theory is sufficient; pluralistic, documented judgment is the professional standard.</p>
       </section>
 
       <section class="card">
         <h2>Cheat Sheet</h2>
         <ul>
-          <li>Utilitarian → consequences / aggregate good</li>
-          <li>Deontological → duties and rights</li>
-          <li>Virtue → character and professional excellence</li>
-          <li>Care → relationships and vulnerability</li>
-          <li>Always: identify stakeholders and document reasoning</li>
+          <li>Utilitarian → consequences / aggregate welfare (watch minority harms)</li>
+          <li>Deontological → duties and rights (watch rigidity under conflict)</li>
+          <li>Virtue → character and professional excellence (watch local culture capture)</li>
+          <li>Care → relationships and vulnerability (watch parochialism)</li>
+          <li>Always: identify stakeholders, check principles, estimate consequences, document residual risk</li>
+        </ul>
+      </section>
+
+      <section class="card">
+        <h2>Further Reading</h2>
+        <ul>
+          <li>ACM Code of Ethics — principles and case discussions</li>
+          <li>Quinn, <em>Ethics for the Information Age</em> — theory chapters</li>
+          <li>Baase, <em>A Gift of Fire</em> — applied dilemmas</li>
+          <li>Dignum, <em>Responsible Artificial Intelligence</em> — socio-technical framing</li>
         </ul>
       </section>
 
       <footer class="page-footer">
-        <a href="lecture-02.html">← Previous</a>
+        <a href="lecture-02.html">← Previous: History & Codes</a>
         <a href="lecture-04.html">Next: ACM & IEEE Codes →</a>
       </footer>
     </main>
   </div>
   <script src="../js/main.js"></script>
+  <script>
+    // Optional: richer quiz data for this module
+    window.quizData = window.quizData || {};
+    window.quizData["lec03"] = [
+      {
+        q: "Utilitarianism primarily evaluates actions by:",
+        options: ["Their consequences for overall welfare", "Strict adherence to absolute rules", "The character of the decision-maker alone"],
+        correct: 0,
+        explanation: "Utilitarianism is consequence-focused: maximize overall good / minimize harm."
+      },
+      {
+        q: "A practical professional decision framework should include:",
+        options: ["Only the opinion of the most senior engineer", "Stakeholder identification, principle checks, and consequence estimates", "Ignoring long-term impacts"],
+        correct: 1,
+        explanation: "Structured frameworks make judgment visible and improvable."
+      },
+      {
+        q: "Care ethics is especially useful when:",
+        options: ["Only aggregate metrics matter", "Rules never conflict", "Relationships, vulnerability, and context are central"],
+        correct: 2,
+        explanation: "Care ethics centers particular relationships and vulnerability."
+      }
+    ];
+  </script>
 </body>
 </html>
