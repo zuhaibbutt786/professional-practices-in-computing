@@ -1,1 +1,131 @@
-PLACEHOLDER_WILL_REPLACE
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Lecture 1: Introduction to Professional Practices in Computing — Why professionalism matters, professional identity, multi-perspective thinking." />
+  <title>Lecture 01 — Introduction to Professional Practices | Professional Practices in Computing</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">PPC</a>
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../index.html">Home</a>
+        <a href="lecture-01.html" class="active">01 · Introduction</a>
+        <a href="lecture-02.html">02 · History & Codes</a>
+        <a href="lecture-03.html">03 · Ethical Theories</a>
+        <a href="lecture-04.html">04 · ACM & IEEE</a>
+        <a href="lecture-05.html">05 · Responsibility</a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="lecture-header glass">
+        <div class="breadcrumb">Home / Lectures / 01</div>
+        <h1>Introduction to Professional Practices in Computing</h1>
+        <p class="lead">Why professionalism matters, building professional identity, and learning to think across ethical, legal, business, AI, data, software engineering, and security perspectives.</p>
+      </header>
+
+      <section class="objectives glass">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Define professional practices in the context of modern computing disciplines.</li>
+          <li>Explain why technical skill alone is insufficient for professional success and societal trust.</li>
+          <li>Identify the stakeholders affected by computing decisions.</li>
+          <li>Apply multi-perspective analysis (ethical, legal, business, AI, data, SE, security) to simple scenarios.</li>
+          <li>Articulate personal professional identity and responsibility.</li>
+        </ul>
+      </section>
+
+      <section class="content glass">
+        <h2>Introduction & Motivation</h2>
+        <p>Computing now shapes nearly every aspect of human life: health, finance, mobility, education, democracy, and personal relationships. The same systems that create enormous value can also amplify harm at unprecedented scale and speed. Professional practices are the habits, standards, and reasoning skills that help practitioners deliver value while minimizing harm and maintaining public trust.</p>
+        <p>This course is deliberately technology-independent. It does not teach a particular language, framework, or cloud provider. Instead it trains professional thinking: how to recognize stakeholders, surface trade-offs, reason under uncertainty, and act with accountability.</p>
+      </section>
+
+      <section class="content glass">
+        <h2>Real Story: Therac-25</h2>
+        <p>In the mid-1980s the Therac-25 radiation therapy machine delivered massive overdoses to several patients, killing some and severely injuring others. Investigations revealed software race conditions, inadequate hardware interlocks, poor user-interface design, and organizational failures in testing and incident response. The case remains a foundational example of why software professionals must treat safety, usability, and accountability as first-class concerns—not afterthoughts.</p>
+        <p><strong>Professional lesson:</strong> Competence includes understanding failure modes, designing for the worst case, and creating feedback loops that surface problems early.</p>
+      </section>
+
+      <section class="content glass">
+        <h2>Industrial Scenario</h2>
+        <p>You join a startup building a recommendation engine for a health-related app. The product team wants aggressive engagement metrics. Early A/B tests show that slightly misleading urgency messaging increases daily active users. Legal has not reviewed the copy. Data scientists note the model may amplify existing health disparities. Security flags that user health data is stored with weaker controls than industry norms. How do you respond as an individual contributor and as a member of a cross-functional team?</p>
+      </section>
+
+      <section class="content glass">
+        <h2>Multi-Perspective Analysis</h2>
+        <h3>Ethical Perspective</h3>
+        <p>Respect for persons, non-maleficence, beneficence, and justice. Does the design treat users as ends rather than means? Are vulnerable groups disproportionately affected?</p>
+        <h3>Legal Perspective</h3>
+        <p>Privacy regulations, consumer protection, medical device or health-related claims, duty of care. What is the legal risk of the current messaging and data practices?</p>
+        <h3>Business Perspective</h3>
+        <p>Short-term growth versus long-term trust and brand risk. Regulatory fines, user churn after a scandal, and ability to raise capital under increased scrutiny.</p>
+        <h3>AI / Data Science Perspective</h3>
+        <p>Model fairness, data quality, feedback loops that can create harmful spirals, documentation and reproducibility of decisions.</p>
+        <h3>Software Engineering Perspective</h3>
+        <p>Requirements clarity, testability of safety properties, observability, incident response readiness, technical debt that hides risk.</p>
+        <h3>Cybersecurity Perspective</h3>
+        <p>Data minimization, access control, encryption at rest and in transit, threat modeling for health data.</p>
+      </section>
+
+      <section class="content glass">
+        <h2>Professional Identity</h2>
+        <p>A computing professional is not only a skilled implementer. Professionals accept responsibility for the consequences of their work, continuously update their knowledge, communicate risks clearly, and contribute to the standards of their field. Codes of ethics (ACM, IEEE) provide shared language; personal integrity supplies the daily practice.</p>
+      </section>
+
+      <section class="quiz glass" id="quiz">
+        <h2>Knowledge Check</h2>
+        <div id="quiz-container"></div>
+      </section>
+
+      <section class="content glass">
+        <h2>Reflection</h2>
+        <ol>
+          <li>Describe one computing system you use daily. Who are the stakeholders beyond the obvious users?</li>
+          <li>When have you seen technical excellence without professional responsibility? What was the outcome?</li>
+          <li>Which perspective (ethical, legal, business, AI, SE, security) do you currently find hardest to apply? Why?</li>
+        </ol>
+      </section>
+
+      <section class="summary glass">
+        <h2>Summary</h2>
+        <ul>
+          <li>Professional practices bridge technical skill and societal impact.</li>
+          <li>Multi-perspective analysis is a core professional habit.</li>
+          <li>Historical failures (Therac-25 and others) illustrate the cost of neglecting professionalism.</li>
+          <li>Personal identity and accountability start with the individual contributor.</li>
+        </ul>
+      </section>
+
+      <footer class="lecture-footer">
+        <a href="../index.html">← Home</a>
+        <a href="lecture-02.html">Next: History & Codes →</a>
+      </footer>
+    </main>
+  </div>
+  <script src="../js/main.js"></script>
+  <script>
+    initQuiz([
+      {
+        question: "Why is multi-perspective analysis emphasized in this course?",
+        options: [
+          "To increase technical performance metrics",
+          "To train analysis across ethical, legal, business, AI, data, SE, and security viewpoints",
+          "Marketing and user acquisition only"
+        ],
+        correct: 1,
+        explanation: "The course deliberately trains multi-perspective analysis across ethical, legal, business, AI, data, SE, and security viewpoints."
+      }
+    ]);
+  </script>
+</body>
+</html>
