@@ -5,9 +5,105 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Lecture 01 — Introduction to Professional Practices | Professional Practices in Computing</title>
   <link rel="stylesheet" href="../css/styles.css" />
+  <script src="../js/main.js" defer></script>
 </head>
 <body>
-  <!-- Full content is large; using local file to ensure correct push -->
-  <p>Placeholder for full content - will be fixed in next step</p>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">PPC</a>
+        <button class="theme-toggle" aria-label="Toggle theme">🌙</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../index.html">Home</a>
+        <a href="lecture-01.html" class="active">01. Introduction</a>
+        <a href="lecture-02.html">02. History & Codes</a>
+        <a href="lecture-03.html">03. Ethical Theories</a>
+        <a href="lecture-04.html">04. ACM & IEEE</a>
+        <a href="lecture-05.html">05. Responsibility</a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="page-header">
+        <h1>Lecture 01 — Introduction to Professional Practices</h1>
+        <p class="subtitle">Building the foundation for ethical, responsible, and effective computing professionals</p>
+      </header>
+      <section class="objectives glass">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Define professional practices in the context of computing disciplines</li>
+          <li>Explain why professional ethics matter for CS, SE, DS, AI, and Cybersecurity</li>
+          <li>Identify the stakeholders affected by computing decisions</li>
+          <li>Describe the relationship between technical competence and professional responsibility</li>
+          <li>Recognize common ethical dilemmas in modern technology work</li>
+        </ul>
+      </section>
+      <section class="intro glass">
+        <h2>Introduction</h2>
+        <p>Computing is no longer a purely technical craft. Every line of code, every data pipeline, every model deployment, and every security configuration has the potential to affect people’s privacy, safety, livelihoods, and rights. Professional Practices in Computing prepares you to make those decisions with awareness, integrity, and accountability.</p>
+        <p>This course integrates perspectives from software engineering, data science, artificial intelligence, cybersecurity, and the broader digital society. You will learn to reason about ethics, law, business impact, and societal consequences while remaining grounded in the day-to-day realities of professional work.</p>
+      </section>
+      <section class="motivation glass">
+        <h2>Motivation — Why This Course Matters</h2>
+        <p>High-profile failures — from biased hiring algorithms to large-scale data breaches and unsafe autonomous systems — show that technical excellence alone is insufficient. Employers, professional societies (ACM, IEEE), regulators, and the public increasingly expect computing graduates to demonstrate professional judgment.</p>
+        <p>By the end of this course you will be able to analyze real incidents, apply ethical frameworks, communicate recommendations, and act as a responsible professional in any computing role.</p>
+      </section>
+      <section class="real-story glass">
+        <h2>Real Story</h2>
+        <p>In 2018, a major social media platform faced intense scrutiny after it was revealed that personal data of millions of users had been harvested and used for political targeting without meaningful consent. Engineers and product managers who had built the underlying APIs and data-sharing features were forced to confront questions of responsibility that went far beyond the original technical specifications.</p>
+        <p>This case illustrates that design decisions made years earlier can have profound ethical and societal consequences. Professional practice requires anticipating such impacts.</p>
+      </section>
+      <section class="industrial glass">
+        <h2>Industrial Scenario</h2>
+        <p>You are a junior engineer on a team building a recommendation engine for a healthcare app. The product manager asks you to maximize engagement metrics. Your analysis shows that the current ranking may surface sensational or incomplete health information. How do you raise the concern? What professional obligations apply?</p>
+      </section>
+      <section class="perspectives glass">
+        <h2>Multi-Perspective Analysis</h2>
+        <div class="card-grid">
+          <div class="card"><h3>Ethical</h3><p>Respect for persons, non-maleficence, and justice require that systems do not systematically harm or mislead users.</p></div>
+          <div class="card"><h3>Legal</h3><p>Data protection regulations (GDPR, CCPA, and emerging AI laws) impose duties of transparency and accountability.</p></div>
+          <div class="card"><h3>Business</h3><p>Short-term engagement gains can destroy long-term trust and invite regulatory penalties or loss of users.</p></div>
+          <div class="card"><h3>AI / Data Science</h3><p>Model choices and training data shape outcomes; bias and lack of explainability create professional risk.</p></div>
+          <div class="card"><h3>Software Engineering</h3><p>Requirements, design, testing, and maintenance all carry professional responsibility for safety and quality.</p></div>
+          <div class="card"><h3>Cybersecurity</h3><p>Protecting confidentiality, integrity, and availability is a core professional duty.</p></div>
+        </div>
+      </section>
+      <section class="quiz glass">
+        <h2>Knowledge Check</h2>
+        <div class="quiz-question" data-correct="1">
+          <p>Which statement best captures the scope of professional practices in computing?</p>
+          <label><input type="radio" name="q1" value="0"> It is limited to following the company code of conduct.</label>
+          <label><input type="radio" name="q1" value="1"> It includes ethical, legal, social, and technical responsibilities toward all stakeholders.</label>
+          <label><input type="radio" name="q1" value="2"> It mainly concerns writing clean code and meeting deadlines.</label>
+        </div>
+      </section>
+      <section class="reflection glass">
+        <h2>Reflection</h2>
+        <p>Think of a recent technology news story. Identify the professional practice issues involved and the stakeholders who were affected. What would you have done differently if you had been on the team?</p>
+      </section>
+      <section class="summary glass">
+        <h2>Summary</h2>
+        <ul>
+          <li>Professional practice goes beyond technical skill.</li>
+          <li>Computing decisions affect individuals, organizations, and society.</li>
+          <li>Multiple perspectives (ethical, legal, business, AI, SE, security) are required for sound judgment.</li>
+          <li>This course builds the habits of analysis, communication, and responsibility expected of computing professionals.</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <script>
+    // Basic quiz wiring (full engine in main.js)
+    document.querySelectorAll('.quiz-question').forEach(q => {
+      q.addEventListener('change', e => {
+        if (e.target.name) {
+          const correct = q.dataset.correct;
+          const selected = e.target.value;
+          q.classList.toggle('correct', selected === correct);
+          q.classList.toggle('incorrect', selected !== correct);
+        }
+      });
+    });
+  </script>
 </body>
 </html>
