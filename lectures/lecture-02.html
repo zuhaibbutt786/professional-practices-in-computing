@@ -3,15 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 02: History of the Computing Profession & Codes of Ethics — Evolution of professional identity, ACM/IEEE codes, and lessons from historical failures." />
-  <title>Lecture 02 · History of the Profession & Codes | Professional Practices in Computing</title>
+  <meta name="description" content="Lecture 02: History of the Computing Profession & Codes of Ethics — Evolution of professional identity, early codes, ACM/IEEE milestones, and why history matters for modern practice." />
+  <title>Lecture 02 — History & Codes | Professional Practices in Computing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <!-- NAVBAR -->
   <nav class="navbar">
     <a href="../index.html" class="navbar-brand">
       <div class="logo">PPC</div>
@@ -19,38 +18,33 @@
     </a>
     <div class="nav-actions">
       <div class="search-box">
-        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-        <input type="search" placeholder="Search course…" id="searchInput" />
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="search-input" placeholder="Search..." aria-label="Search" />
       </div>
-      <button class="btn-icon" id="themeToggle" title="Toggle theme" aria-label="Toggle dark/light mode">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
-      </button>
-      <button class="btn-icon" id="sidebarToggle" title="Toggle sidebar" aria-label="Toggle sidebar">
-        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
       </button>
     </div>
   </nav>
 
-  <!-- SIDEBAR -->
+  <div class="overlay" id="overlay"></div>
+
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-section">
       <div class="sidebar-title">Course</div>
-      <a href="../index.html" class="sidebar-link">Home</a>
-      <a href="../index.html#about" class="sidebar-link">About</a>
-      <a href="../index.html#outcomes" class="sidebar-link">Learning Outcomes</a>
+      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
     </div>
     <div class="sidebar-section">
-      <div class="sidebar-title">Lectures</div>
-      <a href="lecture-01.html" class="sidebar-link"><span class="num">01</span> Introduction</a>
-      <a href="lecture-02.html" class="sidebar-link active"><span class="num">02</span> History & Codes</a>
-      <a href="lecture-03.html" class="sidebar-link"><span class="num">03</span> Ethical Theories</a>
-      <a href="lecture-04.html" class="sidebar-link"><span class="num">04</span> ACM & IEEE</a>
-      <a href="lecture-05.html" class="sidebar-link"><span class="num">05</span> Responsibility</a>
+      <div class="sidebar-title">Current Module</div>
+      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link active" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
     </div>
   </aside>
-  <div class="overlay" id="overlay"></div>
 
-  <!-- MAIN -->
   <div class="main-wrapper" id="mainWrapper">
     <div class="content">
       <nav class="breadcrumbs">
@@ -101,8 +95,205 @@
         </div>
       </section>
 
-      <!-- PLACEHOLDER FOR FULL CONTENT - will use full local file -->
-      <section class="section"><p>Loading full module…</p></section>
+      <section class="section" id="story">
+        <div class="section-header">
+          <div class="section-icon">📰</div>
+          <h2>Real Story: Therac-25</h2>
+        </div>
+        <div class="card">
+          <p>Between 1985 and 1987 the Therac-25 radiation therapy machine delivered massive overdoses to several patients. Investigation revealed software race conditions, inadequate hardware interlocks, poor user-interface design, and a culture that treated software as secondary to mechanical engineering. Operators and engineers lacked clear professional channels and shared standards for raising safety concerns about software behavior.</p>
+          <p>The case became a canonical teaching example in software engineering ethics. It demonstrated that technical competence without systematic attention to safety, verification, and communication of residual risk produces preventable harm. Modern codes explicitly elevate public safety, thorough evaluation, and honest communication of limitations—principles that were still consolidating when Therac-25 was fielded.</p>
+          <p><strong>Professional lesson:</strong> Historical failures are not ancient history; they are the reason contemporary codes contain the clauses they do.</p>
+        </div>
+      </section>
+
+      <section class="section" id="history">
+        <div class="section-header">
+          <div class="section-icon">⏳</div>
+          <h2>Historical Arc of Professionalization</h2>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1940s–1950s</div>
+            <p>Computing as scientific instrument and military tool. Professional identity still forming; early ACM (1947) and IEEE Computer Society roots.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1960s–1970s</div>
+            <p>Software crisis. Cost and reliability failures in large systems. ACM and IEEE begin formalizing codes of ethics and educational recommendations.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1980s–1990s</div>
+            <p>Personal computing and the internet. Privacy, intellectual property, liability, and safety-critical systems intensify the need for shared standards.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2000s–present</div>
+            <p>Platform scale, AI, data science, and cyber-physical systems. Codes are updated (ACM 2018) and interpreted for new domains.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="industrial">
+        <div class="section-header">
+          <div class="section-icon">🏭</div>
+          <h2>Industrial Scenario</h2>
+        </div>
+        <div class="activity-card">
+          <h4>Scenario: Pressure to Ship Before Code Review Completes</h4>
+          <p>You are a mid-level engineer on a team building a medical-device companion app. A major hospital customer has a go-live date in three weeks. The remaining open issues include incomplete hazard analysis documentation and two unresolved edge cases in the dose-calculation path. Your manager asks the team to “document the residual risk and ship; we can patch later.”</p>
+          <p><strong>Discussion prompts:</strong></p>
+          <ol style="margin:0.5rem 0 0 1.25rem; color:var(--text-secondary);">
+            <li>Which historical lessons (Therac-25 or others) are relevant?</li>
+            <li>Which principles from ACM or IEEE codes give you language to push back constructively?</li>
+            <li>What documentation and escalation steps would a professional take?</li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" id="case-study">
+        <div class="section-header">
+          <div class="section-icon">📁</div>
+          <h2>Case Study: From Therac-25 to Modern Codes</h2>
+        </div>
+        <div class="card">
+          <p><strong>Background:</strong> The Therac-25 accidents (1985–1987) exposed race conditions, missing hardware interlocks, and weak software safety culture in a radiation therapy system.</p>
+          <p><strong>Ethical issue:</strong> Prioritizing schedule and cost over rigorous verification of safety-critical software; insufficient channels for operators to escalate software concerns.</p>
+          <p><strong>Legal & business impact:</strong> Patient harm, lawsuits, regulatory scrutiny, and lasting reputational damage to the manufacturer and the broader medical-device software community.</p>
+          <p><strong>Technical lessons:</strong> Independent safety analysis, defensive design, clear separation of critical paths, and thorough testing of concurrent behavior are non-negotiable.</p>
+          <p><strong>Professional lessons:</strong> Codes now explicitly require public safety, honest communication of residual risk, and refusal to release systems whose hazards have not been adequately characterized.</p>
+          <p><strong>Discussion:</strong> How would you map ACM Code principles to the decisions that led to the Therac-25 failures? What escalation path would you document today?</p>
+        </div>
+      </section>
+
+      <section class="section" id="perspectives">
+        <div class="section-header">
+          <div class="section-icon">🔭</div>
+          <h2>Multi-Perspective View</h2>
+        </div>
+        <div class="perspective-grid">
+          <div class="perspective-card">
+            <h4>🛠️ Software Engineering</h4>
+            <p>Codes reinforce process discipline, truthful status reporting, independent review, and refusing to release systems whose residual risk has not been adequately characterized.</p>
+          </div>
+          <div class="perspective-card">
+            <h4>🤖 AI & Data Science</h4>
+            <p>Modern interpretations extend classic principles to dataset bias, model opacity, feedback loops, and the duty to document limitations of predictive systems.</p>
+          </div>
+          <div class="perspective-card">
+            <h4>🔒 Cybersecurity</h4>
+            <p>Responsible disclosure, authorization boundaries, and dual-use awareness appear as applications of honesty, public interest, and “access only when authorized.”</p>
+          </div>
+          <div class="perspective-card">
+            <h4>💼 Business & Legal</h4>
+            <p>Codes support duty-of-care arguments and influence how organizations structure escalation, post-incident review, and external communication of risk.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="concepts">
+        <div class="section-header">
+          <div class="section-icon">💡</div>
+          <h2>Key Concepts / Cheat Sheet</h2>
+        </div>
+        <div class="cheatsheet">
+          <div class="cheatsheet-item"><strong>Professionalization</strong><span>The process by which an occupation develops specialized knowledge, education standards, codes, and mechanisms of self-regulation.</span></div>
+          <div class="cheatsheet-item"><strong>Code of ethics</strong><span>A formal statement of values and expected conduct for members of a profession; a living document refined by experience.</span></div>
+          <div class="cheatsheet-item"><strong>Public interest</strong><span>The welfare of society as a whole, prioritized over narrow private or organizational gain in professional codes.</span></div>
+          <div class="cheatsheet-item"><strong>Competence</strong><span>The obligation to maintain and apply the knowledge and skill required for the work one undertakes, and to acknowledge limits.</span></div>
+          <div class="cheatsheet-item"><strong>Due care</strong><span>The standard of care a reasonable professional would exercise under similar circumstances, informed by codes and historical lessons.</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="glossary">
+        <div class="section-header">
+          <div class="section-icon">📖</div>
+          <h2>Glossary</h2>
+        </div>
+        <div class="cheatsheet">
+          <div class="cheatsheet-item"><strong>ACM</strong><span>Association for Computing Machinery — leading professional society; publishes Code of Ethics and professional recommendations.</span></div>
+          <div class="cheatsheet-item"><strong>IEEE CS</strong><span>IEEE Computer Society — partner in software engineering standards and ethics guidance.</span></div>
+          <div class="cheatsheet-item"><strong>Therac-25</strong><span>Radiation therapy machine whose software-related overdoses (1985–87) became a landmark case in software safety and professional responsibility.</span></div>
+          <div class="cheatsheet-item"><strong>Software crisis</strong><span>1960s–70s recognition that large software projects frequently exceeded budgets, schedules, and reliability expectations.</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="quiz">
+        <div class="section-header">
+          <div class="section-icon">✅</div>
+          <h2>Knowledge Check</h2>
+        </div>
+        <div class="quiz-container" id="quiz1">
+          <div class="quiz-question">1. Codes of ethics in computing primarily emerged because:</div>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Governments required them by law from the start of the industry.</div>
+            <div class="quiz-option" data-correct="true">Growing societal impact and repeated failures demanded shared professional standards.</div>
+            <div class="quiz-option" data-correct="false">They replace the need for technical testing and verification.</div>
+            <div class="quiz-option" data-correct="false">They were written mainly to protect companies from liability.</div>
+          </div>
+          <div class="quiz-feedback" id="feedback1"></div>
+        </div>
+        <div class="quiz-container" id="quiz2">
+          <div class="quiz-question">2. A recurring theme across ACM and IEEE codes is:</div>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Maximizing shareholder value above all else.</div>
+            <div class="quiz-option" data-correct="false">Avoiding all innovation risk.</div>
+            <div class="quiz-option" data-correct="true">Prioritizing the public interest and honest communication of limitations.</div>
+            <div class="quiz-option" data-correct="false">Requiring every practitioner to hold a specific certification.</div>
+          </div>
+          <div class="quiz-feedback" id="feedback2"></div>
+        </div>
+      </section>
+
+      <section class="section" id="assignment">
+        <div class="section-header">
+          <div class="section-icon">📝</div>
+          <h2>Assignment</h2>
+        </div>
+        <div class="activity-card">
+          <h4>Write a Professional Brief (400–600 words)</h4>
+          <p>Choose one historical failure (Therac-25, Ariane 5 Flight 501, or a privacy scandal of your choice). Map at least three principles from the ACM or IEEE Code of Ethics to decisions or omissions that contributed to the failure. Conclude with two concrete practices an early-career engineer could adopt to reduce similar risk today.</p>
+          <p>Submit as a markdown or PDF file. Cite the code sections you reference.</p>
+        </div>
+      </section>
+
+      <section class="section" id="reflection">
+        <div class="section-header">
+          <div class="section-icon">🪞</div>
+          <h2>Reflection</h2>
+        </div>
+        <div class="reflection-box">
+          <p><strong>Personal prompt:</strong> Which historical failure most clearly illustrates the need for a professional code in your view? How might an early-career engineer use a code of ethics when facing pressure to ship incomplete work? Write 5–8 sentences.</p>
+          <textarea placeholder="Your reflection (saved locally in this browser)…" id="reflectionText"></textarea>
+          <button class="btn btn-primary btn-sm mt-2" onclick="saveReflection()">Save locally</button>
+        </div>
+      </section>
+
+      <section class="section" id="summary">
+        <div class="section-header">
+          <div class="section-icon">📋</div>
+          <h2>Summary</h2>
+        </div>
+        <ul style="margin-left:1.25rem; color:var(--text-secondary);">
+          <li>The computing profession developed codes of ethics in response to growing societal impact and repeated failures.</li>
+          <li>Public interest, competence, honesty, and fairness are recurring themes.</li>
+          <li>Historical cases such as Therac-25 directly informed modern emphasis on safety, verification, and communication of residual risk.</li>
+          <li>Codes remain living documents that guide judgment, training, and accountability across SE, AI, data, and security practice.</li>
+          <li>Use codes as decision aids and shared language, not as checklists to be filed away.</li>
+        </ul>
+      </section>
+
+      <section class="section" id="reading">
+        <div class="section-header">
+          <div class="section-icon">📚</div>
+          <h2>Further Reading</h2>
+        </div>
+        <ul style="margin-left:1.25rem; color:var(--text-secondary);">
+          <li>ACM Code of Ethics and Professional Conduct (2018)</li>
+          <li>IEEE Code of Ethics</li>
+          <li>Nancy Leveson — accounts of the Therac-25 accidents</li>
+          <li>Sara Baase — <em>A Gift of Fire</em>, chapters on professional ethics and historical cases</li>
+          <li>Michael Quinn — <em>Ethics for the Information Age</em>, chapters on professional ethics</li>
+        </ul>
+      </section>
 
       <div class="site-footer">
         <p>Professional Practices in Computing · Lecture 02</p>
@@ -112,5 +303,33 @@
   </div>
 
   <script src="../js/main.js"></script>
+  <script>
+    document.querySelectorAll('.quiz-option').forEach(opt => {
+      opt.addEventListener('click', function() {
+        const container = this.closest('.quiz-container');
+        const options = container.querySelectorAll('.quiz-option');
+        const feedback = container.querySelector('.quiz-feedback');
+        options.forEach(o => o.classList.remove('selected', 'correct', 'incorrect'));
+        this.classList.add('selected');
+        const isCorrect = this.dataset.correct === 'true';
+        if (isCorrect) {
+          this.classList.add('correct');
+          feedback.textContent = 'Correct.';
+          feedback.className = 'quiz-feedback show correct';
+        } else {
+          this.classList.add('incorrect');
+          feedback.textContent = 'Not quite. Re-read the historical motivation for codes.';
+          feedback.className = 'quiz-feedback show incorrect';
+        }
+      });
+    });
+    function saveReflection() {
+      const text = document.getElementById('reflectionText').value;
+      localStorage.setItem('ppc-l02-reflection', text);
+      alert('Reflection saved locally in this browser.');
+    }
+    const saved = localStorage.getItem('ppc-l02-reflection');
+    if (saved) document.getElementById('reflectionText').value = saved;
+  </script>
 </body>
 </html>
