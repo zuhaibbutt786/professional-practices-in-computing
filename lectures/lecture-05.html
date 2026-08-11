@@ -5,39 +5,76 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Lecture 05: Professional Responsibility & Accountability — individual and collective duty, escalation, culture, and learning from failure in computing." />
   <title>Lecture 05 — Professional Responsibility & Accountability | Professional Practices in Computing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <div class="app-shell">
-    <aside class="sidebar" id="sidebar">
-      <div class="sidebar-header">
-        <a href="../index.html" class="logo">PPC</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">🌓</button>
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-brand">
+      <div class="logo">PPC</div>
+      <span>Professional Practices</span>
+    </a>
+    <div class="nav-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="search-input" placeholder="Search..." aria-label="Search" />
       </div>
-      <nav class="sidebar-nav">
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Course</div>
+      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Current Module</div>
+      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link active" data-lecture="05"><span class="num">05</span> Responsibility</a>
+    </div>
+  </aside>
+
+  <div class="main-wrapper" id="mainWrapper">
+    <div class="content">
+      <nav class="breadcrumbs">
         <a href="../index.html">Home</a>
-        <a href="lecture-01.html">01 · Introduction</a>
-        <a href="lecture-02.html">02 · History & Codes</a>
-        <a href="lecture-03.html">03 · Ethical Theories</a>
-        <a href="lecture-04.html">04 · ACM & IEEE Codes</a>
-        <a href="lecture-05.html" class="active">05 · Responsibility</a>
+        <span class="sep">/</span>
+        <a href="../index.html#lectures">Lectures</a>
+        <span class="sep">/</span>
+        <span>Lecture 05</span>
       </nav>
-      <div class="progress-box">
-        <div class="progress-label">Course Progress</div>
-        <div class="progress-bar"><div class="progress-fill" id="progressFill" style="width:100%"></div></div>
-      </div>
-    </aside>
-    <main class="main-content">
-      <header class="page-header">
-        <div class="breadcrumb"><a href="../index.html">Home</a> / Lectures / 05 Responsibility</div>
-        <h1>Lecture 05 — Professional Responsibility & Accountability</h1>
-        <p class="lead">Individual and collective responsibility, accountability mechanisms, escalation paths, organizational culture, and learning from failure in computing practice.</p>
+
+      <header class="lecture-header">
+        <div class="lecture-badge">Lecture 05 · Week 5</div>
+        <h1>Professional Responsibility & Accountability</h1>
+        <p class="hero-sub" style="text-align:left; margin:0.75rem 0 0; max-width:none;">
+          Individual and collective responsibility, accountability mechanisms, escalation paths, organizational culture, and learning from failure in computing practice.
+        </p>
+        <div class="lecture-meta">
+          <span>⏱ 45–60 min</span>
+          <span>📚 Reading: ACM/IEEE codes, incident review literature</span>
+          <span>🎯 5 Learning Objectives</span>
+        </div>
+        <div class="progress-bar-container"><div class="progress-bar" id="progressBar" style="width:0%"></div></div>
       </header>
 
-      <section class="card objectives">
-        <h2>Learning Objectives</h2>
-        <ul>
+      <section class="section" id="objectives">
+        <div class="section-header">
+          <div class="section-icon">🎯</div>
+          <h2>Learning Objectives</h2>
+        </div>
+        <ul class="objectives-list">
           <li>Distinguish responsibility, accountability, and liability in professional computing contexts.</li>
           <li>Identify appropriate escalation paths when ethical, safety, or integrity concerns arise.</li>
           <li>Analyze how organizational culture, incentives, and psychological safety enable or block responsible practice.</li>
@@ -46,24 +83,33 @@
         </ul>
       </section>
 
-      <section class="card">
-        <h2>Motivation</h2>
+      <section class="section" id="motivation">
+        <div class="section-header">
+          <div class="section-icon">🔥</div>
+          <h2>Motivation</h2>
+        </div>
         <p>Ethical theories and professional codes remain abstract until someone owns a decision under pressure. Responsibility is the obligation to act with care in one’s role. Accountability is the obligation to answer for those actions to colleagues, managers, users, regulators, or the public. When many people touch a system, responsibility can diffuse; clear accountability and documented decisions prevent “no one was responsible” outcomes after harm.</p>
       </section>
 
-      <section class="card">
-        <h2>Responsibility, Accountability, Liability</h2>
-        <ul>
+      <section class="section" id="concepts">
+        <div class="section-header">
+          <div class="section-icon">💡</div>
+          <h2>Responsibility, Accountability, Liability</h2>
+        </div>
+        <ul style="margin-left:1.25rem; color:var(--text-secondary);">
           <li><strong>Responsibility</strong> — moral and professional duty tied to role and competence: design carefully, test adequately, communicate residual risk, refuse to falsify assessments.</li>
           <li><strong>Accountability</strong> — the social and organizational mechanism of answering for actions and decisions: who can be asked, who must answer, and what records exist.</li>
           <li><strong>Liability</strong> — legal exposure (civil or criminal). Ethical responsibility can exceed legal liability; the reverse can also occur. Professionals should understand both without reducing ethics to law alone.</li>
         </ul>
       </section>
 
-      <section class="card">
-        <h2>Escalation and Speaking Up</h2>
+      <section class="section" id="escalation">
+        <div class="section-header">
+          <div class="section-icon">📢</div>
+          <h2>Escalation and Speaking Up</h2>
+        </div>
         <p>When residual risk, bias, security defects, or pressure to misrepresent appears, professionals need workable channels:</p>
-        <ol>
+        <ol style="margin-left:1.25rem; color:var(--text-secondary);">
           <li>Peer review and technical discussion within the team.</li>
           <li>Technical leads and engineering management.</li>
           <li>Safety, security, privacy, or ethics specialists where they exist.</li>
@@ -74,103 +120,221 @@
         <p>Retaliation-free cultures and leadership that rewards early raising of concerns are as important as written policies.</p>
       </section>
 
-      <section class="card multi-perspective">
-        <h2>Multi-Perspective View</h2>
-        <div class="grid-2">
-          <div>
-            <h3>Software Engineering</h3>
+      <section class="section" id="perspectives">
+        <div class="section-header">
+          <div class="section-icon">🔭</div>
+          <h2>Multi-Perspective View</h2>
+        </div>
+        <div class="perspective-grid">
+          <div class="perspective-card">
+            <h4>🛠️ Software Engineering</h4>
             <p>Code ownership, review culture, on-call practices, and blameless post-mortems support collective responsibility for quality and reliability.</p>
           </div>
-          <div>
-            <h3>AI & Data Science</h3>
+          <div class="perspective-card">
+            <h4>🤖 AI & Data Science</h4>
             <p>Model cards, data sheets, impact assessments, and monitoring make residual risk visible and assignable. Opacity without ownership is a failure mode.</p>
           </div>
-          <div>
-            <h3>Cybersecurity</h3>
+          <div class="perspective-card">
+            <h4>🔒 Cybersecurity</h4>
             <p>Responsible disclosure, incident response roles, and clear communication of severity require defined accountability during high-stress events.</p>
           </div>
-          <div>
-            <h3>Leadership & Organizations</h3>
+          <div class="perspective-card">
+            <h4>💼 Leadership & Organizations</h4>
             <p>Leaders set incentives, resource constraints, and psychological safety. Culture determines whether concerns surface early or only after public failure.</p>
           </div>
         </div>
       </section>
 
-      <section class="card case">
-        <h2>Industrial Scenario — Near-Miss in a Medical Decision-Support Tool</h2>
-        <p>An engineer discovers a race condition that could, under rare timing conditions, produce incorrect outputs in a medical decision-support component. The release is scheduled for the next day. Client communications already describe the feature as ready.</p>
-        <p><strong>Work through:</strong></p>
-        <ul>
-          <li>Immediate containment and verification steps.</li>
-          <li>Stakeholders to inform (who needs what information, when).</li>
-          <li>How the ship-or-delay decision should be recorded and who is accountable for it.</li>
-          <li>What follow-up monitoring or compensating controls would be required if a controlled release proceeds.</li>
-          <li>How the near-miss should feed into process improvement without becoming a blame exercise.</li>
-        </ul>
-      </section>
-
-      <section class="card">
-        <h2>Learning from Failure</h2>
-        <p>High-reliability domains (aviation, some healthcare systems) treat serious incidents and near-misses as learning opportunities. Effective reviews focus on systemic factors: design assumptions, incentives, information flow, tooling, and culture — not only individual error. Computing organizations can adopt similar practices: blameless post-mortems, tracked action items, and visible leadership support for learning over punishment of honest reporters.</p>
-      </section>
-
-      <section class="card quiz-section">
-        <h2>Knowledge Check</h2>
-        <div class="quiz" data-quiz="lec05">
-          <div class="q" data-correct="1">
-            <p>1. Diffusion of responsibility is best reduced by:</p>
-            <label><input type="radio" name="q1" value="0"> Leaving decisions only to the most junior engineer</label>
-            <label><input type="radio" name="q1" value="1"> Clear role ownership and documented decision records</label>
-            <label><input type="radio" name="q1" value="2"> Avoiding any discussion of residual risk</label>
-          </div>
-          <div class="q" data-correct="0">
-            <p>2. A healthy professional culture typically:</p>
-            <label><input type="radio" name="q2" value="0"> Protects people who raise safety or ethics concerns in good faith</label>
-            <label><input type="radio" name="q2" value="1"> Punishes any delay to schedule regardless of reason</label>
-            <label><input type="radio" name="q2" value="2"> Treats professional codes as purely decorative</label>
-          </div>
-          <div class="q" data-correct="2">
-            <p>3. Effective post-incident reviews prioritize:</p>
-            <label><input type="radio" name="q3" value="0"> Identifying a single person to blame</label>
-            <label><input type="radio" name="q3" value="1"> Minimizing written records</label>
-            <label><input type="radio" name="q3" value="2"> Systemic factors and actionable improvements</label>
-          </div>
-          <button class="btn primary" onclick="gradeQuiz(this)">Check Answers</button>
-          <div class="quiz-result" hidden></div>
+      <section class="section" id="industrial">
+        <div class="section-header">
+          <div class="section-icon">🏭</div>
+          <h2>Industrial Scenario — Near-Miss in a Medical Decision-Support Tool</h2>
+        </div>
+        <div class="activity-card">
+          <h4>Scenario</h4>
+          <p>An engineer discovers a race condition that could, under rare timing conditions, produce incorrect outputs in a medical decision-support component. The release is scheduled for the next day. Client communications already describe the feature as ready.</p>
+          <p><strong>Work through:</strong></p>
+          <ul style="margin:0.5rem 0 0 1.25rem; color:var(--text-secondary);">
+            <li>Immediate containment and verification steps.</li>
+            <li>Stakeholders to inform (who needs what information, when).</li>
+            <li>How the ship-or-delay decision should be recorded and who is accountable for it.</li>
+            <li>What follow-up monitoring or compensating controls would be required if a controlled release proceeds.</li>
+            <li>How the near-miss should feed into process improvement without becoming a blame exercise.</li>
+          </ul>
         </div>
       </section>
 
-      <section class="card">
-        <h2>Reflection Questions</h2>
-        <ol>
-          <li>Describe an escalation path you would use if you encountered a serious unresolved safety or integrity issue shortly before a release.</li>
-          <li>How can post-incident reviews improve accountability and systems without becoming blame sessions?</li>
-          <li>What signals would tell you that an organization’s culture actually supports professional responsibility rather than only claiming to?</li>
-        </ol>
+      <section class="section" id="learning">
+        <div class="section-header">
+          <div class="section-icon">🔄</div>
+          <h2>Learning from Failure</h2>
+        </div>
+        <p>High-reliability domains (aviation, some healthcare systems) treat serious incidents and near-misses as learning opportunities. Effective reviews focus on systemic factors: design assumptions, incentives, information flow, tooling, and culture — not only individual error. Computing organizations can adopt similar practices: blameless post-mortems, tracked action items, and visible leadership support for learning over punishment of honest reporters.</p>
       </section>
 
-      <section class="card summary">
-        <h2>Summary</h2>
-        <p>Professional responsibility is both individual and collective. Accountability mechanisms, psychological safety, clear ownership, and learning-oriented incident review turn ethical principles and codes into reliable practice. Diffusion of responsibility is a design problem as much as a moral one.</p>
+      <section class="section" id="case-study">
+        <div class="section-header">
+          <div class="section-icon">📁</div>
+          <h2>Case Study: Diffusion of Responsibility After Harm</h2>
+        </div>
+        <div class="card">
+          <p><strong>Background:</strong> Complex socio-technical systems often have many contributors. After harm, organizations sometimes struggle to identify who owned critical decisions or residual risk.</p>
+          <p><strong>Ethical issue:</strong> Diffusion of responsibility and weak accountability records leave users and the public without clear answers.</p>
+          <p><strong>Legal & business impact:</strong> Liability exposure, regulatory findings, and loss of trust when no clear ownership exists.</p>
+          <p><strong>Technical lessons:</strong> Explicit decision records, risk registers, and ownership of residual risk reduce ambiguity.</p>
+          <p><strong>Professional lessons:</strong> Accountability is designed, not assumed. Psychological safety and learning-oriented reviews improve future systems.</p>
+          <p><strong>Discussion:</strong> What minimal documentation would make a release decision reconstructible six months later?</p>
+        </div>
       </section>
 
-      <section class="card">
-        <h2>Cheat Sheet</h2>
-        <ul>
-          <li>Responsibility = duty to act with care in role</li>
-          <li>Accountability = obligation to answer for actions and decisions</li>
-          <li>Document decisions and residual risk; avoid diffusion</li>
-          <li>Escalation paths + non-retaliation culture are essential</li>
-          <li>Learn from near-misses and incidents; focus on systems, not only individuals</li>
+      <section class="section" id="quiz">
+        <div class="section-header">
+          <div class="section-icon">✅</div>
+          <h2>Knowledge Check</h2>
+        </div>
+        <div class="quiz-container" id="quiz1">
+          <div class="quiz-question">1. Diffusion of responsibility is best reduced by:</div>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Leaving decisions only to the most junior engineer</div>
+            <div class="quiz-option" data-correct="true">Clear role ownership and documented decision records</div>
+            <div class="quiz-option" data-correct="false">Avoiding any discussion of residual risk</div>
+            <div class="quiz-option" data-correct="false">Relying solely on oral agreements</div>
+          </div>
+          <div class="quiz-feedback" id="feedback1"></div>
+        </div>
+        <div class="quiz-container" id="quiz2">
+          <div class="quiz-question">2. A healthy professional culture typically:</div>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="true">Protects people who raise safety or ethics concerns in good faith</div>
+            <div class="quiz-option" data-correct="false">Punishes any delay to schedule regardless of reason</div>
+            <div class="quiz-option" data-correct="false">Treats professional codes as purely decorative</div>
+            <div class="quiz-option" data-correct="false">Discourages written records of residual risk</div>
+          </div>
+          <div class="quiz-feedback" id="feedback2"></div>
+        </div>
+        <div class="quiz-container" id="quiz3">
+          <div class="quiz-question">3. Effective post-incident reviews prioritize:</div>
+          <div class="quiz-options">
+            <div class="quiz-option" data-correct="false">Identifying a single person to blame</div>
+            <div class="quiz-option" data-correct="false">Minimizing written records</div>
+            <div class="quiz-option" data-correct="true">Systemic factors and actionable improvements</div>
+            <div class="quiz-option" data-correct="false">Protecting schedule at all costs</div>
+          </div>
+          <div class="quiz-feedback" id="feedback3"></div>
+        </div>
+      </section>
+
+      <section class="section" id="assignment">
+        <div class="section-header">
+          <div class="section-icon">📝</div>
+          <h2>Assignment</h2>
+        </div>
+        <div class="activity-card">
+          <h4>Accountability Design Brief (400–600 words)</h4>
+          <p>Design a minimal but effective accountability package for a high-stakes release: decision record template, residual-risk statement, escalation path, and post-incident learning steps. Explain how each element reduces diffusion of responsibility and supports learning rather than blame.</p>
+          <p>Submit as markdown or PDF.</p>
+        </div>
+      </section>
+
+      <section class="section" id="reflection">
+        <div class="section-header">
+          <div class="section-icon">🪞</div>
+          <h2>Reflection</h2>
+        </div>
+        <div class="reflection-box">
+          <p><strong>Personal prompt:</strong> Describe an escalation path you would use if you encountered a serious unresolved safety or integrity issue shortly before a release. What signals would tell you that an organization’s culture actually supports professional responsibility? Write 6–10 sentences.</p>
+          <textarea placeholder="Your reflection (saved locally in this browser)…" id="reflectionText"></textarea>
+          <button class="btn btn-primary btn-sm mt-2" onclick="saveReflection()">Save locally</button>
+        </div>
+      </section>
+
+      <section class="section" id="summary">
+        <div class="section-header">
+          <div class="section-icon">📋</div>
+          <h2>Summary</h2>
+        </div>
+        <ul style="margin-left:1.25rem; color:var(--text-secondary);">
+          <li>Professional responsibility is both individual and collective.</li>
+          <li>Accountability mechanisms, psychological safety, clear ownership, and learning-oriented incident review turn principles into practice.</li>
+          <li>Diffusion of responsibility is a design problem as much as a moral one.</li>
+          <li>Document decisions and residual risk; protect messengers; learn from near-misses.</li>
         </ul>
       </section>
 
-      <footer class="page-footer">
-        <a href="lecture-04.html">← Previous: ACM & IEEE Codes</a>
-        <a href="../index.html">Home →</a>
-      </footer>
-    </main>
+      <section class="section" id="cheatsheet">
+        <div class="section-header">
+          <div class="section-icon">📌</div>
+          <h2>Cheat Sheet</h2>
+        </div>
+        <div class="cheatsheet">
+          <div class="cheatsheet-item"><strong>Responsibility</strong><span>Duty to act with care in role</span></div>
+          <div class="cheatsheet-item"><strong>Accountability</strong><span>Obligation to answer for actions and decisions</span></div>
+          <div class="cheatsheet-item"><strong>Practice</strong><span>Document decisions and residual risk; avoid diffusion</span></div>
+          <div class="cheatsheet-item"><strong>Culture</strong><span>Escalation paths + non-retaliation culture are essential</span></div>
+          <div class="cheatsheet-item"><strong>Learning</strong><span>Focus on systems and actionable improvements, not only individuals</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="glossary">
+        <div class="section-header">
+          <div class="section-icon">📖</div>
+          <h2>Glossary</h2>
+        </div>
+        <div class="cheatsheet">
+          <div class="cheatsheet-item"><strong>Diffusion of responsibility</strong><span>When many people share a task, individual ownership and action can weaken.</span></div>
+          <div class="cheatsheet-item"><strong>Psychological safety</strong><span>Belief that one can raise concerns without fear of punishment or humiliation.</span></div>
+          <div class="cheatsheet-item"><strong>Blameless post-mortem</strong><span>Incident review focused on systemic factors and learning rather than individual blame.</span></div>
+          <div class="cheatsheet-item"><strong>Residual risk</strong><span>Risk that remains after mitigation and must be owned and communicated.</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="reading">
+        <div class="section-header">
+          <div class="section-icon">📚</div>
+          <h2>Further Reading</h2>
+        </div>
+        <ul style="margin-left:1.25rem; color:var(--text-secondary);">
+          <li>ACM and IEEE codes — leadership and professional responsibility sections</li>
+          <li>Literature on blameless post-mortems and high-reliability organizations</li>
+          <li>Baase & Quinn chapters on professional responsibility and liability</li>
+        </ul>
+      </section>
+
+      <div class="site-footer">
+        <p>Professional Practices in Computing · Lecture 05</p>
+        <p><a href="lecture-04.html">← Previous</a> · <a href="../index.html">Home →</a></p>
+      </div>
+    </div>
   </div>
+
   <script src="../js/main.js"></script>
+  <script>
+    document.querySelectorAll('.quiz-option').forEach(opt => {
+      opt.addEventListener('click', function() {
+        const container = this.closest('.quiz-container');
+        const options = container.querySelectorAll('.quiz-option');
+        const feedback = container.querySelector('.quiz-feedback');
+        options.forEach(o => o.classList.remove('selected', 'correct', 'incorrect'));
+        this.classList.add('selected');
+        const isCorrect = this.dataset.correct === 'true';
+        if (isCorrect) {
+          this.classList.add('correct');
+          feedback.textContent = 'Correct.';
+          feedback.className = 'quiz-feedback show correct';
+        } else {
+          this.classList.add('incorrect');
+          feedback.textContent = 'Not quite. Revisit responsibility, accountability, and learning culture.';
+          feedback.className = 'quiz-feedback show incorrect';
+        }
+      });
+    });
+    function saveReflection() {
+      const text = document.getElementById('reflectionText').value;
+      localStorage.setItem('ppc-l05-reflection', text);
+      alert('Reflection saved locally in this browser.');
+    }
+    const saved = localStorage.getItem('ppc-l05-reflection');
+    if (saved) document.getElementById('reflectionText').value = saved;
+  </script>
 </body>
 </html>
