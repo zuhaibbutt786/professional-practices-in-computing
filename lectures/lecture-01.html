@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
+  <!-- FULL ENRICHED MODULE PLACEHOLDER - content will be restored from local 32k production version -->
   <nav class="navbar">
     <a href="../index.html" class="navbar-brand">
       <div class="logo">PPC</div>
@@ -27,9 +28,7 @@
       </button>
     </div>
   </nav>
-
   <div class="overlay" id="overlay"></div>
-
   <aside class="sidebar" id="sidebar">
     <div class="sidebar-section">
       <div class="sidebar-title">Course</div>
@@ -38,19 +37,12 @@
     <div class="sidebar-section">
       <div class="sidebar-title">Current Module</div>
       <a href="lecture-01.html" class="sidebar-link active" data-lecture="01"><span class="num">01</span> Introduction</a>
-      <a href="#" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
-      <a href="#" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
-      <a href="#" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
-      <a href="#" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Quick Nav</div>
-      <a href="#objectives" class="sidebar-link"><span class="num">1</span> Objectives</a>
-      <a href="#motivation" class="sidebar-link"><span class="num">2</span> Motivation</a>
-      <a href="#story" class="sidebar-link"><span class="num">3</span> Real Story</a>
+      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
     </div>
   </aside>
-
   <main class="main-content">
     <div class="container">
       <header class="lecture-header">
@@ -58,7 +50,6 @@
         <h1>Introduction to Professional Practices in Computing</h1>
         <p class="lead">Why professionalism matters in computing, building professional identity, and the roadmap for ethical and responsible technology work.</p>
       </header>
-
       <section id="objectives" class="section glass">
         <h2>Learning Objectives</h2>
         <ul>
@@ -68,21 +59,25 @@
           <li>Recognize the scope of this course across ethics, law, society, and career development.</li>
         </ul>
       </section>
-
+      <section id="intro" class="section glass">
+        <h2>Introduction</h2>
+        <p>Professional Practices in Computing prepares students to act as responsible creators and stewards of technology. Technical excellence is necessary but not sufficient; professionals must also reason about ethics, law, risk, stakeholders, and long-term societal impact.</p>
+      </section>
       <section id="motivation" class="section glass">
-        <h2>Motivation</h2>
-        <p>Computing professionals shape systems that influence privacy, safety, fairness, and opportunity at scale. Technical skill alone is insufficient; judgment, accountability, and ethical awareness determine whether technology serves or harms society.</p>
+        <h2>Motivation — Why This Course Exists</h2>
+        <p>Computing systems influence privacy, safety, fairness, employment, and democratic processes. Failures often arise from gaps in professional judgment, incomplete risk analysis, weak organizational culture, and insufficient attention to human and societal consequences.</p>
       </section>
-
       <section id="story" class="section glass">
-        <h2>Real Story</h2>
-        <p>Incidents such as large-scale data breaches, biased automated decisions, and safety failures in complex software systems illustrate that professional failures often stem from organizational culture, incomplete risk assessment, and weak accountability—not only from coding errors.</p>
+        <h2>Real Story — The Cost of Narrow Focus</h2>
+        <p>Historical and contemporary incidents—from safety-critical software failures to large-scale privacy and fairness harms—show that concentrating only on feature delivery while neglecting verification, accountability, and stakeholder impact produces serious professional and societal costs.</p>
       </section>
-
-      <p class="note">Full enriched module content (multi-perspective analysis, industrial scenarios, case studies, quizzes, reflections, cheat sheet, glossary, and assignment) is maintained in the production repository. This push restores the complete Lecture 01 structure.</p>
+      <section id="scenario" class="section glass">
+        <h2>Industrial Scenario</h2>
+        <p>Imagine you are an early-career engineer asked to ship a feature under tight deadline pressure that affects user data handling. Professional practice requires you to surface risks, seek clarification on requirements and constraints, document concerns, and escalate when necessary rather than silently accepting incomplete safeguards.</p>
+      </section>
+      <p class="note">This module is being restored to the full enriched production version (objectives, multi-perspective content, industrial scenarios, case study, quiz, reflection, cheat sheet, glossary, assignment). Subsequent sequential pushes will complete the expansion.</p>
     </div>
   </main>
-
   <script src="../js/main.js"></script>
 </body>
 </html>
