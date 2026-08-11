@@ -1,6 +1,6 @@
 # Course Website Status
 
-**Last content push:** 2026-08-12 00:15 PKT
+**Last content push:** 2026-08-12 01:00 PKT
 
 ## Live
 https://zuhaibbutt786.github.io/professional-practices-in-computing/
@@ -11,10 +11,10 @@ https://zuhaibbutt786.github.io/professional-practices-in-computing/
 - css/styles.css (full glassmorphism dark/light, responsive, print — 17k)
 - js/main.js (theme, sidebar, progress, quiz engine, search)
 - lectures/lecture-01.html — Introduction to Professional Practices (**full enriched ~32k** production module)
-- lectures/lecture-02.html — History of the Profession & Codes (**full enriched production module** with Case Study, Cheat Sheet, Glossary, Assignment, Quiz, Reflection)
-- lectures/lecture-03.html — Ethical Theories & Decision Frameworks (**full enriched production module** with Case Study, Cheat Sheet, Glossary, Assignment, Quiz, Reflection)
-- lectures/lecture-04.html — ACM & IEEE Codes Deep Dive (**full enriched production module** with Case Study, Cheat Sheet, Glossary, Assignment, Quiz, Reflection)
-- lectures/lecture-05.html — Professional Responsibility & Accountability (**full enriched production module** with Case Study, Cheat Sheet, Glossary, Assignment, Quiz, Reflection)
+- lectures/lecture-02.html — History of the Profession & Codes (**full enriched ~31k** production module with Case Study, Cheat Sheet, Glossary, Assignment, Quiz, Reflection)
+- lectures/lecture-03.html — Ethical Theories & Decision Frameworks (**full enriched ~31k** production module with Case Study, Cheat Sheet, Glossary, Assignment, Quiz, Reflection)
+- lectures/lecture-04.html — ACM & IEEE Codes Deep Dive (**full enriched ~28k** production module with Case Study, Cheat Sheet, Glossary, Assignment, Quiz, Reflection)
+- lectures/lecture-05.html — Professional Responsibility & Accountability (**full enriched ~28k** production module with Case Study, Cheat Sheet, Glossary, Assignment, Quiz, Reflection)
 
 ## Notes
 - Index, CSS, JS, README production-ready.
