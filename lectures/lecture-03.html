@@ -3,16 +3,180 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 03 — Ethical Theories & Decision Frameworks | Professional Practices in Computing" />
+  <meta name="description" content="Lecture 03: Ethical Theories & Decision-Making Frameworks — Utilitarianism, deontology, virtue ethics, and practical frameworks for computing professionals." />
   <title>Lecture 03 — Ethical Theories | Professional Practices in Computing</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <div class="container" style="padding: 2rem; max-width: 800px; margin: 4rem auto;">
-    <h1>Lecture 03 — Ethical Theories & Decision Frameworks</h1>
-    <p>Full enriched production module (~31k) is being restored from local. Please refresh shortly or check STATUS.md.</p>
-    <p><a href="../index.html">← Back to Home</a></p>
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-brand">
+      <div class="logo">PPC</div>
+      <span>Professional Practices</span>
+    </a>
+    <div class="nav-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="search-input" placeholder="Search..." aria-label="Search" />
+      </div>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </nav>
+  <div class="overlay" id="overlay"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Course</div>
+      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Current Module</div>
+      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link active" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
+    </div>
+  </aside>
+  <div class="main-content">
+    <div class="content-wrapper">
+      <header class="lecture-header">
+        <div class="breadcrumb"><a href="../index.html">Home</a> / <span>Lecture 03</span></div>
+        <h1>Ethical Theories & Decision-Making Frameworks</h1>
+        <p class="lecture-subtitle">Classical ethical theories applied to computing, AI, data, and cybersecurity dilemmas.</p>
+        <div class="meta-row">
+          <span class="badge">Module 03</span>
+          <span class="badge">~50–65 min</span>
+          <span class="badge">Core Theory</span>
+        </div>
+      </header>
+      <section class="objectives glass-card">
+        <h2>Learning Objectives</h2>
+        <ul>
+          <li>Summarize utilitarianism, deontology, and virtue ethics in the context of computing decisions.</li>
+          <li>Apply at least one structured ethical decision framework to a realistic professional scenario.</li>
+          <li>Compare how different theories evaluate the same dilemma (privacy vs. security, accuracy vs. fairness).</li>
+          <li>Recognize the limits of pure theory when organizational incentives and incomplete information dominate.</li>
+          <li>Connect ethical theory to ACM/IEEE principles and emerging AI ethics guidance.</li>
+        </ul>
+      </section>
+      <section class="intro glass-card">
+        <h2>Introduction</h2>
+        <p>Professional codes tell you what the profession expects. Ethical theory helps you understand why those expectations exist and how to reason when codes conflict or are silent. Computing professionals routinely face trade-offs: release a model that is mostly accurate but biased against a minority group; log user behavior to improve safety while increasing surveillance risk; delay a security patch to meet a contractual deadline. Theory does not eliminate hard choices, but it supplies disciplined language and criteria.</p>
+      </section>
+      <section class="motivation glass-card">
+        <h2>Motivation</h2>
+        <p>Without shared frameworks, ethical discussion collapses into personal opinion or corporate policy. Students and practitioners need portable tools they can use in design reviews, incident post-mortems, and policy debates.</p>
+      </section>
+      <section class="real-story glass-card">
+        <h2>Real Story: The Trolley Problem Goes Digital</h2>
+        <p>Autonomous vehicle ethics popularized simplified trolley dilemmas. Real systems involve probabilistic harm, distributed responsibility, training-data choices, and regulatory constraints. Classical theories still illuminate the stakes, but they must be adapted to scale, opacity, and multi-agent settings.</p>
+      </section>
+      <section class="industrial glass-card">
+        <h2>Industrial Scenario</h2>
+        <p>Your team trains a hiring screening model. Validation shows higher false-negative rates for candidates from certain demographic groups. Shipping on schedule would improve short-term revenue metrics. Delaying for fairness work risks missing a market window. How would a utilitarian, a deontologist, and a virtue ethicist each approach the decision? What process would you recommend?</p>
+      </section>
+      <section class="case-study glass-card">
+        <h2>Case Study: Bias, Utility, and Duty</h2>
+        <p><strong>Background.</strong> A predictive policing tool reduces average response time but concentrates stops in already over-policed neighborhoods.</p>
+        <p><strong>Problem.</strong> Aggregate utility may rise while specific groups bear disproportionate costs.</p>
+        <p><strong>Ethical issue.</strong> Is the relevant unit of analysis the average citizen or the worst-off community?</p>
+        <p><strong>Legal & business.</strong> Discrimination law, public trust, and long-term legitimacy are at stake.</p>
+        <p><strong>Lessons.</strong> Theory helps surface which values are being prioritized; it does not replace stakeholder engagement or empirical measurement of harms.</p>
+      </section>
+      <section class="concepts glass-card">
+        <h2>Core Theories</h2>
+        <h3>Utilitarianism</h3>
+        <p>Focus on consequences: maximize overall good (or minimize overall harm). In computing, this often appears as risk-benefit analysis, A/B testing of harm rates, or cost-benefit of safety features. Challenges include measurement of “utility,” distribution of harms, and long-term vs. short-term effects.</p>
+        <h3>Deontology</h3>
+        <p>Focus on duties and rules: certain actions are right or wrong regardless of outcome. Privacy as a side-constraint, informed consent as a duty, and prohibitions on deception fit this family. Challenges include conflicting duties and rigid application in novel situations.</p>
+        <h3>Virtue Ethics</h3>
+        <p>Focus on character and professional excellence: what would a responsible, honest, careful computing professional do? Emphasizes habits, role models, and organizational culture. Challenges include vagueness and cultural variation in virtues.</p>
+        <h3>Practical frameworks</h3>
+        <p>Many organizations combine elements: identify stakeholders, list options, evaluate consequences and duties, check consistency with codes, document reasoning, and revisit after deployment.</p>
+      </section>
+      <section class="perspectives glass-card">
+        <h2>Multi-Perspective Notes</h2>
+        <div class="perspective-grid">
+          <div class="p-card"><h4>AI</h4><p>Value alignment and reward design are utilitarian in spirit; constitutional or rule-based constraints are deontological.</p></div>
+          <div class="p-card"><h4>Data Science</h4><p>Fairness metrics operationalize different moral theories (equality of opportunity vs. equalized odds, etc.).</p></div>
+          <div class="p-card"><h4>Cybersecurity</h4><p>Duty to protect often conflicts with transparency and research disclosure norms.</p></div>
+          <div class="p-card"><h4>Software Engineering</h4><p>Safety-critical practice leans toward strict duties and conservative release criteria.</p></div>
+        </div>
+      </section>
+      <section class="quiz-section glass-card">
+        <h2>Knowledge Check</h2>
+        <div id="quiz-3" class="quiz-container"></div>
+      </section>
+      <section class="reflection glass-card">
+        <h2>Reflection Questions</h2>
+        <ol>
+          <li>When should consequences outweigh duties in a professional computing decision?</li>
+          <li>Can virtue ethics guide concrete design choices, or is it mainly about culture?</li>
+          <li>How would you document an ethical analysis so that a future auditor can understand it?</li>
+        </ol>
+      </section>
+      <section class="assignment glass-card">
+        <h2>Assignment</h2>
+        <p>Select one real or realistic computing dilemma (privacy, bias, dual-use, safety). Analyze it under utilitarianism, deontology, and virtue ethics (250–300 words each). Conclude with a recommended decision and a short process for ongoing monitoring (200 words).</p>
+      </section>
+      <section class="cheat-sheet glass-card">
+        <h2>Cheat Sheet</h2>
+        <ul>
+          <li>Utilitarianism → outcomes and aggregate welfare.</li>
+          <li>Deontology → duties, rights, side-constraints.</li>
+          <li>Virtue ethics → character, habits, professional excellence.</li>
+          <li>Frameworks combine identification of stakeholders, options, duties, consequences, and documentation.</li>
+        </ul>
+      </section>
+      <section class="glossary glass-card">
+        <h2>Glossary</h2>
+        <dl>
+          <dt>Utilitarianism</dt><dd>Ethical theory judging actions by their consequences for overall good.</dd>
+          <dt>Deontology</dt><dd>Ethical theory emphasizing duties and rules independent of outcomes.</dd>
+          <dt>Virtue ethics</dt><dd>Ethical approach centered on character traits and professional excellence.</dd>
+          <dt>Side-constraint</dt><dd>A moral limit that may not be violated even to produce better consequences.</dd>
+        </dl>
+      </section>
+      <section class="further glass-card">
+        <h2>Further Reading</h2>
+        <ul>
+          <li>Michael Quinn, <em>Ethics for the Information Age</em> (ethical theories chapters)</li>
+          <li>Virginia Dignum, <em>Responsible Artificial Intelligence</em></li>
+          <li>ACM Code of Ethics (principles mapped to theory)</li>
+        </ul>
+      </section>
+      <footer class="lecture-footer">
+        <p>Professional Practices in Computing • Open educational resource • Suitable for university use 2026–2035</p>
+      </footer>
+    </div>
   </div>
   <script src="../js/main.js"></script>
+  <script>
+    initQuiz('quiz-3', [
+      {
+        question: "Utilitarianism primarily evaluates actions by:",
+        options: ["Whether they follow universal rules", "Their consequences for overall good or harm", "The character of the decision-maker", "Compliance with company policy only"],
+        correct: 1,
+        explanation: "Utilitarianism is consequence-focused: the right action is the one that produces the best overall outcomes."
+      },
+      {
+        question: "A deontological approach is most likely to treat privacy as:",
+        options: ["A factor in a cost-benefit calculation", "A side-constraint or duty that limits certain actions", "Irrelevant if accuracy improves", "A marketing claim"],
+        correct: 1,
+        explanation: "Deontology emphasizes duties and constraints that hold even when violating them might produce better aggregate results."
+      },
+      {
+        question: "Virtue ethics in professional computing emphasizes:",
+        options: ["Only measurable KPIs", "Character traits such as honesty, care, and responsibility", "Strict legal minimums", "Shareholder value alone"],
+        correct: 1,
+        explanation: "Virtue ethics focuses on the kind of professional one should become and the habits that support excellence."
+      }
+    ]);
+  </script>
 </body>
 </html>
