@@ -3,16 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 02 — History of the Profession & Codes of Ethics | Professional Practices in Computing" />
-  <title>Lecture 02 — History of the Profession & Codes | Professional Practices in Computing</title>
-  <link rel="stylesheet" href="../css/styles.css" />
+  <meta name="description" content="Lecture 02: History of the Computing Profession & Codes of Ethics — Evolution of professional identity, early codes, ACM/IEEE milestones, and why history matters for modern practice." />
+  <title>Lecture 02 — History & Codes | Professional Practices in Computing</title>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <!-- PLACEHOLDER - full content will be loaded from local file via sequential tool if this fails size limits -->
-  <p>Loading full module...</p>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="../index.html" class="logo">PPC</a>
+        <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">☰</button>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="../index.html">Home</a>
+        <a href="lecture-01.html">01 · Introduction</a>
+        <a href="lecture-02.html" class="active">02 · History & Codes</a>
+        <a href="lecture-03.html">03 · Ethical Theories</a>
+        <a href="lecture-04.html">04 · ACM & IEEE Codes</a>
+        <a href="lecture-05.html">05 · Responsibility</a>
+      </nav>
+    </aside>
+    <main class="main-content">
+      <header class="topbar">
+        <div class="breadcrumbs"><a href="../index.html">Home</a> / Lectures / 02</div>
+        <div class="topbar-actions">
+          <button id="themeToggle" class="btn-icon" aria-label="Toggle theme">🌓</button>
+          <button id="searchToggle" class="btn-icon" aria-label="Search">🔍</button>
+        </div>
+      </header>
+      <article class="lecture-article glass-card">
+        <h1>Lecture 02 — History of the Profession & Codes of Ethics</h1>
+        <p class="lead">Understanding how computing became a profession and why codes of ethics emerged helps professionals act with historical awareness and institutional responsibility.</p>
+        <section>
+          <h2>Learning Objectives</h2>
+          <ul>
+            <li>Trace the historical development of computing as a profession</li>
+            <li>Explain the role of early codes of ethics in professionalization</li>
+            <li>Compare key milestones in ACM and IEEE ethical guidance</li>
+            <li>Apply historical lessons to contemporary professional dilemmas</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Why History Matters</h2>
+          <p>Professional practices are not invented from scratch each decade. They accumulate through accidents, scandals, standards bodies, academic programs, and public expectations. Knowing this history prevents repeating known failures and strengthens judgment when new technologies (AI, autonomous systems, large-scale data) create novel risks.</p>
+        </section>
+        <section>
+          <h2>Case Study Snapshot</h2>
+          <p>Historical episodes such as early software reliability failures, the development of professional societies, and the formalization of codes after visible harms illustrate how the community learned to self-regulate. Students should examine primary statements from ACM and IEEE and discuss how wording evolved with societal expectations.</p>
+        </section>
+        <section>
+          <h2>Knowledge Check</h2>
+          <div id="quiz-container"></div>
+        </section>
+        <section>
+          <h2>Reflection</h2>
+          <ol>
+            <li>Which historical event most strongly shaped your view of professional responsibility in computing?</li>
+            <li>How should codes of ethics adapt when the dominant risks shift from software reliability to AI societal impact?</li>
+          </ol>
+        </section>
+        <section>
+          <h2>Assignment</h2>
+          <p>Write a 600–800 word analysis comparing one early code of ethics with a current ACM or IEEE statement. Identify continuity and change, and argue what the changes reveal about the profession’s self-understanding.</p>
+        </section>
+        <section>
+          <h2>Cheat Sheet</h2>
+          <ul>
+            <li>Profession ≈ specialized knowledge + service orientation + self-regulation</li>
+            <li>Codes encode collective expectations and provide accountability anchors</li>
+            <li>History of computing ethics is driven by both technical failures and social harms</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Glossary</h2>
+          <dl>
+            <dt>Professionalization</dt><dd>Process by which an occupation develops formal knowledge, standards, and self-governance.</dd>
+            <dt>Code of ethics</dt><dd>Public statement of principles and expected conduct adopted by a professional body.</dd>
+          </dl>
+        </section>
+      </article>
+      <footer class="lecture-footer">
+        <a href="lecture-01.html">← Previous</a>
+        <a href="lecture-03.html">Next →</a>
+      </footer>
+    </main>
+  </div>
   <script src="../js/main.js"></script>
+  <script>
+    initQuiz('quiz-container', [
+      {
+        question: "Which of the following is NOT typically considered a defining sociological criterion of professionalism?",
+        options: [
+          "Specialized body of knowledge",
+          "Service orientation toward clients/public",
+          "High average salary relative to other occupations",
+          "Self-regulation through codes and peer mechanisms"
+        ],
+        correct: 2,
+        explanation: "Salary levels are not a defining sociological criterion of professionalism; knowledge, service orientation, and self-regulation are."
+      }
+    ]);
+  </script>
 </body>
 </html>
