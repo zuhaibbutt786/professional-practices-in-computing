@@ -3,104 +3,199 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 05: Professional Responsibility & Accountability in Computing" />
-  <title>Lecture 05 — Responsibility | Professional Practices in Computing</title>
+  <meta name="description" content="Lecture 05: Professional Responsibility & Accountability in Computing — individual, organizational, and systemic accountability." />
+  <title>Lecture 05 — Responsibility & Accountability | Professional Practices in Computing</title>
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
-    <div class="nav-actions">
-      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
-      <button class="btn-icon" id="menu-toggle" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-    </div>
-  </nav>
-  <div class="overlay" id="overlay"></div>
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Course</div>
-      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Current Module</div>
-      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
-      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
-      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
-      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
-      <a href="lecture-05.html" class="sidebar-link active" data-lecture="05"><span class="num">05</span> Responsibility</a>
-    </div>
-  </aside>
-  <div class="main-content">
-    <div class="content-wrapper">
-      <header class="lecture-header">
-        <div class="breadcrumb"><a href="../index.html">Home</a> / <span>Lecture 05</span></div>
-        <h1>Professional Responsibility & Accountability</h1>
-        <p class="lecture-subtitle">Who is responsible when systems fail? Individual, organizational, and systemic accountability in computing.</p>
-        <div class="meta-row"><span class="badge">Module 05</span><span class="badge">~50–70 min</span><span class="badge">Core Practice</span></div>
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="Course navigation"></aside>
+    <main class="main-content">
+      <header class="topbar">
+        <button id="sidebar-toggle" class="icon-btn" aria-label="Toggle sidebar">☰</button>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a> <span>/</span> <span>Lecture 05</span>
+        </nav>
+        <div class="topbar-actions">
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        </div>
       </header>
-      <section class="objectives glass-card">
-        <h2>Learning Objectives</h2>
-        <ul>
-          <li>Distinguish responsibility, accountability, and liability in professional contexts.</li>
-          <li>Analyze diffusion of responsibility in complex software and AI supply chains.</li>
-          <li>Identify practical steps individuals and teams can take to maintain accountability.</li>
-          <li>Connect professional responsibility to documentation, testing, escalation, and whistleblowing protections.</li>
-        </ul>
-      </section>
-      <section class="intro glass-card">
-        <h2>Introduction</h2>
-        <p>When a system causes harm, the public and regulators ask who is responsible. In modern computing, responsibility is often distributed across product managers, engineers, data scientists, vendors, and operators. This lecture clarifies concepts and equips you to act when accountability is unclear.</p>
-      </section>
-      <section class="concepts glass-card">
-        <h2>Key Distinctions</h2>
-        <p><strong>Responsibility</strong> — duty to act or refrain from acting. <strong>Accountability</strong> — obligation to answer for outcomes. <strong>Liability</strong> — legal exposure to remedies or penalties. Professionals must understand all three.</p>
-        <h2>Diffusion of Responsibility</h2>
-        <p>Complex pipelines, third-party models, and organizational silos make it easy for no single person to feel fully accountable. Mature organizations counter this with clear ownership, decision logs, and escalation paths.</p>
-      </section>
-      <section class="industrial glass-card">
-        <h2>Industrial Scenario</h2>
-        <p>A production ML model begins producing biased outcomes after a silent upstream data change. No one owns the monitoring alert. How should a professional respond in the moment, and what process changes prevent recurrence?</p>
-      </section>
-      <section class="quiz-section glass-card">
-        <h2>Knowledge Check</h2>
-        <div id="quiz-5" class="quiz-container"></div>
-      </section>
-      <section class="reflection glass-card">
-        <h2>Reflection</h2>
-        <ol>
-          <li>Where have you seen responsibility diffused in a team or project?</li>
-          <li>What documentation or practices would make accountability clearer in your next project?</li>
-        </ol>
-      </section>
-      <section class="assignment glass-card">
-        <h2>Assignment</h2>
-        <p>Write a 700–900 word case analysis of a public computing failure (e.g., a major breach, bias incident, or safety event). Map individual, team, and organizational responsibilities. Propose three concrete accountability mechanisms that could have reduced harm.</p>
-      </section>
-      <section class="cheat-sheet glass-card">
-        <h2>Cheat Sheet</h2>
-        <ul>
-          <li>Responsibility = duty; Accountability = answerability; Liability = legal exposure</li>
-          <li>Diffusion is common in complex systems — counter with ownership and logs</li>
-          <li>Escalate early; document decisions; support safe reporting channels</li>
-        </ul>
-      </section>
-      <section class="glossary glass-card">
-        <h2>Glossary</h2>
-        <dl>
-          <dt>Accountability</dt><dd>Obligation to explain and justify decisions and outcomes.</dd>
-          <dt>Diffusion of responsibility</dt><dd>Tendency for individuals to feel less responsible when many parties share a task.</dd>
-        </dl>
-      </section>
-      <footer class="lecture-footer"><p>Professional Practices in Computing • Open educational resource</p></footer>
-    </div>
+
+      <article class="lecture-article">
+        <header class="lecture-hero glass-card">
+          <p class="lecture-meta">Module 05 · Core Practice</p>
+          <h1>Professional Responsibility & Accountability</h1>
+          <p class="lead">Who is responsible when systems fail? Clarify individual, organizational, and systemic accountability in software, data, AI, and cybersecurity practice. Learn practical mechanisms that keep answerability real.</p>
+          <div class="hero-tags">
+            <span class="tag">Responsibility</span>
+            <span class="tag">Accountability</span>
+            <span class="tag">Liability</span>
+            <span class="tag">Diffusion</span>
+            <span class="tag">Escalation</span>
+          </div>
+        </header>
+
+        <section class="section glass-card" id="objectives">
+          <h2>Learning Objectives</h2>
+          <ul class="objectives-list">
+            <li>Distinguish responsibility, accountability, and liability in professional contexts.</li>
+            <li>Analyze diffusion of responsibility in complex software and AI supply chains.</li>
+            <li>Identify practical steps individuals and teams can take to maintain accountability.</li>
+            <li>Connect professional responsibility to documentation, testing, escalation, and safe reporting channels.</li>
+            <li>Evaluate organizational designs that either support or undermine accountable practice.</li>
+            <li>Relate accountability concepts to ACM/IEEE codes and emerging AI governance expectations.</li>
+          </ul>
+        </section>
+
+        <section class="section glass-card" id="introduction">
+          <h2>Introduction</h2>
+          <p>When a system causes harm, the public and regulators ask who is responsible. In modern computing, responsibility is often distributed across product managers, engineers, data scientists, vendors, operators, and automated components. This lecture clarifies the core concepts and equips you to act when accountability is unclear or contested.</p>
+        </section>
+
+        <section class="section glass-card" id="motivation">
+          <h2>Motivation</h2>
+          <p>High-profile failures (major breaches, biased automated decisions, safety incidents in cyber-physical systems) repeatedly reveal gaps between formal role descriptions and actual answerability. Professionals who understand these dynamics can design better processes and intervene earlier.</p>
+        </section>
+
+        <section class="section glass-card" id="concepts">
+          <h2>Key Distinctions</h2>
+          <p><strong>Responsibility</strong> — a duty to act or refrain from acting in certain ways.</p>
+          <p><strong>Accountability</strong> — the obligation to explain and justify decisions and outcomes to relevant parties.</p>
+          <p><strong>Liability</strong> — legal exposure to remedies, penalties, or damages.</p>
+          <p>Professionals must understand all three. Ethical and professional responsibility often exceeds legal liability; good practice aims to prevent harm rather than merely avoid lawsuits.</p>
+        </section>
+
+        <section class="section glass-card" id="diffusion">
+          <h2>Diffusion of Responsibility</h2>
+          <p>Complex pipelines, third-party models, shared ownership, and organizational silos make it easy for no single person to feel fully accountable. Classic social psychology (bystander effect) has organizational analogues: “someone else owns monitoring,” “the vendor certified it,” “the model is a black box.” Mature organizations counter diffusion with clear ownership, decision logs, RACI-style matrices, and explicit escalation paths.</p>
+        </section>
+
+        <section class="section glass-card" id="industrial-scenario">
+          <h2>Industrial Scenario</h2>
+          <p>A production ML model begins producing biased outcomes after a silent upstream data change. Monitoring alerts exist but have no named owner. On-call engineers treat the alerts as noise. How should a professional respond in the moment, and what process changes prevent recurrence?</p>
+          <p>Immediate actions include acknowledging the issue, containing harm where possible, notifying stakeholders, and documenting the chain of decisions. Systemic fixes include assigning alert ownership, adding data-drift checks, and reviewing escalation SLAs.</p>
+        </section>
+
+        <section class="section glass-card" id="case-study">
+          <h2>Case Study: Accountability in a Major Breach</h2>
+          <p><strong>Background:</strong> A large organization suffers a breach after known vulnerabilities remained unpatched and access controls were overly broad. Post-incident reviews reveal fragmented ownership of patch management, incomplete asset inventories, and pressure to prioritize new features over remediation.</p>
+          <p><strong>Analysis:</strong> Individual engineers may have raised concerns; managers may have deprioritized work; executives may have accepted residual risk without adequate visibility. Accountability requires examining the full chain, not only the last person who touched a system.</p>
+          <p><strong>Lessons:</strong> Clear ownership of critical controls, documented risk acceptance, and protected channels for raising safety and security issues are essential.</p>
+        </section>
+
+        <section class="section glass-card" id="mechanisms">
+          <h2>Practical Accountability Mechanisms</h2>
+          <ul>
+            <li>Named owners for critical systems, data pipelines, and alerts.</li>
+            <li>Decision logs and architecture decision records (ADRs).</li>
+            <li>Blameless post-mortems that still identify systemic fixes.</li>
+            <li>Safe internal reporting and, where necessary, external whistleblowing protections.</li>
+            <li>Model cards, datasheets, and security review checklists as living accountability artifacts.</li>
+            <li>Regular access reviews and least-privilege enforcement.</li>
+          </ul>
+        </section>
+
+        <section class="section glass-card" id="perspectives">
+          <h2>Multi-Perspective Notes</h2>
+          <p><strong>Professional:</strong> Codes require competence, honesty, and prioritization of public interest; responsibility cannot be fully outsourced.</p>
+          <p><strong>Legal:</strong> Liability regimes vary by jurisdiction and product type; professional standards can influence negligence analysis.</p>
+          <p><strong>Business:</strong> Accountability systems reduce surprise incidents and support sustainable risk management.</p>
+          <p><strong>AI / Data:</strong> Automated decision systems raise questions of meaningful human oversight and auditability.</p>
+          <p><strong>Cybersecurity:</strong> Shared responsibility models (cloud, supply chain) require explicit contracts and continuous verification.</p>
+        </section>
+
+        <section class="section glass-card" id="knowledge-check">
+          <h2>Knowledge Check</h2>
+          <div class="quiz-container" data-quiz="lecture-05">
+            <div class="quiz-question" data-correct="b">
+              <p><strong>1.</strong> Accountability primarily means:</p>
+              <label><input type="radio" name="q1" value="a" /> Legal liability only</label>
+              <label><input type="radio" name="q1" value="b" /> Obligation to answer for outcomes</label>
+              <label><input type="radio" name="q1" value="c" /> Writing more code</label>
+              <label><input type="radio" name="q1" value="d" /> Avoiding all risk</label>
+            </div>
+            <div class="quiz-question" data-correct="b">
+              <p><strong>2.</strong> Diffusion of responsibility is especially common when:</p>
+              <label><input type="radio" name="q2" value="a" /> A single engineer owns the system end-to-end</label>
+              <label><input type="radio" name="q2" value="b" /> Many parties share complex pipelines without clear ownership</label>
+              <label><input type="radio" name="q2" value="c" /> Codes of ethics are enforced strictly</label>
+              <label><input type="radio" name="q2" value="d" /> Projects are very small and simple</label>
+            </div>
+            <div class="quiz-question" data-correct="b">
+              <p><strong>3.</strong> A practical way to strengthen accountability is:</p>
+              <label><input type="radio" name="q3" value="a" /> Delete decision logs to reduce paperwork</label>
+              <label><input type="radio" name="q3" value="b" /> Assign clear ownership and keep decision records</label>
+              <label><input type="radio" name="q3" value="c" /> Never escalate concerns</label>
+              <label><input type="radio" name="q3" value="d" /> Optimize only for delivery speed</label>
+            </div>
+          </div>
+          <button class="btn primary" id="check-quiz">Check answers</button>
+          <div id="quiz-feedback" class="quiz-feedback" hidden></div>
+        </section>
+
+        <section class="section glass-card" id="reflection">
+          <h2>Reflection Questions</h2>
+          <ol>
+            <li>Where have you seen responsibility diffused in a team or project?</li>
+            <li>What documentation or practices would make accountability clearer in your next project?</li>
+            <li>How should organizations balance blameless culture with real accountability for repeated negligence?</li>
+          </ol>
+        </section>
+
+        <section class="section glass-card" id="assignment">
+          <h2>Assignment</h2>
+          <p>Write a 700–900 word case analysis of a public computing failure (major breach, bias incident, or safety event). Map individual, team, and organizational responsibilities. Propose three concrete accountability mechanisms that could have reduced harm. Cite public sources.</p>
+        </section>
+
+        <section class="section glass-card" id="cheat-sheet">
+          <h2>Cheat Sheet</h2>
+          <ul>
+            <li>Responsibility = duty; Accountability = answerability; Liability = legal exposure</li>
+            <li>Diffusion is common in complex systems — counter with ownership and logs</li>
+            <li>Escalate early; document decisions; support safe reporting channels</li>
+            <li>Blameless post-mortems + systemic fixes; repeated negligence still requires consequences</li>
+          </ul>
+        </section>
+
+        <section class="section glass-card" id="glossary">
+          <h2>Glossary</h2>
+          <dl>
+            <dt>Accountability</dt>
+            <dd>Obligation to explain and justify decisions and outcomes.</dd>
+            <dt>Diffusion of responsibility</dt>
+            <dd>Tendency for individuals to feel less responsible when many parties share a task.</dd>
+            <dt>Liability</dt>
+            <dd>Legal exposure to remedies or penalties.</dd>
+            <dt>Meaningful human oversight</dt>
+            <dd>Human review that can effectively understand and override automated decisions when needed.</dd>
+          </dl>
+        </section>
+
+        <section class="section glass-card" id="further-reading">
+          <h2>Further Reading</h2>
+          <ul>
+            <li>ACM and IEEE codes (responsibility and public interest clauses)</li>
+            <li>NIST AI Risk Management Framework — governance and accountability functions</li>
+            <li>Selected case studies from Baase and Quinn</li>
+            <li>Incident response and post-mortem literature in software reliability engineering</li>
+          </ul>
+        </section>
+
+        <section class="section glass-card" id="summary">
+          <h2>Summary</h2>
+          <p>Professional responsibility is the duty to act; accountability is the obligation to answer for outcomes; liability is legal exposure. Complex systems diffuse responsibility unless organizations deliberately create ownership, documentation, escalation paths, and learning processes. Individuals still retain professional duties even inside imperfect systems. Strengthening accountability is both a technical and a cultural practice.</p>
+        </section>
+
+        <nav class="lecture-nav">
+          <a class="btn ghost" href="lecture-04.html">← Lecture 04</a>
+          <a class="btn primary" href="../index.html">Back to Home</a>
+        </nav>
+      </article>
+    </main>
   </div>
   <script src="../js/main.js"></script>
-  <script>
-    initQuiz('quiz-5', [
-      {question: "Accountability primarily means:", options: ["Legal liability only", "Obligation to answer for outcomes", "Writing more code", "Avoiding all risk"], correct: 1, explanation: "Accountability is answerability for outcomes."},
-      {question: "Diffusion of responsibility is especially common when:", options: ["A single engineer owns the system", "Many parties share complex pipelines without clear ownership", "Codes of ethics are enforced strictly", "Projects are very small"], correct: 1, explanation: "Shared complex systems without ownership dilute responsibility."},
-      {question: "A practical way to strengthen accountability is:", options: ["Delete decision logs", "Assign clear ownership and keep decision records", "Never escalate", "Optimize only for speed"], correct: 1, explanation: "Ownership and documentation support accountability."}
-    ]);
-  </script>
 </body>
 </html>
