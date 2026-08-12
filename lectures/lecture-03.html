@@ -3,124 +3,308 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 03: Ethical Theories & Decision Frameworks for Computing Professionals" />
-  <title>Lecture 03 — Ethical Theories | Professional Practices in Computing</title>
+  <meta name="description" content="Lecture 03: Ethical Theories & Decision Frameworks — Professional Practices in Computing" />
+  <title>Lecture 03: Ethical Theories & Decision Frameworks | Professional Practices in Computing</title>
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
-    <div class="nav-actions">
-      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
-      <button class="btn-icon" id="menu-toggle" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-    </div>
-  </nav>
-  <div class="overlay" id="overlay"></div>
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Course</div>
-      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Current Module</div>
-      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
-      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
-      <a href="lecture-03.html" class="sidebar-link active" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
-      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
-      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
-    </div>
-  </aside>
-  <div class="main-content">
-    <div class="content-wrapper">
-      <header class="lecture-header">
-        <div class="breadcrumb"><a href="../index.html">Home</a> / <span>Lecture 03</span></div>
-        <h1>Ethical Theories & Decision Frameworks</h1>
-        <p class="lecture-subtitle">Utilitarianism, deontology, virtue ethics, and practical frameworks for professional decision-making in computing.</p>
-        <div class="meta-row"><span class="badge">Module 03</span><span class="badge">~50–70 min</span><span class="badge">Core Theory</span></div>
+  <div class="app-shell">
+    <!-- Sidebar will be injected by main.js -->
+    <aside id="sidebar" class="sidebar" aria-label="Course navigation"></aside>
+
+    <main class="main-content">
+      <header class="topbar">
+        <button id="sidebar-toggle" class="icon-btn" aria-label="Toggle sidebar">☰</button>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a>
+          <span>/</span>
+          <span>Lecture 03</span>
+        </nav>
+        <div class="topbar-actions">
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        </div>
       </header>
-      <section class="objectives glass-card">
-        <h2>Learning Objectives</h2>
-        <ul>
-          <li>Explain the core ideas of utilitarianism, deontology, and virtue ethics in plain language.</li>
-          <li>Apply at least one structured decision framework to a computing dilemma.</li>
-          <li>Identify strengths and limits of each theory when applied to software, data, and AI contexts.</li>
-          <li>Recognize when theories conflict and how professionals navigate residual judgment.</li>
-        </ul>
-      </section>
-      <section class="intro glass-card">
-        <h2>Introduction</h2>
-        <p>Professional codes rest on deeper ethical traditions. When a code is silent or principles clash, computing professionals need the ability to reason from first principles. This lecture introduces the major ethical theories used in technology ethics and shows how to turn them into practical decision aids.</p>
-      </section>
-      <section class="motivation glass-card">
-        <h2>Motivation</h2>
-        <p>Imagine a ranking algorithm that improves average user engagement but systematically disadvantages a minority group. Utilitarian reasoning may favor the aggregate gain; deontological reasoning may forbid treating people as mere means; virtue ethics asks what a responsible practitioner would do. Without a framework, teams default to commercial pressure or gut feeling.</p>
-      </section>
-      <section class="real-story glass-card">
-        <h2>Real Story</h2>
-        <p>Classic trolley-problem variants reappear in autonomous vehicle design, content moderation, and medical triage algorithms. Engineers who only optimize metrics without ethical framing repeatedly produce systems that later require costly remediation and public apology.</p>
-      </section>
-      <section class="concepts glass-card">
-        <h2>Core Theories</h2>
-        <h3>Utilitarianism</h3>
-        <p>Evaluate actions by their consequences for overall well-being. Useful for risk analysis and impact assessment; weak when harms are concentrated on the few or when rights are ignored.</p>
-        <h3>Deontology</h3>
-        <p>Focus on duties, rights, and rules that must be respected regardless of outcomes. Strong for privacy, consent, and non-discrimination; can be rigid when rules conflict.</p>
-        <h3>Virtue Ethics</h3>
-        <p>Ask what a person of good character and professional excellence would do. Emphasizes judgment, honesty, and courage; less prescriptive for novel cases.</p>
-        <h3>Practical Frameworks</h3>
-        <p>Many organizations combine impact analysis, stakeholder mapping, rights checks, and escalation paths. Frameworks do not eliminate judgment; they structure it.</p>
-      </section>
-      <section class="perspectives glass-card">
-        <h2>Multi-Perspective Notes</h2>
-        <ul>
-          <li><strong>AI:</strong> Fairness metrics often encode utilitarian trade-offs; rights-based constraints are needed as hard limits.</li>
-          <li><strong>Data Science:</strong> Secondary use of data raises consent and purpose-limitation questions that pure utility analysis underweights.</li>
-          <li><strong>Software Engineering:</strong> Safety-critical systems demand both outcome optimization and non-negotiable duties of care.</li>
-          <li><strong>Cybersecurity:</strong> Responsible disclosure balances public benefit against potential harm from premature exposure.</li>
-        </ul>
-      </section>
-      <section class="quiz-section glass-card">
-        <h2>Knowledge Check</h2>
-        <div id="quiz-3" class="quiz-container"></div>
-      </section>
-      <section class="reflection glass-card">
-        <h2>Reflection</h2>
-        <ol>
-          <li>When have you seen a metric-driven decision conflict with a rights-based concern?</li>
-          <li>Which ethical theory feels most natural to you, and what does that reveal about your blind spots?</li>
-        </ol>
-      </section>
-      <section class="assignment glass-card">
-        <h2>Assignment</h2>
-        <p>Select a recent technology controversy. Analyze it under utilitarianism, deontology, and virtue ethics (300–400 words each). Conclude with a recommended professional response (150 words).</p>
-      </section>
-      <section class="cheat-sheet glass-card">
-        <h2>Cheat Sheet</h2>
-        <ul>
-          <li>Utilitarianism → consequences / aggregate welfare</li>
-          <li>Deontology → duties, rights, rules</li>
-          <li>Virtue ethics → character and professional excellence</li>
-          <li>Frameworks structure judgment; they do not replace it</li>
-        </ul>
-      </section>
-      <section class="glossary glass-card">
-        <h2>Glossary</h2>
-        <dl>
-          <dt>Utilitarianism</dt><dd>Ethical theory that judges actions by their consequences for overall well-being.</dd>
-          <dt>Deontology</dt><dd>Ethical theory centered on duties and rules independent of outcomes.</dd>
-          <dt>Virtue ethics</dt><dd>Approach focused on the character traits of a good professional.</dd>
-        </dl>
-      </section>
-      <footer class="lecture-footer"><p>Professional Practices in Computing • Open educational resource</p></footer>
-    </div>
+
+      <article class="lecture-article">
+        <header class="lecture-hero glass-card">
+          <p class="lecture-meta">Module 03 · Ethical Reasoning</p>
+          <h1>Ethical Theories & Decision Frameworks</h1>
+          <p class="lead">Build a rigorous toolkit for analyzing professional dilemmas using classical and contemporary ethical theories, structured decision processes, and multi-stakeholder perspectives relevant to computing, AI, data science, and cybersecurity.</p>
+          <div class="hero-tags">
+            <span class="tag">Utilitarianism</span>
+            <span class="tag">Deontology</span>
+            <span class="tag">Virtue Ethics</span>
+            <span class="tag">Care Ethics</span>
+            <span class="tag">Decision Frameworks</span>
+          </div>
+        </header>
+
+        <section class="section glass-card" id="objectives">
+          <h2>Learning Objectives</h2>
+          <p>By the end of this module you will be able to:</p>
+          <ul class="objectives-list">
+            <li>Explain the core claims of major ethical theories (consequentialist, deontological, virtue, care, and justice-based approaches) in plain language.</li>
+            <li>Apply at least two structured ethical decision frameworks to realistic computing scenarios.</li>
+            <li>Compare how different theories yield different recommendations for the same dilemma.</li>
+            <li>Identify stakeholder interests and power asymmetries in technology-mediated harms.</li>
+            <li>Articulate the limits of pure theory when facing incomplete information, conflicting duties, and organizational constraints.</li>
+            <li>Connect ethical analysis to professional codes (ACM/IEEE) and emerging AI governance principles.</li>
+          </ul>
+        </section>
+
+        <section class="section glass-card" id="introduction">
+          <h2>Introduction</h2>
+          <p>Professional practice in computing is not merely about writing correct code or shipping features on time. Every system you design, every dataset you process, and every model you deploy encodes value judgments about what matters, whose interests count, and what risks are acceptable. Ethical theories give us shared vocabulary and disciplined methods for making those judgments explicit and open to criticism.</p>
+          <p>This lecture does not aim to convert you to a single moral philosophy. Instead it equips you with multiple lenses so that you can (1) diagnose why reasonable people disagree, (2) structure your own reasoning under pressure, and (3) communicate ethical analysis clearly to teammates, managers, clients, and regulators.</p>
+        </section>
+
+        <section class="section glass-card" id="motivation">
+          <h2>Motivation: Why Theory Matters in Practice</h2>
+          <p>When a product manager asks “Should we ship this recommendation ranking even though it amplifies outrage?” or a security engineer asks “Is it acceptable to use this zero-day before the vendor patches?” pure intuition is fragile. Theories help you:</p>
+          <ul>
+            <li>Surface hidden assumptions (e.g., “maximizing engagement is always good”).</li>
+            <li>Identify missing stakeholders (children, future users, non-users harmed by externalities).</li>
+            <li>Distinguish short-term local benefits from long-term systemic costs.</li>
+            <li>Defend decisions under audit or public scrutiny with coherent reasons rather than after-the-fact rationalizations.</li>
+          </ul>
+          <p>Industry failures from Cambridge Analytica to biased hiring algorithms to unsafe autonomous systems repeatedly show that technical competence without ethical competence is insufficient.</p>
+        </section>
+
+        <section class="section glass-card" id="real-story">
+          <h2>Real Story: The Algorithmic Hiring Filter</h2>
+          <p>A large technology company built an internal recruiting tool that ranked applicants based on historical hiring data. The system systematically down-ranked resumes that contained the word “women’s” (as in “women’s chess club”) and preferred patterns associated with male candidates who had been hired in the past. The team initially framed the problem as a pure optimization and fairness-after-the-fact issue. Only after external criticism and internal ethical review did they recognize that the training data encoded past discrimination, that the system amplified it at scale, and that deontological constraints (do not systematically disadvantage protected groups) and justice considerations required redesign rather than post-hoc score calibration.</p>
+          <p>The episode illustrates how consequentialist “better predictions” can conflict with non-discrimination duties, and how virtue and organizational culture shape whether engineers feel empowered to raise the issue early.</p>
+        </section>
+
+        <section class="section glass-card" id="industrial-scenario">
+          <h2>Industrial Scenario</h2>
+          <p>You are a senior data scientist at a fintech startup. Your model for credit risk improves default prediction by 8% over the previous system, which would reduce portfolio losses. However, the model uses features that are correlated with protected attributes (zip code, device type, time-of-day of application). When you remove those features, performance drops. Compliance asks for a “fairness report.” Product wants the higher-performing model. Legal is concerned about disparate impact claims. Your manager asks for a recommendation by Friday.</p>
+          <p>This is not a pure technical question. Different ethical theories will weight accuracy gains, individual rights, group fairness metrics, transparency duties, and the firm’s long-term reputation differently. You will need a structured way to present options and trade-offs.</p>
+        </section>
+
+        <section class="section glass-card" id="historical">
+          <h2>Historical Background</h2>
+          <p>Western ethical theory has deep roots in classical philosophy (Aristotle on virtue and flourishing; Kant on duty and respect for persons; Mill and Bentham on utility). Twentieth-century developments added care ethics (Gilligan, Noddings), justice as fairness (Rawls), and capability approaches (Sen, Nussbaum). Computing-specific work accelerated in the 1980s–1990s with computer ethics (Moor, Johnson, Gotterbarn) and later with value-sensitive design, responsible AI, and AI ethics frameworks from ACM, IEEE, OECD, UNESCO, and national regulators.</p>
+          <p>Contemporary professional practice draws on this heritage while remaining pragmatic: codes of ethics, risk management frameworks (e.g., NIST AI RMF), and organizational processes that force explicit consideration of harms.</p>
+        </section>
+
+        <section class="section glass-card" id="theories">
+          <h2>Core Ethical Theories</h2>
+
+          <h3>1. Consequentialism / Utilitarianism</h3>
+          <p><strong>Core idea:</strong> The right action is the one that produces the best overall consequences (often understood as maximizing well-being or minimizing harm).</p>
+          <p><strong>Strengths in computing:</strong> Forces attention to downstream effects at scale; useful for safety cases, cost-benefit analysis of security controls, and evaluating system-level impacts.</p>
+          <p><strong>Weaknesses:</strong> Difficult measurement of “utility”; can justify sacrificing individuals for aggregate gain; ignores rights and duties that many consider inviolable; short-term vs long-term utility conflicts.</p>
+          <p><strong>Computing example:</strong> Deciding whether to release a vulnerability disclosure that causes short-term pain for some vendors but reduces systemic risk for millions of users.</p>
+
+          <h3>2. Deontology (Duty-Based Ethics)</h3>
+          <p><strong>Core idea:</strong> Certain actions are right or wrong regardless of consequences; persons must be treated as ends, not merely as means (Kantian formulation).</p>
+          <p><strong>Strengths:</strong> Protects individual rights (privacy, informed consent, non-discrimination); supports bright-line rules (do not deceive users; do not hide known critical vulnerabilities from affected parties).</p>
+          <p><strong>Weaknesses:</strong> Duties can conflict; rigid rules may produce bad outcomes in edge cases; hard to prioritize when multiple duties apply.</p>
+          <p><strong>Computing example:</strong> Refusing to implement dark patterns even if they increase conversion, because they treat users as means to revenue.</p>
+
+          <h3>3. Virtue Ethics</h3>
+          <p><strong>Core idea:</strong> Focus on the character of the moral agent—what a good professional would do, what habits of excellence (honesty, courage, care, justice, humility) look like in practice.</p>
+          <p><strong>Strengths:</strong> Emphasizes professional identity and culture; useful for mentoring and organizational design; flexible across novel situations.</p>
+          <p><strong>Weaknesses:</strong> Less precise action guidance; can be culturally relative; hard to operationalize in compliance checklists.</p>
+          <p><strong>Computing example:</strong> Cultivating the habit of documenting assumptions and residual risks rather than shipping with silent uncertainty.</p>
+
+          <h3>4. Care Ethics</h3>
+          <p><strong>Core idea:</strong> Moral significance of relationships, interdependence, and attending to the concrete needs of particular others (especially the vulnerable).</p>
+          <p><strong>Strengths:</strong> Highlights power asymmetries and relational harms that aggregate metrics miss; valuable for accessibility, user research, and content moderation contexts.</p>
+          <p><strong>Weaknesses:</strong> Risk of partiality; scale challenges when millions of users are involved.</p>
+          <p><strong>Computing example:</strong> Designing content moderation that prioritizes protection of minors and marginalized communities even when it reduces engagement metrics.</p>
+
+          <h3>5. Justice and Fairness Approaches</h3>
+          <p>Includes distributive justice (how benefits and burdens are allocated), procedural justice (fair processes), and recognition justice. Rawlsian “veil of ignorance” thought experiments and capability approaches are influential. In machine learning this maps onto debates about group fairness metrics, individual fairness, and equality of opportunity versus equality of outcome.</p>
+        </section>
+
+        <section class="section glass-card" id="frameworks">
+          <h2>Structured Decision Frameworks</h2>
+          <p>Theories alone are not enough under time pressure. Practitioners need repeatable processes.</p>
+
+          <h3>Framework A: Stakeholder Impact Analysis</h3>
+          <ol>
+            <li>Identify affected parties (users, non-users, employees, partners, society, future generations).</li>
+            <li>Map benefits, risks, and rights for each.</li>
+            <li>Assess power imbalances and ability to consent or exit.</li>
+            <li>Check consistency with professional codes and law.</li>
+            <li>Document residual risks and monitoring plans.</li>
+          </ol>
+
+          <h3>Framework B: Ethical Decision Procedure (adapted from common professional models)</h3>
+          <ol>
+            <li>Recognize the ethical dimension (not just a technical or business issue).</li>
+            <li>Gather facts and clarify uncertainty.</li>
+            <li>Identify stakeholders and their legitimate interests.</li>
+            <li>Generate options (including “do nothing” and “escalate”).</li>
+            <li>Evaluate options through multiple ethical lenses.</li>
+            <li>Choose, implement, and monitor; be prepared to revise.</li>
+            <li>Reflect and share lessons (within confidentiality constraints).</li>
+          </ol>
+
+          <h3>Framework C: Value-Sensitive Design (high-level)</h3>
+          <p>Integrate human values (privacy, autonomy, trust, accountability, sustainability) into design from the earliest stages through conceptual, empirical, and technical investigations.</p>
+        </section>
+
+        <section class="section glass-card" id="perspectives">
+          <h2>Multi-Perspective Analysis</h2>
+
+          <h3>Professional Perspective</h3>
+          <p>Professionals are expected to exercise independent judgment, not merely follow orders. Codes require prioritizing public interest, honesty, and competence. Decision frameworks help you justify when you must push back or escalate.</p>
+
+          <h3>Ethical Perspective</h3>
+          <p>No single theory is authoritative in all cases. Responsible practice often involves “ethical triangulation”: if consequentialist, deontological, and virtue analyses all converge, confidence increases; if they diverge, deeper deliberation and stakeholder engagement are warranted.</p>
+
+          <h3>Legal Perspective</h3>
+          <p>Law sets minimum floors (anti-discrimination, privacy statutes, product liability, AI-specific rules in some jurisdictions). Ethical analysis often goes beyond legal compliance. Conversely, some legal requirements may themselves raise ethical questions (e.g., mandatory data retention).</p>
+
+          <h3>Business Perspective</h3>
+          <p>Short-term profit can conflict with long-term trust and license to operate. Ethical failures create regulatory, reputational, and talent risks. Framing ethical analysis in terms of risk management and sustainable value creation often improves organizational uptake.</p>
+
+          <h3>AI Perspective</h3>
+          <p>AI systems amplify scale, opacity, and autonomy of decision-making. Theories of responsibility (who is accountable when a model harms?) and principles of transparency, fairness, and human oversight become critical. Frameworks such as NIST AI RMF operationalize risk-based ethical reasoning.</p>
+
+          <h3>Data Science Perspective</h3>
+          <p>Data work embeds choices about measurement, inclusion/exclusion, labeling, and optimization targets. Each choice has ethical content. Documentation (datasheets, model cards) and participatory practices help surface those choices.</p>
+
+          <h3>Software Engineering Perspective</h3>
+          <p>Requirements engineering, architecture decisions, testing criteria, and deployment gates are natural insertion points for ethical checkpoints. “Ethics as a non-functional requirement” is an incomplete but useful framing when combined with process.</p>
+
+          <h3>Cybersecurity Perspective</h3>
+          <p>Security ethics involves dual-use research, coordinated disclosure, active defense boundaries, and the tension between user privacy and threat detection. Deontological constraints (do not cause unjustified harm) and consequentialist harm reduction both apply.</p>
+        </section>
+
+        <section class="section glass-card" id="case-study">
+          <h2>Case Study: Content Ranking and Amplification</h2>
+          <p><strong>Background:</strong> A social platform’s ranking algorithm optimizes for time-on-site and engagement. Internal research shows that content that provokes strong emotional reactions (including anger and outrage) is preferentially amplified. External researchers link the system to polarization and real-world harm.</p>
+          <p><strong>Problem:</strong> Engagement metrics conflict with societal well-being and user mental health.</p>
+          <p><strong>Ethical issues:</strong> Consequentialist harm at scale; deontological questions about manipulating attention; care ethics concerns for vulnerable users; justice questions about whose voices are amplified.</p>
+          <p><strong>Legal / regulatory:</strong> Platform liability regimes vary; emerging online safety legislation; potential advertising and consumer protection issues.</p>
+          <p><strong>Business impact:</strong> Changing the objective function may reduce short-term engagement and revenue while reducing regulatory and reputational risk.</p>
+          <p><strong>Technical lessons:</strong> Optimization targets are value-laden; measurement of “harm” is difficult but necessary; A/B tests can miss long-term and societal effects.</p>
+          <p><strong>Professional lessons:</strong> Engineers and data scientists share responsibility for downstream effects of ranking systems; escalation channels and ethical review boards matter; transparency with the public is part of accountability.</p>
+          <p><strong>Discussion prompts:</strong></p>
+          <ul>
+            <li>Which ethical theory most strongly supports changing the ranking objective? Which supports keeping engagement primary?</li>
+            <li>What would a virtue-ethics culture look like inside the ranking team?</li>
+            <li>How should the company weigh evidence that is correlational rather than causal?</li>
+          </ul>
+        </section>
+
+        <section class="section glass-card" id="knowledge-check">
+          <h2>Knowledge Check</h2>
+          <div class="quiz-container" data-quiz="lecture-03">
+            <div class="quiz-question" data-correct="b">
+              <p><strong>1.</strong> A team justifies collecting more user data solely because it improves model accuracy for a non-critical feature. Which ethical approach is most likely to challenge this justification?</p>
+              <label><input type="radio" name="q1" value="a" /> Pure act utilitarianism focused only on accuracy gains</label>
+              <label><input type="radio" name="q1" value="b" /> Deontological emphasis on informed consent and treating users as ends</label>
+              <label><input type="radio" name="q1" value="c" /> Virtue ethics that prioritizes technical excellence above all</label>
+              <label><input type="radio" name="q1" value="d" /> Care ethics that ignores institutional power</label>
+            </div>
+            <div class="quiz-question" data-correct="c">
+              <p><strong>2.</strong> When consequentialist, deontological, and virtue analyses all recommend the same course of action, a practitioner should:</p>
+              <label><input type="radio" name="q2" value="a" /> Ignore the analysis and follow the highest-paid stakeholder</label>
+              <label><input type="radio" name="q2" value="b" /> Treat the recommendation as infallible and stop monitoring</label>
+              <label><input type="radio" name="q2" value="c" /> Gain confidence but still document residual risks and monitor outcomes</label>
+              <label><input type="radio" name="q2" value="d" /> Automatically reject the action because theories never agree</label>
+            </div>
+            <div class="quiz-question" data-correct="a">
+              <p><strong>3.</strong> Stakeholder impact analysis is most useful for:</p>
+              <label><input type="radio" name="q3" value="a" /> Making invisible parties and power asymmetries explicit before deciding</label>
+              <label><input type="radio" name="q3" value="b" /> Guaranteeing legal compliance in every jurisdiction</label>
+              <label><input type="radio" name="q3" value="c" /> Replacing the need for professional codes of ethics</label>
+              <label><input type="radio" name="q3" value="d" /> Proving that one ethical theory is universally correct</label>
+            </div>
+          </div>
+          <button class="btn primary" id="check-quiz">Check answers</button>
+          <div id="quiz-feedback" class="quiz-feedback" hidden></div>
+        </section>
+
+        <section class="section glass-card" id="reflection">
+          <h2>Reflection Questions</h2>
+          <ol>
+            <li>Recall a time you (or a team you observed) faced a trade-off between a metric and a human impact. Which ethical lens would have changed the conversation?</li>
+            <li>Which ethical theory feels most natural to you, and which feels most alien? Why might that matter for your professional development?</li>
+            <li>How would you explain to a non-technical executive why “just maximize the objective function” is not ethically neutral?</li>
+          </ol>
+        </section>
+
+        <section class="section glass-card" id="assignment">
+          <h2>Assignment</h2>
+          <p><strong>Individual written analysis (800–1200 words)</strong></p>
+          <p>Select one real or realistic computing dilemma (hiring algorithm, content moderation, medical AI triage, security disclosure, environmental cost of training, etc.).</p>
+          <ol>
+            <li>Describe the facts and uncertainty clearly.</li>
+            <li>Identify at least four stakeholder groups and their interests.</li>
+            <li>Analyze the situation through at least two ethical theories and one structured decision framework.</li>
+            <li>State your recommended course of action and the residual risks you accept.</li>
+            <li>Explain how you would monitor and revise the decision.</li>
+          </ol>
+          <p>Submit as a PDF or Markdown file. Cite any sources. Original analysis only.</p>
+        </section>
+
+        <section class="section glass-card" id="cheat-sheet">
+          <h2>Cheat Sheet</h2>
+          <ul>
+            <li><strong>Utilitarianism:</strong> Best overall consequences / well-being.</li>
+            <li><strong>Deontology:</strong> Duties and respect for persons; rights matter independently of outcomes.</li>
+            <li><strong>Virtue ethics:</strong> Character and professional excellence.</li>
+            <li><strong>Care ethics:</strong> Relationships, vulnerability, concrete needs.</li>
+            <li><strong>Justice:</strong> Fair distribution, process, and recognition.</li>
+            <li><strong>Practice:</strong> Stakeholder analysis + multi-lens evaluation + document &amp; monitor.</li>
+            <li><strong>Key habit:</strong> Make value judgments explicit rather than burying them in metrics.</li>
+          </ul>
+        </section>
+
+        <section class="section glass-card" id="glossary">
+          <h2>Glossary</h2>
+          <dl>
+            <dt>Consequentialism</dt>
+            <dd>Moral theories that evaluate actions solely by their outcomes.</dd>
+            <dt>Deontology</dt>
+            <dd>Duty-based ethics; some actions are right or wrong regardless of consequences.</dd>
+            <dt>Virtue ethics</dt>
+            <dd>Focus on the moral character and habits of the agent.</dd>
+            <dt>Care ethics</dt>
+            <dd>Emphasizes relationships, interdependence, and attending to particular others.</dd>
+            <dt>Stakeholder</dt>
+            <dd>Any party affected by or able to affect a decision or system.</dd>
+            <dt>Value-sensitive design</dt>
+            <dd>Methodology that accounts for human values throughout the design process.</dd>
+            <dt>Dual-use</dt>
+            <dd>Technology or research that can be used for beneficial and harmful purposes.</dd>
+          </dl>
+        </section>
+
+        <section class="section glass-card" id="further-reading">
+          <h2>Further Reading</h2>
+          <ul>
+            <li>Sara Baase — <em>A Gift of Fire</em> (selected chapters on ethics and professional practice)</li>
+            <li>Michael Quinn — <em>Ethics for the Information Age</em></li>
+            <li>Virginia Dignum — <em>Responsible Artificial Intelligence</em></li>
+            <li>ACM Code of Ethics and Professional Conduct</li>
+            <li>IEEE Code of Ethics</li>
+            <li>NIST AI Risk Management Framework (high-level overview)</li>
+            <li>OECD AI Principles and UNESCO Recommendation on the Ethics of AI</li>
+          </ul>
+        </section>
+
+        <section class="section glass-card" id="summary">
+          <h2>Summary</h2>
+          <p>Ethical theories provide disciplined ways to reason about professional dilemmas in computing. Utilitarianism, deontology, virtue ethics, care ethics, and justice approaches each illuminate different aspects of a problem. Structured frameworks turn theory into repeatable practice under time and organizational pressure. Multi-perspective analysis (professional, legal, business, AI, data science, software engineering, cybersecurity) prevents narrow framing. The goal is not philosophical purity but better, more accountable decisions and the ability to explain them.</p>
+        </section>
+
+        <nav class="lecture-nav">
+          <a class="btn ghost" href="lecture-02.html">← Lecture 02</a>
+          <a class="btn primary" href="lecture-04.html">Lecture 04 →</a>
+        </nav>
+      </article>
+    </main>
   </div>
   <script src="../js/main.js"></script>
-  <script>
-    initQuiz('quiz-3', [
-      {question: "Utilitarianism primarily evaluates actions by:", options: ["Conformity to universal rules", "Their consequences for overall well-being", "The character of the agent", "Legal compliance only"], correct: 1, explanation: "Utilitarianism is consequence-focused."},
-      {question: "A key strength of deontology in computing is:", options: ["Maximizing engagement metrics", "Protecting rights such as privacy even when outcomes are costly", "Ignoring rules when results are good", "Replacing all professional judgment"], correct: 1, explanation: "Deontology emphasizes duties and rights."},
-      {question: "Virtue ethics asks:", options: ["What maximizes total utility?", "What rules must never be broken?", "What would a person of good professional character do?", "What is cheapest to implement?"], correct: 2, explanation: "Virtue ethics centers character and excellence."}
-    ]);
-  </script>
 </body>
 </html>
