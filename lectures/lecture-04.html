@@ -3,105 +3,194 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Lecture 04: ACM & IEEE Codes of Ethics Deep Dive" />
+  <meta name="description" content="Lecture 04: ACM & IEEE Codes of Ethics Deep Dive — Principles, application, case mapping, and practical use of professional codes in computing." />
   <title>Lecture 04 — ACM & IEEE Codes | Professional Practices in Computing</title>
   <link rel="stylesheet" href="../css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
 <body>
-  <nav class="navbar">
-    <a href="../index.html" class="navbar-brand"><div class="logo">PPC</div><span>Professional Practices</span></a>
-    <div class="nav-actions">
-      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
-      <button class="btn-icon" id="menu-toggle" aria-label="Menu"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg></button>
-    </div>
-  </nav>
-  <div class="overlay" id="overlay"></div>
-  <aside class="sidebar" id="sidebar">
-    <div class="sidebar-section">
-      <div class="sidebar-title">Course</div>
-      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
-    </div>
-    <div class="sidebar-section">
-      <div class="sidebar-title">Current Module</div>
-      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
-      <a href="lecture-02.html" class="sidebar-link" data-lecture="02"><span class="num">02</span> History & Codes</a>
-      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
-      <a href="lecture-04.html" class="sidebar-link active" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
-      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
-    </div>
-  </aside>
-  <div class="main-content">
-    <div class="content-wrapper">
-      <header class="lecture-header">
-        <div class="breadcrumb"><a href="../index.html">Home</a> / <span>Lecture 04</span></div>
-        <h1>ACM & IEEE Codes Deep Dive</h1>
-        <p class="lecture-subtitle">Structure, key principles, and practical application of the two most influential computing codes of ethics.</p>
-        <div class="meta-row"><span class="badge">Module 04</span><span class="badge">~50–70 min</span><span class="badge">Professional Standards</span></div>
+  <div class="app-shell">
+    <aside id="sidebar" class="sidebar" aria-label="Course navigation"></aside>
+    <main class="main-content">
+      <header class="topbar">
+        <button id="sidebar-toggle" class="icon-btn" aria-label="Toggle sidebar">☰</button>
+        <nav class="breadcrumbs" aria-label="Breadcrumb">
+          <a href="../index.html">Home</a> <span>/</span> <span>Lecture 04</span>
+        </nav>
+        <div class="topbar-actions">
+          <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">🌙</button>
+        </div>
       </header>
-      <section class="objectives glass-card">
-        <h2>Learning Objectives</h2>
-        <ul>
-          <li>Locate and interpret the main sections of the ACM Code of Ethics and Professional Conduct.</li>
-          <li>Explain the priority of public safety, health, and welfare in the IEEE Code of Ethics.</li>
-          <li>Map specific code clauses to common workplace scenarios (privacy, safety, honesty, conflicts of interest).</li>
-          <li>Discuss limits of codes as soft law and the role of organizational culture.</li>
-        </ul>
-      </section>
-      <section class="intro glass-card">
-        <h2>Introduction</h2>
-        <p>The ACM and IEEE codes are the primary reference documents for computing professionalism in many universities and organizations. They are living documents that have been revised to address privacy, accessibility, and emerging technologies. This lecture treats them as tools for daily practice, not merely documents to memorize.</p>
-      </section>
-      <section class="concepts glass-card">
-        <h2>ACM Code Highlights</h2>
-        <p>The ACM Code organizes principles around general ethical responsibilities, professional responsibilities, professional leadership principles, and compliance. Key themes include contributing to society, avoiding harm, being honest and trustworthy, respecting privacy, and honoring confidentiality.</p>
-        <h2>IEEE Code Highlights</h2>
-        <p>IEEE places the safety, health, and welfare of the public first. It addresses conflicts of interest, honest disclosure of limitations, and continuous competence. The public-welfare priority is especially relevant for safety-critical and infrastructure systems.</p>
-      </section>
-      <section class="industrial glass-card">
-        <h2>Industrial Scenario</h2>
-        <p>Your manager asks you to understate known limitations of a model in a client proposal. ACM and IEEE both emphasize honesty and accurate communication of capabilities and risks. How would you cite the relevant clauses and propose an alternative path?</p>
-      </section>
-      <section class="quiz-section glass-card">
-        <h2>Knowledge Check</h2>
-        <div id="quiz-4" class="quiz-container"></div>
-      </section>
-      <section class="reflection glass-card">
-        <h2>Reflection</h2>
-        <ol>
-          <li>Which ACM or IEEE principle is most often under pressure in product organizations?</li>
-          <li>How should codes treat generative AI systems that can produce harmful content at scale?</li>
-        </ol>
-      </section>
-      <section class="assignment glass-card">
-        <h2>Assignment</h2>
-        <p>Choose three ACM principles and three IEEE principles. For each, write a short workplace vignette (100–150 words) showing the principle under tension and a professional response consistent with the code.</p>
-      </section>
-      <section class="cheat-sheet glass-card">
-        <h2>Cheat Sheet</h2>
-        <ul>
-          <li>ACM: society, avoid harm, honesty, privacy, confidentiality</li>
-          <li>IEEE: public safety/health/welfare first</li>
-          <li>Codes = soft law + cultural tools</li>
-          <li>Cite clauses; propose alternatives</li>
-        </ul>
-      </section>
-      <section class="glossary glass-card">
-        <h2>Glossary</h2>
-        <dl>
-          <dt>Soft law</dt><dd>Norms that guide behavior and can influence legal interpretation without being statutes.</dd>
-          <dt>Conflict of interest</dt><dd>Situation in which personal or organizational interests may compromise professional judgment.</dd>
-        </dl>
-      </section>
-      <footer class="lecture-footer"><p>Professional Practices in Computing • Open educational resource</p></footer>
-    </div>
+
+      <article class="lecture-article">
+        <header class="lecture-hero glass-card">
+          <p class="lecture-meta">Module 04 · Professional Standards</p>
+          <h1>ACM & IEEE Codes Deep Dive</h1>
+          <p class="lead">Master the structure, key principles, and practical application of the two most influential computing codes of ethics. Learn to map clauses to workplace scenarios and use codes as tools for professional judgment.</p>
+          <div class="hero-tags">
+            <span class="tag">ACM Code</span>
+            <span class="tag">IEEE Code</span>
+            <span class="tag">Public Welfare</span>
+            <span class="tag">Professional Conduct</span>
+          </div>
+        </header>
+
+        <section class="section glass-card" id="objectives">
+          <h2>Learning Objectives</h2>
+          <ul class="objectives-list">
+            <li>Locate and interpret the main sections of the ACM Code of Ethics and Professional Conduct.</li>
+            <li>Explain the priority of public safety, health, and welfare in the IEEE Code of Ethics.</li>
+            <li>Map specific code clauses to common workplace scenarios (privacy, safety, honesty, conflicts of interest, competence).</li>
+            <li>Discuss the limits of codes as soft law and the complementary role of organizational culture and law.</li>
+            <li>Apply code principles when preparing justifications for escalation or refusal of unethical requests.</li>
+            <li>Compare ACM and IEEE approaches and relate them to emerging AI ethics guidance.</li>
+          </ul>
+        </section>
+
+        <section class="section glass-card" id="introduction">
+          <h2>Introduction</h2>
+          <p>The ACM and IEEE codes are living reference documents for computing professionalism. They are not statutes, yet they shape education, membership expectations, expert testimony, and organizational policy. This module treats them as practical tools: instruments for clarifying duties, structuring disagreement, and defending professional judgment under pressure.</p>
+        </section>
+
+        <section class="section glass-card" id="motivation">
+          <h2>Motivation</h2>
+          <p>When a manager asks you to understate model limitations, ship a known unsafe feature, or reuse client data beyond the original purpose, abstract ethics become concrete. Codes give you shared language with other professionals and a basis for escalation that is harder to dismiss as mere personal opinion.</p>
+        </section>
+
+        <section class="section glass-card" id="acm">
+          <h2>ACM Code of Ethics and Professional Conduct</h2>
+          <p>The ACM Code organizes principles into general ethical principles, professional responsibilities, professional leadership principles, and compliance with the code. Central themes include:</p>
+          <ul>
+            <li>Contribute to society and to human well-being; avoid harm.</li>
+            <li>Be honest and trustworthy; be fair and take action not to discriminate.</li>
+            <li>Respect privacy; honor confidentiality.</li>
+            <li>Maintain high standards of professional competence and conduct.</li>
+            <li>Design and implement systems that are robustly and usably secure.</li>
+            <li>Access computing resources only when authorized.</li>
+          </ul>
+          <p>Leadership principles emphasize that managers and leaders have additional duties to create environments in which ethical practice is possible and expected.</p>
+        </section>
+
+        <section class="section glass-card" id="ieee">
+          <h2>IEEE Code of Ethics</h2>
+          <p>The IEEE Code places the safety, health, and welfare of the public first. It addresses conflicts of interest, honest disclosure of limitations of systems and data, continuous development of competence, and treatment of colleagues with respect. For safety-critical systems, infrastructure software, and cyber-physical products, the public-welfare priority is decisive.</p>
+        </section>
+
+        <section class="section glass-card" id="comparison">
+          <h2>Comparing ACM and IEEE</h2>
+          <p>Both codes prioritize avoiding harm and honesty. IEEE is more explicit about the primacy of public safety. ACM provides richer detail on privacy, confidentiality, and professional leadership. In practice, many professionals are accountable to both (or to organizational codes derived from them). When they conflict with local management pressure, the public-interest clauses provide the strongest professional grounding for push-back.</p>
+        </section>
+
+        <section class="section glass-card" id="industrial-scenario">
+          <h2>Industrial Scenario</h2>
+          <p>Your manager asks you to understate known limitations of a risk model in a client proposal so the deal closes this quarter. ACM and IEEE both emphasize honesty and accurate communication of capabilities and risks. You should cite the relevant clauses, document the known limitations, and propose an alternative path (accurate disclosure with optional phased improvement plan) that still supports the business relationship without misrepresentation.</p>
+        </section>
+
+        <section class="section glass-card" id="case-study">
+          <h2>Case Study: Safety-Critical Disclosure</h2>
+          <p><strong>Background:</strong> An engineering team discovers a rare but severe failure mode in software controlling industrial equipment. Fixing it will delay a major release. Sales pressure is intense.</p>
+          <p><strong>Code mapping:</strong> IEEE public welfare priority and ACM avoid-harm / honesty clauses require disclosure and remediation prioritization over schedule. Soft-law codes support escalation to safety officers or external regulators when internal channels fail.</p>
+          <p><strong>Discussion:</strong> What documentation and escalation path would you prepare? How would you frame the issue for a non-technical executive?</p>
+        </section>
+
+        <section class="section glass-card" id="perspectives">
+          <h2>Multi-Perspective Notes</h2>
+          <p><strong>Professional:</strong> Codes define the baseline of professional identity independent of any single employer.</p>
+          <p><strong>Legal:</strong> Codes are soft law; they can influence negligence standards and expert testimony but are not themselves criminal statutes.</p>
+          <p><strong>Business:</strong> Ethical culture reduces regulatory, reputational, and talent risk; short-term schedule pressure is a common failure mode.</p>
+          <p><strong>AI / Data / Security:</strong> Emerging AI principles (transparency, accountability, human oversight) extend the spirit of existing codes to autonomous and data-intensive systems.</p>
+        </section>
+
+        <section class="section glass-card" id="knowledge-check">
+          <h2>Knowledge Check</h2>
+          <div class="quiz-container" data-quiz="lecture-04">
+            <div class="quiz-question" data-correct="b">
+              <p><strong>1.</strong> IEEE Code of Ethics places highest priority on:</p>
+              <label><input type="radio" name="q1" value="a" /> Shareholder value</label>
+              <label><input type="radio" name="q1" value="b" /> Safety, health, and welfare of the public</label>
+              <label><input type="radio" name="q1" value="c" /> Speed of delivery</label>
+              <label><input type="radio" name="q1" value="d" /> Open-source contribution volume</label>
+            </div>
+            <div class="quiz-question" data-correct="b">
+              <p><strong>2.</strong> ACM Code emphasizes which of the following?</p>
+              <label><input type="radio" name="q2" value="a" /> Only technical competence</label>
+              <label><input type="radio" name="q2" value="b" /> Contributing to society and avoiding harm</label>
+              <label><input type="radio" name="q2" value="c" /> Ignoring privacy for innovation</label>
+              <label><input type="radio" name="q2" value="d" /> Mandatory government licensing of all software</label>
+            </div>
+            <div class="quiz-question" data-correct="b">
+              <p><strong>3.</strong> Codes of ethics in computing are best described as:</p>
+              <label><input type="radio" name="q3" value="a" /> Criminal statutes</label>
+              <label><input type="radio" name="q3" value="b" /> Soft law and professional guidance</label>
+              <label><input type="radio" name="q3" value="c" /> Marketing documents only</label>
+              <label><input type="radio" name="q3" value="d" /> Optional reading with no practical use</label>
+            </div>
+          </div>
+          <button class="btn primary" id="check-quiz">Check answers</button>
+          <div id="quiz-feedback" class="quiz-feedback" hidden></div>
+        </section>
+
+        <section class="section glass-card" id="reflection">
+          <h2>Reflection Questions</h2>
+          <ol>
+            <li>Which ACM or IEEE principle is most often under pressure in product organizations you have observed or studied?</li>
+            <li>How should existing codes treat generative AI systems that can produce harmful content at scale?</li>
+            <li>If internal escalation fails, what external options remain consistent with professional duty?</li>
+          </ol>
+        </section>
+
+        <section class="section glass-card" id="assignment">
+          <h2>Assignment</h2>
+          <p>Choose three ACM principles and three IEEE principles. For each, write a short workplace vignette (100–150 words) showing the principle under tension and a professional response consistent with the code. Submit as a single document.</p>
+        </section>
+
+        <section class="section glass-card" id="cheat-sheet">
+          <h2>Cheat Sheet</h2>
+          <ul>
+            <li>ACM: society, avoid harm, honesty, privacy, confidentiality, competence</li>
+            <li>IEEE: public safety / health / welfare first</li>
+            <li>Codes = soft law + cultural tools</li>
+            <li>Cite clauses; propose constructive alternatives</li>
+            <li>Leadership has extra duties to enable ethical practice</li>
+          </ul>
+        </section>
+
+        <section class="section glass-card" id="glossary">
+          <h2>Glossary</h2>
+          <dl>
+            <dt>Soft law</dt>
+            <dd>Norms that guide behavior and can influence legal interpretation without being binding statutes.</dd>
+            <dt>Conflict of interest</dt>
+            <dd>Situation in which personal or organizational interests may compromise professional judgment.</dd>
+            <dt>Public welfare priority</dt>
+            <dd>IEEE principle placing safety, health, and welfare of the public above other considerations.</dd>
+          </dl>
+        </section>
+
+        <section class="section glass-card" id="further-reading">
+          <h2>Further Reading</h2>
+          <ul>
+            <li>ACM Code of Ethics and Professional Conduct (official text)</li>
+            <li>IEEE Code of Ethics (official text)</li>
+            <li>Software Engineering Code of Ethics and Professional Practice (ACM/IEEE-CS joint)</li>
+            <li>Selected chapters from Baase and Quinn on professional codes</li>
+          </ul>
+        </section>
+
+        <section class="section glass-card" id="summary">
+          <h2>Summary</h2>
+          <p>ACM and IEEE codes provide structured professional standards centered on public interest, honesty, competence, privacy, and avoidance of harm. They function as soft law and cultural tools. Effective professionals learn to map clauses to concrete situations, escalate when necessary, and help build organizations in which ethical practice is the default rather than the exception.</p>
+        </section>
+
+        <nav class="lecture-nav">
+          <a class="btn ghost" href="lecture-03.html">← Lecture 03</a>
+          <a class="btn primary" href="lecture-05.html">Lecture 05 →</a>
+        </nav>
+      </article>
+    </main>
   </div>
   <script src="../js/main.js"></script>
-  <script>
-    initQuiz('quiz-4', [
-      {question: "IEEE Code of Ethics places highest priority on:", options: ["Shareholder value", "Safety, health, and welfare of the public", "Speed of delivery", "Open-source contribution"], correct: 1, explanation: "Public welfare is paramount in the IEEE code."},
-      {question: "ACM Code emphasizes which of the following?", options: ["Only technical competence", "Contributing to society and avoiding harm", "Ignoring privacy for innovation", "Mandatory licensing"], correct: 1, explanation: "Society and avoiding harm are central."},
-      {question: "Codes of ethics in computing are best described as:", options: ["Criminal statutes", "Soft law and professional guidance", "Marketing documents only", "Optional reading with no practical use"], correct: 1, explanation: "They function as soft law and cultural tools."}
-    ]);
-  </script>
 </body>
 </html>
