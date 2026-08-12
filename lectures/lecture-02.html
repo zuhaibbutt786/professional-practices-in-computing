@@ -5,28 +5,574 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Lecture 02: History of the Computing Profession & Codes of Ethics — Evolution of professional identity, early codes, ACM/IEEE milestones, and why history matters for modern practice." />
   <title>Lecture 02 — History & Codes | Professional Practices in Computing</title>
-  <link rel="stylesheet" href="../css/styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../css/styles.css" />
 </head>
 <body>
-  <!-- Full production module content is being restored. This is a temporary minimal structure while the complete ~31k module is applied in the next sequential push. -->
-  <header class="site-header glass">
-    <div class="container header-inner">
-      <a href="../index.html" class="logo">PPC</a>
-      <nav class="main-nav">
-        <a href="../index.html">Home</a>
-        <a href="#">Lectures</a>
-      </nav>
-      <button id="theme-toggle" class="theme-btn" aria-label="Toggle theme">🌓</button>
+  <nav class="navbar">
+    <a href="../index.html" class="navbar-brand">
+      <div class="logo">PPC</div>
+      <span>Professional Practices</span>
+    </a>
+    <div class="nav-actions">
+      <div class="search-box">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <input type="search" id="search-input" placeholder="Search..." aria-label="Search" />
+      </div>
+      <button class="btn-icon" id="theme-toggle" aria-label="Toggle theme"></button>
+      <button class="btn-icon" id="menu-toggle" aria-label="Menu">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+      </button>
     </div>
-  </header>
-  <main class="container lecture-page">
-    <h1>Lecture 02 — History of the Profession & Codes</h1>
-    <p class="lead">Full enriched production module (~31k) with learning objectives, multi-perspective analysis, historical timeline, case studies, industrial scenarios, quiz, reflection questions, assignment, cheat sheet and glossary is ready locally and will be pushed in the immediate next step.</p>
-    <p>If you see this message, the sequential full-content push is in progress.</p>
-  </main>
+  </nav>
+
+  <div class="overlay" id="overlay"></div>
+
+  <aside class="sidebar" id="sidebar">
+    <div class="sidebar-section">
+      <div class="sidebar-title">Course</div>
+      <a href="../index.html" class="sidebar-link"><span class="num">⌂</span> Home</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Current Module</div>
+      <a href="lecture-01.html" class="sidebar-link" data-lecture="01"><span class="num">01</span> Introduction</a>
+      <a href="lecture-02.html" class="sidebar-link active" data-lecture="02"><span class="num">02</span> History & Codes</a>
+      <a href="lecture-03.html" class="sidebar-link" data-lecture="03"><span class="num">03</span> Ethical Theories</a>
+      <a href="lecture-04.html" class="sidebar-link" data-lecture="04"><span class="num">04</span> ACM & IEEE Codes</a>
+      <a href="lecture-05.html" class="sidebar-link" data-lecture="05"><span class="num">05</span> Responsibility</a>
+    </div>
+    <div class="sidebar-section">
+      <div class="sidebar-title">Quick Nav</div>
+      <a href="#objectives" class="sidebar-link"><span class="num">1</span> Objectives</a>
+      <a href="#motivation" class="sidebar-link"><span class="num">2</span> Motivation</a>
+      <a href="#story" class="sidebar-link"><span class="num">3</span> Real Story</a>
+      <a href="#history" class="sidebar-link"><span class="num">4</span> Timeline</a>
+      <a href="#concepts" class="sidebar-link"><span class="num">5</span> Concepts</a>
+      <a href="#case" class="sidebar-link"><span class="num">6</span> Case Study</a>
+      <a href="#activity" class="sidebar-link"><span class="num">7</span> Activities</a>
+      <a href="#assignment" class="sidebar-link"><span class="num">8</span> Assignment</a>
+      <a href="#summary" class="sidebar-link"><span class="num">9</span> Summary</a>
+    </div>
+  </aside>
+
+  <div class="main-wrapper">
+    <div class="content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="../index.html">Home</a>
+        <span class="sep">/</span>
+        <a href="../index.html#lectures">Lectures</a>
+        <span class="sep">/</span>
+        <span>Lecture 02</span>
+      </nav>
+
+      <header class="lecture-header">
+        <div class="lecture-badge">Lecture 02 of 30</div>
+        <h1>History of the Computing Profession & Codes of Ethics</h1>
+        <p style="font-size:1.15rem;color:var(--text-secondary);max-width:640px;">
+          How computing evolved from a technical craft into a profession with shared norms, 
+          formal codes, and public accountability — and why that history still shapes decisions today.
+        </p>
+        <div class="lecture-meta">
+          <span>⏱ 80–95 min</span>
+          <span>📚 Core</span>
+          <span>🎯 Foundation</span>
+          <span>✍️ Timeline + Quiz</span>
+        </div>
+        <div class="progress-bar-container">
+          <div class="progress-bar" data-progress-bar></div>
+        </div>
+      </header>
+
+      <!-- Objectives -->
+      <section id="objectives" class="section">
+        <div class="section-header">
+          <div class="section-icon">🎯</div>
+          <h2>Learning Objectives</h2>
+        </div>
+        <p>By the end of this lecture you will be able to:</p>
+        <ul class="objectives-list">
+          <li>Trace the major stages in the professionalization of computing from the 1940s to the present.</li>
+          <li>Explain why formal codes of ethics emerged and what problems they were intended to address.</li>
+          <li>Compare early computing codes with the modern ACM and IEEE codes at a high level.</li>
+          <li>Identify recurring patterns in how the profession has responded to new technological risks.</li>
+          <li>Articulate how historical failures and successes inform contemporary professional responsibility.</li>
+        </ul>
+      </section>
+
+      <!-- Introduction -->
+      <section id="intro" class="section">
+        <div class="section-header">
+          <div class="section-icon">📖</div>
+          <h2>Introduction</h2>
+        </div>
+        <p>
+          Professions do not appear fully formed. They develop through technical progress, 
+          institutional growth, public pressure, and deliberate efforts by practitioners to 
+          define standards of conduct. Computing followed this path later than medicine or 
+          engineering, but the trajectory is clear: from specialized technical work inside 
+          laboratories and military projects to a global profession expected to manage 
+          profound societal impacts.
+        </p>
+        <p>
+          Understanding this history is not antiquarian curiosity. The same tensions that 
+          produced the first codes — speed versus safety, innovation versus accountability, 
+          private interest versus public good — reappear in AI, data science, cybersecurity, 
+          and platform governance today.
+        </p>
+      </section>
+
+      <!-- Motivation -->
+      <section id="motivation" class="section">
+        <div class="section-header">
+          <div class="section-icon">🔥</div>
+          <h2>Motivation — Why History Matters for Practitioners</h2>
+        </div>
+        <p>
+          New graduates often encounter ethics codes as static documents. History shows they 
+          are living responses to concrete failures and emerging powers. Knowing the context 
+          helps you:
+        </p>
+        <ul style="margin:1rem 0 1.5rem 1.5rem;color:var(--text-secondary);">
+          <li>Recognize when a current dilemma echoes an older one.</li>
+          <li>Evaluate whether existing codes adequately address new technologies (especially AI).</li>
+          <li>Participate more effectively in updating professional norms inside organizations and societies.</li>
+          <li>Avoid the illusion that “this time is completely different.”</li>
+        </ul>
+        <div class="callout callout-info">
+          <div class="callout-title">Key Insight</div>
+          Codes of ethics are lagging indicators of professional maturity. They appear after 
+          the profession has already caused (or risked causing) significant harm and after 
+          practitioners decide that self-regulation is preferable to pure external control.
+        </div>
+      </section>
+
+      <!-- Real Story -->
+      <section id="story" class="section">
+        <div class="section-header">
+          <div class="section-icon">📰</div>
+          <h2>Real Story — The Software Crisis and the Birth of Software Engineering</h2>
+        </div>
+        <div class="card">
+          <p>
+            By the late 1960s, large software projects were routinely late, over budget, and 
+            unreliable. The 1968 NATO Software Engineering Conference in Garmisch is often 
+            cited as the moment the field named the problem and began treating software 
+            construction as an engineering discipline rather than pure craft or art.
+          </p>
+          <p>
+            Participants discussed not only technical methods but also professional 
+            responsibility: Who is accountable when software fails? What standards of 
+            competence and care should the community enforce? These conversations laid 
+            groundwork for later codes and for the idea that software practitioners share 
+            obligations beyond their immediate employer.
+          </p>
+          <p style="margin-bottom:0;">
+            The “software crisis” was never fully solved, but the professional identity that 
+            emerged from it still shapes how we talk about quality, process, and accountability.
+          </p>
+        </div>
+      </section>
+
+      <!-- Industrial Scenario -->
+      <section id="scenario" class="section">
+        <div class="section-header">
+          <div class="section-icon">🏭</div>
+          <h2>Industrial Scenario</h2>
+        </div>
+        <div class="activity-card">
+          <h4>Scenario: Updating an Internal Code of Conduct</h4>
+          <p>
+            You work at a mid-sized AI company. Leadership asks a small group (including you) 
+            to refresh the internal code of ethics. The existing document is a lightly adapted 
+            version of the ACM Code from 2018. Newer engineers argue it feels outdated for 
+            generative AI and large-scale data work. Product managers worry that a stronger 
+            code will slow shipping. Legal wants clear, defensible language.
+          </p>
+          <p><strong>Questions:</strong></p>
+          <ul style="margin-left:1.25rem;color:var(--text-secondary);">
+            <li>What historical lessons about the purpose of codes should guide the revision?</li>
+            <li>Which sections of a modern code most need expansion for AI and data practices?</li>
+            <li>How do you balance aspirational principles with enforceable expectations?</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Historical Timeline -->
+      <section id="history" class="section">
+        <div class="section-header">
+          <div class="section-icon">⏳</div>
+          <h2>Historical Timeline — Professionalization of Computing</h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-year">1940s–1950s</div>
+            <p>Computing emerges from wartime and scientific projects. Practitioners are mostly mathematicians, physicists, and engineers. Professional identity is still fluid.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1947–1960s</div>
+            <p>ACM founded (1947). IEEE Computer Society grows. Early discussions of education, standards, and social implications begin, but formal ethics codes remain limited.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1968–1970s</div>
+            <p>NATO Software Engineering conferences. Growing recognition of software’s societal impact and the need for disciplined practice. First significant ethics discussions inside professional societies.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1972 / 1992</div>
+            <p>ACM adopts an early Code of Professional Conduct (1972), later substantially revised. The modern structure begins to take shape.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">1990s</div>
+            <p>IEEE-CS/ACM Software Engineering Code of Ethics and Professional Practice (1999). Explicit recognition that software can cause significant harm and that practitioners have public duties.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2000s–2010s</div>
+            <p>Internet scale, privacy scandals, open-source maturation, and early algorithmic accountability debates. Codes are updated; new specialized guidelines appear.</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-year">2018–present</div>
+            <p>ACM Code revised (2018). Explosion of AI ethics principles, frameworks (NIST AI RMF, OECD, UNESCO), and organizational AI ethics boards. The profession confronts systems that learn, scale, and act with limited human oversight.</p>
+          </div>
+        </div>
+
+        <div class="svg-container">
+          <svg viewBox="0 0 700 180" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Professionalization arc">
+            <defs>
+              <linearGradient id="arc" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#3b82f6"/>
+                <stop offset="100%" style="stop-color:#8b5cf6"/>
+              </linearGradient>
+            </defs>
+            <line x1="40" y1="120" x2="660" y2="120" stroke="var(--border)" stroke-width="2"/>
+            <circle cx="80" cy="120" r="8" fill="#3b82f6"/>
+            <text x="80" y="150" text-anchor="middle" fill="currentColor" font-size="11">1940s</text>
+            <text x="80" y="95" text-anchor="middle" fill="currentColor" font-size="10">Craft</text>
+            <circle cx="220" cy="120" r="8" fill="#3b82f6"/>
+            <text x="220" y="150" text-anchor="middle" fill="currentColor" font-size="11">1968</text>
+            <text x="220" y="95" text-anchor="middle" fill="currentColor" font-size="10">SE Identity</text>
+            <circle cx="360" cy="120" r="8" fill="#6366f1"/>
+            <text x="360" y="150" text-anchor="middle" fill="currentColor" font-size="11">1990s</text>
+            <text x="360" y="95" text-anchor="middle" fill="currentColor" font-size="10">Formal Codes</text>
+            <circle cx="500" cy="120" r="8" fill="#8b5cf6"/>
+            <text x="500" y="150" text-anchor="middle" fill="currentColor" font-size="11">2010s</text>
+            <text x="500" y="95" text-anchor="middle" fill="currentColor" font-size="10">Scale & Privacy</text>
+            <circle cx="640" cy="120" r="8" fill="#a855f7"/>
+            <text x="640" y="150" text-anchor="middle" fill="currentColor" font-size="11">Now</text>
+            <text x="640" y="95" text-anchor="middle" fill="currentColor" font-size="10">AI Era</text>
+          </svg>
+          <p style="font-size:0.85rem;color:var(--text-muted);margin-top:0.5rem;">
+            From technical craft → engineering identity → formal codes → responses to scale and AI.
+          </p>
+        </div>
+      </section>
+
+      <!-- Concepts -->
+      <section id="concepts" class="section">
+        <div class="section-header">
+          <div class="section-icon">💡</div>
+          <h2>Key Concepts</h2>
+        </div>
+
+        <h3>What Makes an Occupation a Profession?</h3>
+        <p>
+          Sociologists of the professions typically point to: specialized knowledge requiring 
+          formal education; a service ideal oriented toward a public good; self-regulation 
+          through codes and peer mechanisms; and social recognition of authority and 
+          responsibility. Computing has acquired most of these features unevenly and 
+          incompletely — especially the self-regulation and licensing dimensions.
+        </p>
+
+        <h3>Why Codes Appear</h3>
+        <p>Codes of ethics typically emerge when three conditions coincide:</p>
+        <ol style="margin:1rem 0 1.5rem 1.5rem;color:var(--text-secondary);">
+          <li>The work can cause significant harm or benefit to non-clients.</li>
+          <li>Practitioners possess specialized knowledge that outsiders cannot easily evaluate.</li>
+          <li>The community decides that internal standards are preferable (or necessary) to pure external regulation.</li>
+        </ol>
+
+        <h3>Aspirational vs Enforceable Provisions</h3>
+        <div class="perspective-grid">
+          <div class="perspective-card">
+            <h4>Aspirational</h4>
+            <p>Statements of ideal character and goals (“contribute to society,” “avoid harm”). Useful for education and culture; hard to enforce directly.</p>
+          </div>
+          <div class="perspective-card">
+            <h4>Enforceable</h4>
+            <p>More specific duties that can support complaints, investigations, or sanctions within a professional society or organization.</p>
+          </div>
+        </div>
+        <p>
+          Most computing codes blend both. Understanding the difference helps you read them 
+          realistically and design organizational codes that can actually influence behavior.
+        </p>
+      </section>
+
+      <!-- Perspectives -->
+      <section id="perspectives" class="section">
+        <div class="section-header">
+          <div class="section-icon">🔭</div>
+          <h2>Multiple Perspectives</h2>
+        </div>
+        <div class="perspective-grid">
+          <div class="perspective-card">
+            <h4>⚖️ Ethical</h4>
+            <p>Codes express the profession’s collective judgment about what values should constrain technical power.</p>
+          </div>
+          <div class="perspective-card">
+            <h4>📜 Legal</h4>
+            <p>Codes are not law, but they can influence standards of care in negligence cases and regulatory expectations.</p>
+          </div>
+          <div class="perspective-card">
+            <h4>💼 Business</h4>
+            <p>Organizations adopt or adapt codes to manage reputation, reduce risk, and attract talent that values responsibility.</p>
+          </div>
+          <div class="perspective-card">
+            <h4>🤖 AI</h4>
+            <p>Traditional codes were written for human-authored software. AI systems that learn and act at scale force updates to notions of accountability and oversight.</p>
+          </div>
+          <div class="perspective-card">
+            <h4>🛠️ Software Engineering</h4>
+            <p>The SE Code of Ethics explicitly links process, quality, and public safety — a direct descendant of the software-crisis debates.</p>
+          </div>
+          <div class="perspective-card">
+            <h4>🔐 Cybersecurity</h4>
+            <p>Security practitioners face acute dual-use and disclosure dilemmas that earlier general codes only partially anticipated.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Case Study -->
+      <section id="case" class="section">
+        <div class="section-header">
+          <div class="section-icon">🔍</div>
+          <h2>Case Study — From Early Codes to the 2018 ACM Revision</h2>
+        </div>
+        <div class="card">
+          <p>
+            The ACM’s first formal Code of Professional Conduct appeared in 1972. Subsequent 
+            revisions reflected new realities: personal computing, networks, intellectual 
+            property disputes, and later the web and data-intensive systems. The 2018 revision 
+            strengthened language around privacy, security, and the broader social impact of 
+            computing, and it reorganized principles for clearer application.
+          </p>
+          <p><strong>Professional lessons:</strong></p>
+          <ul style="margin:0.75rem 0 0 1.25rem;color:var(--text-secondary);">
+            <li>Codes must be periodically updated or they lose relevance.</li>
+            <li>Revision processes themselves are professional acts — they require broad consultation and deliberate value choices.</li>
+            <li>Even well-crafted codes have limited effect without education, culture, and organizational support.</li>
+            <li>The gap between principle and practice is a permanent feature; the goal is continuous reduction of that gap.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Knowledge Check -->
+      <section id="activity" class="section">
+        <div class="section-header">
+          <div class="section-icon">✅</div>
+          <h2>Knowledge Check</h2>
+        </div>
+        <div class="quiz-container" id="quiz-2"></div>
+      </section>
+
+      <!-- Reflection -->
+      <section id="reflection" class="section">
+        <div class="section-header">
+          <div class="section-icon">🪞</div>
+          <h2>Reflection Questions</h2>
+        </div>
+        <div class="reflection-box">
+          <p><strong>1.</strong> Which historical moment in the professionalization of computing do you find most relevant to the technology you expect to work on? Why?</p>
+          <textarea data-reflection="l02-q1" placeholder="Write your thoughts here (saved locally)..."></textarea>
+        </div>
+        <div class="reflection-box">
+          <p><strong>2.</strong> If you were asked to add one new principle to a modern computing code to address generative AI, what would it be and why?</p>
+          <textarea data-reflection="l02-q2" placeholder="Write your thoughts here..."></textarea>
+        </div>
+        <div class="reflection-box">
+          <p><strong>3.</strong> Do you think computing should move toward stronger self-regulation (including possible licensing in high-risk domains)? What are the trade-offs?</p>
+          <textarea data-reflection="l02-q3" placeholder="Write your thoughts here..."></textarea>
+        </div>
+      </section>
+
+      <!-- Discussion -->
+      <section id="discussion" class="section">
+        <div class="section-header">
+          <div class="section-icon">💬</div>
+          <h2>Discussion & Scenario Prompts</h2>
+        </div>
+        <div class="card">
+          <ol style="margin-left:1.25rem;color:var(--text-secondary);">
+            <li>Why did formal ethics codes appear relatively late in computing compared with medicine or civil engineering?</li>
+            <li>A colleague says “Codes are just PR.” How would you respond using historical evidence?</li>
+            <li>How should professional societies handle members who publicly violate core principles?</li>
+          </ol>
+        </div>
+      </section>
+
+      <!-- Assignment -->
+      <section id="assignment" class="section">
+        <div class="section-header">
+          <div class="section-icon">📝</div>
+          <h2>Assignment & Mini-Project</h2>
+        </div>
+        <div class="card">
+          <h3>Assignment 2.1 — Code Comparison Memo</h3>
+          <p>
+            Write a 500–700 word memo comparing any two of the following: ACM Code (2018), 
+            IEEE Code of Ethics, or the Software Engineering Code of Ethics (1999). Focus on:
+          </p>
+          <ul style="margin:0.75rem 0 1rem 1.25rem;color:var(--text-secondary);">
+            <li>Structure and primary audience</li>
+            <li>How each treats public interest / harm prevention</li>
+            <li>One strength and one limitation of each for contemporary AI or data work</li>
+          </ul>
+          <p><strong>Due:</strong> Before Lecture 4.</p>
+        </div>
+        <div class="card mt-2">
+          <h3>Mini-Project — Personal Professional Timeline</h3>
+          <p>
+            Create a one-page visual or textual timeline of your own path into computing so far 
+            and the next 5–7 years. Mark at least three moments where professional (not purely 
+            technical) judgment will matter. Keep it for your portfolio.
+          </p>
+        </div>
+      </section>
+
+      <!-- Summary -->
+      <section id="summary" class="section">
+        <div class="section-header">
+          <div class="section-icon">📌</div>
+          <h2>Summary</h2>
+        </div>
+        <ul style="margin-left:1.25rem;color:var(--text-secondary);">
+          <li>Computing professionalized gradually through technical growth, institutional efforts, and responses to failure.</li>
+          <li>Codes of ethics are historical artifacts that encode the profession’s evolving self-understanding.</li>
+          <li>They blend aspirational ideals with more concrete duties and must be updated as technology changes.</li>
+          <li>The same core tensions (speed vs safety, private vs public interest) recur across decades.</li>
+          <li>Knowing the history improves your ability to apply and improve professional norms today.</li>
+        </ul>
+      </section>
+
+      <!-- Cheat Sheet -->
+      <section id="cheatsheet" class="section">
+        <div class="section-header">
+          <div class="section-icon">📋</div>
+          <h2>Cheat Sheet</h2>
+        </div>
+        <div class="cheatsheet">
+          <div class="cheatsheet-item"><strong>1947</strong><span>ACM founded</span></div>
+          <div class="cheatsheet-item"><strong>1968</strong><span>NATO SE Conference — software engineering identity</span></div>
+          <div class="cheatsheet-item"><strong>1972 / 1992 / 2018</strong><span>Major ACM code milestones</span></div>
+          <div class="cheatsheet-item"><strong>1999</strong><span>SE Code of Ethics (IEEE-CS/ACM)</span></div>
+          <div class="cheatsheet-item"><strong>Profession markers</strong><span>Knowledge • Service ideal • Self-regulation • Accountability</span></div>
+          <div class="cheatsheet-item"><strong>Code functions</strong><span>Education • Guidance • Legitimacy • Limited enforcement</span></div>
+        </div>
+      </section>
+
+      <!-- Glossary -->
+      <section id="glossary" class="section">
+        <div class="section-header">
+          <div class="section-icon">📖</div>
+          <h2>Glossary</h2>
+        </div>
+        <dl>
+          <div class="glossary-term">
+            <dt>Professionalization</dt>
+            <dd>The historical process by which an occupation develops specialized knowledge, educational pathways, ethical standards, and claims to public responsibility.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Code of ethics</dt>
+            <dd>A formal statement by a professional community of the values and duties that should guide members’ conduct.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Aspirational provision</dt>
+            <dd>A statement of ideal aims or character that is difficult to enforce but shapes professional culture and education.</dd>
+          </div>
+          <div class="glossary-term">
+            <dt>Software crisis</dt>
+            <dd>The late-1960s recognition that large software projects were frequently unreliable, late, and over budget, prompting the software-engineering movement.</dd>
+          </div>
+        </dl>
+      </section>
+
+      <!-- Further Reading -->
+      <section id="reading" class="section">
+        <div class="section-header">
+          <div class="section-icon">📚</div>
+          <h2>Further Reading</h2>
+        </div>
+        <ul style="margin-left:1.25rem;color:var(--text-secondary);">
+          <li>ACM Code of Ethics and Professional Conduct (2018) — full text and supporting materials.</li>
+          <li>IEEE Code of Ethics and the Software Engineering Code of Ethics (1999).</li>
+          <li>Historical overviews of the 1968 NATO Software Engineering Conference.</li>
+          <li>Baase, <em>A Gift of Fire</em> — chapters on historical social issues.</li>
+          <li>Short professional-society histories from ACM and IEEE Computer Society.</li>
+        </ul>
+      </section>
+
+      <div class="flex justify-between flex-wrap gap-2 mt-3" style="margin-top:3rem;">
+        <a href="lecture-01.html" class="btn btn-outline">← Lecture 01</a>
+        <button class="btn btn-primary" id="mark-complete" data-lecture-id="02">Mark Lecture Complete</button>
+        <a href="lecture-03.html" class="btn btn-outline">Lecture 03 →</a>
+      </div>
+
+      <footer class="site-footer">
+        <p>Professional Practices in Computing — Lecture 02</p>
+        <p>Static educational resource • Suitable for university use 2026–2035</p>
+      </footer>
+    </div>
+  </div>
+
   <script src="../js/main.js"></script>
+  <script>
+    initQuiz('quiz-2', [
+      {
+        question: "What was a major outcome of the 1968 NATO Software Engineering Conference?",
+        options: [
+          "The first ACM Code of Ethics was adopted.",
+          "Software construction began to be framed as an engineering discipline with professional responsibilities.",
+          "Licensing of software engineers became mandatory worldwide.",
+          "The internet was invented."
+        ],
+        correct: 1,
+        explanation: "The conference helped establish software engineering as a discipline and surfaced questions of accountability and professional standards."
+      },
+      {
+        question: "Codes of ethics in computing typically combine which two types of provisions?",
+        options: [
+          "Legal statutes and criminal penalties",
+          "Aspirational ideals and more concrete, potentially enforceable duties",
+          "Technical standards and product certifications only",
+          "Marketing guidelines and branding rules"
+        ],
+        correct: 1,
+        explanation: "Most professional codes blend high-level aspirational statements with more specific duties that can support education and limited enforcement."
+      },
+      {
+        question: "Why must professional codes be periodically revised?",
+        options: [
+          "Because technology and the harms it can cause change over time.",
+          "Because the original authors’ copyright expires.",
+          "Because employers demand shorter documents.",
+          "Because international law requires annual updates."
+        ],
+        correct: 0,
+        explanation: "New capabilities (networks, data scale, AI) create new responsibilities that earlier codes only partially anticipated."
+      },
+      {
+        question: "Which of the following is NOT typically listed as a classic marker of a profession?",
+        options: [
+          "Specialized knowledge requiring extended education",
+          "A service ideal oriented toward a public good",
+          "Guaranteed high salaries for all members",
+          "Self-regulation through codes and peer mechanisms"
+        ],
+        correct: 2,
+        explanation: "Salary levels are not a defining sociological criterion of professionalism; knowledge, service orientation, and self-regulation are."
+      }
+    ]);
+  </script>
 </body>
 </html>
